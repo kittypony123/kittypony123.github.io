@@ -1,0 +1,1820 @@
+propertyid,budget_year,category,budgeted_amount_gbp,actual_spend_gbp,variance_gbp,variance_percent,property_type,property_age_years,blockid,estateid
+362,2022,Routine Repairs,278,238,-40,-14.3,House,32.0,21.0,
+362,2022,Cyclical Decorating,200,217,17,8.4,House,32.0,21.0,
+362,2022,Communal Repairs,356,403,46,13.0,House,32.0,21.0,
+362,2022,Major Works,130,136,5,4.0,House,32.0,21.0,
+362,2022,Emergency Repairs,133,123,-10,-7.3,House,32.0,21.0,
+74,2022,Planned Maintenance,139,166,27,19.5,Flat,30.0,5.0,3.0
+74,2022,Emergency Repairs,328,290,-38,-11.6,Flat,30.0,5.0,3.0
+74,2022,Major Works,332,266,-66,-19.8,Flat,30.0,5.0,3.0
+74,2022,Communal Repairs,159,189,30,18.9,Flat,30.0,5.0,3.0
+375,2022,Cyclical Decorating,109,124,14,13.2,Flat,32.0,22.0,
+375,2022,Major Works,309,327,18,6.0,Flat,32.0,22.0,
+375,2022,Void Works,216,245,29,13.4,Flat,32.0,22.0,
+375,2022,Compliance Works,115,122,7,5.7,Flat,32.0,22.0,
+375,2022,Routine Repairs,297,260,-37,-12.4,Flat,32.0,22.0,
+156,2022,Planned Maintenance,189,214,24,12.7,Block of Flats,32.0,2.0,1.0
+156,2022,Routine Repairs,283,255,-28,-10.0,Block of Flats,32.0,2.0,1.0
+156,2022,Communal Repairs,208,198,-10,-4.9,Block of Flats,32.0,2.0,1.0
+156,2022,Cyclical Decorating,341,357,15,4.5,Block of Flats,32.0,2.0,1.0
+156,2022,Compliance Works,255,230,-25,-9.7,Block of Flats,32.0,2.0,1.0
+156,2022,Major Works,249,292,43,17.1,Block of Flats,32.0,2.0,1.0
+105,2022,Planned Maintenance,236,241,6,2.5,Flat,30.0,5.0,3.0
+105,2022,Cyclical Decorating,235,282,47,19.9,Flat,30.0,5.0,3.0
+105,2022,Void Works,213,201,-12,-5.7,Flat,30.0,5.0,3.0
+105,2022,Major Works,133,134,1,0.7,Flat,30.0,5.0,3.0
+105,2022,Compliance Works,367,437,70,19.1,Flat,30.0,5.0,3.0
+105,2022,Communal Repairs,101,92,-9,-8.7,Flat,30.0,5.0,3.0
+395,2022,Environmental Works,96,91,-5,-5.2,Flat,32.0,21.0,
+395,2022,Cyclical Decorating,176,198,23,12.9,Flat,32.0,21.0,
+395,2022,Routine Repairs,191,168,-23,-12.0,Flat,32.0,21.0,
+395,2022,Planned Maintenance,129,144,15,11.8,Flat,32.0,21.0,
+395,2022,Void Works,185,205,20,10.9,Flat,32.0,21.0,
+395,2022,Major Works,205,170,-35,-17.1,Flat,32.0,21.0,
+378,2022,Communal Repairs,170,161,-9,-5.3,Flat,32.0,20.0,
+378,2022,Major Works,260,251,-8,-3.2,Flat,32.0,20.0,
+378,2022,Planned Maintenance,329,382,54,16.3,Flat,32.0,20.0,
+378,2022,Routine Repairs,313,326,13,4.1,Flat,32.0,20.0,
+125,2022,Environmental Works,162,153,-8,-5.1,Block of Flats,30.0,5.0,3.0
+125,2022,Compliance Works,360,400,41,11.4,Block of Flats,30.0,5.0,3.0
+125,2022,Void Works,190,213,24,12.5,Block of Flats,30.0,5.0,3.0
+125,2022,Cyclical Decorating,397,345,-52,-13.0,Block of Flats,30.0,5.0,3.0
+125,2022,Major Works,304,356,52,17.1,Block of Flats,30.0,5.0,3.0
+125,2022,Communal Repairs,208,192,-16,-7.7,Block of Flats,30.0,5.0,3.0
+69,2022,Routine Repairs,129,115,-14,-10.9,Flat,30.0,5.0,3.0
+69,2022,Void Works,278,294,17,6.0,Flat,30.0,5.0,3.0
+69,2022,Cyclical Decorating,174,150,-24,-13.8,Flat,30.0,5.0,3.0
+69,2022,Planned Maintenance,238,195,-43,-18.1,Flat,30.0,5.0,3.0
+451,2022,Environmental Works,218,209,-10,-4.4,Flat,27.0,,
+451,2022,Void Works,234,268,34,14.4,Flat,27.0,,
+451,2022,Major Works,185,200,15,8.4,Flat,27.0,,
+10,2022,Cyclical Decorating,186,174,-12,-6.3,Flat,31.0,6.0,4.0
+10,2022,Routine Repairs,161,169,8,5.0,Flat,31.0,6.0,4.0
+10,2022,Compliance Works,164,192,28,16.8,Flat,31.0,6.0,4.0
+10,2022,Void Works,146,150,4,2.4,Flat,31.0,6.0,4.0
+10,2022,Communal Repairs,227,254,27,11.8,Flat,31.0,6.0,4.0
+10,2022,Planned Maintenance,222,261,39,17.6,Flat,31.0,6.0,4.0
+195,2022,Cyclical Decorating,276,330,54,19.5,House,28.0,1.0,1.0
+195,2022,Emergency Repairs,333,395,62,18.8,House,28.0,1.0,1.0
+195,2022,Environmental Works,164,154,-10,-6.4,House,28.0,1.0,1.0
+195,2022,Communal Repairs,242,207,-35,-14.4,House,28.0,1.0,1.0
+195,2022,Void Works,180,153,-27,-14.8,House,28.0,1.0,1.0
+195,2022,Compliance Works,152,160,8,5.2,House,28.0,1.0,1.0
+407,2022,Emergency Repairs,175,202,27,15.4,House,32.0,20.0,
+407,2022,Routine Repairs,215,240,25,11.6,House,32.0,20.0,
+407,2022,Cyclical Decorating,218,239,21,9.6,House,32.0,20.0,
+85,2022,Environmental Works,268,218,-49,-18.5,Flat,32.0,9.0,5.0
+85,2022,Major Works,97,107,10,10.4,Flat,32.0,9.0,5.0
+85,2022,Void Works,181,162,-19,-10.6,Flat,32.0,9.0,5.0
+85,2022,Communal Repairs,203,216,13,6.4,Flat,32.0,9.0,5.0
+85,2022,Emergency Repairs,282,245,-37,-13.0,Flat,32.0,9.0,5.0
+85,2022,Routine Repairs,209,176,-33,-15.9,Flat,32.0,9.0,5.0
+372,2022,Environmental Works,172,177,5,3.0,Flat,32.0,19.0,
+372,2022,Emergency Repairs,283,277,-6,-2.1,Flat,32.0,19.0,
+372,2022,Void Works,137,140,3,2.0,Flat,32.0,19.0,
+372,2022,Routine Repairs,253,216,-38,-14.9,Flat,32.0,19.0,
+372,2022,Major Works,125,107,-18,-14.4,Flat,32.0,19.0,
+372,2022,Cyclical Decorating,188,213,25,13.3,Flat,32.0,19.0,
+389,2022,Communal Repairs,250,258,8,3.0,Flat,31.0,18.0,
+389,2022,Compliance Works,197,160,-37,-18.8,Flat,31.0,18.0,
+389,2022,Environmental Works,73,68,-5,-6.2,Flat,31.0,18.0,
+389,2022,Emergency Repairs,102,117,14,14.0,Flat,31.0,18.0,
+389,2022,Cyclical Decorating,157,165,7,4.6,Flat,31.0,18.0,
+389,2022,Major Works,188,220,32,16.9,Flat,31.0,18.0,
+496,2022,Emergency Repairs,149,159,11,7.1,House,27.0,,
+496,2022,Void Works,407,345,-62,-15.1,House,27.0,,
+496,2022,Routine Repairs,122,119,-3,-2.2,House,27.0,,
+496,2022,Communal Repairs,403,379,-25,-6.1,House,27.0,,
+496,2022,Cyclical Decorating,172,171,0,-0.3,House,27.0,,
+496,2022,Environmental Works,201,218,17,8.4,House,27.0,,
+31,2022,Routine Repairs,214,229,15,6.8,Flat,31.0,6.0,4.0
+31,2022,Compliance Works,213,188,-25,-11.9,Flat,31.0,6.0,4.0
+31,2022,Environmental Works,226,242,16,7.1,Flat,31.0,6.0,4.0
+317,2022,Communal Repairs,220,236,16,7.3,Flat,32.0,20.0,
+317,2022,Major Works,242,196,-46,-19.1,Flat,32.0,20.0,
+317,2022,Routine Repairs,182,168,-15,-8.1,Flat,32.0,20.0,
+317,2022,Planned Maintenance,176,165,-11,-6.4,Flat,32.0,20.0,
+317,2022,Cyclical Decorating,253,261,8,3.0,Flat,32.0,20.0,
+317,2022,Environmental Works,186,205,19,10.1,Flat,32.0,20.0,
+409,2022,Void Works,197,227,30,15.1,Flat,32.0,19.0,
+409,2022,Emergency Repairs,177,146,-31,-17.8,Flat,32.0,19.0,
+409,2022,Compliance Works,221,191,-30,-13.7,Flat,32.0,19.0,
+409,2022,Cyclical Decorating,118,120,2,1.4,Flat,32.0,19.0,
+409,2022,Major Works,129,152,22,17.3,Flat,32.0,19.0,
+491,2022,Environmental Works,213,188,-26,-12.0,Flat,27.0,,
+491,2022,Major Works,206,207,1,0.6,Flat,27.0,,
+491,2022,Cyclical Decorating,206,245,38,18.6,Flat,27.0,,
+491,2022,Routine Repairs,178,160,-18,-10.1,Flat,27.0,,
+491,2022,Void Works,118,113,-5,-4.4,Flat,27.0,,
+492,2022,Void Works,217,249,32,14.7,House,27.0,,
+492,2022,Compliance Works,177,153,-24,-13.5,House,27.0,,
+492,2022,Communal Repairs,307,303,-4,-1.2,House,27.0,,
+281,2022,Communal Repairs,254,232,-23,-8.9,Flat,32.0,20.0,
+281,2022,Emergency Repairs,106,102,-4,-3.8,Flat,32.0,20.0,
+281,2022,Planned Maintenance,86,102,15,17.5,Flat,32.0,20.0,
+281,2022,Major Works,187,223,35,18.9,Flat,32.0,20.0,
+357,2022,Void Works,347,375,28,8.1,Flat,32.0,19.0,
+357,2022,Cyclical Decorating,178,190,13,7.2,Flat,32.0,19.0,
+357,2022,Major Works,298,279,-19,-6.5,Flat,32.0,19.0,
+77,2022,Cyclical Decorating,313,363,51,16.3,Flat,32.0,11.0,6.0
+77,2022,Routine Repairs,208,173,-35,-16.7,Flat,32.0,11.0,6.0
+77,2022,Major Works,203,243,39,19.3,Flat,32.0,11.0,6.0
+462,2022,Compliance Works,300,355,55,18.5,Flat,27.0,,
+462,2022,Environmental Works,282,258,-24,-8.4,Flat,27.0,,
+462,2022,Emergency Repairs,338,278,-60,-17.9,Flat,27.0,,
+498,2022,Environmental Works,156,162,6,3.7,House,27.0,,
+498,2022,Major Works,299,251,-48,-15.9,House,27.0,,
+498,2022,Routine Repairs,186,216,31,16.5,House,27.0,,
+498,2022,Cyclical Decorating,325,337,12,3.7,House,27.0,,
+498,2022,Compliance Works,320,324,4,1.2,House,27.0,,
+498,2022,Void Works,276,289,13,4.7,House,27.0,,
+212,2022,Major Works,111,120,9,7.7,Flat,32.0,12.0,7.0
+212,2022,Cyclical Decorating,314,352,38,12.1,Flat,32.0,12.0,7.0
+212,2022,Void Works,186,184,-2,-1.3,Flat,32.0,12.0,7.0
+212,2022,Environmental Works,162,143,-19,-11.9,Flat,32.0,12.0,7.0
+102,2022,Cyclical Decorating,139,157,18,12.9,Flat,32.0,17.0,10.0
+102,2022,Environmental Works,284,335,51,18.0,Flat,32.0,17.0,10.0
+102,2022,Routine Repairs,295,311,16,5.4,Flat,32.0,17.0,10.0
+102,2022,Void Works,265,268,3,1.3,Flat,32.0,17.0,10.0
+102,2022,Major Works,126,125,0,-0.1,Flat,32.0,17.0,10.0
+102,2022,Communal Repairs,241,274,33,13.7,Flat,32.0,17.0,10.0
+335,2022,Routine Repairs,352,298,-54,-15.2,House,32.0,21.0,
+335,2022,Environmental Works,244,232,-12,-4.9,House,32.0,21.0,
+335,2022,Cyclical Decorating,161,149,-12,-7.5,House,32.0,21.0,
+335,2022,Emergency Repairs,349,370,20,5.9,House,32.0,21.0,
+476,2022,Communal Repairs,169,150,-19,-11.4,Block of Flats,27.0,,
+476,2022,Cyclical Decorating,154,173,19,12.4,Block of Flats,27.0,,
+476,2022,Major Works,126,135,9,7.2,Block of Flats,27.0,,
+476,2022,Void Works,161,170,9,5.3,Block of Flats,27.0,,
+476,2022,Environmental Works,136,158,22,16.1,Block of Flats,27.0,,
+337,2022,Environmental Works,204,203,-1,-0.4,House,32.0,20.0,
+337,2022,Routine Repairs,150,124,-26,-17.6,House,32.0,20.0,
+337,2022,Communal Repairs,401,335,-65,-16.3,House,32.0,20.0,
+337,2022,Emergency Repairs,430,432,2,0.4,House,32.0,20.0,
+441,2022,Cyclical Decorating,229,224,-5,-2.0,Flat,27.0,,
+441,2022,Emergency Repairs,233,247,14,5.8,Flat,27.0,,
+441,2022,Routine Repairs,289,271,-19,-6.4,Flat,27.0,,
+441,2022,Environmental Works,203,241,39,19.0,Flat,27.0,,
+174,2022,Void Works,154,150,-4,-2.6,Flat,32.0,11.0,6.0
+174,2022,Planned Maintenance,159,160,1,0.5,Flat,32.0,11.0,6.0
+174,2022,Compliance Works,309,258,-51,-16.5,Flat,32.0,11.0,6.0
+174,2022,Environmental Works,107,128,21,19.6,Flat,32.0,11.0,6.0
+174,2022,Emergency Repairs,217,183,-35,-15.9,Flat,32.0,11.0,6.0
+174,2022,Major Works,278,300,22,7.7,Flat,32.0,11.0,6.0
+3,2022,Cyclical Decorating,263,292,29,11.2,Flat,31.0,10.0,5.0
+3,2022,Communal Repairs,145,155,10,6.6,Flat,31.0,10.0,5.0
+3,2022,Major Works,243,263,20,8.1,Flat,31.0,10.0,5.0
+3,2022,Emergency Repairs,214,209,-5,-2.2,Flat,31.0,10.0,5.0
+3,2022,Environmental Works,236,223,-13,-5.5,Flat,31.0,10.0,5.0
+334,2022,Void Works,151,153,1,0.7,Flat,32.0,19.0,
+334,2022,Communal Repairs,201,216,16,7.8,Flat,32.0,19.0,
+334,2022,Routine Repairs,89,98,9,9.6,Flat,32.0,19.0,
+410,2022,Void Works,232,274,42,18.0,House,32.0,22.0,
+410,2022,Planned Maintenance,335,347,12,3.5,House,32.0,22.0,
+410,2022,Major Works,289,244,-45,-15.7,House,32.0,22.0,
+410,2022,Emergency Repairs,243,282,38,15.8,House,32.0,22.0,
+71,2022,Planned Maintenance,364,396,31,8.5,House,32.0,2.0,1.0
+71,2022,Compliance Works,253,240,-14,-5.4,House,32.0,2.0,1.0
+71,2022,Emergency Repairs,391,333,-58,-14.8,House,32.0,2.0,1.0
+71,2022,Communal Repairs,121,103,-17,-14.3,House,32.0,2.0,1.0
+210,2022,Cyclical Decorating,329,369,40,12.0,House,31.0,10.0,5.0
+210,2022,Emergency Repairs,364,381,17,4.7,House,31.0,10.0,5.0
+210,2022,Planned Maintenance,318,330,12,3.9,House,31.0,10.0,5.0
+210,2022,Routine Repairs,235,196,-39,-16.6,House,31.0,10.0,5.0
+64,2022,Compliance Works,184,190,6,3.5,Flat,28.0,1.0,1.0
+64,2022,Void Works,119,133,14,11.4,Flat,28.0,1.0,1.0
+64,2022,Environmental Works,174,155,-18,-10.5,Flat,28.0,1.0,1.0
+64,2022,Communal Repairs,275,284,8,3.0,Flat,28.0,1.0,1.0
+385,2022,Environmental Works,111,112,0,0.4,Flat,32.0,19.0,
+385,2022,Routine Repairs,153,183,30,19.4,Flat,32.0,19.0,
+385,2022,Communal Repairs,202,234,31,15.5,Flat,32.0,19.0,
+385,2022,Compliance Works,192,210,17,9.1,Flat,32.0,19.0,
+385,2022,Cyclical Decorating,133,148,15,11.4,Flat,32.0,19.0,
+94,2022,Cyclical Decorating,227,207,-20,-8.7,Flat,32.0,17.0,10.0
+94,2022,Void Works,88,91,2,2.4,Flat,32.0,17.0,10.0
+94,2022,Planned Maintenance,291,235,-56,-19.3,Flat,32.0,17.0,10.0
+94,2022,Routine Repairs,259,268,9,3.3,Flat,32.0,17.0,10.0
+94,2022,Environmental Works,318,278,-40,-12.6,Flat,32.0,17.0,10.0
+94,2022,Emergency Repairs,264,313,49,18.6,Flat,32.0,17.0,10.0
+486,2022,Cyclical Decorating,64,54,-10,-16.2,Flat,27.0,,
+486,2022,Void Works,247,257,10,4.1,Flat,27.0,,
+486,2022,Communal Repairs,183,160,-23,-12.6,Flat,27.0,,
+486,2022,Major Works,164,142,-22,-13.5,Flat,27.0,,
+486,2022,Routine Repairs,97,91,-6,-5.8,Flat,27.0,,
+486,2022,Emergency Repairs,170,160,-10,-5.7,Flat,27.0,,
+186,2022,Planned Maintenance,191,227,36,18.9,House,29.0,13.0,8.0
+186,2022,Emergency Repairs,308,277,-31,-10.0,House,29.0,13.0,8.0
+186,2022,Void Works,296,253,-43,-14.5,House,29.0,13.0,8.0
+34,2022,Environmental Works,276,301,25,9.2,Flat,31.0,16.0,9.0
+34,2022,Void Works,130,116,-14,-10.8,Flat,31.0,16.0,9.0
+34,2022,Cyclical Decorating,300,309,9,3.1,Flat,31.0,16.0,9.0
+34,2022,Major Works,330,353,24,7.1,Flat,31.0,16.0,9.0
+34,2022,Communal Repairs,193,159,-34,-17.7,Flat,31.0,16.0,9.0
+78,2022,Void Works,234,196,-38,-16.2,Flat,32.0,17.0,10.0
+78,2022,Cyclical Decorating,131,129,-2,-1.7,Flat,32.0,17.0,10.0
+78,2022,Planned Maintenance,135,146,11,7.9,Flat,32.0,17.0,10.0
+78,2022,Emergency Repairs,209,228,19,9.1,Flat,32.0,17.0,10.0
+78,2022,Communal Repairs,106,94,-13,-11.9,Flat,32.0,17.0,10.0
+1,2022,Emergency Repairs,89,76,-13,-14.5,Flat,28.0,1.0,1.0
+1,2022,Void Works,200,215,15,7.4,Flat,28.0,1.0,1.0
+1,2022,Planned Maintenance,173,186,13,7.8,Flat,28.0,1.0,1.0
+12,2022,Compliance Works,379,308,-71,-18.7,Flat,32.0,17.0,10.0
+12,2022,Planned Maintenance,282,304,22,7.9,Flat,32.0,17.0,10.0
+12,2022,Cyclical Decorating,174,190,16,9.1,Flat,32.0,17.0,10.0
+416,2022,Environmental Works,176,176,-1,-0.3,House,32.0,21.0,
+416,2022,Void Works,230,237,8,3.4,House,32.0,21.0,
+416,2022,Planned Maintenance,318,272,-46,-14.5,House,32.0,21.0,
+416,2022,Emergency Repairs,176,179,3,1.6,House,32.0,21.0,
+416,2022,Communal Repairs,344,298,-46,-13.4,House,32.0,21.0,
+416,2022,Major Works,296,265,-31,-10.6,House,32.0,21.0,
+23,2022,Environmental Works,211,218,7,3.5,Flat,32.0,2.0,1.0
+23,2022,Void Works,96,95,-1,-0.9,Flat,32.0,2.0,1.0
+23,2022,Routine Repairs,159,151,-8,-5.0,Flat,32.0,2.0,1.0
+73,2022,Void Works,309,257,-51,-16.7,Flat,28.0,1.0,1.0
+73,2022,Communal Repairs,316,280,-36,-11.4,Flat,28.0,1.0,1.0
+73,2022,Routine Repairs,224,260,36,16.2,Flat,28.0,1.0,1.0
+73,2022,Emergency Repairs,262,263,0,0.1,Flat,28.0,1.0,1.0
+183,2022,Communal Repairs,233,254,21,8.9,Flat,32.0,12.0,7.0
+183,2022,Routine Repairs,185,186,1,0.5,Flat,32.0,12.0,7.0
+183,2022,Emergency Repairs,165,151,-13,-8.1,Flat,32.0,12.0,7.0
+183,2022,Void Works,166,176,10,6.2,Flat,32.0,12.0,7.0
+183,2022,Major Works,324,261,-63,-19.4,Flat,32.0,12.0,7.0
+132,2022,Planned Maintenance,88,90,2,1.7,Flat,29.0,13.0,8.0
+132,2022,Cyclical Decorating,237,235,-2,-1.0,Flat,29.0,13.0,8.0
+132,2022,Emergency Repairs,73,66,-7,-9.8,Flat,29.0,13.0,8.0
+132,2022,Communal Repairs,259,284,25,9.7,Flat,29.0,13.0,8.0
+132,2022,Routine Repairs,148,150,1,0.9,Flat,29.0,13.0,8.0
+411,2022,Cyclical Decorating,283,306,24,8.3,Flat,32.0,19.0,
+411,2022,Major Works,136,114,-22,-16.4,Flat,32.0,19.0,
+411,2022,Planned Maintenance,102,112,11,10.4,Flat,32.0,19.0,
+411,2022,Communal Repairs,203,168,-35,-17.3,Flat,32.0,19.0,
+194,2022,Planned Maintenance,290,300,11,3.6,Flat,32.0,4.0,2.0
+194,2022,Cyclical Decorating,97,104,7,7.2,Flat,32.0,4.0,2.0
+194,2022,Major Works,122,139,17,14.1,Flat,32.0,4.0,2.0
+194,2022,Environmental Works,269,264,-5,-1.7,Flat,32.0,4.0,2.0
+194,2022,Emergency Repairs,213,190,-23,-10.6,Flat,32.0,4.0,2.0
+194,2022,Routine Repairs,341,323,-17,-5.0,Flat,32.0,4.0,2.0
+56,2022,Planned Maintenance,277,227,-50,-18.2,Flat,29.0,3.0,1.0
+56,2022,Cyclical Decorating,177,211,33,18.9,Flat,29.0,3.0,1.0
+56,2022,Compliance Works,292,349,57,19.5,Flat,29.0,3.0,1.0
+149,2022,Emergency Repairs,245,213,-32,-13.2,Block of Flats,29.0,13.0,8.0
+149,2022,Planned Maintenance,256,298,42,16.2,Block of Flats,29.0,13.0,8.0
+149,2022,Routine Repairs,306,361,56,18.2,Block of Flats,29.0,13.0,8.0
+149,2022,Cyclical Decorating,433,454,21,4.9,Block of Flats,29.0,13.0,8.0
+19,2022,Communal Repairs,318,288,-29,-9.2,Flat,32.0,7.0,4.0
+19,2022,Void Works,112,109,-4,-3.1,Flat,32.0,7.0,4.0
+19,2022,Planned Maintenance,88,91,3,3.6,Flat,32.0,7.0,4.0
+19,2022,Compliance Works,205,182,-23,-11.2,Flat,32.0,7.0,4.0
+205,2022,Communal Repairs,110,108,-1,-1.1,Flat,32.0,7.0,4.0
+205,2022,Planned Maintenance,330,321,-9,-2.7,Flat,32.0,7.0,4.0
+205,2022,Emergency Repairs,173,180,6,3.6,Flat,32.0,7.0,4.0
+205,2022,Void Works,350,416,67,19.1,Flat,32.0,7.0,4.0
+79,2022,Void Works,247,281,34,13.8,Flat,31.0,16.0,9.0
+79,2022,Emergency Repairs,172,181,8,4.9,Flat,31.0,16.0,9.0
+79,2022,Cyclical Decorating,189,201,11,6.0,Flat,31.0,16.0,9.0
+79,2022,Compliance Works,81,77,-4,-4.9,Flat,31.0,16.0,9.0
+79,2022,Planned Maintenance,211,200,-10,-4.9,Flat,31.0,16.0,9.0
+495,2022,Communal Repairs,139,160,21,15.3,Flat,27.0,,
+495,2022,Compliance Works,104,100,-5,-4.3,Flat,27.0,,
+495,2022,Void Works,98,86,-12,-12.2,Flat,27.0,,
+495,2022,Routine Repairs,170,141,-29,-17.0,Flat,27.0,,
+495,2022,Cyclical Decorating,230,188,-42,-18.2,Flat,27.0,,
+495,2022,Planned Maintenance,249,298,49,19.9,Flat,27.0,,
+263,2022,Communal Repairs,409,388,-21,-5.2,House,32.0,19.0,
+263,2022,Routine Repairs,333,274,-60,-17.9,House,32.0,19.0,
+263,2022,Compliance Works,216,234,17,8.1,House,32.0,19.0,
+263,2022,Planned Maintenance,407,437,29,7.2,House,32.0,19.0,
+263,2022,Major Works,119,112,-8,-6.4,House,32.0,19.0,
+324,2022,Communal Repairs,119,127,8,6.7,Flat,32.0,19.0,
+324,2022,Emergency Repairs,153,179,26,17.0,Flat,32.0,19.0,
+324,2022,Cyclical Decorating,224,220,-4,-1.7,Flat,32.0,19.0,
+324,2022,Major Works,178,146,-32,-17.8,Flat,32.0,19.0,
+324,2022,Planned Maintenance,109,96,-13,-11.8,Flat,32.0,19.0,
+324,2022,Void Works,157,183,25,16.0,Flat,32.0,19.0,
+484,2022,Routine Repairs,165,174,9,5.5,Flat,27.0,,
+484,2022,Major Works,312,265,-47,-14.9,Flat,27.0,,
+484,2022,Emergency Repairs,355,327,-28,-7.8,Flat,27.0,,
+80,2022,Environmental Works,311,317,6,2.0,Flat,32.0,9.0,5.0
+80,2022,Major Works,250,205,-46,-18.3,Flat,32.0,9.0,5.0
+80,2022,Communal Repairs,167,167,0,0.3,Flat,32.0,9.0,5.0
+80,2022,Cyclical Decorating,317,347,30,9.6,Flat,32.0,9.0,5.0
+80,2022,Planned Maintenance,124,106,-18,-14.5,Flat,32.0,9.0,5.0
+80,2022,Void Works,305,252,-53,-17.4,Flat,32.0,9.0,5.0
+40,2022,Major Works,264,222,-42,-15.8,Flat,30.0,5.0,3.0
+40,2022,Compliance Works,181,186,6,3.2,Flat,30.0,5.0,3.0
+40,2022,Routine Repairs,153,138,-15,-9.9,Flat,30.0,5.0,3.0
+452,2022,Routine Repairs,322,298,-24,-7.6,House,27.0,,
+452,2022,Void Works,360,403,42,11.8,House,27.0,,
+452,2022,Compliance Works,168,144,-24,-14.4,House,27.0,,
+452,2022,Communal Repairs,341,340,-1,-0.2,House,27.0,,
+452,2022,Major Works,408,453,45,10.9,House,27.0,,
+47,2022,Environmental Works,126,131,6,4.5,Flat,26.0,8.0,4.0
+47,2022,Planned Maintenance,302,266,-36,-11.9,Flat,26.0,8.0,4.0
+47,2022,Compliance Works,266,319,53,19.9,Flat,26.0,8.0,4.0
+239,2022,Communal Repairs,273,311,39,14.2,Flat,32.0,22.0,
+239,2022,Compliance Works,124,124,0,-0.1,Flat,32.0,22.0,
+239,2022,Void Works,201,163,-38,-18.7,Flat,32.0,22.0,
+392,2022,Cyclical Decorating,284,236,-48,-17.0,Flat,31.0,18.0,
+392,2022,Environmental Works,231,276,45,19.6,Flat,31.0,18.0,
+392,2022,Routine Repairs,164,151,-13,-7.7,Flat,31.0,18.0,
+353,2022,Void Works,315,360,44,14.1,Flat,32.0,22.0,
+353,2022,Compliance Works,157,163,6,3.8,Flat,32.0,22.0,
+353,2022,Environmental Works,213,250,37,17.2,Flat,32.0,22.0,
+353,2022,Major Works,153,143,-11,-6.9,Flat,32.0,22.0,
+353,2022,Routine Repairs,102,107,5,5.2,Flat,32.0,22.0,
+353,2022,Planned Maintenance,181,185,4,2.3,Flat,32.0,22.0,
+342,2022,Major Works,124,141,16,13.2,Flat,32.0,20.0,
+342,2022,Compliance Works,179,151,-29,-16.1,Flat,32.0,20.0,
+342,2022,Void Works,233,250,16,7.0,Flat,32.0,20.0,
+342,2022,Cyclical Decorating,300,253,-48,-15.9,Flat,32.0,20.0,
+342,2022,Emergency Repairs,194,185,-9,-4.6,Flat,32.0,20.0,
+278,2022,Environmental Works,74,64,-11,-14.2,Flat,32.0,20.0,
+278,2022,Emergency Repairs,279,309,30,10.8,Flat,32.0,20.0,
+278,2022,Cyclical Decorating,177,152,-26,-14.4,Flat,32.0,20.0,
+278,2022,Routine Repairs,250,295,45,18.2,Flat,32.0,20.0,
+278,2022,Void Works,193,182,-11,-5.6,Flat,32.0,20.0,
+291,2022,Void Works,135,122,-12,-9.3,Flat,31.0,18.0,
+291,2022,Environmental Works,193,226,33,17.1,Flat,31.0,18.0,
+291,2022,Emergency Repairs,133,145,13,9.5,Flat,31.0,18.0,
+291,2022,Cyclical Decorating,157,157,0,-0.2,Flat,31.0,18.0,
+291,2022,Routine Repairs,124,127,3,2.2,Flat,31.0,18.0,
+318,2022,Void Works,159,176,17,10.8,Flat,32.0,19.0,
+318,2022,Major Works,99,109,10,9.8,Flat,32.0,19.0,
+318,2022,Planned Maintenance,187,169,-19,-10.0,Flat,32.0,19.0,
+318,2022,Cyclical Decorating,109,97,-12,-10.7,Flat,32.0,19.0,
+305,2022,Communal Repairs,163,147,-16,-9.9,Flat,31.0,18.0,
+305,2022,Planned Maintenance,173,198,26,14.8,Flat,31.0,18.0,
+305,2022,Environmental Works,273,240,-33,-12.1,Flat,31.0,18.0,
+305,2022,Cyclical Decorating,251,272,20,8.0,Flat,31.0,18.0,
+269,2022,Major Works,144,168,24,16.3,Flat,32.0,19.0,
+269,2022,Planned Maintenance,292,300,8,2.7,Flat,32.0,19.0,
+269,2022,Compliance Works,122,140,18,14.5,Flat,32.0,19.0,
+269,2022,Environmental Works,108,129,21,19.7,Flat,32.0,19.0,
+269,2022,Communal Repairs,228,182,-45,-20.0,Flat,32.0,19.0,
+269,2022,Void Works,226,204,-22,-9.8,Flat,32.0,19.0,
+70,2022,Environmental Works,278,283,5,1.7,House,29.0,13.0,8.0
+70,2022,Void Works,158,161,3,2.0,House,29.0,13.0,8.0
+70,2022,Compliance Works,252,234,-18,-7.2,House,29.0,13.0,8.0
+70,2022,Cyclical Decorating,403,347,-57,-14.1,House,29.0,13.0,8.0
+70,2022,Emergency Repairs,152,182,30,19.8,House,29.0,13.0,8.0
+456,2022,Cyclical Decorating,346,388,42,12.1,Flat,27.0,,
+456,2022,Environmental Works,140,162,23,16.3,Flat,27.0,,
+456,2022,Planned Maintenance,160,139,-21,-13.1,Flat,27.0,,
+456,2022,Compliance Works,194,202,8,4.1,Flat,27.0,,
+466,2022,Environmental Works,393,422,29,7.4,House,27.0,,
+466,2022,Void Works,203,212,9,4.4,House,27.0,,
+466,2022,Major Works,332,345,14,4.1,House,27.0,,
+466,2022,Communal Repairs,422,443,21,5.1,House,27.0,,
+155,2022,Planned Maintenance,352,285,-68,-19.2,House,29.0,3.0,1.0
+155,2022,Compliance Works,158,162,3,2.0,House,29.0,3.0,1.0
+155,2022,Environmental Works,310,323,13,4.3,House,29.0,3.0,1.0
+155,2022,Communal Repairs,141,157,16,11.5,House,29.0,3.0,1.0
+83,2022,Void Works,341,295,-46,-13.4,House,30.0,14.0,9.0
+83,2022,Major Works,290,327,37,12.9,House,30.0,14.0,9.0
+83,2022,Environmental Works,352,305,-48,-13.6,House,30.0,14.0,9.0
+83,2022,Communal Repairs,113,101,-11,-10.0,House,30.0,14.0,9.0
+478,2022,Compliance Works,114,96,-18,-16.1,Block of Flats,27.0,,
+478,2022,Void Works,118,122,3,2.9,Block of Flats,27.0,,
+478,2022,Cyclical Decorating,100,99,-1,-1.4,Block of Flats,27.0,,
+478,2022,Emergency Repairs,269,314,45,16.9,Block of Flats,27.0,,
+478,2022,Major Works,91,75,-16,-17.1,Block of Flats,27.0,,
+173,2022,Environmental Works,97,104,7,7.5,Flat,32.0,4.0,2.0
+173,2022,Emergency Repairs,269,277,9,3.2,Flat,32.0,4.0,2.0
+173,2022,Major Works,133,126,-6,-4.8,Flat,32.0,4.0,2.0
+173,2022,Communal Repairs,171,139,-33,-19.1,Flat,32.0,4.0,2.0
+322,2022,Major Works,98,84,-14,-14.6,Flat,32.0,19.0,
+322,2022,Void Works,244,220,-24,-9.9,Flat,32.0,19.0,
+322,2022,Environmental Works,107,89,-18,-16.8,Flat,32.0,19.0,
+91,2022,Void Works,169,192,23,13.5,Flat,31.0,10.0,5.0
+91,2022,Major Works,96,88,-7,-7.7,Flat,31.0,10.0,5.0
+91,2022,Planned Maintenance,171,184,13,7.7,Flat,31.0,10.0,5.0
+91,2022,Routine Repairs,305,300,-6,-1.8,Flat,31.0,10.0,5.0
+181,2022,Cyclical Decorating,284,296,12,4.4,Block of Flats,31.0,10.0,5.0
+181,2022,Emergency Repairs,218,238,20,9.2,Block of Flats,31.0,10.0,5.0
+181,2022,Routine Repairs,250,215,-35,-13.8,Block of Flats,31.0,10.0,5.0
+181,2022,Void Works,153,147,-6,-3.6,Block of Flats,31.0,10.0,5.0
+181,2022,Major Works,176,154,-22,-12.4,Block of Flats,31.0,10.0,5.0
+181,2022,Environmental Works,290,321,31,10.7,Block of Flats,31.0,10.0,5.0
+415,2022,Environmental Works,225,255,29,13.0,Flat,32.0,20.0,
+415,2022,Major Works,102,91,-11,-10.9,Flat,32.0,20.0,
+415,2022,Compliance Works,151,170,19,12.8,Flat,32.0,20.0,
+415,2022,Planned Maintenance,178,200,22,12.1,Flat,32.0,20.0,
+415,2022,Emergency Repairs,204,239,35,16.9,Flat,32.0,20.0,
+313,2022,Void Works,188,198,10,5.1,Flat,32.0,21.0,
+313,2022,Compliance Works,267,219,-47,-17.7,Flat,32.0,21.0,
+313,2022,Communal Repairs,158,160,2,1.0,Flat,32.0,21.0,
+313,2022,Environmental Works,137,129,-8,-6.1,Flat,32.0,21.0,
+279,2022,Major Works,347,362,14,4.1,Block of Flats,31.0,18.0,
+279,2022,Communal Repairs,291,251,-40,-13.7,Block of Flats,31.0,18.0,
+279,2022,Cyclical Decorating,169,186,18,10.5,Block of Flats,31.0,18.0,
+279,2022,Routine Repairs,276,256,-20,-7.2,Block of Flats,31.0,18.0,
+279,2022,Compliance Works,113,98,-15,-13.4,Block of Flats,31.0,18.0,
+279,2022,Void Works,306,325,19,6.2,Block of Flats,31.0,18.0,
+382,2022,Planned Maintenance,206,180,-26,-12.7,Flat,32.0,20.0,
+382,2022,Environmental Works,229,197,-33,-14.2,Flat,32.0,20.0,
+382,2022,Compliance Works,103,101,-2,-1.8,Flat,32.0,20.0,
+473,2022,Major Works,106,89,-17,-16.0,Flat,27.0,,
+473,2022,Planned Maintenance,226,271,45,19.9,Flat,27.0,,
+473,2022,Communal Repairs,208,247,39,18.7,Flat,27.0,,
+473,2022,Routine Repairs,124,120,-4,-2.9,Flat,27.0,,
+363,2022,Planned Maintenance,113,118,6,5.3,Flat,31.0,18.0,
+363,2022,Void Works,227,222,-5,-2.1,Flat,31.0,18.0,
+363,2022,Communal Repairs,256,260,4,1.4,Flat,31.0,18.0,
+363,2022,Major Works,224,260,36,16.1,Flat,31.0,18.0,
+363,2022,Compliance Works,183,211,28,15.5,Flat,31.0,18.0,
+325,2022,Communal Repairs,281,268,-13,-4.7,Block of Flats,32.0,22.0,
+325,2022,Emergency Repairs,375,323,-53,-14.0,Block of Flats,32.0,22.0,
+325,2022,Major Works,236,237,2,0.6,Block of Flats,32.0,22.0,
+325,2022,Void Works,391,439,49,12.4,Block of Flats,32.0,22.0,
+432,2022,Major Works,313,345,32,10.2,Flat,27.0,,
+432,2022,Void Works,218,222,4,1.9,Flat,27.0,,
+432,2022,Emergency Repairs,87,92,5,5.5,Flat,27.0,,
+348,2022,Cyclical Decorating,238,199,-39,-16.3,Flat,32.0,22.0,
+348,2022,Communal Repairs,217,188,-28,-13.1,Flat,32.0,22.0,
+348,2022,Compliance Works,263,266,3,1.3,Flat,32.0,22.0,
+348,2022,Major Works,260,288,28,10.7,Flat,32.0,22.0,
+348,2022,Emergency Repairs,107,108,0,0.2,Flat,32.0,22.0,
+348,2022,Void Works,263,287,23,8.9,Flat,32.0,22.0,
+87,2022,Compliance Works,195,182,-13,-6.5,Flat,32.0,11.0,6.0
+87,2022,Routine Repairs,179,178,0,-0.1,Flat,32.0,11.0,6.0
+87,2022,Emergency Repairs,114,134,20,17.2,Flat,32.0,11.0,6.0
+87,2022,Environmental Works,275,234,-40,-14.7,Flat,32.0,11.0,6.0
+87,2022,Cyclical Decorating,227,240,13,5.5,Flat,32.0,11.0,6.0
+87,2022,Major Works,111,116,5,4.7,Flat,32.0,11.0,6.0
+76,2022,Void Works,183,154,-29,-15.6,House,32.0,2.0,1.0
+76,2022,Cyclical Decorating,201,222,21,10.4,House,32.0,2.0,1.0
+76,2022,Communal Repairs,121,104,-17,-14.0,House,32.0,2.0,1.0
+76,2022,Compliance Works,312,338,26,8.4,House,32.0,2.0,1.0
+76,2022,Emergency Repairs,239,247,8,3.3,House,32.0,2.0,1.0
+76,2022,Major Works,179,147,-32,-17.7,House,32.0,2.0,1.0
+439,2022,Compliance Works,173,202,29,16.7,House,27.0,,
+439,2022,Planned Maintenance,331,338,7,2.0,House,27.0,,
+439,2022,Communal Repairs,296,351,55,18.6,House,27.0,,
+439,2022,Emergency Repairs,369,392,22,6.0,House,27.0,,
+439,2022,Void Works,145,117,-28,-19.5,House,27.0,,
+16,2022,Planned Maintenance,141,149,8,5.7,Flat,26.0,8.0,4.0
+16,2022,Environmental Works,249,266,17,7.0,Flat,26.0,8.0,4.0
+16,2022,Cyclical Decorating,322,277,-45,-13.9,Flat,26.0,8.0,4.0
+16,2022,Communal Repairs,287,284,-3,-1.1,Flat,26.0,8.0,4.0
+16,2022,Routine Repairs,319,327,8,2.6,Flat,26.0,8.0,4.0
+307,2023,Compliance Works,201,188,-13,-6.4,House,32.0,18.0,
+307,2023,Planned Maintenance,127,148,21,16.9,House,32.0,18.0,
+307,2023,Routine Repairs,156,141,-14,-9.2,House,32.0,18.0,
+450,2023,Planned Maintenance,246,241,-5,-2.2,Flat,28.0,,
+450,2023,Emergency Repairs,83,76,-7,-8.7,Flat,28.0,,
+450,2023,Cyclical Decorating,133,114,-20,-14.8,Flat,28.0,,
+124,2023,Environmental Works,147,121,-25,-17.4,Flat,30.0,13.0,8.0
+124,2023,Void Works,203,176,-27,-13.3,Flat,30.0,13.0,8.0
+124,2023,Compliance Works,143,157,14,10.0,Flat,30.0,13.0,8.0
+124,2023,Planned Maintenance,197,167,-30,-15.2,Flat,30.0,13.0,8.0
+195,2023,Communal Repairs,320,332,12,3.9,House,29.0,1.0,1.0
+195,2023,Environmental Works,349,352,4,1.1,House,29.0,1.0,1.0
+195,2023,Routine Repairs,308,370,61,19.9,House,29.0,1.0,1.0
+195,2023,Planned Maintenance,180,211,32,17.7,House,29.0,1.0,1.0
+67,2023,Void Works,479,521,42,8.8,House,33.0,9.0,5.0
+67,2023,Environmental Works,313,306,-7,-2.2,House,33.0,9.0,5.0
+67,2023,Compliance Works,301,282,-19,-6.2,House,33.0,9.0,5.0
+395,2023,Emergency Repairs,323,309,-13,-4.1,Flat,33.0,21.0,
+395,2023,Major Works,265,282,17,6.2,Flat,33.0,21.0,
+395,2023,Compliance Works,260,234,-26,-9.9,Flat,33.0,21.0,
+431,2023,Void Works,346,384,38,10.9,House,28.0,,
+431,2023,Emergency Repairs,102,110,8,8.0,House,28.0,,
+431,2023,Cyclical Decorating,236,280,44,18.7,House,28.0,,
+346,2023,Routine Repairs,423,421,-2,-0.5,House,33.0,21.0,
+346,2023,Communal Repairs,405,372,-33,-8.2,House,33.0,21.0,
+346,2023,Environmental Works,183,213,30,16.3,House,33.0,21.0,
+346,2023,Compliance Works,352,309,-42,-12.0,House,33.0,21.0,
+499,2023,Compliance Works,178,208,31,17.3,Flat,28.0,,
+499,2023,Environmental Works,158,130,-28,-17.5,Flat,28.0,,
+499,2023,Planned Maintenance,234,224,-9,-4.0,Flat,28.0,,
+499,2023,Cyclical Decorating,181,165,-16,-8.6,Flat,28.0,,
+499,2023,Communal Repairs,322,265,-57,-17.6,Flat,28.0,,
+499,2023,Major Works,92,81,-11,-12.1,Flat,28.0,,
+238,2023,Major Works,371,307,-63,-17.1,Flat,32.0,18.0,
+238,2023,Communal Repairs,142,113,-28,-20.0,Flat,32.0,18.0,
+238,2023,Compliance Works,307,365,58,18.9,Flat,32.0,18.0,
+320,2023,Environmental Works,264,276,12,4.7,Flat,33.0,20.0,
+320,2023,Major Works,168,170,2,0.9,Flat,33.0,20.0,
+320,2023,Void Works,216,184,-32,-14.9,Flat,33.0,20.0,
+320,2023,Planned Maintenance,89,89,1,0.8,Flat,33.0,20.0,
+320,2023,Emergency Repairs,227,233,6,2.5,Flat,33.0,20.0,
+320,2023,Cyclical Decorating,252,271,19,7.7,Flat,33.0,20.0,
+68,2023,Cyclical Decorating,182,201,19,10.7,House,33.0,2.0,1.0
+68,2023,Compliance Works,282,304,21,7.6,House,33.0,2.0,1.0
+68,2023,Void Works,297,345,47,16.0,House,33.0,2.0,1.0
+180,2023,Environmental Works,285,321,37,12.9,House,32.0,6.0,4.0
+180,2023,Routine Repairs,297,354,56,18.9,House,32.0,6.0,4.0
+180,2023,Emergency Repairs,234,229,-5,-1.9,House,32.0,6.0,4.0
+180,2023,Planned Maintenance,122,145,23,18.8,House,32.0,6.0,4.0
+180,2023,Void Works,262,307,45,17.4,House,32.0,6.0,4.0
+180,2023,Major Works,280,331,51,18.4,House,32.0,6.0,4.0
+473,2023,Communal Repairs,139,156,16,11.8,Flat,28.0,,
+473,2023,Void Works,99,104,5,5.2,Flat,28.0,,
+473,2023,Major Works,79,86,6,8.2,Flat,28.0,,
+495,2023,Compliance Works,129,118,-10,-8.1,Flat,28.0,,
+495,2023,Communal Repairs,84,86,1,1.6,Flat,28.0,,
+495,2023,Major Works,317,338,20,6.5,Flat,28.0,,
+495,2023,Emergency Repairs,105,109,4,3.6,Flat,28.0,,
+495,2023,Planned Maintenance,116,126,10,9.0,Flat,28.0,,
+469,2023,Environmental Works,135,141,6,4.5,Flat,28.0,,
+469,2023,Compliance Works,82,95,12,15.1,Flat,28.0,,
+469,2023,Emergency Repairs,222,200,-22,-10.0,Flat,28.0,,
+469,2023,Planned Maintenance,141,132,-9,-6.2,Flat,28.0,,
+469,2023,Void Works,261,253,-8,-3.1,Flat,28.0,,
+469,2023,Communal Repairs,119,141,22,18.5,Flat,28.0,,
+77,2023,Major Works,233,274,41,17.6,Flat,33.0,11.0,6.0
+77,2023,Compliance Works,194,166,-28,-14.3,Flat,33.0,11.0,6.0
+77,2023,Void Works,217,240,23,10.7,Flat,33.0,11.0,6.0
+485,2023,Environmental Works,385,351,-35,-9.0,House,28.0,,
+485,2023,Routine Repairs,251,233,-18,-7.1,House,28.0,,
+485,2023,Major Works,233,244,11,4.9,House,28.0,,
+485,2023,Emergency Repairs,410,450,41,9.9,House,28.0,,
+485,2023,Void Works,318,287,-32,-9.9,House,28.0,,
+485,2023,Planned Maintenance,229,207,-23,-9.9,House,28.0,,
+313,2023,Cyclical Decorating,266,247,-19,-7.0,Flat,33.0,21.0,
+313,2023,Void Works,176,151,-25,-14.3,Flat,33.0,21.0,
+313,2023,Routine Repairs,112,93,-19,-17.2,Flat,33.0,21.0,
+297,2023,Routine Repairs,226,264,38,16.7,House,33.0,20.0,
+297,2023,Environmental Works,141,145,4,2.9,House,33.0,20.0,
+297,2023,Cyclical Decorating,134,137,3,1.9,House,33.0,20.0,
+297,2023,Void Works,487,449,-38,-7.8,House,33.0,20.0,
+297,2023,Compliance Works,204,243,38,18.7,House,33.0,20.0,
+131,2023,Routine Repairs,316,275,-41,-13.0,Block of Flats,32.0,10.0,5.0
+131,2023,Void Works,212,190,-22,-10.5,Block of Flats,32.0,10.0,5.0
+131,2023,Environmental Works,173,190,17,9.9,Block of Flats,32.0,10.0,5.0
+131,2023,Compliance Works,304,339,35,11.6,Block of Flats,32.0,10.0,5.0
+131,2023,Emergency Repairs,303,260,-42,-14.0,Block of Flats,32.0,10.0,5.0
+131,2023,Communal Repairs,148,141,-7,-4.6,Block of Flats,32.0,10.0,5.0
+356,2023,Communal Repairs,285,338,53,18.6,Flat,33.0,20.0,
+356,2023,Cyclical Decorating,107,107,0,-0.4,Flat,33.0,20.0,
+356,2023,Void Works,338,383,46,13.5,Flat,33.0,20.0,
+356,2023,Planned Maintenance,151,175,25,16.3,Flat,33.0,20.0,
+155,2023,Void Works,316,292,-24,-7.5,House,30.0,3.0,1.0
+155,2023,Major Works,250,238,-13,-5.0,House,30.0,3.0,1.0
+155,2023,Planned Maintenance,107,87,-20,-19.1,House,30.0,3.0,1.0
+155,2023,Emergency Repairs,240,213,-26,-11.0,House,30.0,3.0,1.0
+155,2023,Compliance Works,245,212,-32,-13.2,House,30.0,3.0,1.0
+155,2023,Routine Repairs,188,173,-14,-7.7,House,30.0,3.0,1.0
+125,2023,Routine Repairs,103,114,12,11.3,Block of Flats,31.0,5.0,3.0
+125,2023,Planned Maintenance,328,287,-41,-12.5,Block of Flats,31.0,5.0,3.0
+125,2023,Environmental Works,161,192,31,19.4,Block of Flats,31.0,5.0,3.0
+189,2023,Routine Repairs,207,227,19,9.4,Flat,33.0,11.0,6.0
+189,2023,Planned Maintenance,125,110,-15,-12.0,Flat,33.0,11.0,6.0
+189,2023,Void Works,226,192,-33,-14.7,Flat,33.0,11.0,6.0
+189,2023,Communal Repairs,201,170,-32,-15.8,Flat,33.0,11.0,6.0
+189,2023,Cyclical Decorating,192,183,-9,-4.5,Flat,33.0,11.0,6.0
+175,2023,Emergency Repairs,153,156,3,2.0,Flat,31.0,5.0,3.0
+175,2023,Major Works,282,278,-3,-1.1,Flat,31.0,5.0,3.0
+175,2023,Environmental Works,244,258,14,5.8,Flat,31.0,5.0,3.0
+175,2023,Void Works,200,212,12,5.8,Flat,31.0,5.0,3.0
+175,2023,Communal Repairs,248,275,27,11.0,Flat,31.0,5.0,3.0
+175,2023,Cyclical Decorating,126,104,-22,-17.4,Flat,31.0,5.0,3.0
+362,2023,Void Works,273,234,-40,-14.6,House,33.0,21.0,
+362,2023,Compliance Works,258,305,47,18.3,House,33.0,21.0,
+362,2023,Cyclical Decorating,343,331,-13,-3.7,House,33.0,21.0,
+362,2023,Communal Repairs,363,314,-49,-13.5,House,33.0,21.0,
+362,2023,Routine Repairs,261,249,-12,-4.7,House,33.0,21.0,
+358,2023,Void Works,217,179,-38,-17.7,Flat,33.0,21.0,
+358,2023,Major Works,228,186,-42,-18.4,Flat,33.0,21.0,
+358,2023,Routine Repairs,257,208,-49,-19.0,Flat,33.0,21.0,
+358,2023,Communal Repairs,128,131,3,2.4,Flat,33.0,21.0,
+358,2023,Cyclical Decorating,252,253,1,0.4,Flat,33.0,21.0,
+358,2023,Planned Maintenance,138,121,-17,-12.1,Flat,33.0,21.0,
+412,2023,Environmental Works,333,368,35,10.6,Flat,33.0,22.0,
+412,2023,Emergency Repairs,120,116,-4,-3.6,Flat,33.0,22.0,
+412,2023,Planned Maintenance,239,199,-40,-16.6,Flat,33.0,22.0,
+412,2023,Cyclical Decorating,150,128,-21,-14.3,Flat,33.0,22.0,
+412,2023,Compliance Works,158,157,0,-0.2,Flat,33.0,22.0,
+412,2023,Routine Repairs,174,150,-23,-13.4,Flat,33.0,22.0,
+460,2023,Cyclical Decorating,273,323,50,18.3,Flat,28.0,,
+460,2023,Void Works,286,340,55,19.1,Flat,28.0,,
+460,2023,Emergency Repairs,220,261,41,18.4,Flat,28.0,,
+460,2023,Environmental Works,84,99,15,17.9,Flat,28.0,,
+460,2023,Compliance Works,174,178,4,2.1,Flat,28.0,,
+24,2023,Emergency Repairs,102,116,15,14.6,Flat,33.0,17.0,10.0
+24,2023,Planned Maintenance,170,167,-3,-1.9,Flat,33.0,17.0,10.0
+24,2023,Void Works,154,181,27,17.3,Flat,33.0,17.0,10.0
+24,2023,Cyclical Decorating,105,117,12,11.0,Flat,33.0,17.0,10.0
+24,2023,Environmental Works,243,232,-11,-4.6,Flat,33.0,17.0,10.0
+31,2023,Emergency Repairs,300,286,-14,-4.6,Flat,32.0,6.0,4.0
+31,2023,Void Works,104,88,-17,-16.0,Flat,32.0,6.0,4.0
+31,2023,Major Works,143,165,22,15.7,Flat,32.0,6.0,4.0
+266,2023,Planned Maintenance,278,234,-44,-15.9,Flat,33.0,22.0,
+266,2023,Emergency Repairs,339,320,-19,-5.7,Flat,33.0,22.0,
+266,2023,Communal Repairs,205,197,-8,-4.1,Flat,33.0,22.0,
+266,2023,Cyclical Decorating,144,117,-27,-19.0,Flat,33.0,22.0,
+263,2023,Cyclical Decorating,251,244,-8,-3.1,House,33.0,19.0,
+263,2023,Compliance Works,367,423,56,15.3,House,33.0,19.0,
+263,2023,Planned Maintenance,433,391,-42,-9.6,House,33.0,19.0,
+263,2023,Void Works,293,332,39,13.4,House,33.0,19.0,
+263,2023,Communal Repairs,439,373,-66,-15.0,House,33.0,19.0,
+263,2023,Environmental Works,475,525,50,10.5,House,33.0,19.0,
+354,2023,Void Works,96,80,-17,-17.5,Flat,33.0,22.0,
+354,2023,Environmental Works,229,233,4,1.8,Flat,33.0,22.0,
+354,2023,Cyclical Decorating,178,163,-15,-8.3,Flat,33.0,22.0,
+207,2023,Cyclical Decorating,230,223,-7,-3.0,Block of Flats,33.0,11.0,6.0
+207,2023,Compliance Works,121,117,-4,-3.3,Block of Flats,33.0,11.0,6.0
+207,2023,Communal Repairs,361,334,-26,-7.3,Block of Flats,33.0,11.0,6.0
+89,2023,Planned Maintenance,307,368,61,19.7,Flat,33.0,17.0,10.0
+89,2023,Communal Repairs,176,204,29,16.3,Flat,33.0,17.0,10.0
+89,2023,Compliance Works,317,321,4,1.2,Flat,33.0,17.0,10.0
+89,2023,Emergency Repairs,314,348,34,10.7,Flat,33.0,17.0,10.0
+89,2023,Environmental Works,110,128,18,16.1,Flat,33.0,17.0,10.0
+295,2023,Planned Maintenance,224,229,5,2.1,House,33.0,22.0,
+295,2023,Routine Repairs,202,172,-31,-15.2,House,33.0,22.0,
+295,2023,Cyclical Decorating,155,163,8,5.0,House,33.0,22.0,
+128,2023,Cyclical Decorating,248,272,24,9.8,Block of Flats,32.0,6.0,4.0
+128,2023,Environmental Works,284,255,-28,-10.0,Block of Flats,32.0,6.0,4.0
+128,2023,Emergency Repairs,105,113,8,7.8,Block of Flats,32.0,6.0,4.0
+199,2023,Major Works,65,61,-4,-6.3,Flat,29.0,1.0,1.0
+199,2023,Cyclical Decorating,196,178,-18,-9.4,Flat,29.0,1.0,1.0
+199,2023,Emergency Repairs,80,72,-8,-10.0,Flat,29.0,1.0,1.0
+199,2023,Planned Maintenance,166,182,17,10.0,Flat,29.0,1.0,1.0
+255,2023,Communal Repairs,325,385,59,18.3,Flat,33.0,22.0,
+255,2023,Emergency Repairs,324,347,24,7.3,Flat,33.0,22.0,
+255,2023,Environmental Works,241,207,-34,-14.0,Flat,33.0,22.0,
+232,2023,Environmental Works,282,301,19,6.6,Flat,33.0,21.0,
+232,2023,Major Works,166,191,25,15.3,Flat,33.0,21.0,
+232,2023,Emergency Repairs,144,148,3,2.4,Flat,33.0,21.0,
+121,2023,Emergency Repairs,105,112,6,6.0,Block of Flats,33.0,2.0,1.0
+121,2023,Routine Repairs,119,106,-13,-11.2,Block of Flats,33.0,2.0,1.0
+121,2023,Communal Repairs,143,169,26,18.2,Block of Flats,33.0,2.0,1.0
+244,2023,Major Works,320,377,57,17.9,House,33.0,19.0,
+244,2023,Planned Maintenance,184,216,31,16.9,House,33.0,19.0,
+244,2023,Cyclical Decorating,206,180,-26,-12.5,House,33.0,19.0,
+439,2023,Compliance Works,448,518,71,15.7,House,28.0,,
+439,2023,Communal Repairs,319,313,-7,-2.1,House,28.0,,
+439,2023,Environmental Works,376,388,12,3.3,House,28.0,,
+439,2023,Emergency Repairs,281,243,-38,-13.6,House,28.0,,
+439,2023,Planned Maintenance,208,236,28,13.6,House,28.0,,
+439,2023,Major Works,278,256,-22,-8.0,House,28.0,,
+424,2023,Major Works,299,326,27,8.9,Flat,33.0,22.0,
+424,2023,Planned Maintenance,327,288,-38,-11.7,Flat,33.0,22.0,
+424,2023,Emergency Repairs,333,393,60,18.2,Flat,33.0,22.0,
+424,2023,Environmental Works,269,290,21,7.8,Flat,33.0,22.0,
+424,2023,Compliance Works,329,376,47,14.1,Flat,33.0,22.0,
+424,2023,Routine Repairs,200,177,-22,-11.2,Flat,33.0,22.0,
+438,2023,Emergency Repairs,155,145,-10,-6.6,Flat,28.0,,
+438,2023,Routine Repairs,296,244,-52,-17.6,Flat,28.0,,
+438,2023,Communal Repairs,315,326,12,3.7,Flat,28.0,,
+438,2023,Cyclical Decorating,133,133,-1,-0.6,Flat,28.0,,
+108,2023,Routine Repairs,119,99,-21,-17.3,Flat,33.0,11.0,6.0
+108,2023,Environmental Works,188,211,24,12.5,Flat,33.0,11.0,6.0
+108,2023,Void Works,251,286,35,14.0,Flat,33.0,11.0,6.0
+108,2023,Compliance Works,271,315,44,16.2,Flat,33.0,11.0,6.0
+108,2023,Cyclical Decorating,226,248,22,9.7,Flat,33.0,11.0,6.0
+108,2023,Communal Repairs,223,191,-32,-14.4,Flat,33.0,11.0,6.0
+374,2023,Cyclical Decorating,209,183,-26,-12.5,Block of Flats,33.0,19.0,
+374,2023,Emergency Repairs,248,293,44,17.9,Block of Flats,33.0,19.0,
+374,2023,Major Works,263,269,6,2.2,Block of Flats,33.0,19.0,
+374,2023,Planned Maintenance,420,418,-3,-0.6,Block of Flats,33.0,19.0,
+374,2023,Compliance Works,402,463,61,15.2,Block of Flats,33.0,19.0,
+374,2023,Communal Repairs,322,331,9,2.9,Block of Flats,33.0,19.0,
+329,2023,Planned Maintenance,160,182,21,13.2,Flat,33.0,19.0,
+329,2023,Void Works,316,335,19,5.9,Flat,33.0,19.0,
+329,2023,Emergency Repairs,276,225,-51,-18.6,Flat,33.0,19.0,
+329,2023,Compliance Works,168,149,-19,-11.2,Flat,33.0,19.0,
+329,2023,Routine Repairs,174,197,22,12.9,Flat,33.0,19.0,
+329,2023,Environmental Works,191,223,32,16.8,Flat,33.0,19.0,
+127,2023,Planned Maintenance,84,98,14,16.6,Flat,33.0,4.0,2.0
+127,2023,Communal Repairs,249,287,38,15.2,Flat,33.0,4.0,2.0
+127,2023,Void Works,260,253,-7,-2.6,Flat,33.0,4.0,2.0
+127,2023,Emergency Repairs,166,185,19,11.1,Flat,33.0,4.0,2.0
+127,2023,Environmental Works,255,285,30,12.0,Flat,33.0,4.0,2.0
+497,2023,Major Works,208,209,1,0.6,House,28.0,,
+497,2023,Void Works,95,83,-12,-12.2,House,28.0,,
+497,2023,Emergency Repairs,148,164,16,10.8,House,28.0,,
+497,2023,Cyclical Decorating,226,229,3,1.2,House,28.0,,
+497,2023,Communal Repairs,222,182,-40,-18.1,House,28.0,,
+497,2023,Compliance Works,221,216,-5,-2.2,House,28.0,,
+40,2023,Emergency Repairs,247,212,-35,-14.2,Flat,31.0,5.0,3.0
+40,2023,Cyclical Decorating,210,198,-12,-5.5,Flat,31.0,5.0,3.0
+40,2023,Compliance Works,171,176,5,3.1,Flat,31.0,5.0,3.0
+40,2023,Void Works,339,342,3,1.0,Flat,31.0,5.0,3.0
+399,2023,Communal Repairs,113,100,-13,-11.8,Flat,32.0,18.0,
+399,2023,Void Works,174,158,-16,-9.1,Flat,32.0,18.0,
+399,2023,Routine Repairs,157,146,-11,-7.0,Flat,32.0,18.0,
+399,2023,Compliance Works,307,328,21,6.9,Flat,32.0,18.0,
+315,2023,Compliance Works,91,102,11,12.5,Flat,33.0,22.0,
+315,2023,Communal Repairs,279,231,-48,-17.1,Flat,33.0,22.0,
+315,2023,Environmental Works,255,290,35,13.7,Flat,33.0,22.0,
+315,2023,Major Works,196,203,8,3.9,Flat,33.0,22.0,
+120,2023,Communal Repairs,246,232,-13,-5.4,House,33.0,7.0,4.0
+120,2023,Environmental Works,355,284,-71,-19.9,House,33.0,7.0,4.0
+120,2023,Void Works,171,204,33,19.3,House,33.0,7.0,4.0
+120,2023,Emergency Repairs,222,261,39,17.6,House,33.0,7.0,4.0
+234,2023,Planned Maintenance,103,116,13,12.9,Flat,33.0,20.0,
+234,2023,Compliance Works,258,226,-32,-12.3,Flat,33.0,20.0,
+234,2023,Major Works,246,274,28,11.2,Flat,33.0,20.0,
+234,2023,Routine Repairs,105,106,1,1.3,Flat,33.0,20.0,
+234,2023,Environmental Works,277,249,-28,-10.3,Flat,33.0,20.0,
+60,2023,Void Works,294,272,-21,-7.3,Flat,30.0,15.0,9.0
+60,2023,Compliance Works,110,128,18,15.9,Flat,30.0,15.0,9.0
+60,2023,Major Works,221,178,-43,-19.6,Flat,30.0,15.0,9.0
+60,2023,Emergency Repairs,111,115,4,3.9,Flat,30.0,15.0,9.0
+60,2023,Cyclical Decorating,216,232,16,7.2,Flat,30.0,15.0,9.0
+60,2023,Environmental Works,138,117,-21,-15.0,Flat,30.0,15.0,9.0
+225,2023,Major Works,102,93,-9,-8.8,Flat,30.0,15.0,9.0
+225,2023,Emergency Repairs,105,91,-14,-13.1,Flat,30.0,15.0,9.0
+225,2023,Void Works,130,109,-22,-16.6,Flat,30.0,15.0,9.0
+225,2023,Communal Repairs,205,190,-14,-7.0,Flat,30.0,15.0,9.0
+225,2023,Compliance Works,94,79,-15,-16.3,Flat,30.0,15.0,9.0
+159,2023,Communal Repairs,307,366,59,19.2,Flat,33.0,9.0,5.0
+159,2023,Compliance Works,267,260,-6,-2.4,Flat,33.0,9.0,5.0
+159,2023,Planned Maintenance,120,126,6,4.9,Flat,33.0,9.0,5.0
+159,2023,Major Works,360,347,-13,-3.6,Flat,33.0,9.0,5.0
+97,2023,Planned Maintenance,241,246,4,1.7,Flat,31.0,5.0,3.0
+97,2023,Emergency Repairs,321,266,-55,-17.2,Flat,31.0,5.0,3.0
+97,2023,Environmental Works,343,289,-55,-15.9,Flat,31.0,5.0,3.0
+116,2023,Major Works,180,179,-1,-0.4,House,32.0,10.0,5.0
+116,2023,Environmental Works,379,325,-54,-14.2,House,32.0,10.0,5.0
+116,2023,Void Works,379,453,74,19.5,House,32.0,10.0,5.0
+116,2023,Planned Maintenance,128,111,-18,-13.7,House,32.0,10.0,5.0
+334,2023,Environmental Works,185,157,-28,-15.1,Flat,33.0,19.0,
+334,2023,Major Works,226,208,-18,-8.1,Flat,33.0,19.0,
+334,2023,Cyclical Decorating,106,105,-1,-1.1,Flat,33.0,19.0,
+334,2023,Routine Repairs,70,57,-13,-18.0,Flat,33.0,19.0,
+496,2023,Planned Maintenance,192,154,-37,-19.5,House,28.0,,
+496,2023,Emergency Repairs,397,461,64,16.1,House,28.0,,
+496,2023,Void Works,403,385,-18,-4.4,House,28.0,,
+496,2023,Compliance Works,178,162,-16,-8.8,House,28.0,,
+496,2023,Environmental Works,370,370,0,-0.1,House,28.0,,
+496,2023,Routine Repairs,114,124,10,8.8,House,28.0,,
+261,2023,Void Works,132,142,10,7.8,Flat,33.0,22.0,
+261,2023,Emergency Repairs,111,91,-21,-18.4,Flat,33.0,22.0,
+261,2023,Communal Repairs,195,224,29,14.9,Flat,33.0,22.0,
+261,2023,Major Works,235,211,-23,-10.0,Flat,33.0,22.0,
+261,2023,Routine Repairs,118,132,14,12.2,Flat,33.0,22.0,
+274,2023,Compliance Works,282,240,-42,-14.9,Flat,33.0,20.0,
+274,2023,Planned Maintenance,117,94,-23,-19.6,Flat,33.0,20.0,
+274,2023,Void Works,339,282,-58,-17.0,Flat,33.0,20.0,
+274,2023,Communal Repairs,192,179,-13,-6.6,Flat,33.0,20.0,
+274,2023,Emergency Repairs,148,136,-12,-8.2,Flat,33.0,20.0,
+416,2023,Void Works,305,295,-10,-3.3,House,33.0,21.0,
+416,2023,Cyclical Decorating,155,163,8,5.0,House,33.0,21.0,
+416,2023,Emergency Repairs,303,293,-10,-3.3,House,33.0,21.0,
+416,2023,Compliance Works,148,138,-10,-6.9,House,33.0,21.0,
+71,2023,Void Works,346,398,52,15.0,House,33.0,2.0,1.0
+71,2023,Cyclical Decorating,180,201,21,11.7,House,33.0,2.0,1.0
+71,2023,Planned Maintenance,344,367,23,6.6,House,33.0,2.0,1.0
+71,2023,Compliance Works,166,180,14,8.1,House,33.0,2.0,1.0
+139,2023,Environmental Works,215,238,23,10.7,House,31.0,14.0,9.0
+139,2023,Void Works,376,441,64,17.1,House,31.0,14.0,9.0
+139,2023,Cyclical Decorating,318,327,8,2.7,House,31.0,14.0,9.0
+311,2023,Major Works,117,134,18,15.1,Flat,33.0,20.0,
+311,2023,Compliance Works,152,139,-13,-8.6,Flat,33.0,20.0,
+311,2023,Environmental Works,157,181,24,15.3,Flat,33.0,20.0,
+311,2023,Void Works,184,179,-5,-2.8,Flat,33.0,20.0,
+311,2023,Communal Repairs,117,107,-9,-8.1,Flat,33.0,20.0,
+464,2023,Environmental Works,209,246,36,17.4,Flat,28.0,,
+464,2023,Cyclical Decorating,276,267,-9,-3.2,Flat,28.0,,
+464,2023,Major Works,82,68,-15,-17.7,Flat,28.0,,
+464,2023,Planned Maintenance,303,318,15,4.9,Flat,28.0,,
+402,2023,Environmental Works,342,279,-63,-18.5,House,33.0,22.0,
+402,2023,Routine Repairs,326,346,20,6.1,House,33.0,22.0,
+402,2023,Void Works,475,397,-78,-16.4,House,33.0,22.0,
+402,2023,Cyclical Decorating,348,300,-48,-13.8,House,33.0,22.0,
+198,2023,Communal Repairs,163,190,27,16.7,Block of Flats,31.0,14.0,9.0
+198,2023,Routine Repairs,340,363,23,6.7,Block of Flats,31.0,14.0,9.0
+198,2023,Emergency Repairs,207,243,35,17.1,Block of Flats,31.0,14.0,9.0
+198,2023,Environmental Works,420,498,78,18.6,Block of Flats,31.0,14.0,9.0
+198,2023,Major Works,285,287,2,0.7,Block of Flats,31.0,14.0,9.0
+157,2023,Communal Repairs,264,248,-16,-6.1,Flat,30.0,13.0,8.0
+157,2023,Compliance Works,272,218,-54,-19.7,Flat,30.0,13.0,8.0
+157,2023,Cyclical Decorating,144,128,-16,-11.4,Flat,30.0,13.0,8.0
+157,2023,Major Works,236,274,38,16.2,Flat,30.0,13.0,8.0
+157,2023,Void Works,313,336,23,7.2,Flat,30.0,13.0,8.0
+157,2023,Routine Repairs,104,124,20,19.1,Flat,30.0,13.0,8.0
+353,2023,Environmental Works,178,162,-16,-9.2,Flat,33.0,22.0,
+353,2023,Compliance Works,241,261,20,8.4,Flat,33.0,22.0,
+353,2023,Void Works,195,171,-25,-12.7,Flat,33.0,22.0,
+353,2023,Routine Repairs,90,89,-1,-1.3,Flat,33.0,22.0,
+353,2023,Planned Maintenance,200,233,33,16.6,Flat,33.0,22.0,
+353,2023,Major Works,123,145,22,18.1,Flat,33.0,22.0,
+64,2023,Communal Repairs,315,319,4,1.4,Flat,29.0,1.0,1.0
+64,2023,Routine Repairs,330,331,1,0.4,Flat,29.0,1.0,1.0
+64,2023,Major Works,255,263,8,3.1,Flat,29.0,1.0,1.0
+64,2023,Void Works,142,140,-2,-1.7,Flat,29.0,1.0,1.0
+15,2023,Cyclical Decorating,86,81,-5,-5.5,Flat,30.0,13.0,8.0
+15,2023,Routine Repairs,283,251,-32,-11.3,Flat,30.0,13.0,8.0
+15,2023,Planned Maintenance,205,190,-16,-7.6,Flat,30.0,13.0,8.0
+15,2023,Compliance Works,298,300,2,0.5,Flat,30.0,13.0,8.0
+15,2023,Void Works,87,103,16,17.9,Flat,30.0,13.0,8.0
+15,2023,Environmental Works,281,258,-23,-8.0,Flat,30.0,13.0,8.0
+176,2023,Communal Repairs,107,105,-1,-1.2,House,32.0,6.0,4.0
+176,2023,Routine Repairs,265,236,-29,-10.9,House,32.0,6.0,4.0
+176,2023,Void Works,275,310,36,13.0,House,32.0,6.0,4.0
+176,2023,Compliance Works,300,319,19,6.4,House,32.0,6.0,4.0
+176,2023,Planned Maintenance,400,441,41,10.1,House,32.0,6.0,4.0
+176,2023,Major Works,285,335,49,17.3,House,32.0,6.0,4.0
+18,2023,Major Works,339,385,46,13.6,House,27.0,8.0,4.0
+18,2023,Cyclical Decorating,131,145,14,10.8,House,27.0,8.0,4.0
+18,2023,Planned Maintenance,127,128,2,1.2,House,27.0,8.0,4.0
+222,2023,Compliance Works,109,116,7,6.8,House,33.0,4.0,2.0
+222,2023,Environmental Works,331,364,33,10.0,House,33.0,4.0,2.0
+222,2023,Emergency Repairs,264,270,6,2.4,House,33.0,4.0,2.0
+208,2023,Cyclical Decorating,154,182,29,18.6,Flat,33.0,17.0,10.0
+208,2023,Routine Repairs,120,97,-23,-19.2,Flat,33.0,17.0,10.0
+208,2023,Planned Maintenance,107,103,-4,-3.5,Flat,33.0,17.0,10.0
+432,2023,Planned Maintenance,128,149,20,16.0,Flat,28.0,,
+432,2023,Emergency Repairs,178,148,-30,-16.6,Flat,28.0,,
+432,2023,Compliance Works,316,332,17,5.3,Flat,28.0,,
+432,2023,Void Works,132,138,6,4.2,Flat,28.0,,
+432,2023,Environmental Works,313,368,55,17.7,Flat,28.0,,
+432,2023,Major Works,235,202,-33,-13.9,Flat,28.0,,
+158,2023,Routine Repairs,148,137,-12,-7.8,Flat,33.0,7.0,4.0
+158,2023,Void Works,181,215,34,18.5,Flat,33.0,7.0,4.0
+158,2023,Planned Maintenance,205,243,38,18.5,Flat,33.0,7.0,4.0
+158,2023,Environmental Works,286,334,48,16.6,Flat,33.0,7.0,4.0
+158,2023,Emergency Repairs,286,241,-45,-15.7,Flat,33.0,7.0,4.0
+260,2023,Environmental Works,298,282,-15,-5.2,Flat,33.0,22.0,
+260,2023,Emergency Repairs,136,116,-20,-14.4,Flat,33.0,22.0,
+260,2023,Major Works,263,305,42,16.0,Flat,33.0,22.0,
+260,2023,Void Works,104,109,5,4.4,Flat,33.0,22.0,
+260,2023,Communal Repairs,109,92,-18,-16.1,Flat,33.0,22.0,
+137,2023,Communal Repairs,215,217,2,1.0,Flat,33.0,4.0,2.0
+137,2023,Environmental Works,169,191,22,13.3,Flat,33.0,4.0,2.0
+137,2023,Major Works,215,195,-20,-9.5,Flat,33.0,4.0,2.0
+137,2023,Compliance Works,309,248,-61,-19.6,Flat,33.0,4.0,2.0
+137,2023,Void Works,187,224,37,19.7,Flat,33.0,4.0,2.0
+278,2023,Cyclical Decorating,111,128,17,15.0,Flat,33.0,20.0,
+278,2023,Emergency Repairs,95,110,15,15.2,Flat,33.0,20.0,
+278,2023,Routine Repairs,75,90,15,19.5,Flat,33.0,20.0,
+278,2023,Major Works,238,274,37,15.4,Flat,33.0,20.0,
+278,2023,Environmental Works,135,143,8,5.9,Flat,33.0,20.0,
+278,2023,Compliance Works,182,192,11,5.8,Flat,33.0,20.0,
+2,2023,Emergency Repairs,284,337,53,18.8,Flat,30.0,15.0,9.0
+2,2023,Void Works,282,322,41,14.5,Flat,30.0,15.0,9.0
+2,2023,Communal Repairs,205,207,2,1.0,Flat,30.0,15.0,9.0
+2,2023,Planned Maintenance,318,291,-28,-8.7,Flat,30.0,15.0,9.0
+2,2023,Compliance Works,287,318,31,10.7,Flat,30.0,15.0,9.0
+88,2023,Major Works,224,236,13,5.7,Flat,30.0,3.0,1.0
+88,2023,Environmental Works,216,214,-2,-0.8,Flat,30.0,3.0,1.0
+88,2023,Emergency Repairs,107,120,13,12.4,Flat,30.0,3.0,1.0
+88,2023,Planned Maintenance,296,264,-33,-11.0,Flat,30.0,3.0,1.0
+88,2023,Compliance Works,316,287,-29,-9.3,Flat,30.0,3.0,1.0
+88,2023,Cyclical Decorating,206,210,4,2.1,Flat,30.0,3.0,1.0
+289,2023,Emergency Repairs,377,434,57,15.1,House,33.0,22.0,
+289,2023,Environmental Works,203,168,-36,-17.5,House,33.0,22.0,
+289,2023,Planned Maintenance,285,261,-24,-8.3,House,33.0,22.0,
+87,2023,Routine Repairs,123,111,-12,-9.9,Flat,33.0,11.0,6.0
+87,2023,Environmental Works,264,234,-30,-11.3,Flat,33.0,11.0,6.0
+87,2023,Planned Maintenance,206,212,6,2.7,Flat,33.0,11.0,6.0
+87,2023,Compliance Works,266,222,-44,-16.6,Flat,33.0,11.0,6.0
+87,2023,Cyclical Decorating,225,227,2,1.1,Flat,33.0,11.0,6.0
+87,2023,Communal Repairs,249,290,40,16.2,Flat,33.0,11.0,6.0
+436,2023,Cyclical Decorating,173,161,-12,-6.7,Block of Flats,28.0,,
+436,2023,Routine Repairs,307,342,34,11.2,Block of Flats,28.0,,
+436,2023,Communal Repairs,283,260,-22,-7.8,Block of Flats,28.0,,
+436,2023,Compliance Works,331,281,-50,-15.1,Block of Flats,28.0,,
+436,2023,Planned Maintenance,344,344,-1,-0.2,Block of Flats,28.0,,
+436,2023,Environmental Works,357,290,-67,-18.8,Block of Flats,28.0,,
+443,2023,Compliance Works,237,213,-24,-10.1,Flat,28.0,,
+443,2023,Communal Repairs,299,284,-15,-5.1,Flat,28.0,,
+443,2023,Void Works,309,333,24,7.7,Flat,28.0,,
+294,2023,Compliance Works,217,249,32,14.9,Flat,32.0,18.0,
+294,2023,Emergency Repairs,220,203,-17,-7.9,Flat,32.0,18.0,
+294,2023,Cyclical Decorating,147,129,-18,-12.1,Flat,32.0,18.0,
+294,2023,Planned Maintenance,199,226,27,13.6,Flat,32.0,18.0,
+294,2023,Communal Repairs,123,102,-20,-16.7,Flat,32.0,18.0,
+294,2023,Void Works,275,325,49,17.9,Flat,32.0,18.0,
+298,2023,Major Works,123,134,11,9.0,House,33.0,22.0,
+298,2023,Compliance Works,382,456,73,19.2,House,33.0,22.0,
+298,2023,Environmental Works,374,428,54,14.6,House,33.0,22.0,
+298,2023,Void Works,331,296,-35,-10.6,House,33.0,22.0,
+298,2023,Planned Maintenance,370,399,30,8.0,House,33.0,22.0,
+298,2023,Emergency Repairs,322,352,30,9.4,House,33.0,22.0,
+270,2023,Major Works,125,121,-3,-2.7,House,33.0,22.0,
+270,2023,Environmental Works,221,177,-44,-19.8,House,33.0,22.0,
+270,2023,Cyclical Decorating,189,226,36,19.3,House,33.0,22.0,
+185,2023,Planned Maintenance,96,90,-6,-5.8,Flat,31.0,14.0,9.0
+185,2023,Cyclical Decorating,131,120,-11,-8.7,Flat,31.0,14.0,9.0
+185,2023,Major Works,86,84,-1,-1.5,Flat,31.0,14.0,9.0
+185,2023,Compliance Works,215,230,15,7.0,Flat,31.0,14.0,9.0
+185,2023,Emergency Repairs,99,105,5,5.5,Flat,31.0,14.0,9.0
+185,2023,Communal Repairs,175,146,-30,-16.9,Flat,31.0,14.0,9.0
+332,2023,Emergency Repairs,229,219,-9,-4.1,Flat,33.0,22.0,
+332,2023,Compliance Works,200,215,15,7.7,Flat,33.0,22.0,
+332,2023,Routine Repairs,182,210,28,15.3,Flat,33.0,22.0,
+332,2023,Major Works,183,187,4,2.5,Flat,33.0,22.0,
+332,2023,Void Works,161,135,-26,-15.9,Flat,33.0,22.0,
+169,2023,Planned Maintenance,283,304,21,7.4,Flat,31.0,14.0,9.0
+169,2023,Compliance Works,85,100,15,17.8,Flat,31.0,14.0,9.0
+169,2023,Emergency Repairs,270,251,-18,-6.8,Flat,31.0,14.0,9.0
+169,2023,Environmental Works,105,103,-2,-1.7,Flat,31.0,14.0,9.0
+169,2023,Cyclical Decorating,295,338,42,14.3,Flat,31.0,14.0,9.0
+366,2023,Emergency Repairs,120,129,8,7.0,Flat,32.0,18.0,
+366,2023,Compliance Works,79,63,-16,-19.8,Flat,32.0,18.0,
+366,2023,Void Works,269,301,32,11.8,Flat,32.0,18.0,
+366,2023,Cyclical Decorating,213,218,5,2.2,Flat,32.0,18.0,
+366,2023,Major Works,98,85,-13,-12.9,Flat,32.0,18.0,
+366,2023,Environmental Works,219,192,-27,-12.4,Flat,32.0,18.0,
+293,2023,Cyclical Decorating,235,268,33,13.9,Flat,33.0,22.0,
+293,2023,Compliance Works,176,205,29,16.3,Flat,33.0,22.0,
+293,2023,Planned Maintenance,262,306,44,17.0,Flat,33.0,22.0,
+293,2023,Environmental Works,73,81,7,9.7,Flat,33.0,22.0,
+293,2023,Emergency Repairs,98,84,-14,-14.4,Flat,33.0,22.0,
+293,2023,Major Works,204,185,-19,-9.4,Flat,33.0,22.0,
+116,2024,Planned Maintenance,318,286,-33,-10.2,House,33.0,10.0,5.0
+116,2024,Major Works,299,257,-42,-14.0,House,33.0,10.0,5.0
+116,2024,Emergency Repairs,195,215,20,10.1,House,33.0,10.0,5.0
+116,2024,Routine Repairs,128,104,-23,-18.4,House,33.0,10.0,5.0
+116,2024,Communal Repairs,245,251,6,2.4,House,33.0,10.0,5.0
+268,2024,Cyclical Decorating,237,283,46,19.3,Block of Flats,34.0,21.0,
+268,2024,Emergency Repairs,377,382,5,1.4,Block of Flats,34.0,21.0,
+268,2024,Compliance Works,174,184,10,5.5,Block of Flats,34.0,21.0,
+268,2024,Major Works,326,303,-23,-7.2,Block of Flats,34.0,21.0,
+28,2024,Compliance Works,310,259,-51,-16.4,Flat,34.0,12.0,7.0
+28,2024,Cyclical Decorating,241,237,-4,-1.7,Flat,34.0,12.0,7.0
+28,2024,Major Works,259,272,13,4.9,Flat,34.0,12.0,7.0
+28,2024,Communal Repairs,209,200,-9,-4.3,Flat,34.0,12.0,7.0
+28,2024,Planned Maintenance,189,222,34,17.9,Flat,34.0,12.0,7.0
+422,2024,Major Works,333,305,-28,-8.5,Flat,34.0,22.0,
+422,2024,Routine Repairs,138,113,-25,-18.1,Flat,34.0,22.0,
+422,2024,Void Works,287,261,-26,-9.2,Flat,34.0,22.0,
+422,2024,Environmental Works,228,269,41,17.8,Flat,34.0,22.0,
+422,2024,Compliance Works,330,286,-44,-13.4,Flat,34.0,22.0,
+472,2024,Communal Repairs,398,449,51,12.8,House,29.0,,
+472,2024,Environmental Works,140,135,-6,-3.9,House,29.0,,
+472,2024,Major Works,395,337,-57,-14.5,House,29.0,,
+472,2024,Planned Maintenance,477,456,-21,-4.4,House,29.0,,
+472,2024,Compliance Works,390,320,-70,-17.9,House,29.0,,
+472,2024,Routine Repairs,483,435,-48,-9.9,House,29.0,,
+258,2024,Communal Repairs,202,173,-29,-14.4,House,34.0,21.0,
+258,2024,Void Works,309,277,-32,-10.4,House,34.0,21.0,
+258,2024,Cyclical Decorating,272,251,-21,-7.6,House,34.0,21.0,
+258,2024,Planned Maintenance,327,385,58,17.7,House,34.0,21.0,
+470,2024,Communal Repairs,121,138,17,14.0,Flat,29.0,,
+470,2024,Emergency Repairs,247,273,26,10.6,Flat,29.0,,
+470,2024,Cyclical Decorating,175,179,4,2.5,Flat,29.0,,
+460,2024,Planned Maintenance,267,315,48,17.9,Flat,29.0,,
+460,2024,Compliance Works,152,176,24,16.0,Flat,29.0,,
+460,2024,Major Works,101,85,-16,-15.8,Flat,29.0,,
+460,2024,Cyclical Decorating,300,354,54,18.0,Flat,29.0,,
+460,2024,Emergency Repairs,141,131,-10,-7.3,Flat,29.0,,
+456,2024,Void Works,213,248,35,16.4,Flat,29.0,,
+456,2024,Environmental Works,316,316,-1,-0.2,Flat,29.0,,
+456,2024,Emergency Repairs,331,288,-43,-12.9,Flat,29.0,,
+436,2024,Routine Repairs,173,201,29,16.6,Block of Flats,29.0,,
+436,2024,Planned Maintenance,133,134,2,1.3,Block of Flats,29.0,,
+436,2024,Communal Repairs,270,324,54,19.8,Block of Flats,29.0,,
+436,2024,Environmental Works,172,185,13,7.3,Block of Flats,29.0,,
+79,2024,Cyclical Decorating,219,233,14,6.2,Flat,33.0,16.0,9.0
+79,2024,Environmental Works,197,226,29,14.7,Flat,33.0,16.0,9.0
+79,2024,Planned Maintenance,160,136,-24,-14.9,Flat,33.0,16.0,9.0
+79,2024,Routine Repairs,239,248,10,4.0,Flat,33.0,16.0,9.0
+79,2024,Emergency Repairs,107,104,-3,-2.4,Flat,33.0,16.0,9.0
+274,2024,Compliance Works,121,129,8,7.0,Flat,34.0,20.0,
+274,2024,Planned Maintenance,268,226,-42,-15.6,Flat,34.0,20.0,
+274,2024,Void Works,119,110,-10,-8.0,Flat,34.0,20.0,
+274,2024,Emergency Repairs,185,163,-22,-11.6,Flat,34.0,20.0,
+274,2024,Routine Repairs,88,90,3,3.2,Flat,34.0,20.0,
+91,2024,Major Works,180,183,3,1.6,Flat,33.0,10.0,5.0
+91,2024,Emergency Repairs,254,211,-43,-17.0,Flat,33.0,10.0,5.0
+91,2024,Environmental Works,305,259,-46,-15.1,Flat,33.0,10.0,5.0
+91,2024,Planned Maintenance,278,286,9,3.2,Flat,33.0,10.0,5.0
+91,2024,Communal Repairs,231,260,30,12.9,Flat,33.0,10.0,5.0
+91,2024,Compliance Works,150,128,-21,-14.2,Flat,33.0,10.0,5.0
+102,2024,Emergency Repairs,260,229,-30,-11.7,Flat,34.0,17.0,10.0
+102,2024,Communal Repairs,149,145,-5,-3.1,Flat,34.0,17.0,10.0
+102,2024,Cyclical Decorating,89,90,1,0.8,Flat,34.0,17.0,10.0
+260,2024,Cyclical Decorating,110,130,21,19.0,Flat,34.0,22.0,
+260,2024,Emergency Repairs,106,87,-19,-17.8,Flat,34.0,22.0,
+260,2024,Communal Repairs,187,165,-22,-11.7,Flat,34.0,22.0,
+219,2024,Environmental Works,112,96,-16,-14.2,Flat,34.0,17.0,10.0
+219,2024,Planned Maintenance,171,171,0,-0.3,Flat,34.0,17.0,10.0
+219,2024,Routine Repairs,195,193,-1,-0.8,Flat,34.0,17.0,10.0
+219,2024,Major Works,266,268,1,0.5,Flat,34.0,17.0,10.0
+219,2024,Void Works,146,139,-7,-4.8,Flat,34.0,17.0,10.0
+48,2024,Major Works,327,354,27,8.2,Flat,34.0,4.0,2.0
+48,2024,Emergency Repairs,136,147,11,8.0,Flat,34.0,4.0,2.0
+48,2024,Planned Maintenance,96,95,-1,-1.2,Flat,34.0,4.0,2.0
+77,2024,Compliance Works,167,192,26,15.3,Flat,34.0,11.0,6.0
+77,2024,Cyclical Decorating,107,121,14,12.7,Flat,34.0,11.0,6.0
+77,2024,Void Works,201,170,-31,-15.5,Flat,34.0,11.0,6.0
+77,2024,Routine Repairs,236,217,-19,-8.0,Flat,34.0,11.0,6.0
+77,2024,Communal Repairs,127,151,24,18.9,Flat,34.0,11.0,6.0
+473,2024,Compliance Works,200,177,-23,-11.7,Flat,29.0,,
+473,2024,Routine Repairs,274,280,6,2.0,Flat,29.0,,
+473,2024,Major Works,72,81,9,12.1,Flat,29.0,,
+473,2024,Communal Repairs,83,88,5,6.1,Flat,29.0,,
+473,2024,Void Works,155,181,26,16.8,Flat,29.0,,
+473,2024,Emergency Repairs,161,186,25,15.7,Flat,29.0,,
+185,2024,Void Works,169,171,1,0.7,Flat,32.0,14.0,9.0
+185,2024,Planned Maintenance,288,240,-47,-16.5,Flat,32.0,14.0,9.0
+185,2024,Environmental Works,97,79,-18,-18.6,Flat,32.0,14.0,9.0
+185,2024,Communal Repairs,123,146,23,18.9,Flat,32.0,14.0,9.0
+185,2024,Compliance Works,176,163,-13,-7.4,Flat,32.0,14.0,9.0
+183,2024,Environmental Works,189,214,25,13.5,Flat,34.0,12.0,7.0
+183,2024,Communal Repairs,261,263,3,1.0,Flat,34.0,12.0,7.0
+183,2024,Void Works,95,85,-10,-10.8,Flat,34.0,12.0,7.0
+183,2024,Emergency Repairs,288,247,-41,-14.2,Flat,34.0,12.0,7.0
+239,2024,Compliance Works,269,294,25,9.4,Flat,34.0,22.0,
+239,2024,Planned Maintenance,136,114,-21,-15.8,Flat,34.0,22.0,
+239,2024,Cyclical Decorating,304,301,-3,-1.0,Flat,34.0,22.0,
+239,2024,Environmental Works,175,165,-10,-5.8,Flat,34.0,22.0,
+239,2024,Void Works,294,334,40,13.7,Flat,34.0,22.0,
+248,2024,Communal Repairs,126,121,-6,-4.4,House,34.0,19.0,
+248,2024,Emergency Repairs,95,96,1,0.6,House,34.0,19.0,
+248,2024,Cyclical Decorating,111,101,-10,-8.8,House,34.0,19.0,
+248,2024,Void Works,236,250,14,6.1,House,34.0,19.0,
+248,2024,Environmental Works,226,252,26,11.7,House,34.0,19.0,
+248,2024,Routine Repairs,96,87,-9,-9.2,House,34.0,19.0,
+30,2024,Void Works,259,219,-40,-15.4,Block of Flats,34.0,4.0,2.0
+30,2024,Cyclical Decorating,273,270,-3,-1.1,Block of Flats,34.0,4.0,2.0
+30,2024,Routine Repairs,408,410,2,0.5,Block of Flats,34.0,4.0,2.0
+30,2024,Major Works,402,350,-52,-12.9,Block of Flats,34.0,4.0,2.0
+30,2024,Compliance Works,385,326,-60,-15.5,Block of Flats,34.0,4.0,2.0
+209,2024,Compliance Works,158,169,11,7.0,Flat,34.0,4.0,2.0
+209,2024,Void Works,158,149,-9,-5.8,Flat,34.0,4.0,2.0
+209,2024,Routine Repairs,101,108,7,6.5,Flat,34.0,4.0,2.0
+367,2024,Planned Maintenance,112,111,-1,-0.9,Flat,34.0,22.0,
+367,2024,Communal Repairs,138,113,-25,-18.3,Flat,34.0,22.0,
+367,2024,Environmental Works,230,276,46,19.8,Flat,34.0,22.0,
+276,2024,Routine Repairs,331,299,-32,-9.7,House,34.0,19.0,
+276,2024,Planned Maintenance,324,273,-51,-15.6,House,34.0,19.0,
+276,2024,Major Works,337,276,-61,-18.1,House,34.0,19.0,
+276,2024,Void Works,244,261,16,6.7,House,34.0,19.0,
+276,2024,Communal Repairs,306,265,-40,-13.2,House,34.0,19.0,
+52,2024,Planned Maintenance,73,81,8,10.9,Flat,31.0,15.0,9.0
+52,2024,Compliance Works,112,101,-11,-10.1,Flat,31.0,15.0,9.0
+52,2024,Major Works,161,192,31,19.0,Flat,31.0,15.0,9.0
+52,2024,Communal Repairs,242,231,-11,-4.7,Flat,31.0,15.0,9.0
+52,2024,Routine Repairs,186,202,17,9.0,Flat,31.0,15.0,9.0
+52,2024,Environmental Works,176,178,3,1.4,Flat,31.0,15.0,9.0
+352,2024,Communal Repairs,389,362,-26,-6.8,House,34.0,22.0,
+352,2024,Compliance Works,286,263,-23,-8.1,House,34.0,22.0,
+352,2024,Cyclical Decorating,328,361,33,10.0,House,34.0,22.0,
+352,2024,Environmental Works,149,161,12,7.7,House,34.0,22.0,
+188,2024,Void Works,119,126,7,5.7,House,34.0,12.0,7.0
+188,2024,Compliance Works,202,215,13,6.4,House,34.0,12.0,7.0
+188,2024,Major Works,400,385,-15,-3.7,House,34.0,12.0,7.0
+188,2024,Routine Repairs,407,415,8,2.1,House,34.0,12.0,7.0
+340,2024,Void Works,377,314,-63,-16.7,Block of Flats,33.0,18.0,
+340,2024,Compliance Works,383,457,74,19.2,Block of Flats,33.0,18.0,
+340,2024,Environmental Works,303,317,15,4.8,Block of Flats,33.0,18.0,
+277,2024,Environmental Works,142,163,21,15.0,Flat,33.0,18.0,
+277,2024,Cyclical Decorating,264,265,1,0.3,Flat,33.0,18.0,
+277,2024,Compliance Works,213,191,-22,-10.3,Flat,33.0,18.0,
+50,2024,Routine Repairs,218,204,-14,-6.3,Flat,34.0,4.0,2.0
+50,2024,Major Works,221,198,-23,-10.5,Flat,34.0,4.0,2.0
+50,2024,Void Works,181,189,8,4.3,Flat,34.0,4.0,2.0
+50,2024,Emergency Repairs,168,176,8,4.5,Flat,34.0,4.0,2.0
+50,2024,Planned Maintenance,249,259,10,4.0,Flat,34.0,4.0,2.0
+50,2024,Communal Repairs,154,163,9,5.7,Flat,34.0,4.0,2.0
+195,2024,Emergency Repairs,117,111,-6,-5.1,House,30.0,1.0,1.0
+195,2024,Environmental Works,347,326,-21,-6.1,House,30.0,1.0,1.0
+195,2024,Communal Repairs,164,147,-17,-10.5,House,30.0,1.0,1.0
+195,2024,Cyclical Decorating,178,155,-23,-12.9,House,30.0,1.0,1.0
+195,2024,Planned Maintenance,130,141,11,8.6,House,30.0,1.0,1.0
+58,2024,Communal Repairs,154,136,-19,-12.1,Flat,34.0,11.0,6.0
+58,2024,Planned Maintenance,249,217,-32,-12.8,Flat,34.0,11.0,6.0
+58,2024,Routine Repairs,80,82,2,2.1,Flat,34.0,11.0,6.0
+58,2024,Emergency Repairs,164,145,-19,-11.5,Flat,34.0,11.0,6.0
+58,2024,Environmental Works,116,120,5,4.0,Flat,34.0,11.0,6.0
+360,2024,Cyclical Decorating,143,143,-1,-0.4,Flat,34.0,22.0,
+360,2024,Environmental Works,140,133,-7,-4.7,Flat,34.0,22.0,
+360,2024,Void Works,105,124,19,17.7,Flat,34.0,22.0,
+360,2024,Routine Repairs,136,162,25,18.7,Flat,34.0,22.0,
+360,2024,Communal Repairs,109,91,-18,-16.2,Flat,34.0,22.0,
+360,2024,Planned Maintenance,92,84,-8,-8.8,Flat,34.0,22.0,
+207,2024,Emergency Repairs,335,333,-1,-0.4,Block of Flats,34.0,11.0,6.0
+207,2024,Routine Repairs,299,348,49,16.4,Block of Flats,34.0,11.0,6.0
+207,2024,Planned Maintenance,262,271,9,3.4,Block of Flats,34.0,11.0,6.0
+207,2024,Communal Repairs,258,262,4,1.4,Block of Flats,34.0,11.0,6.0
+207,2024,Cyclical Decorating,107,86,-21,-19.8,Block of Flats,34.0,11.0,6.0
+207,2024,Environmental Works,195,179,-16,-8.0,Block of Flats,34.0,11.0,6.0
+203,2024,Emergency Repairs,271,279,8,2.9,Flat,30.0,1.0,1.0
+203,2024,Compliance Works,187,214,28,14.9,Flat,30.0,1.0,1.0
+203,2024,Environmental Works,176,174,-2,-1.0,Flat,30.0,1.0,1.0
+203,2024,Major Works,126,108,-19,-14.9,Flat,30.0,1.0,1.0
+430,2024,Cyclical Decorating,199,218,19,9.6,Flat,29.0,,
+430,2024,Communal Repairs,131,111,-20,-15.4,Flat,29.0,,
+430,2024,Void Works,311,372,61,19.6,Flat,29.0,,
+430,2024,Environmental Works,253,244,-9,-3.6,Flat,29.0,,
+430,2024,Major Works,81,78,-3,-3.5,Flat,29.0,,
+362,2024,Communal Repairs,286,339,53,18.6,House,34.0,21.0,
+362,2024,Emergency Repairs,222,216,-6,-2.9,House,34.0,21.0,
+362,2024,Compliance Works,154,128,-26,-17.1,House,34.0,21.0,
+362,2024,Void Works,121,134,13,11.0,House,34.0,21.0,
+362,2024,Environmental Works,302,262,-40,-13.2,House,34.0,21.0,
+362,2024,Planned Maintenance,348,295,-53,-15.2,House,34.0,21.0,
+160,2024,Void Works,246,226,-20,-8.0,House,30.0,1.0,1.0
+160,2024,Routine Repairs,323,303,-20,-6.2,House,30.0,1.0,1.0
+160,2024,Major Works,242,264,22,9.1,House,30.0,1.0,1.0
+217,2024,Cyclical Decorating,340,376,36,10.6,House,32.0,5.0,3.0
+217,2024,Compliance Works,330,324,-6,-1.9,House,32.0,5.0,3.0
+217,2024,Major Works,221,181,-40,-18.2,House,32.0,5.0,3.0
+217,2024,Planned Maintenance,213,200,-13,-6.2,House,32.0,5.0,3.0
+217,2024,Communal Repairs,276,289,13,4.8,House,32.0,5.0,3.0
+217,2024,Void Works,122,114,-8,-6.5,House,32.0,5.0,3.0
+359,2024,Compliance Works,213,235,22,10.4,Flat,34.0,19.0,
+359,2024,Environmental Works,254,287,33,13.0,Flat,34.0,19.0,
+359,2024,Planned Maintenance,175,167,-8,-4.3,Flat,34.0,19.0,
+359,2024,Major Works,166,135,-30,-18.3,Flat,34.0,19.0,
+359,2024,Cyclical Decorating,110,124,14,12.2,Flat,34.0,19.0,
+181,2024,Compliance Works,255,254,-1,-0.4,Block of Flats,33.0,10.0,5.0
+181,2024,Routine Repairs,89,104,14,16.0,Block of Flats,33.0,10.0,5.0
+181,2024,Emergency Repairs,312,283,-29,-9.2,Block of Flats,33.0,10.0,5.0
+181,2024,Communal Repairs,116,105,-11,-9.6,Block of Flats,33.0,10.0,5.0
+181,2024,Void Works,239,202,-37,-15.5,Block of Flats,33.0,10.0,5.0
+323,2024,Communal Repairs,254,247,-7,-2.6,Block of Flats,34.0,21.0,
+323,2024,Compliance Works,314,266,-48,-15.4,Block of Flats,34.0,21.0,
+323,2024,Major Works,360,299,-61,-16.9,Block of Flats,34.0,21.0,
+323,2024,Emergency Repairs,218,208,-9,-4.2,Block of Flats,34.0,21.0,
+323,2024,Void Works,364,415,51,14.0,Block of Flats,34.0,21.0,
+323,2024,Cyclical Decorating,120,127,7,6.2,Block of Flats,34.0,21.0,
+6,2024,Emergency Repairs,212,233,21,10.0,Flat,31.0,3.0,1.0
+6,2024,Routine Repairs,324,278,-45,-14.0,Flat,31.0,3.0,1.0
+6,2024,Environmental Works,235,228,-7,-3.0,Flat,31.0,3.0,1.0
+6,2024,Compliance Works,86,98,12,13.7,Flat,31.0,3.0,1.0
+6,2024,Void Works,200,187,-13,-6.7,Flat,31.0,3.0,1.0
+227,2024,Emergency Repairs,227,195,-32,-14.1,Flat,34.0,20.0,
+227,2024,Environmental Works,110,128,18,16.5,Flat,34.0,20.0,
+227,2024,Planned Maintenance,121,99,-22,-17.9,Flat,34.0,20.0,
+306,2024,Emergency Repairs,282,273,-9,-3.2,Flat,33.0,18.0,
+306,2024,Environmental Works,300,245,-56,-18.5,Flat,33.0,18.0,
+306,2024,Void Works,187,152,-35,-18.8,Flat,33.0,18.0,
+306,2024,Cyclical Decorating,312,337,25,8.2,Flat,33.0,18.0,
+306,2024,Compliance Works,117,130,13,11.4,Flat,33.0,18.0,
+337,2024,Environmental Works,310,329,19,6.1,House,34.0,20.0,
+337,2024,Planned Maintenance,299,256,-43,-14.4,House,34.0,20.0,
+337,2024,Compliance Works,245,248,3,1.2,House,34.0,20.0,
+337,2024,Major Works,258,272,14,5.5,House,34.0,20.0,
+337,2024,Emergency Repairs,315,321,6,2.0,House,34.0,20.0,
+249,2024,Compliance Works,212,218,7,3.2,House,33.0,18.0,
+249,2024,Routine Repairs,149,147,-3,-1.8,House,33.0,18.0,
+249,2024,Major Works,373,366,-7,-1.9,House,33.0,18.0,
+249,2024,Planned Maintenance,276,275,-1,-0.4,House,33.0,18.0,
+249,2024,Emergency Repairs,369,344,-25,-6.8,House,33.0,18.0,
+249,2024,Environmental Works,375,436,61,16.3,House,33.0,18.0,
+105,2024,Void Works,154,156,2,1.5,Flat,32.0,5.0,3.0
+105,2024,Emergency Repairs,184,167,-16,-8.8,Flat,32.0,5.0,3.0
+105,2024,Compliance Works,115,132,17,15.0,Flat,32.0,5.0,3.0
+250,2024,Routine Repairs,150,169,19,12.5,House,34.0,21.0,
+250,2024,Cyclical Decorating,310,258,-53,-17.0,House,34.0,21.0,
+250,2024,Communal Repairs,180,200,20,11.2,House,34.0,21.0,
+250,2024,Emergency Repairs,145,157,12,8.4,House,34.0,21.0,
+250,2024,Environmental Works,121,141,20,16.3,House,34.0,21.0,
+250,2024,Major Works,156,187,30,19.4,House,34.0,21.0,
+425,2024,Planned Maintenance,296,334,38,13.0,Flat,33.0,18.0,
+425,2024,Communal Repairs,158,145,-13,-8.0,Flat,33.0,18.0,
+425,2024,Cyclical Decorating,108,96,-12,-10.9,Flat,33.0,18.0,
+425,2024,Environmental Works,205,186,-19,-9.2,Flat,33.0,18.0,
+425,2024,Major Works,108,99,-8,-7.8,Flat,33.0,18.0,
+68,2024,Environmental Works,299,246,-53,-17.8,House,34.0,2.0,1.0
+68,2024,Major Works,328,381,54,16.4,House,34.0,2.0,1.0
+68,2024,Planned Maintenance,262,257,-5,-2.0,House,34.0,2.0,1.0
+409,2024,Planned Maintenance,124,135,11,9.1,Flat,34.0,19.0,
+409,2024,Communal Repairs,345,318,-27,-7.8,Flat,34.0,19.0,
+409,2024,Void Works,136,153,18,13.1,Flat,34.0,19.0,
+409,2024,Environmental Works,241,277,36,14.8,Flat,34.0,19.0,
+409,2024,Routine Repairs,329,341,12,3.5,Flat,34.0,19.0,
+409,2024,Compliance Works,305,360,55,18.2,Flat,34.0,19.0,
+16,2024,Routine Repairs,70,62,-9,-12.5,Flat,28.0,8.0,4.0
+16,2024,Communal Repairs,166,169,3,1.8,Flat,28.0,8.0,4.0
+16,2024,Planned Maintenance,242,257,15,6.1,Flat,28.0,8.0,4.0
+16,2024,Compliance Works,198,236,38,19.4,Flat,28.0,8.0,4.0
+455,2024,Environmental Works,264,247,-17,-6.4,House,29.0,,
+455,2024,Compliance Works,397,335,-62,-15.6,House,29.0,,
+455,2024,Major Works,111,122,11,10.3,House,29.0,,
+455,2024,Planned Maintenance,346,314,-31,-9.1,House,29.0,,
+455,2024,Routine Repairs,187,210,23,12.4,House,29.0,,
+201,2024,Routine Repairs,148,151,3,2.3,Flat,33.0,10.0,5.0
+201,2024,Compliance Works,361,432,72,19.9,Flat,33.0,10.0,5.0
+201,2024,Emergency Repairs,346,342,-4,-1.2,Flat,33.0,10.0,5.0
+341,2024,Environmental Works,214,233,20,9.3,Flat,34.0,20.0,
+341,2024,Emergency Repairs,260,247,-14,-5.2,Flat,34.0,20.0,
+341,2024,Communal Repairs,175,182,6,3.5,Flat,34.0,20.0,
+341,2024,Routine Repairs,172,176,4,2.2,Flat,34.0,20.0,
+341,2024,Compliance Works,291,306,15,5.1,Flat,34.0,20.0,
+341,2024,Cyclical Decorating,93,106,13,14.1,Flat,34.0,20.0,
+221,2024,Major Works,81,68,-13,-15.9,Flat,34.0,7.0,4.0
+221,2024,Compliance Works,93,80,-13,-13.7,Flat,34.0,7.0,4.0
+221,2024,Cyclical Decorating,254,293,40,15.6,Flat,34.0,7.0,4.0
+221,2024,Emergency Repairs,239,229,-10,-4.4,Flat,34.0,7.0,4.0
+242,2024,Communal Repairs,126,116,-10,-8.1,Flat,34.0,21.0,
+242,2024,Environmental Works,269,296,26,9.8,Flat,34.0,21.0,
+242,2024,Emergency Repairs,242,266,23,9.7,Flat,34.0,21.0,
+242,2024,Compliance Works,249,234,-15,-5.9,Flat,34.0,21.0,
+372,2024,Compliance Works,253,296,43,17.0,Flat,34.0,19.0,
+372,2024,Environmental Works,105,102,-2,-2.4,Flat,34.0,19.0,
+372,2024,Major Works,118,101,-17,-14.6,Flat,34.0,19.0,
+372,2024,Planned Maintenance,135,114,-21,-15.7,Flat,34.0,19.0,
+372,2024,Cyclical Decorating,252,220,-32,-12.7,Flat,34.0,19.0,
+372,2024,Void Works,149,145,-3,-2.2,Flat,34.0,19.0,
+80,2024,Environmental Works,371,429,58,15.6,Flat,34.0,9.0,5.0
+80,2024,Compliance Works,149,134,-15,-10.2,Flat,34.0,9.0,5.0
+80,2024,Routine Repairs,205,226,21,10.3,Flat,34.0,9.0,5.0
+80,2024,Emergency Repairs,288,302,14,5.0,Flat,34.0,9.0,5.0
+208,2024,Communal Repairs,269,219,-50,-18.6,Flat,34.0,17.0,10.0
+208,2024,Void Works,243,213,-30,-12.2,Flat,34.0,17.0,10.0
+208,2024,Cyclical Decorating,285,263,-22,-7.9,Flat,34.0,17.0,10.0
+271,2024,Compliance Works,179,207,28,15.9,Flat,34.0,21.0,
+271,2024,Emergency Repairs,242,255,13,5.3,Flat,34.0,21.0,
+271,2024,Void Works,141,151,10,7.3,Flat,34.0,21.0,
+271,2024,Planned Maintenance,147,122,-25,-16.9,Flat,34.0,21.0,
+271,2024,Environmental Works,212,248,36,17.0,Flat,34.0,21.0,
+271,2024,Major Works,176,144,-31,-17.9,Flat,34.0,21.0,
+338,2024,Compliance Works,323,383,60,18.5,Flat,34.0,19.0,
+338,2024,Emergency Repairs,347,410,63,18.3,Flat,34.0,19.0,
+338,2024,Environmental Works,342,400,58,16.9,Flat,34.0,19.0,
+338,2024,Routine Repairs,190,218,28,14.6,Flat,34.0,19.0,
+338,2024,Void Works,109,103,-6,-5.6,Flat,34.0,19.0,
+235,2024,Compliance Works,87,76,-12,-13.4,Flat,34.0,20.0,
+235,2024,Environmental Works,226,256,30,13.0,Flat,34.0,20.0,
+235,2024,Cyclical Decorating,244,274,30,12.2,Flat,34.0,20.0,
+235,2024,Communal Repairs,233,257,24,10.2,Flat,34.0,20.0,
+235,2024,Planned Maintenance,228,254,25,11.1,Flat,34.0,20.0,
+262,2024,Emergency Repairs,134,109,-25,-18.8,Flat,34.0,21.0,
+262,2024,Communal Repairs,101,94,-7,-6.6,Flat,34.0,21.0,
+262,2024,Major Works,179,185,6,3.5,Flat,34.0,21.0,
+398,2024,Communal Repairs,122,125,4,3.0,House,34.0,19.0,
+398,2024,Planned Maintenance,359,360,1,0.2,House,34.0,19.0,
+398,2024,Routine Repairs,286,331,45,15.7,House,34.0,19.0,
+415,2024,Communal Repairs,168,151,-17,-10.3,Flat,34.0,20.0,
+415,2024,Environmental Works,202,213,11,5.5,Flat,34.0,20.0,
+415,2024,Planned Maintenance,144,125,-19,-13.3,Flat,34.0,20.0,
+44,2024,Routine Repairs,313,303,-10,-3.2,Flat,34.0,12.0,7.0
+44,2024,Communal Repairs,162,154,-8,-5.0,Flat,34.0,12.0,7.0
+44,2024,Major Works,277,269,-8,-2.8,Flat,34.0,12.0,7.0
+44,2024,Emergency Repairs,141,121,-20,-14.1,Flat,34.0,12.0,7.0
+3,2024,Emergency Repairs,138,137,-2,-1.3,Flat,33.0,10.0,5.0
+3,2024,Environmental Works,341,388,47,13.7,Flat,33.0,10.0,5.0
+3,2024,Major Works,293,316,23,7.8,Flat,33.0,10.0,5.0
+3,2024,Compliance Works,315,262,-53,-16.8,Flat,33.0,10.0,5.0
+238,2024,Planned Maintenance,109,91,-18,-16.7,Flat,33.0,18.0,
+238,2024,Compliance Works,270,275,5,1.8,Flat,33.0,18.0,
+238,2024,Environmental Works,335,336,1,0.3,Flat,33.0,18.0,
+238,2024,Communal Repairs,143,166,22,15.6,Flat,33.0,18.0,
+170,2024,Void Works,136,110,-27,-19.6,House,34.0,4.0,2.0
+170,2024,Planned Maintenance,105,114,8,7.9,House,34.0,4.0,2.0
+170,2024,Emergency Repairs,331,302,-29,-8.8,House,34.0,4.0,2.0
+170,2024,Cyclical Decorating,144,151,7,4.7,House,34.0,4.0,2.0
+170,2024,Environmental Works,176,160,-17,-9.5,House,34.0,4.0,2.0
+279,2024,Cyclical Decorating,342,335,-7,-2.2,Block of Flats,33.0,18.0,
+279,2024,Communal Repairs,138,164,26,18.7,Block of Flats,33.0,18.0,
+279,2024,Environmental Works,238,255,17,7.3,Block of Flats,33.0,18.0,
+279,2024,Void Works,306,317,12,3.8,Block of Flats,33.0,18.0,
+400,2024,Routine Repairs,224,206,-18,-8.2,Flat,34.0,21.0,
+400,2024,Compliance Works,291,285,-7,-2.3,Flat,34.0,21.0,
+400,2024,Emergency Repairs,278,234,-43,-15.6,Flat,34.0,21.0,
+400,2024,Planned Maintenance,93,91,-2,-2.2,Flat,34.0,21.0,
+400,2024,Environmental Works,268,275,6,2.3,Flat,34.0,21.0,
+400,2024,Communal Repairs,218,211,-8,-3.5,Flat,34.0,21.0,
+43,2024,Communal Repairs,131,153,22,16.9,Block of Flats,33.0,16.0,9.0
+43,2024,Emergency Repairs,323,329,5,1.7,Block of Flats,33.0,16.0,9.0
+43,2024,Routine Repairs,308,359,52,16.8,Block of Flats,33.0,16.0,9.0
+43,2024,Cyclical Decorating,220,209,-11,-4.8,Block of Flats,33.0,16.0,9.0
+43,2024,Planned Maintenance,150,144,-6,-4.2,Block of Flats,33.0,16.0,9.0
+43,2024,Void Works,282,329,46,16.4,Block of Flats,33.0,16.0,9.0
+61,2024,Cyclical Decorating,178,197,18,10.3,House,34.0,11.0,6.0
+61,2024,Routine Repairs,265,261,-5,-1.8,House,34.0,11.0,6.0
+61,2024,Communal Repairs,212,237,25,11.7,House,34.0,11.0,6.0
+61,2024,Emergency Repairs,343,299,-44,-12.9,House,34.0,11.0,6.0
+61,2024,Major Works,414,349,-65,-15.7,House,34.0,11.0,6.0
+61,2024,Void Works,423,351,-72,-17.0,House,34.0,11.0,6.0
+308,2024,Routine Repairs,278,332,54,19.6,Flat,33.0,18.0,
+308,2024,Environmental Works,260,308,49,18.7,Flat,33.0,18.0,
+308,2024,Major Works,106,126,20,18.9,Flat,33.0,18.0,
+308,2024,Emergency Repairs,101,91,-9,-9.2,Flat,33.0,18.0,
+308,2024,Cyclical Decorating,152,170,18,12.1,Flat,33.0,18.0,
+308,2024,Planned Maintenance,248,259,12,4.8,Flat,33.0,18.0,
+126,2024,Planned Maintenance,122,121,-1,-0.7,Flat,34.0,2.0,1.0
+126,2024,Void Works,336,321,-14,-4.3,Flat,34.0,2.0,1.0
+126,2024,Cyclical Decorating,363,291,-72,-19.9,Flat,34.0,2.0,1.0
+126,2024,Major Works,318,380,62,19.6,Flat,34.0,2.0,1.0
+155,2024,Major Works,173,184,11,6.5,House,31.0,3.0,1.0
+155,2024,Void Works,329,323,-6,-1.9,House,31.0,3.0,1.0
+155,2024,Cyclical Decorating,359,409,50,13.9,House,31.0,3.0,1.0
+155,2024,Compliance Works,244,268,24,9.9,House,31.0,3.0,1.0
+155,2024,Communal Repairs,266,243,-23,-8.5,House,31.0,3.0,1.0
+413,2024,Major Works,216,201,-15,-7.0,Flat,34.0,20.0,
+413,2024,Cyclical Decorating,94,90,-5,-4.8,Flat,34.0,20.0,
+413,2024,Void Works,153,172,19,12.6,Flat,34.0,20.0,
+413,2024,Compliance Works,134,146,12,8.9,Flat,34.0,20.0,
+413,2024,Routine Repairs,168,160,-8,-4.7,Flat,34.0,20.0,
+413,2024,Communal Repairs,121,143,22,18.2,Flat,34.0,20.0,
+325,2024,Communal Repairs,387,363,-25,-6.4,Block of Flats,34.0,22.0,
+325,2024,Compliance Works,416,348,-68,-16.4,Block of Flats,34.0,22.0,
+325,2024,Environmental Works,341,355,14,4.0,Block of Flats,34.0,22.0,
+66,2024,Communal Repairs,335,312,-24,-7.0,House,32.0,14.0,9.0
+66,2024,Emergency Repairs,368,301,-67,-18.2,House,32.0,14.0,9.0
+66,2024,Cyclical Decorating,148,145,-3,-2.1,House,32.0,14.0,9.0
+66,2024,Routine Repairs,382,396,14,3.7,House,32.0,14.0,9.0
+190,2024,Environmental Works,248,266,18,7.2,Flat,31.0,15.0,9.0
+190,2024,Void Works,129,119,-10,-7.8,Flat,31.0,15.0,9.0
+190,2024,Cyclical Decorating,100,90,-9,-9.4,Flat,31.0,15.0,9.0
+73,2024,Void Works,241,274,33,13.7,Flat,30.0,1.0,1.0
+73,2024,Routine Repairs,171,160,-11,-6.5,Flat,30.0,1.0,1.0
+73,2024,Planned Maintenance,152,176,24,15.9,Flat,30.0,1.0,1.0
+73,2024,Compliance Works,267,233,-34,-12.8,Flat,30.0,1.0,1.0
+73,2024,Environmental Works,230,195,-36,-15.5,Flat,30.0,1.0,1.0
+365,2024,Compliance Works,134,118,-16,-11.9,Flat,34.0,21.0,
+365,2024,Cyclical Decorating,310,278,-31,-10.1,Flat,34.0,21.0,
+365,2024,Environmental Works,182,177,-5,-2.8,Flat,34.0,21.0,
+354,2024,Void Works,202,191,-11,-5.2,Flat,34.0,22.0,
+354,2024,Planned Maintenance,170,143,-27,-15.8,Flat,34.0,22.0,
+354,2024,Environmental Works,233,269,36,15.5,Flat,34.0,22.0,
+354,2024,Cyclical Decorating,88,93,5,5.8,Flat,34.0,22.0,
+83,2024,Communal Repairs,239,214,-25,-10.4,House,32.0,14.0,9.0
+83,2024,Planned Maintenance,343,369,27,7.8,House,32.0,14.0,9.0
+83,2024,Compliance Works,293,238,-55,-18.7,House,32.0,14.0,9.0
+83,2024,Routine Repairs,254,217,-37,-14.4,House,32.0,14.0,9.0
+83,2024,Void Works,252,272,20,7.8,House,32.0,14.0,9.0
+83,2024,Cyclical Decorating,112,125,13,11.6,House,32.0,14.0,9.0
+285,2024,Planned Maintenance,118,101,-17,-14.5,House,34.0,19.0,
+285,2024,Compliance Works,305,363,59,19.2,House,34.0,19.0,
+285,2024,Major Works,227,214,-13,-5.9,House,34.0,19.0,
+285,2024,Environmental Works,356,377,22,6.1,House,34.0,19.0,
+285,2024,Void Works,325,263,-61,-18.9,House,34.0,19.0,
+285,2024,Cyclical Decorating,189,187,-2,-1.3,House,34.0,19.0,
+311,2024,Major Works,75,68,-7,-9.1,Flat,34.0,20.0,
+311,2024,Cyclical Decorating,108,89,-19,-17.4,Flat,34.0,20.0,
+311,2024,Routine Repairs,245,281,36,14.8,Flat,34.0,20.0,
+311,2024,Planned Maintenance,227,183,-43,-19.1,Flat,34.0,20.0,
+33,2024,Environmental Works,163,179,17,10.3,Block of Flats,31.0,15.0,9.0
+33,2024,Communal Repairs,214,252,38,17.8,Block of Flats,31.0,15.0,9.0
+33,2024,Major Works,254,230,-24,-9.4,Block of Flats,31.0,15.0,9.0
+33,2024,Cyclical Decorating,143,119,-24,-17.0,Block of Flats,31.0,15.0,9.0
+33,2024,Routine Repairs,347,393,46,13.4,Block of Flats,31.0,15.0,9.0
+56,2024,Planned Maintenance,222,264,42,18.8,Flat,31.0,3.0,1.0
+56,2024,Environmental Works,134,152,18,13.6,Flat,31.0,3.0,1.0
+56,2024,Emergency Repairs,268,310,42,15.6,Flat,31.0,3.0,1.0
+56,2024,Routine Repairs,292,349,57,19.4,Flat,31.0,3.0,1.0
+345,2024,Void Works,283,300,17,6.0,Flat,34.0,19.0,
+345,2024,Environmental Works,199,210,11,5.6,Flat,34.0,19.0,
+345,2024,Planned Maintenance,224,232,8,3.7,Flat,34.0,19.0,
+345,2024,Major Works,127,131,5,3.6,Flat,34.0,19.0,
+345,2024,Communal Repairs,166,163,-4,-2.1,Flat,34.0,19.0,
+280,2024,Routine Repairs,242,275,34,13.9,House,34.0,20.0,
+280,2024,Compliance Works,130,150,21,16.1,House,34.0,20.0,
+280,2024,Planned Maintenance,436,495,60,13.7,House,34.0,20.0,
+280,2024,Emergency Repairs,290,279,-12,-4.0,House,34.0,20.0,
+280,2024,Communal Repairs,352,404,51,14.5,House,34.0,20.0,
+280,2024,Cyclical Decorating,148,124,-23,-15.7,House,34.0,20.0,
+167,2024,Emergency Repairs,345,347,1,0.4,House,31.0,3.0,1.0
+167,2024,Void Works,151,178,27,17.6,House,31.0,3.0,1.0
+167,2024,Communal Repairs,365,408,43,11.8,House,31.0,3.0,1.0
+167,2024,Environmental Works,365,306,-59,-16.3,House,31.0,3.0,1.0
+167,2024,Routine Repairs,317,277,-40,-12.7,House,31.0,3.0,1.0
+167,2024,Compliance Works,143,143,0,-0.3,House,31.0,3.0,1.0
+199,2024,Environmental Works,347,321,-26,-7.5,Flat,30.0,1.0,1.0
+199,2024,Compliance Works,172,153,-19,-11.1,Flat,30.0,1.0,1.0
+199,2024,Emergency Repairs,178,198,20,11.4,Flat,30.0,1.0,1.0
+199,2024,Void Works,139,119,-20,-14.4,Flat,30.0,1.0,1.0
+199,2024,Cyclical Decorating,150,172,22,14.9,Flat,30.0,1.0,1.0
+342,2024,Void Works,219,223,4,1.9,Flat,34.0,20.0,
+342,2024,Compliance Works,123,130,7,6.0,Flat,34.0,20.0,
+342,2024,Routine Repairs,97,109,12,12.6,Flat,34.0,20.0,
+342,2024,Planned Maintenance,221,214,-6,-2.8,Flat,34.0,20.0,
+342,2024,Environmental Works,183,151,-33,-17.9,Flat,34.0,20.0,
+342,2024,Communal Repairs,80,75,-5,-6.4,Flat,34.0,20.0,
+393,2024,Major Works,247,264,17,6.8,House,34.0,19.0,
+393,2024,Cyclical Decorating,199,200,1,0.5,House,34.0,19.0,
+393,2024,Environmental Works,288,314,26,9.0,House,34.0,19.0,
+163,2024,Void Works,122,136,14,11.4,Flat,34.0,4.0,2.0
+163,2024,Cyclical Decorating,112,92,-20,-17.9,Flat,34.0,4.0,2.0
+163,2024,Planned Maintenance,219,252,34,15.4,Flat,34.0,4.0,2.0
+163,2024,Major Works,275,314,39,14.3,Flat,34.0,4.0,2.0
+163,2024,Communal Repairs,103,102,-1,-0.9,Flat,34.0,4.0,2.0
+213,2025,Compliance Works,272,269,-3,-1.1,Block of Flats,34.0,6.0,4.0
+213,2025,Void Works,310,297,-12,-4.0,Block of Flats,34.0,6.0,4.0
+213,2025,Emergency Repairs,376,381,5,1.2,Block of Flats,34.0,6.0,4.0
+213,2025,Cyclical Decorating,287,342,56,19.4,Block of Flats,34.0,6.0,4.0
+325,2025,Void Works,168,152,-16,-9.5,Block of Flats,35.0,22.0,
+325,2025,Planned Maintenance,412,346,-65,-15.9,Block of Flats,35.0,22.0,
+325,2025,Emergency Repairs,417,474,57,13.7,Block of Flats,35.0,22.0,
+299,2025,Cyclical Decorating,149,137,-12,-8.3,Block of Flats,35.0,21.0,
+299,2025,Major Works,291,336,45,15.4,Block of Flats,35.0,21.0,
+299,2025,Routine Repairs,269,307,37,13.8,Block of Flats,35.0,21.0,
+299,2025,Planned Maintenance,292,320,27,9.4,Block of Flats,35.0,21.0,
+299,2025,Compliance Works,319,296,-23,-7.2,Block of Flats,35.0,21.0,
+83,2025,Environmental Works,287,311,25,8.6,House,33.0,14.0,9.0
+83,2025,Compliance Works,174,144,-30,-17.2,House,33.0,14.0,9.0
+83,2025,Cyclical Decorating,167,160,-7,-3.9,House,33.0,14.0,9.0
+83,2025,Routine Repairs,389,344,-44,-11.4,House,33.0,14.0,9.0
+83,2025,Communal Repairs,202,201,-1,-0.5,House,33.0,14.0,9.0
+83,2025,Emergency Repairs,329,326,-3,-1.0,House,33.0,14.0,9.0
+443,2025,Environmental Works,163,191,28,17.5,Flat,30.0,,
+443,2025,Void Works,138,144,5,3.8,Flat,30.0,,
+443,2025,Routine Repairs,151,170,19,12.5,Flat,30.0,,
+443,2025,Emergency Repairs,295,237,-58,-19.7,Flat,30.0,,
+443,2025,Cyclical Decorating,266,256,-10,-3.6,Flat,30.0,,
+443,2025,Major Works,86,98,11,13.2,Flat,30.0,,
+315,2025,Cyclical Decorating,244,199,-45,-18.6,Flat,35.0,22.0,
+315,2025,Void Works,146,141,-4,-2.9,Flat,35.0,22.0,
+315,2025,Communal Repairs,69,60,-9,-13.2,Flat,35.0,22.0,
+422,2025,Environmental Works,89,99,10,11.6,Flat,35.0,22.0,
+422,2025,Major Works,166,168,2,1.2,Flat,35.0,22.0,
+422,2025,Planned Maintenance,227,235,8,3.4,Flat,35.0,22.0,
+182,2025,Cyclical Decorating,158,126,-31,-19.9,Flat,31.0,1.0,1.0
+182,2025,Emergency Repairs,72,87,14,19.5,Flat,31.0,1.0,1.0
+182,2025,Routine Repairs,142,141,-2,-1.1,Flat,31.0,1.0,1.0
+182,2025,Void Works,174,166,-8,-4.4,Flat,31.0,1.0,1.0
+182,2025,Compliance Works,109,99,-10,-8.9,Flat,31.0,1.0,1.0
+182,2025,Major Works,150,127,-23,-15.4,Flat,31.0,1.0,1.0
+401,2025,Cyclical Decorating,225,218,-7,-3.1,Flat,35.0,20.0,
+401,2025,Planned Maintenance,304,284,-20,-6.7,Flat,35.0,20.0,
+401,2025,Emergency Repairs,215,219,4,1.6,Flat,35.0,20.0,
+43,2025,Compliance Works,300,275,-25,-8.2,Block of Flats,34.0,16.0,9.0
+43,2025,Void Works,253,206,-47,-18.5,Block of Flats,34.0,16.0,9.0
+43,2025,Major Works,157,177,19,12.3,Block of Flats,34.0,16.0,9.0
+167,2025,Environmental Works,241,210,-31,-13.0,House,32.0,3.0,1.0
+167,2025,Emergency Repairs,133,153,19,14.4,House,32.0,3.0,1.0
+167,2025,Planned Maintenance,238,269,31,12.8,House,32.0,3.0,1.0
+167,2025,Compliance Works,228,199,-30,-12.9,House,32.0,3.0,1.0
+167,2025,Communal Repairs,309,275,-34,-11.1,House,32.0,3.0,1.0
+309,2025,Communal Repairs,268,242,-26,-9.7,Flat,35.0,19.0,
+309,2025,Compliance Works,258,209,-49,-18.8,Flat,35.0,19.0,
+309,2025,Environmental Works,182,191,8,4.6,Flat,35.0,19.0,
+309,2025,Major Works,100,98,-2,-1.6,Flat,35.0,19.0,
+309,2025,Cyclical Decorating,286,267,-19,-6.7,Flat,35.0,19.0,
+309,2025,Void Works,179,188,9,5.1,Flat,35.0,19.0,
+149,2025,Routine Repairs,156,137,-19,-12.1,Block of Flats,32.0,13.0,8.0
+149,2025,Compliance Works,167,176,9,5.6,Block of Flats,32.0,13.0,8.0
+149,2025,Planned Maintenance,206,241,36,17.3,Block of Flats,32.0,13.0,8.0
+149,2025,Communal Repairs,282,240,-41,-14.7,Block of Flats,32.0,13.0,8.0
+417,2025,Emergency Repairs,118,127,9,7.3,Flat,35.0,19.0,
+417,2025,Cyclical Decorating,107,106,-1,-0.9,Flat,35.0,19.0,
+417,2025,Void Works,260,307,47,18.0,Flat,35.0,19.0,
+417,2025,Compliance Works,352,400,48,13.6,Flat,35.0,19.0,
+417,2025,Communal Repairs,180,212,33,18.2,Flat,35.0,19.0,
+393,2025,Environmental Works,117,108,-9,-8.1,House,35.0,19.0,
+393,2025,Major Works,247,224,-23,-9.4,House,35.0,19.0,
+393,2025,Cyclical Decorating,209,196,-14,-6.5,House,35.0,19.0,
+393,2025,Void Works,145,169,24,16.5,House,35.0,19.0,
+393,2025,Planned Maintenance,291,281,-10,-3.3,House,35.0,19.0,
+368,2025,Void Works,324,343,19,5.8,Flat,35.0,20.0,
+368,2025,Planned Maintenance,148,176,28,18.6,Flat,35.0,20.0,
+368,2025,Compliance Works,118,104,-14,-11.9,Flat,35.0,20.0,
+368,2025,Cyclical Decorating,198,182,-16,-8.2,Flat,35.0,20.0,
+48,2025,Environmental Works,174,172,-1,-0.8,Flat,35.0,4.0,2.0
+48,2025,Emergency Repairs,222,198,-24,-10.7,Flat,35.0,4.0,2.0
+48,2025,Void Works,108,95,-13,-12.3,Flat,35.0,4.0,2.0
+225,2025,Major Works,203,167,-36,-17.9,Flat,32.0,15.0,9.0
+225,2025,Planned Maintenance,176,187,11,6.3,Flat,32.0,15.0,9.0
+225,2025,Routine Repairs,116,106,-10,-8.6,Flat,32.0,15.0,9.0
+370,2025,Void Works,129,112,-18,-13.8,Flat,34.0,18.0,
+370,2025,Planned Maintenance,131,112,-20,-14.9,Flat,34.0,18.0,
+370,2025,Cyclical Decorating,226,208,-19,-8.2,Flat,34.0,18.0,
+370,2025,Compliance Works,180,155,-26,-14.2,Flat,34.0,18.0,
+57,2025,Planned Maintenance,242,196,-46,-19.0,Flat,35.0,7.0,4.0
+57,2025,Routine Repairs,163,185,22,13.8,Flat,35.0,7.0,4.0
+57,2025,Major Works,296,325,29,9.8,Flat,35.0,7.0,4.0
+57,2025,Emergency Repairs,186,198,11,6.1,Flat,35.0,7.0,4.0
+57,2025,Cyclical Decorating,98,82,-16,-16.1,Flat,35.0,7.0,4.0
+348,2025,Planned Maintenance,68,60,-8,-12.4,Flat,35.0,22.0,
+348,2025,Major Works,76,74,-2,-3.2,Flat,35.0,22.0,
+348,2025,Compliance Works,172,170,-2,-1.2,Flat,35.0,22.0,
+485,2025,Compliance Works,277,309,32,11.6,House,30.0,,
+485,2025,Major Works,301,260,-41,-13.6,House,30.0,,
+485,2025,Environmental Works,310,347,37,12.0,House,30.0,,
+485,2025,Void Works,261,283,22,8.4,House,30.0,,
+485,2025,Cyclical Decorating,143,150,7,4.6,House,30.0,,
+485,2025,Planned Maintenance,261,262,1,0.5,House,30.0,,
+275,2025,Compliance Works,134,159,25,18.7,Flat,35.0,21.0,
+275,2025,Planned Maintenance,198,192,-6,-3.2,Flat,35.0,21.0,
+275,2025,Emergency Repairs,172,194,22,12.9,Flat,35.0,21.0,
+275,2025,Routine Repairs,82,93,11,13.6,Flat,35.0,21.0,
+275,2025,Void Works,154,171,16,10.6,Flat,35.0,21.0,
+165,2025,Communal Repairs,139,134,-5,-3.8,House,32.0,15.0,9.0
+165,2025,Void Works,197,207,10,4.9,House,32.0,15.0,9.0
+165,2025,Compliance Works,122,113,-9,-7.5,House,32.0,15.0,9.0
+165,2025,Routine Repairs,402,339,-64,-15.8,House,32.0,15.0,9.0
+165,2025,Environmental Works,337,342,5,1.4,House,32.0,15.0,9.0
+42,2025,Void Works,147,129,-19,-12.7,Flat,31.0,1.0,1.0
+42,2025,Routine Repairs,212,232,20,9.4,Flat,31.0,1.0,1.0
+42,2025,Cyclical Decorating,114,103,-11,-9.4,Flat,31.0,1.0,1.0
+42,2025,Emergency Repairs,137,130,-6,-4.6,Flat,31.0,1.0,1.0
+461,2025,Planned Maintenance,244,246,2,0.7,House,30.0,,
+461,2025,Major Works,232,208,-23,-10.0,House,30.0,,
+461,2025,Environmental Works,346,318,-29,-8.3,House,30.0,,
+408,2025,Emergency Repairs,94,96,1,1.5,Flat,35.0,21.0,
+408,2025,Communal Repairs,240,220,-20,-8.3,Flat,35.0,21.0,
+408,2025,Planned Maintenance,234,221,-13,-5.4,Flat,35.0,21.0,
+408,2025,Environmental Works,261,297,36,13.7,Flat,35.0,21.0,
+408,2025,Compliance Works,164,196,32,19.7,Flat,35.0,21.0,
+408,2025,Major Works,143,153,10,7.1,Flat,35.0,21.0,
+413,2025,Compliance Works,315,372,57,18.2,Flat,35.0,20.0,
+413,2025,Cyclical Decorating,136,156,20,14.5,Flat,35.0,20.0,
+413,2025,Void Works,164,183,19,11.6,Flat,35.0,20.0,
+413,2025,Emergency Repairs,189,175,-13,-7.1,Flat,35.0,20.0,
+78,2025,Planned Maintenance,291,271,-20,-6.9,Flat,35.0,17.0,10.0
+78,2025,Void Works,198,212,14,6.9,Flat,35.0,17.0,10.0
+78,2025,Compliance Works,261,262,2,0.7,Flat,35.0,17.0,10.0
+78,2025,Routine Repairs,181,156,-24,-13.5,Flat,35.0,17.0,10.0
+78,2025,Major Works,177,160,-16,-9.3,Flat,35.0,17.0,10.0
+71,2025,Planned Maintenance,184,179,-5,-2.7,House,35.0,2.0,1.0
+71,2025,Major Works,258,211,-46,-17.9,House,35.0,2.0,1.0
+71,2025,Void Works,186,190,4,2.2,House,35.0,2.0,1.0
+71,2025,Compliance Works,406,374,-33,-8.0,House,35.0,2.0,1.0
+244,2025,Emergency Repairs,255,271,16,6.2,House,35.0,19.0,
+244,2025,Routine Repairs,225,187,-38,-16.8,House,35.0,19.0,
+244,2025,Major Works,212,236,24,11.3,House,35.0,19.0,
+244,2025,Cyclical Decorating,258,251,-7,-2.5,House,35.0,19.0,
+244,2025,Communal Repairs,403,344,-59,-14.6,House,35.0,19.0,
+244,2025,Void Works,422,481,59,14.0,House,35.0,19.0,
+66,2025,Environmental Works,167,148,-20,-11.9,House,33.0,14.0,9.0
+66,2025,Compliance Works,175,181,6,3.2,House,33.0,14.0,9.0
+66,2025,Planned Maintenance,229,194,-35,-15.5,House,33.0,14.0,9.0
+66,2025,Major Works,281,263,-17,-6.2,House,33.0,14.0,9.0
+109,2025,Compliance Works,323,348,25,7.9,Flat,34.0,16.0,9.0
+109,2025,Communal Repairs,135,160,25,18.2,Flat,34.0,16.0,9.0
+109,2025,Environmental Works,161,157,-4,-2.7,Flat,34.0,16.0,9.0
+469,2025,Cyclical Decorating,325,334,9,2.8,Flat,30.0,,
+469,2025,Major Works,125,137,12,9.4,Flat,30.0,,
+469,2025,Communal Repairs,190,157,-33,-17.5,Flat,30.0,,
+469,2025,Emergency Repairs,311,274,-37,-11.9,Flat,30.0,,
+469,2025,Void Works,262,250,-12,-4.6,Flat,30.0,,
+383,2025,Communal Repairs,340,368,28,8.3,Flat,34.0,18.0,
+383,2025,Void Works,233,230,-3,-1.2,Flat,34.0,18.0,
+383,2025,Planned Maintenance,345,396,51,14.7,Flat,34.0,18.0,
+383,2025,Compliance Works,247,295,48,19.4,Flat,34.0,18.0,
+383,2025,Routine Repairs,344,364,19,5.6,Flat,34.0,18.0,
+112,2025,Routine Repairs,211,202,-9,-4.3,Flat,35.0,9.0,5.0
+112,2025,Void Works,238,254,16,6.7,Flat,35.0,9.0,5.0
+112,2025,Cyclical Decorating,197,160,-37,-18.7,Flat,35.0,9.0,5.0
+342,2025,Routine Repairs,127,147,20,15.7,Flat,35.0,20.0,
+342,2025,Emergency Repairs,272,299,27,9.8,Flat,35.0,20.0,
+342,2025,Major Works,156,159,4,2.3,Flat,35.0,20.0,
+342,2025,Cyclical Decorating,93,109,16,16.6,Flat,35.0,20.0,
+369,2025,Compliance Works,123,131,8,6.9,House,35.0,22.0,
+369,2025,Cyclical Decorating,213,198,-14,-6.7,House,35.0,22.0,
+369,2025,Major Works,452,526,74,16.3,House,35.0,22.0,
+477,2025,Cyclical Decorating,267,289,22,8.1,Flat,30.0,,
+477,2025,Routine Repairs,76,76,0,0.0,Flat,30.0,,
+477,2025,Communal Repairs,205,217,12,5.7,Flat,30.0,,
+36,2025,Cyclical Decorating,243,216,-28,-11.4,Flat,32.0,13.0,8.0
+36,2025,Major Works,210,222,12,5.7,Flat,32.0,13.0,8.0
+36,2025,Void Works,195,233,39,19.9,Flat,32.0,13.0,8.0
+36,2025,Environmental Works,218,203,-15,-6.9,Flat,32.0,13.0,8.0
+91,2025,Cyclical Decorating,136,150,13,9.9,Flat,34.0,10.0,5.0
+91,2025,Void Works,97,81,-16,-16.6,Flat,34.0,10.0,5.0
+91,2025,Planned Maintenance,85,77,-8,-9.3,Flat,34.0,10.0,5.0
+91,2025,Environmental Works,122,140,18,14.8,Flat,34.0,10.0,5.0
+91,2025,Communal Repairs,295,242,-53,-17.9,Flat,34.0,10.0,5.0
+91,2025,Major Works,97,108,10,10.6,Flat,34.0,10.0,5.0
+439,2025,Compliance Works,193,156,-37,-19.2,House,30.0,,
+439,2025,Environmental Works,127,109,-18,-14.4,House,30.0,,
+439,2025,Planned Maintenance,176,141,-34,-19.5,House,30.0,,
+439,2025,Routine Repairs,357,337,-20,-5.5,House,30.0,,
+125,2025,Routine Repairs,193,203,9,4.8,Block of Flats,33.0,5.0,3.0
+125,2025,Cyclical Decorating,320,349,29,9.0,Block of Flats,33.0,5.0,3.0
+125,2025,Compliance Works,211,237,25,12.0,Block of Flats,33.0,5.0,3.0
+125,2025,Void Works,367,294,-73,-19.9,Block of Flats,33.0,5.0,3.0
+125,2025,Planned Maintenance,376,370,-6,-1.6,Block of Flats,33.0,5.0,3.0
+118,2025,Routine Repairs,269,290,21,7.7,Flat,34.0,10.0,5.0
+118,2025,Cyclical Decorating,184,210,26,14.0,Flat,34.0,10.0,5.0
+118,2025,Planned Maintenance,301,279,-22,-7.3,Flat,34.0,10.0,5.0
+118,2025,Void Works,243,277,34,14.0,Flat,34.0,10.0,5.0
+118,2025,Compliance Works,375,314,-61,-16.3,Flat,34.0,10.0,5.0
+128,2025,Planned Maintenance,261,209,-51,-19.7,Block of Flats,34.0,6.0,4.0
+128,2025,Void Works,234,254,21,8.8,Block of Flats,34.0,6.0,4.0
+128,2025,Environmental Works,233,277,45,19.1,Block of Flats,34.0,6.0,4.0
+447,2025,Communal Repairs,243,213,-29,-12.1,Flat,30.0,,
+447,2025,Routine Repairs,167,146,-20,-12.2,Flat,30.0,,
+447,2025,Cyclical Decorating,180,147,-33,-18.4,Flat,30.0,,
+447,2025,Compliance Works,178,207,28,15.9,Flat,30.0,,
+447,2025,Void Works,170,193,23,13.3,Flat,30.0,,
+447,2025,Major Works,263,228,-35,-13.5,Flat,30.0,,
+360,2025,Communal Repairs,184,208,24,13.3,Flat,35.0,22.0,
+360,2025,Emergency Repairs,172,177,4,2.4,Flat,35.0,22.0,
+360,2025,Cyclical Decorating,334,346,12,3.5,Flat,35.0,22.0,
+360,2025,Void Works,115,109,-6,-4.8,Flat,35.0,22.0,
+360,2025,Planned Maintenance,226,239,14,6.0,Flat,35.0,22.0,
+69,2025,Major Works,161,135,-26,-16.1,Flat,33.0,5.0,3.0
+69,2025,Planned Maintenance,312,250,-62,-20.0,Flat,33.0,5.0,3.0
+69,2025,Emergency Repairs,234,191,-42,-18.2,Flat,33.0,5.0,3.0
+69,2025,Routine Repairs,335,282,-53,-15.7,Flat,33.0,5.0,3.0
+69,2025,Communal Repairs,279,240,-39,-13.8,Flat,33.0,5.0,3.0
+69,2025,Compliance Works,96,83,-13,-13.8,Flat,33.0,5.0,3.0
+385,2025,Planned Maintenance,112,133,21,18.7,Flat,35.0,19.0,
+385,2025,Compliance Works,314,281,-34,-10.8,Flat,35.0,19.0,
+385,2025,Routine Repairs,228,220,-8,-3.4,Flat,35.0,19.0,
+385,2025,Major Works,238,244,6,2.4,Flat,35.0,19.0,
+385,2025,Cyclical Decorating,320,328,8,2.5,Flat,35.0,19.0,
+180,2025,Planned Maintenance,404,456,51,12.7,House,34.0,6.0,4.0
+180,2025,Major Works,296,253,-43,-14.5,House,34.0,6.0,4.0
+180,2025,Void Works,417,440,23,5.5,House,34.0,6.0,4.0
+180,2025,Routine Repairs,190,157,-32,-17.0,House,34.0,6.0,4.0
+436,2025,Emergency Repairs,245,214,-32,-12.9,Block of Flats,30.0,,
+436,2025,Communal Repairs,287,298,10,3.5,Block of Flats,30.0,,
+436,2025,Routine Repairs,104,93,-11,-11.0,Block of Flats,30.0,,
+436,2025,Compliance Works,286,338,52,18.1,Block of Flats,30.0,,
+436,2025,Void Works,162,178,16,9.9,Block of Flats,30.0,,
+159,2025,Routine Repairs,195,226,30,15.4,Flat,35.0,9.0,5.0
+159,2025,Compliance Works,209,176,-33,-15.7,Flat,35.0,9.0,5.0
+159,2025,Planned Maintenance,211,189,-22,-10.6,Flat,35.0,9.0,5.0
+30,2025,Routine Repairs,82,74,-8,-9.9,Block of Flats,35.0,4.0,2.0
+30,2025,Compliance Works,247,250,3,1.4,Block of Flats,35.0,4.0,2.0
+30,2025,Emergency Repairs,141,156,15,10.7,Block of Flats,35.0,4.0,2.0
+30,2025,Cyclical Decorating,241,213,-28,-11.6,Block of Flats,35.0,4.0,2.0
+129,2025,Compliance Works,288,320,32,11.2,Flat,35.0,11.0,6.0
+129,2025,Communal Repairs,338,319,-19,-5.5,Flat,35.0,11.0,6.0
+129,2025,Planned Maintenance,253,258,6,2.3,Flat,35.0,11.0,6.0
+129,2025,Environmental Works,307,278,-29,-9.4,Flat,35.0,11.0,6.0
+129,2025,Routine Repairs,125,115,-11,-8.6,Flat,35.0,11.0,6.0
+129,2025,Void Works,184,182,-2,-1.0,Flat,35.0,11.0,6.0
+85,2025,Emergency Repairs,253,269,16,6.2,Flat,35.0,9.0,5.0
+85,2025,Cyclical Decorating,130,133,3,2.5,Flat,35.0,9.0,5.0
+85,2025,Planned Maintenance,169,172,3,1.5,Flat,35.0,9.0,5.0
+85,2025,Routine Repairs,189,223,34,18.0,Flat,35.0,9.0,5.0
+217,2025,Emergency Repairs,302,248,-54,-18.0,House,33.0,5.0,3.0
+217,2025,Major Works,174,167,-7,-3.9,House,33.0,5.0,3.0
+217,2025,Environmental Works,200,211,11,5.6,House,33.0,5.0,3.0
+217,2025,Routine Repairs,190,199,9,4.7,House,33.0,5.0,3.0
+135,2025,Cyclical Decorating,144,141,-3,-2.2,House,34.0,16.0,9.0
+135,2025,Routine Repairs,106,121,15,13.9,House,34.0,16.0,9.0
+135,2025,Environmental Works,241,275,34,14.0,House,34.0,16.0,9.0
+127,2025,Routine Repairs,342,339,-3,-1.0,Flat,35.0,4.0,2.0
+127,2025,Emergency Repairs,170,185,16,9.3,Flat,35.0,4.0,2.0
+127,2025,Compliance Works,213,235,23,10.7,Flat,35.0,4.0,2.0
+444,2025,Routine Repairs,155,163,7,4.8,Flat,30.0,,
+444,2025,Major Works,82,93,11,13.3,Flat,30.0,,
+444,2025,Cyclical Decorating,160,162,1,0.8,Flat,30.0,,
+444,2025,Void Works,137,145,8,5.6,Flat,30.0,,
+238,2025,Emergency Repairs,127,102,-25,-19.4,Flat,34.0,18.0,
+238,2025,Environmental Works,205,213,8,4.1,Flat,34.0,18.0,
+238,2025,Cyclical Decorating,78,83,5,7.0,Flat,34.0,18.0,
+238,2025,Planned Maintenance,107,88,-19,-17.4,Flat,34.0,18.0,
+238,2025,Routine Repairs,189,156,-33,-17.6,Flat,34.0,18.0,
+207,2025,Major Works,283,287,3,1.1,Block of Flats,35.0,11.0,6.0
+207,2025,Void Works,136,128,-8,-5.8,Block of Flats,35.0,11.0,6.0
+207,2025,Planned Maintenance,157,139,-18,-11.5,Block of Flats,35.0,11.0,6.0
+207,2025,Emergency Repairs,188,179,-9,-4.6,Block of Flats,35.0,11.0,6.0
+207,2025,Environmental Works,162,152,-10,-6.1,Block of Flats,35.0,11.0,6.0
+35,2025,Void Works,143,156,13,8.9,Block of Flats,29.0,8.0,4.0
+35,2025,Emergency Repairs,290,244,-46,-15.9,Block of Flats,29.0,8.0,4.0
+35,2025,Routine Repairs,179,175,-3,-1.9,Block of Flats,29.0,8.0,4.0
+35,2025,Environmental Works,304,313,9,3.0,Block of Flats,29.0,8.0,4.0
+35,2025,Planned Maintenance,333,276,-57,-17.2,Block of Flats,29.0,8.0,4.0
+341,2025,Emergency Repairs,212,213,1,0.6,Flat,35.0,20.0,
+341,2025,Planned Maintenance,315,264,-51,-16.1,Flat,35.0,20.0,
+341,2025,Routine Repairs,99,115,16,16.2,Flat,35.0,20.0,
+10,2025,Emergency Repairs,247,234,-13,-5.4,Flat,34.0,6.0,4.0
+10,2025,Void Works,99,89,-10,-10.5,Flat,34.0,6.0,4.0
+10,2025,Environmental Works,212,213,1,0.6,Flat,34.0,6.0,4.0
+28,2025,Void Works,206,219,12,5.9,Flat,35.0,12.0,7.0
+28,2025,Cyclical Decorating,272,280,7,2.7,Flat,35.0,12.0,7.0
+28,2025,Routine Repairs,114,96,-18,-15.5,Flat,35.0,12.0,7.0
+28,2025,Environmental Works,202,169,-33,-16.2,Flat,35.0,12.0,7.0
+496,2025,Communal Repairs,293,340,47,16.1,House,30.0,,
+496,2025,Routine Repairs,453,535,82,18.1,House,30.0,,
+496,2025,Compliance Works,304,293,-11,-3.6,House,30.0,,
+496,2025,Planned Maintenance,427,445,18,4.2,House,30.0,,
+496,2025,Cyclical Decorating,302,289,-13,-4.4,House,30.0,,
+320,2025,Major Works,107,89,-17,-16.3,Flat,35.0,20.0,
+320,2025,Planned Maintenance,259,230,-29,-11.3,Flat,35.0,20.0,
+320,2025,Compliance Works,245,208,-37,-15.1,Flat,35.0,20.0,
+331,2025,Emergency Repairs,171,169,-2,-1.0,House,34.0,18.0,
+331,2025,Cyclical Decorating,227,227,0,-0.2,House,34.0,18.0,
+331,2025,Major Works,281,257,-23,-8.3,House,34.0,18.0,
+331,2025,Communal Repairs,300,310,10,3.2,House,34.0,18.0,
+279,2025,Compliance Works,198,186,-13,-6.4,Block of Flats,34.0,18.0,
+279,2025,Environmental Works,150,128,-22,-14.5,Block of Flats,34.0,18.0,
+279,2025,Planned Maintenance,362,362,0,-0.1,Block of Flats,34.0,18.0,
+279,2025,Communal Repairs,351,368,17,4.8,Block of Flats,34.0,18.0,
+94,2025,Major Works,281,259,-22,-7.8,Flat,35.0,17.0,10.0
+94,2025,Environmental Works,96,108,12,12.5,Flat,35.0,17.0,10.0
+94,2025,Compliance Works,122,134,12,9.5,Flat,35.0,17.0,10.0
+94,2025,Routine Repairs,336,348,12,3.6,Flat,35.0,17.0,10.0
+94,2025,Planned Maintenance,145,144,-1,-0.5,Flat,35.0,17.0,10.0
+94,2025,Cyclical Decorating,245,223,-23,-9.3,Flat,35.0,17.0,10.0
+421,2025,Void Works,330,273,-57,-17.3,Flat,35.0,19.0,
+421,2025,Planned Maintenance,228,253,25,11.1,Flat,35.0,19.0,
+421,2025,Routine Repairs,120,118,-2,-1.5,Flat,35.0,19.0,
+421,2025,Cyclical Decorating,378,424,46,12.1,Flat,35.0,19.0,
+70,2025,Cyclical Decorating,334,299,-35,-10.4,House,32.0,13.0,8.0
+70,2025,Void Works,104,88,-17,-16.0,House,32.0,13.0,8.0
+70,2025,Planned Maintenance,347,389,42,12.0,House,32.0,13.0,8.0
+362,2025,Planned Maintenance,223,200,-23,-10.5,House,35.0,21.0,
+362,2025,Void Works,344,394,50,14.7,House,35.0,21.0,
+362,2025,Cyclical Decorating,127,117,-10,-7.6,House,35.0,21.0,
+362,2025,Compliance Works,175,181,5,2.9,House,35.0,21.0,
+362,2025,Emergency Repairs,448,500,51,11.4,House,35.0,21.0,
+51,2025,Environmental Works,149,178,30,19.9,Flat,32.0,3.0,1.0
+51,2025,Major Works,75,73,-3,-3.5,Flat,32.0,3.0,1.0
+51,2025,Compliance Works,240,233,-6,-2.6,Flat,32.0,3.0,1.0
+51,2025,Emergency Repairs,111,100,-11,-9.7,Flat,32.0,3.0,1.0
+51,2025,Communal Repairs,218,257,38,17.6,Flat,32.0,3.0,1.0
+51,2025,Routine Repairs,226,235,10,4.3,Flat,32.0,3.0,1.0
+111,2025,Environmental Works,103,103,0,-0.5,Flat,29.0,8.0,4.0
+111,2025,Emergency Repairs,271,218,-52,-19.3,Flat,29.0,8.0,4.0
+111,2025,Void Works,292,244,-48,-16.4,Flat,29.0,8.0,4.0
+111,2025,Planned Maintenance,354,361,7,2.0,Flat,29.0,8.0,4.0
+111,2025,Cyclical Decorating,97,89,-8,-8.0,Flat,29.0,8.0,4.0
+111,2025,Major Works,110,125,16,14.2,Flat,29.0,8.0,4.0
+171,2025,Routine Repairs,267,288,21,7.9,Flat,35.0,4.0,2.0
+171,2025,Planned Maintenance,361,319,-41,-11.5,Flat,35.0,4.0,2.0
+171,2025,Compliance Works,151,142,-10,-6.4,Flat,35.0,4.0,2.0
+228,2025,Environmental Works,363,317,-46,-12.6,House,35.0,22.0,
+228,2025,Routine Repairs,211,197,-14,-6.7,House,35.0,22.0,
+228,2025,Emergency Repairs,335,313,-22,-6.7,House,35.0,22.0,
+228,2025,Major Works,296,311,15,5.0,House,35.0,22.0,
+228,2025,Communal Repairs,439,363,-77,-17.5,House,35.0,22.0,
+483,2025,Communal Repairs,170,171,1,0.7,Flat,30.0,,
+483,2025,Compliance Works,330,349,18,5.6,Flat,30.0,,
+483,2025,Cyclical Decorating,165,195,29,17.7,Flat,30.0,,
+483,2025,Planned Maintenance,310,345,35,11.2,Flat,30.0,,
+483,2025,Major Works,321,368,47,14.5,Flat,30.0,,
+483,2025,Environmental Works,328,345,17,5.0,Flat,30.0,,
+87,2025,Planned Maintenance,186,163,-23,-12.3,Flat,35.0,11.0,6.0
+87,2025,Communal Repairs,158,155,-3,-1.8,Flat,35.0,11.0,6.0
+87,2025,Void Works,187,161,-27,-14.1,Flat,35.0,11.0,6.0
+55,2025,Planned Maintenance,211,214,3,1.6,House,32.0,15.0,9.0
+55,2025,Compliance Works,236,244,8,3.2,House,32.0,15.0,9.0
+55,2025,Cyclical Decorating,384,384,0,0.1,House,32.0,15.0,9.0
+55,2025,Major Works,321,303,-18,-5.5,House,32.0,15.0,9.0
+55,2025,Emergency Repairs,180,157,-23,-12.8,House,32.0,15.0,9.0
+55,2025,Void Works,234,208,-27,-11.3,House,32.0,15.0,9.0
+19,2025,Cyclical Decorating,73,78,6,7.9,Flat,35.0,7.0,4.0
+19,2025,Major Works,275,225,-50,-18.2,Flat,35.0,7.0,4.0
+19,2025,Void Works,218,230,13,5.8,Flat,35.0,7.0,4.0
+151,2025,Routine Repairs,88,84,-4,-4.7,Flat,29.0,8.0,4.0
+151,2025,Void Works,303,314,12,3.9,Flat,29.0,8.0,4.0
+151,2025,Communal Repairs,88,102,14,16.3,Flat,29.0,8.0,4.0
+151,2025,Emergency Repairs,294,296,3,1.0,Flat,29.0,8.0,4.0
+151,2025,Major Works,76,67,-9,-12.1,Flat,29.0,8.0,4.0
+200,2025,Major Works,203,187,-16,-7.8,Flat,34.0,10.0,5.0
+200,2025,Routine Repairs,321,385,63,19.7,Flat,34.0,10.0,5.0
+200,2025,Planned Maintenance,315,272,-44,-13.8,Flat,34.0,10.0,5.0
+427,2025,Communal Repairs,119,136,17,14.1,Flat,30.0,,
+427,2025,Cyclical Decorating,226,225,-1,-0.3,Flat,30.0,,
+427,2025,Void Works,243,283,40,16.4,Flat,30.0,,
+427,2025,Major Works,277,263,-14,-5.2,Flat,30.0,,
+265,2025,Environmental Works,278,242,-35,-12.7,Flat,35.0,22.0,
+265,2025,Major Works,147,131,-16,-10.6,Flat,35.0,22.0,
+265,2025,Emergency Repairs,136,162,26,18.9,Flat,35.0,22.0,
+265,2025,Void Works,134,119,-15,-11.0,Flat,35.0,22.0,
+265,2025,Cyclical Decorating,239,201,-38,-15.9,Flat,35.0,22.0,
+500,2025,Communal Repairs,270,243,-28,-10.3,Flat,30.0,,
+500,2025,Environmental Works,258,261,2,0.9,Flat,30.0,,
+500,2025,Compliance Works,149,132,-17,-11.5,Flat,30.0,,
+500,2025,Routine Repairs,161,152,-9,-5.8,Flat,30.0,,
+500,2025,Emergency Repairs,252,299,48,18.9,Flat,30.0,,
+500,2025,Planned Maintenance,226,236,10,4.4,Flat,30.0,,
+156,2025,Void Works,311,272,-40,-12.8,Block of Flats,35.0,2.0,1.0
+156,2025,Communal Repairs,110,96,-15,-13.2,Block of Flats,35.0,2.0,1.0
+156,2025,Cyclical Decorating,258,305,47,18.1,Block of Flats,35.0,2.0,1.0
+100,2025,Communal Repairs,337,271,-66,-19.7,House,34.0,10.0,5.0
+100,2025,Major Works,467,469,2,0.4,House,34.0,10.0,5.0
+100,2025,Emergency Repairs,288,235,-53,-18.5,House,34.0,10.0,5.0
+100,2025,Planned Maintenance,379,326,-53,-13.9,House,34.0,10.0,5.0
+100,2025,Cyclical Decorating,373,347,-26,-6.9,House,34.0,10.0,5.0
+100,2025,Compliance Works,464,399,-66,-14.2,House,34.0,10.0,5.0
+14,2025,Void Works,246,219,-27,-10.9,House,35.0,11.0,6.0
+14,2025,Emergency Repairs,171,138,-33,-19.2,House,35.0,11.0,6.0
+14,2025,Planned Maintenance,156,152,-4,-2.8,House,35.0,11.0,6.0
+14,2025,Major Works,282,299,17,5.9,House,35.0,11.0,6.0
+14,2025,Cyclical Decorating,328,384,55,16.9,House,35.0,11.0,6.0
+255,2025,Cyclical Decorating,353,395,42,11.9,Flat,35.0,22.0,
+255,2025,Planned Maintenance,313,325,12,3.8,Flat,35.0,22.0,
+255,2025,Emergency Repairs,321,348,28,8.6,Flat,35.0,22.0,
+255,2025,Communal Repairs,267,319,53,19.7,Flat,35.0,22.0,
+255,2025,Environmental Works,154,130,-24,-15.8,Flat,35.0,22.0,
+255,2025,Major Works,132,140,8,5.9,Flat,35.0,22.0,
+291,2025,Compliance Works,346,397,51,14.8,Flat,34.0,18.0,
+291,2025,Planned Maintenance,273,255,-18,-6.5,Flat,34.0,18.0,
+291,2025,Emergency Repairs,115,128,13,11.6,Flat,34.0,18.0,
+375,2025,Cyclical Decorating,103,93,-9,-9.0,Flat,35.0,22.0,
+375,2025,Major Works,172,203,30,17.6,Flat,35.0,22.0,
+375,2025,Void Works,160,168,8,4.9,Flat,35.0,22.0,
+375,2025,Emergency Repairs,298,300,2,0.7,Flat,35.0,22.0,
+263,2025,Communal Repairs,189,218,29,15.5,House,35.0,19.0,
+263,2025,Major Works,325,275,-50,-15.3,House,35.0,19.0,
+263,2025,Void Works,381,355,-26,-6.7,House,35.0,19.0,
+263,2025,Cyclical Decorating,109,98,-11,-9.9,House,35.0,19.0,
+263,2025,Emergency Repairs,126,115,-11,-9.0,House,35.0,19.0,
+229,2025,Major Works,214,223,9,4.1,Flat,35.0,19.0,
+229,2025,Emergency Repairs,239,210,-29,-12.1,Flat,35.0,19.0,
+229,2025,Environmental Works,143,157,14,10.1,Flat,35.0,19.0,
+229,2025,Communal Repairs,116,138,22,19.0,Flat,35.0,19.0,
+229,2025,Routine Repairs,208,216,8,3.7,Flat,35.0,19.0,
+398,2025,Communal Repairs,199,195,-3,-1.7,House,35.0,19.0,
+398,2025,Routine Repairs,219,194,-25,-11.5,House,35.0,19.0,
+398,2025,Planned Maintenance,289,309,20,6.9,House,35.0,19.0,
+398,2025,Environmental Works,216,212,-4,-1.8,House,35.0,19.0,
+398,2025,Compliance Works,346,279,-67,-19.3,House,35.0,19.0,
+334,2025,Communal Repairs,142,139,-4,-2.6,Flat,35.0,19.0,
+334,2025,Routine Repairs,320,301,-18,-5.7,Flat,35.0,19.0,
+334,2025,Void Works,295,293,-2,-0.5,Flat,35.0,19.0,
+334,2025,Major Works,308,338,30,9.6,Flat,35.0,19.0,
+334,2025,Emergency Repairs,140,154,14,10.1,Flat,35.0,19.0,
+334,2025,Environmental Works,333,312,-22,-6.6,Flat,35.0,19.0,
+246,2025,Environmental Works,123,126,2,2.0,Flat,35.0,19.0,
+246,2025,Planned Maintenance,272,286,14,5.2,Flat,35.0,19.0,
+246,2025,Compliance Works,146,167,21,14.3,Flat,35.0,19.0,
+246,2025,Emergency Repairs,188,189,0,0.2,Flat,35.0,19.0,
+246,2025,Routine Repairs,272,238,-34,-12.4,Flat,35.0,19.0,
+404,2025,Communal Repairs,306,331,25,8.2,Flat,34.0,18.0,
+404,2025,Environmental Works,234,272,38,16.2,Flat,34.0,18.0,
+404,2025,Planned Maintenance,265,309,44,16.5,Flat,34.0,18.0,
+404,2025,Cyclical Decorating,274,297,23,8.4,Flat,34.0,18.0,
+290,2025,Routine Repairs,276,258,-17,-6.3,Flat,34.0,18.0,
+290,2025,Planned Maintenance,276,270,-5,-2.0,Flat,34.0,18.0,
+290,2025,Major Works,288,286,-2,-0.8,Flat,34.0,18.0,
+290,2025,Compliance Works,166,197,31,18.8,Flat,34.0,18.0,
+317,2025,Compliance Works,192,219,27,13.8,Flat,35.0,20.0,
+317,2025,Major Works,272,284,12,4.6,Flat,35.0,20.0,
+317,2025,Routine Repairs,172,176,4,2.3,Flat,35.0,20.0,

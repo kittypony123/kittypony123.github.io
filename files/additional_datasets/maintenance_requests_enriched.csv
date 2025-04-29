@@ -1,0 +1,1349 @@
+request_id,tenantid,propertyid,patch_id,request_type,description,request_date,status,resolution_date,property_age_years,propertytype,blockid,simulated_request_type
+1,1,362,1,Plumbing,Repair description for property 362,2021-06-25,Closed,2024-11-26,74,House,21.0,Damp
+2,1,362,1,Structural,Repair description for property 362,2020-08-24,Closed,2024-04-22,74,House,21.0,Electrical
+3,1,362,1,Plumbing,Repair description for property 362,2020-10-05,Closed,2024-05-30,74,House,21.0,Heating
+4,1,362,1,Electrical,Repair description for property 362,2020-12-13,Closed,2025-06-03,74,House,21.0,Electrical
+5,2,74,2,Other,Repair description for property 74,2021-09-18,Open,,78,Flat,5.0,Electrical
+6,3,375,1,Appliance,Repair description for property 375,2020-04-13,Open,,71,Flat,22.0,Roofing
+7,3,375,1,Electrical,Repair description for property 375,2021-09-21,Closed,2024-04-20,71,Flat,22.0,Heating
+8,3,375,1,Appliance,Repair description for property 375,2021-05-31,Closed,2024-10-24,71,Flat,22.0,Heating
+9,3,375,1,Electrical,Repair description for property 375,2022-09-06,Closed,2024-10-25,71,Flat,22.0,Heating
+10,4,156,2,Plumbing,Repair description for property 156,2022-05-21,Open,,15,Block of Flats,2.0,Electrical
+11,5,105,2,Electrical,Repair description for property 105,2020-09-04,Closed,2024-02-05,78,Flat,5.0,Damp
+12,5,105,2,Electrical,Repair description for property 105,2020-12-29,Closed,2025-07-02,78,Flat,5.0,Heating
+13,5,105,2,Plumbing,Repair description for property 105,2020-11-16,Closed,2024-05-09,78,Flat,5.0,Electrical
+14,5,105,2,Electrical,Repair description for property 105,2021-09-24,Open,,78,Flat,5.0,Roofing
+15,6,395,3,Electrical,Repair description for property 395,2020-10-12,In Progress,,74,Flat,21.0,Damp
+16,6,395,3,Other,Repair description for property 395,2020-05-28,Closed,2024-12-25,74,Flat,21.0,Roofing
+17,6,395,3,Structural,Repair description for property 395,2020-03-24,Closed,2024-11-04,74,Flat,21.0,Damp
+18,6,395,3,Plumbing,Repair description for property 395,2022-08-23,Closed,2024-09-22,74,Flat,21.0,Electrical
+19,7,378,1,Electrical,Repair description for property 378,2021-02-09,Open,,29,Flat,20.0,Heating
+20,7,378,1,Electrical,Repair description for property 378,2022-09-04,Closed,2024-04-23,29,Flat,20.0,Windows
+21,8,125,5,Electrical,Repair description for property 125,2021-03-31,Closed,2024-08-31,78,Block of Flats,5.0,Roofing
+22,8,125,5,Structural,Repair description for property 125,2022-01-12,Closed,2024-11-29,78,Block of Flats,5.0,Electrical
+23,9,69,4,Other,Repair description for property 69,2022-03-10,Closed,2024-06-28,78,Flat,5.0,Damp
+24,9,69,4,Appliance,Repair description for property 69,2020-06-09,Closed,2024-04-23,78,Flat,5.0,Structural
+25,9,69,4,Structural,Repair description for property 69,2022-02-22,Open,,78,Flat,5.0,Structural
+26,10,451,6,Appliance,Repair description for property 451,2021-04-04,Closed,2024-12-16,73,Flat,,Heating
+27,10,451,6,Electrical,Repair description for property 451,2021-07-03,Closed,2025-01-30,73,Flat,,Heating
+28,11,10,2,Structural,Repair description for property 10,2021-05-14,Closed,2024-07-07,8,Flat,6.0,General
+29,11,10,2,Electrical,Repair description for property 10,2022-01-07,Closed,2024-06-10,8,Flat,6.0,General
+30,12,195,7,Appliance,Repair description for property 195,2021-05-23,Closed,2024-09-20,66,House,1.0,Damp
+31,12,195,7,Other,Repair description for property 195,2021-10-15,In Progress,,66,House,1.0,Damp
+32,12,195,7,Other,Repair description for property 195,2022-03-14,Closed,2024-08-28,66,House,1.0,Heating
+33,12,195,7,Structural,Repair description for property 195,2021-04-25,Closed,2024-03-09,66,House,1.0,Damp
+34,12,195,7,Electrical,Repair description for property 195,2021-10-24,In Progress,,66,House,1.0,Damp
+35,13,407,6,Structural,Repair description for property 407,2020-04-23,Closed,2024-11-20,29,House,20.0,Windows
+36,14,85,7,Electrical,Repair description for property 85,2022-01-18,Closed,2025-02-23,103,Flat,9.0,Structural
+37,15,372,8,Other,Repair description for property 372,2021-07-31,Open,,47,Flat,19.0,Plumbing
+38,15,372,8,Electrical,Repair description for property 372,2020-12-26,Closed,2025-02-13,47,Flat,19.0,Structural
+39,15,372,8,Plumbing,Repair description for property 372,2020-12-06,Closed,2025-01-28,47,Flat,19.0,Plumbing
+40,15,372,8,Appliance,Repair description for property 372,2022-02-08,In Progress,,47,Flat,19.0,Structural
+41,16,389,1,Appliance,Repair description for property 389,2022-09-13,Closed,2024-09-18,47,Flat,18.0,Plumbing
+42,16,389,1,Plumbing,Repair description for property 389,2022-01-30,In Progress,,47,Flat,18.0,Plumbing
+43,16,389,1,Appliance,Repair description for property 389,2022-08-26,Closed,2025-01-14,47,Flat,18.0,Plumbing
+44,17,496,7,Other,Repair description for property 496,2021-03-24,Closed,2024-08-05,73,House,,Structural
+45,17,496,7,Electrical,Repair description for property 496,2022-04-22,In Progress,,73,House,,Damp
+46,18,31,5,Structural,Repair description for property 31,2022-04-14,Open,,8,Flat,6.0,General
+47,18,31,5,Appliance,Repair description for property 31,2020-06-28,Closed,2024-04-18,8,Flat,6.0,General
+48,18,31,5,Plumbing,Repair description for property 31,2021-12-02,Closed,2024-10-20,8,Flat,6.0,General
+49,18,31,5,Other,Repair description for property 31,2021-02-10,In Progress,,8,Flat,6.0,General
+50,19,317,3,Plumbing,Repair description for property 317,2021-10-27,Closed,2024-08-24,29,Flat,20.0,Plumbing
+51,20,409,4,Plumbing,Repair description for property 409,2020-07-14,Closed,2024-04-24,47,Flat,19.0,Structural
+52,20,409,4,Appliance,Repair description for property 409,2021-04-10,Closed,2024-12-28,47,Flat,19.0,Heating
+53,20,409,4,Structural,Repair description for property 409,2020-11-06,Closed,2024-10-11,47,Flat,19.0,Windows
+54,21,491,8,Structural,Repair description for property 491,2020-09-18,Open,,73,Flat,,Damp
+55,21,491,8,Structural,Repair description for property 491,2021-02-22,Closed,2025-02-14,73,Flat,,Damp
+56,21,491,8,Electrical,Repair description for property 491,2021-02-09,Closed,2024-06-04,73,Flat,,Damp
+57,21,491,8,Electrical,Repair description for property 491,2022-07-27,Closed,2024-12-22,73,Flat,,Electrical
+58,21,491,8,Appliance,Repair description for property 491,2020-05-22,In Progress,,73,Flat,,Heating
+59,22,492,5,Appliance,Repair description for property 492,2020-12-07,Closed,2024-06-23,73,House,,Structural
+60,23,281,4,Electrical,Repair description for property 281,2020-11-11,In Progress,,29,Flat,20.0,Windows
+61,23,281,4,Structural,Repair description for property 281,2020-04-10,Closed,2025-01-20,29,Flat,20.0,Plumbing
+62,23,281,4,Electrical,Repair description for property 281,2020-08-31,Open,,29,Flat,20.0,Windows
+63,24,357,2,Electrical,Repair description for property 357,2021-05-04,Open,,47,Flat,19.0,Windows
+64,25,77,4,Appliance,Repair description for property 77,2020-01-12,Closed,2024-04-16,49,Flat,11.0,Structural
+65,26,462,5,Other,Repair description for property 462,2020-08-26,Closed,2024-09-24,73,Flat,,Roofing
+66,27,498,4,Other,Repair description for property 498,2021-07-14,Open,,73,House,,Damp
+67,27,498,4,Structural,Repair description for property 498,2020-02-11,Open,,73,House,,Electrical
+68,27,498,4,Appliance,Repair description for property 498,2021-11-08,Open,,73,House,,Roofing
+69,28,212,7,Other,Repair description for property 212,2021-08-16,Closed,2025-01-28,80,Flat,12.0,Roofing
+70,28,212,7,Plumbing,Repair description for property 212,2021-03-04,Closed,2024-04-16,80,Flat,12.0,Roofing
+71,29,102,2,Structural,Repair description for property 102,2022-03-13,Open,,25,Flat,17.0,Plumbing
+72,29,102,2,Structural,Repair description for property 102,2020-06-06,Closed,2025-01-03,25,Flat,17.0,Plumbing
+73,30,335,6,Appliance,Repair description for property 335,2020-08-03,Closed,2024-04-06,74,House,21.0,Damp
+74,31,476,8,Structural,Repair description for property 476,2021-10-31,Closed,2024-07-23,73,Block of Flats,,Damp
+75,31,476,8,Appliance,Repair description for property 476,2021-04-06,Closed,2025-01-20,73,Block of Flats,,Structural
+76,31,476,8,Structural,Repair description for property 476,2020-05-13,Closed,2024-02-12,73,Block of Flats,,Electrical
+77,31,476,8,Plumbing,Repair description for property 476,2020-03-07,Closed,2024-06-17,73,Block of Flats,,Electrical
+78,31,476,8,Plumbing,Repair description for property 476,2022-04-27,Closed,2024-06-04,73,Block of Flats,,Roofing
+79,32,337,5,Structural,Repair description for property 337,2020-01-07,Closed,2024-11-05,29,House,20.0,General
+80,33,441,1,Plumbing,Repair description for property 441,2022-08-05,Closed,2024-04-28,73,Flat,,Electrical
+81,33,441,1,Appliance,Repair description for property 441,2021-06-09,In Progress,,73,Flat,,Roofing
+82,34,174,4,Structural,Repair description for property 174,2020-03-13,In Progress,,49,Flat,11.0,Structural
+83,34,174,4,Electrical,Repair description for property 174,2021-02-02,Closed,2024-03-26,49,Flat,11.0,Structural
+84,35,3,5,Electrical,Repair description for property 3,2021-02-08,Closed,2024-03-29,80,Flat,10.0,Damp
+85,35,3,5,Structural,Repair description for property 3,2021-11-05,Closed,2024-04-12,80,Flat,10.0,Damp
+86,35,3,5,Appliance,Repair description for property 3,2021-07-31,Closed,2024-09-07,80,Flat,10.0,Electrical
+87,35,3,5,Electrical,Repair description for property 3,2022-05-08,Closed,2024-09-17,80,Flat,10.0,Structural
+88,35,3,5,Other,Repair description for property 3,2020-05-09,Open,,80,Flat,10.0,Electrical
+89,36,334,3,Appliance,Repair description for property 334,2022-07-19,Closed,2024-07-15,47,Flat,19.0,Structural
+90,36,334,3,Structural,Repair description for property 334,2021-04-10,Closed,2025-02-01,47,Flat,19.0,Roofing
+91,36,334,3,Plumbing,Repair description for property 334,2020-07-24,Closed,2024-08-11,47,Flat,19.0,Roofing
+92,37,410,6,Appliance,Repair description for property 410,2022-02-26,In Progress,,71,House,22.0,Structural
+93,38,71,2,Appliance,Repair description for property 71,2022-09-04,In Progress,,15,House,2.0,Electrical
+94,38,71,2,Structural,Repair description for property 71,2022-02-06,Closed,2024-10-21,15,House,2.0,General
+95,38,71,2,Other,Repair description for property 71,2020-09-22,Closed,2024-03-17,15,House,2.0,General
+96,38,71,2,Plumbing,Repair description for property 71,2021-06-20,Closed,2024-07-16,15,House,2.0,General
+97,39,210,5,Structural,Repair description for property 210,2022-08-19,Open,,80,House,10.0,Structural
+98,39,210,5,Appliance,Repair description for property 210,2022-03-03,Closed,2024-06-07,80,House,10.0,Heating
+99,40,64,1,Appliance,Repair description for property 64,2020-09-09,Open,,66,Flat,1.0,Heating
+100,40,64,1,Other,Repair description for property 64,2022-04-01,Closed,2024-04-14,66,Flat,1.0,Structural
+101,40,64,1,Structural,Repair description for property 64,2020-10-15,Open,,66,Flat,1.0,Heating
+102,41,385,5,Structural,Repair description for property 385,2020-06-12,Closed,2024-09-24,47,Flat,19.0,Structural
+103,41,385,5,Structural,Repair description for property 385,2020-04-04,Closed,2024-10-10,47,Flat,19.0,Heating
+104,41,385,5,Structural,Repair description for property 385,2022-02-20,Closed,2024-05-15,47,Flat,19.0,Heating
+105,42,94,6,Electrical,Repair description for property 94,2022-04-12,In Progress,,25,Flat,17.0,Heating
+106,42,94,6,Other,Repair description for property 94,2020-04-19,Closed,2024-07-20,25,Flat,17.0,Windows
+107,42,94,6,Plumbing,Repair description for property 94,2020-12-01,Closed,2024-05-27,25,Flat,17.0,General
+108,43,486,6,Other,Repair description for property 486,2022-04-01,Closed,2025-02-26,73,Flat,,Structural
+109,43,486,6,Structural,Repair description for property 486,2020-08-25,Closed,2025-04-01,73,Flat,,Damp
+110,43,486,6,Structural,Repair description for property 486,2021-01-15,Open,,73,Flat,,Roofing
+111,44,186,5,Plumbing,Repair description for property 186,2021-03-11,Open,,37,House,13.0,Heating
+112,44,186,5,Other,Repair description for property 186,2022-06-17,Closed,2024-04-11,37,House,13.0,Windows
+113,45,34,2,Electrical,Repair description for property 34,2021-04-27,Closed,2024-10-17,47,Flat,16.0,Structural
+114,46,78,4,Structural,Repair description for property 78,2022-07-25,Closed,2024-08-23,25,Flat,17.0,General
+115,46,78,4,Structural,Repair description for property 78,2022-06-20,Closed,2024-01-10,25,Flat,17.0,Windows
+116,46,78,4,Electrical,Repair description for property 78,2020-01-25,Closed,2024-05-31,25,Flat,17.0,Windows
+117,46,78,4,Structural,Repair description for property 78,2021-10-14,Closed,2024-07-08,25,Flat,17.0,Plumbing
+118,47,1,7,Appliance,Repair description for property 1,2020-04-26,Closed,2024-04-17,66,Flat,1.0,Heating
+119,47,1,7,Other,Repair description for property 1,2021-04-26,Closed,2025-01-23,66,Flat,1.0,Heating
+120,47,1,7,Structural,Repair description for property 1,2021-01-26,In Progress,,66,Flat,1.0,Structural
+121,47,1,7,Other,Repair description for property 1,2022-07-05,Closed,2024-06-08,66,Flat,1.0,Heating
+122,47,1,7,Plumbing,Repair description for property 1,2022-09-20,In Progress,,66,Flat,1.0,Electrical
+123,48,12,7,Other,Repair description for property 12,2022-08-21,Open,,25,Flat,17.0,General
+124,48,12,7,Other,Repair description for property 12,2021-06-20,Closed,2024-06-29,25,Flat,17.0,Plumbing
+125,49,416,1,Electrical,Repair description for property 416,2020-03-19,In Progress,,74,House,21.0,Heating
+126,49,416,1,Other,Repair description for property 416,2021-08-02,Closed,2024-08-19,74,House,21.0,Structural
+127,49,416,1,Plumbing,Repair description for property 416,2020-06-21,Open,,74,House,21.0,Electrical
+128,50,23,2,Structural,Repair description for property 23,2022-08-13,Closed,2024-04-20,15,Flat,2.0,Plumbing
+129,50,23,2,Plumbing,Repair description for property 23,2020-01-12,Closed,2024-05-24,15,Flat,2.0,General
+130,50,23,2,Electrical,Repair description for property 23,2022-03-10,Closed,2024-05-27,15,Flat,2.0,General
+131,51,73,1,Electrical,Repair description for property 73,2020-05-07,Closed,2024-12-31,66,Flat,1.0,Heating
+132,51,73,1,Plumbing,Repair description for property 73,2021-08-30,Closed,2024-10-19,66,Flat,1.0,Structural
+133,51,73,1,Plumbing,Repair description for property 73,2020-04-01,Closed,2024-06-30,66,Flat,1.0,Roofing
+134,51,73,1,Electrical,Repair description for property 73,2021-10-14,Closed,2024-12-14,66,Flat,1.0,Roofing
+135,51,73,1,Appliance,Repair description for property 73,2021-06-26,Closed,2024-11-15,66,Flat,1.0,Damp
+136,52,183,6,Appliance,Repair description for property 183,2022-04-25,In Progress,,80,Flat,12.0,Roofing
+137,52,183,6,Other,Repair description for property 183,2021-06-15,Open,,80,Flat,12.0,Roofing
+138,52,183,6,Other,Repair description for property 183,2021-10-19,In Progress,,80,Flat,12.0,Roofing
+139,52,183,6,Electrical,Repair description for property 183,2022-09-15,Closed,2025-01-15,80,Flat,12.0,Roofing
+140,53,132,5,Appliance,Repair description for property 132,2022-04-07,Closed,2024-12-24,37,Flat,13.0,Heating
+141,53,132,5,Other,Repair description for property 132,2021-03-22,Closed,2024-07-18,37,Flat,13.0,Windows
+142,54,411,3,Plumbing,Repair description for property 411,2021-01-24,Closed,2024-04-09,47,Flat,19.0,Windows
+143,54,411,3,Structural,Repair description for property 411,2021-11-02,Closed,2024-07-18,47,Flat,19.0,Structural
+144,54,411,3,Structural,Repair description for property 411,2022-05-10,Closed,2024-07-20,47,Flat,19.0,Structural
+145,54,411,3,Appliance,Repair description for property 411,2020-02-12,Closed,2025-10-03,47,Flat,19.0,Plumbing
+146,55,194,7,Appliance,Repair description for property 194,2020-09-10,In Progress,,51,Flat,4.0,Structural
+147,56,56,4,Other,Repair description for property 56,2020-05-09,In Progress,,57,Flat,3.0,Windows
+148,56,56,4,Appliance,Repair description for property 56,2020-02-29,Closed,2024-07-13,57,Flat,3.0,Structural
+149,56,56,4,Other,Repair description for property 56,2021-10-24,Closed,2024-06-30,57,Flat,3.0,Plumbing
+150,57,149,1,Structural,Repair description for property 149,2021-04-11,Open,,37,Block of Flats,13.0,General
+151,57,149,1,Appliance,Repair description for property 149,2020-10-13,Closed,2024-08-04,37,Block of Flats,13.0,Plumbing
+152,57,149,1,Other,Repair description for property 149,2021-05-31,Open,,37,Block of Flats,13.0,Windows
+153,58,19,8,Other,Repair description for property 19,2021-04-11,Closed,2024-03-31,98,Flat,7.0,Roofing
+154,58,19,8,Plumbing,Repair description for property 19,2022-07-18,Closed,2024-05-25,98,Flat,7.0,Roofing
+155,58,19,8,Plumbing,Repair description for property 19,2022-02-16,Closed,2025-02-27,98,Flat,7.0,Electrical
+156,58,19,8,Structural,Repair description for property 19,2020-12-10,Closed,2024-04-22,98,Flat,7.0,Structural
+157,58,19,8,Plumbing,Repair description for property 19,2021-10-03,Open,,98,Flat,7.0,Electrical
+158,59,205,4,Plumbing,Repair description for property 205,2021-01-16,In Progress,,98,Flat,7.0,Damp
+159,59,205,4,Plumbing,Repair description for property 205,2022-02-17,Closed,2025-01-30,98,Flat,7.0,Damp
+160,60,79,7,Electrical,Repair description for property 79,2021-11-20,Closed,2024-09-15,47,Flat,16.0,Windows
+161,60,79,7,Other,Repair description for property 79,2020-09-09,Closed,2024-09-30,47,Flat,16.0,Windows
+162,60,79,7,Structural,Repair description for property 79,2022-07-15,Closed,2024-05-27,47,Flat,16.0,Windows
+163,60,79,7,Other,Repair description for property 79,2020-02-25,Closed,2024-09-11,47,Flat,16.0,Plumbing
+164,61,495,5,Plumbing,Repair description for property 495,2021-04-07,Closed,2025-03-02,73,Flat,,Roofing
+165,61,495,5,Structural,Repair description for property 495,2021-04-01,Closed,2024-11-19,73,Flat,,Damp
+166,62,263,5,Other,Repair description for property 263,2022-09-09,Closed,2024-05-15,47,House,19.0,Roofing
+167,62,263,5,Appliance,Repair description for property 263,2020-03-23,Closed,2024-06-24,47,House,19.0,Roofing
+168,62,263,5,Electrical,Repair description for property 263,2022-06-23,Closed,2024-05-07,47,House,19.0,Roofing
+169,62,263,5,Plumbing,Repair description for property 263,2020-04-08,Closed,2025-02-13,47,House,19.0,Roofing
+170,63,324,2,Plumbing,Repair description for property 324,2020-05-28,Closed,2025-03-02,47,Flat,19.0,Plumbing
+171,63,324,2,Plumbing,Repair description for property 324,2020-11-24,Closed,2024-06-07,47,Flat,19.0,Roofing
+172,63,324,2,Structural,Repair description for property 324,2020-06-04,In Progress,,47,Flat,19.0,Windows
+173,63,324,2,Electrical,Repair description for property 324,2020-07-08,Open,,47,Flat,19.0,Structural
+174,63,324,2,Other,Repair description for property 324,2021-05-08,Closed,2024-10-21,47,Flat,19.0,Roofing
+175,64,484,6,Plumbing,Repair description for property 484,2022-06-01,Closed,2024-05-07,73,Flat,,Heating
+176,64,484,6,Plumbing,Repair description for property 484,2020-09-19,Closed,2024-03-06,73,Flat,,Heating
+177,64,484,6,Plumbing,Repair description for property 484,2020-03-20,Closed,2025-02-19,73,Flat,,Structural
+178,64,484,6,Plumbing,Repair description for property 484,2021-02-03,Closed,2025-01-13,73,Flat,,Electrical
+179,64,484,6,Other,Repair description for property 484,2022-02-02,Closed,2024-11-24,73,Flat,,Structural
+180,65,80,4,Other,Repair description for property 80,2021-08-31,In Progress,,103,Flat,9.0,Heating
+181,66,40,3,Electrical,Repair description for property 40,2020-09-16,In Progress,,78,Flat,5.0,Roofing
+182,66,40,3,Plumbing,Repair description for property 40,2022-02-10,Open,,78,Flat,5.0,Damp
+183,66,40,3,Appliance,Repair description for property 40,2021-09-06,Closed,2024-08-07,78,Flat,5.0,Heating
+184,66,40,3,Plumbing,Repair description for property 40,2021-07-05,Open,,78,Flat,5.0,Structural
+185,66,40,3,Other,Repair description for property 40,2022-02-23,Closed,2025-02-24,78,Flat,5.0,Damp
+186,67,452,6,Appliance,Repair description for property 452,2020-04-10,Closed,2024-09-09,73,House,,Structural
+187,67,452,6,Appliance,Repair description for property 452,2020-12-24,Closed,2025-02-13,73,House,,Structural
+188,67,452,6,Plumbing,Repair description for property 452,2021-01-14,Closed,2024-09-03,73,House,,Roofing
+189,67,452,6,Structural,Repair description for property 452,2022-03-30,In Progress,,73,House,,Damp
+190,67,452,6,Electrical,Repair description for property 452,2020-08-08,Closed,2024-12-19,73,House,,Damp
+191,68,47,8,Other,Repair description for property 47,2022-03-30,Closed,2024-05-15,15,Flat,8.0,Plumbing
+192,69,239,3,Electrical,Repair description for property 239,2021-02-23,Open,,71,Flat,22.0,Roofing
+193,69,239,3,Structural,Repair description for property 239,2020-05-03,Closed,2025-02-02,71,Flat,22.0,Heating
+194,69,239,3,Electrical,Repair description for property 239,2021-02-25,Closed,2025-02-24,71,Flat,22.0,Structural
+195,69,239,3,Plumbing,Repair description for property 239,2020-08-18,Closed,2024-10-13,71,Flat,22.0,Electrical
+196,69,239,3,Electrical,Repair description for property 239,2021-11-20,Closed,2024-05-04,71,Flat,22.0,Structural
+197,70,392,3,Electrical,Repair description for property 392,2020-03-03,In Progress,,47,Flat,18.0,Plumbing
+198,70,392,3,Other,Repair description for property 392,2021-04-29,In Progress,,47,Flat,18.0,Plumbing
+199,70,392,3,Other,Repair description for property 392,2021-09-19,Open,,47,Flat,18.0,Plumbing
+200,70,392,3,Plumbing,Repair description for property 392,2021-12-03,Closed,2024-10-31,47,Flat,18.0,Plumbing
+201,71,353,1,Structural,Repair description for property 353,2021-07-27,In Progress,,71,Flat,22.0,Roofing
+202,71,353,1,Other,Repair description for property 353,2022-02-06,Closed,2025-01-22,71,Flat,22.0,Damp
+203,71,353,1,Structural,Repair description for property 353,2021-04-27,Closed,2024-11-18,71,Flat,22.0,Electrical
+204,72,342,4,Appliance,Repair description for property 342,2021-06-02,In Progress,,29,Flat,20.0,Windows
+205,72,342,4,Structural,Repair description for property 342,2020-06-03,Closed,2025-01-26,29,Flat,20.0,Heating
+206,73,278,6,Other,Repair description for property 278,2020-04-01,Closed,2024-08-17,29,Flat,20.0,Heating
+207,73,278,6,Appliance,Repair description for property 278,2022-09-08,Closed,2024-11-09,29,Flat,20.0,General
+208,73,278,6,Appliance,Repair description for property 278,2021-06-09,Closed,2025-02-17,29,Flat,20.0,Plumbing
+209,73,278,6,Structural,Repair description for property 278,2021-03-30,Closed,2024-09-06,29,Flat,20.0,Plumbing
+210,73,278,6,Structural,Repair description for property 278,2022-01-10,In Progress,,29,Flat,20.0,Heating
+211,74,291,1,Other,Repair description for property 291,2021-08-20,In Progress,,47,Flat,18.0,Plumbing
+212,74,291,1,Plumbing,Repair description for property 291,2021-10-06,Open,,47,Flat,18.0,Plumbing
+213,74,291,1,Structural,Repair description for property 291,2021-05-24,Closed,2024-12-06,47,Flat,18.0,Plumbing
+214,74,291,1,Other,Repair description for property 291,2020-07-01,Closed,2024-06-17,47,Flat,18.0,Plumbing
+215,74,291,1,Electrical,Repair description for property 291,2021-01-20,Closed,2024-10-29,47,Flat,18.0,Plumbing
+216,75,318,1,Plumbing,Repair description for property 318,2021-07-27,Closed,2025-03-13,47,Flat,19.0,Roofing
+217,75,318,1,Structural,Repair description for property 318,2021-12-31,In Progress,,47,Flat,19.0,Structural
+218,76,305,2,Structural,Repair description for property 305,2021-02-08,Closed,2024-08-17,47,Flat,18.0,Plumbing
+219,76,305,2,Plumbing,Repair description for property 305,2020-09-02,Open,,47,Flat,18.0,Plumbing
+220,76,305,2,Electrical,Repair description for property 305,2022-01-11,Closed,2024-03-10,47,Flat,18.0,Plumbing
+221,76,305,2,Plumbing,Repair description for property 305,2021-08-13,Closed,2024-07-29,47,Flat,18.0,Plumbing
+222,76,305,2,Appliance,Repair description for property 305,2021-10-22,Closed,2024-09-24,47,Flat,18.0,Plumbing
+223,77,269,7,Other,Repair description for property 269,2021-10-11,In Progress,,47,Flat,19.0,Windows
+224,78,70,6,Electrical,Repair description for property 70,2021-04-15,In Progress,,37,House,13.0,General
+225,78,70,6,Structural,Repair description for property 70,2022-04-05,In Progress,,37,House,13.0,Plumbing
+226,78,70,6,Other,Repair description for property 70,2022-06-06,Closed,2024-09-07,37,House,13.0,Windows
+227,78,70,6,Electrical,Repair description for property 70,2021-02-26,Closed,2024-01-04,37,House,13.0,Heating
+228,78,70,6,Plumbing,Repair description for property 70,2022-06-19,Closed,2024-03-28,37,House,13.0,General
+229,79,456,3,Structural,Repair description for property 456,2020-03-05,Closed,2024-11-25,73,Flat,,Damp
+230,79,456,3,Other,Repair description for property 456,2020-01-13,Closed,2025-03-18,73,Flat,,Damp
+231,79,456,3,Other,Repair description for property 456,2020-07-31,Closed,2025-02-16,73,Flat,,Heating
+232,79,456,3,Structural,Repair description for property 456,2022-09-12,Closed,2024-07-17,73,Flat,,Damp
+233,79,456,3,Plumbing,Repair description for property 456,2020-08-29,Closed,2024-06-06,73,Flat,,Heating
+234,80,466,7,Structural,Repair description for property 466,2021-05-07,Closed,2024-10-16,73,House,,Roofing
+235,80,466,7,Appliance,Repair description for property 466,2020-07-31,In Progress,,73,House,,Heating
+236,80,466,7,Structural,Repair description for property 466,2021-11-23,Closed,2024-05-10,73,House,,Heating
+237,80,466,7,Plumbing,Repair description for property 466,2020-12-03,Open,,73,House,,Damp
+238,81,155,5,Electrical,Repair description for property 155,2022-09-23,In Progress,,57,House,3.0,Windows
+239,81,155,5,Electrical,Repair description for property 155,2020-06-21,Open,,57,House,3.0,Roofing
+240,81,155,5,Plumbing,Repair description for property 155,2021-11-02,Open,,57,House,3.0,Roofing
+241,81,155,5,Appliance,Repair description for property 155,2020-06-12,Closed,2024-11-23,57,House,3.0,Heating
+242,81,155,5,Other,Repair description for property 155,2021-04-09,Open,,57,House,3.0,Roofing
+243,82,83,5,Electrical,Repair description for property 83,2022-09-21,Closed,2024-10-04,24,House,14.0,General
+244,82,83,5,Structural,Repair description for property 83,2021-05-11,Closed,2024-05-16,24,House,14.0,Windows
+245,82,83,5,Electrical,Repair description for property 83,2021-11-30,Closed,2024-11-24,24,House,14.0,Heating
+246,82,83,5,Structural,Repair description for property 83,2021-01-29,In Progress,,24,House,14.0,Heating
+247,83,478,8,Appliance,Repair description for property 478,2021-12-03,Closed,2024-02-09,73,Block of Flats,,Roofing
+248,84,173,3,Electrical,Repair description for property 173,2022-07-05,Closed,2024-11-15,51,Flat,4.0,Heating
+249,84,173,3,Other,Repair description for property 173,2020-11-03,Closed,2024-06-26,51,Flat,4.0,Plumbing
+250,84,173,3,Structural,Repair description for property 173,2022-02-06,Closed,2024-01-04,51,Flat,4.0,Windows
+251,84,173,3,Electrical,Repair description for property 173,2020-07-01,Closed,2024-03-10,51,Flat,4.0,Heating
+252,84,173,3,Electrical,Repair description for property 173,2021-09-20,Closed,2024-06-06,51,Flat,4.0,Roofing
+253,85,322,5,Other,Repair description for property 322,2022-03-04,Closed,2025-05-03,47,Flat,19.0,Windows
+254,85,322,5,Electrical,Repair description for property 322,2021-05-24,Open,,47,Flat,19.0,Windows
+255,85,322,5,Electrical,Repair description for property 322,2021-12-08,Open,,47,Flat,19.0,Roofing
+256,85,322,5,Appliance,Repair description for property 322,2021-06-29,Closed,2025-02-17,47,Flat,19.0,Heating
+257,86,91,8,Structural,Repair description for property 91,2021-07-17,Closed,2024-09-21,80,Flat,10.0,Structural
+258,86,91,8,Other,Repair description for property 91,2021-09-15,Closed,2025-01-24,80,Flat,10.0,Damp
+259,86,91,8,Structural,Repair description for property 91,2022-02-02,Closed,2024-05-15,80,Flat,10.0,Electrical
+260,86,91,8,Appliance,Repair description for property 91,2021-08-16,In Progress,,80,Flat,10.0,Electrical
+261,87,181,5,Other,Repair description for property 181,2022-01-13,Open,,80,Block of Flats,10.0,Heating
+262,87,181,5,Other,Repair description for property 181,2020-08-14,Closed,2024-10-07,80,Block of Flats,10.0,Structural
+263,87,181,5,Appliance,Repair description for property 181,2022-01-14,Closed,2024-05-09,80,Block of Flats,10.0,Structural
+264,88,415,3,Plumbing,Repair description for property 415,2022-01-02,In Progress,,29,Flat,20.0,General
+265,88,415,3,Other,Repair description for property 415,2021-03-11,Closed,2024-11-11,29,Flat,20.0,General
+266,89,313,4,Structural,Repair description for property 313,2022-07-13,Closed,2024-05-06,74,Flat,21.0,Heating
+267,89,313,4,Plumbing,Repair description for property 313,2021-02-25,Closed,2024-08-20,74,Flat,21.0,Damp
+268,89,313,4,Other,Repair description for property 313,2021-07-07,Closed,2024-11-20,74,Flat,21.0,Structural
+269,89,313,4,Structural,Repair description for property 313,2020-01-21,Closed,2024-09-29,74,Flat,21.0,Damp
+270,89,313,4,Structural,Repair description for property 313,2021-07-07,Closed,2024-10-17,74,Flat,21.0,Heating
+271,90,279,1,Structural,Repair description for property 279,2021-01-31,Open,,47,Block of Flats,18.0,Plumbing
+272,90,279,1,Electrical,Repair description for property 279,2021-09-16,Closed,2025-03-01,47,Block of Flats,18.0,Plumbing
+273,90,279,1,Other,Repair description for property 279,2020-04-14,Closed,2025-02-14,47,Block of Flats,18.0,Plumbing
+274,91,382,6,Structural,Repair description for property 382,2020-07-10,Closed,2024-12-16,29,Flat,20.0,Plumbing
+275,91,382,6,Appliance,Repair description for property 382,2020-01-17,Closed,2024-03-12,29,Flat,20.0,General
+276,91,382,6,Plumbing,Repair description for property 382,2020-04-29,Closed,2024-06-20,29,Flat,20.0,Windows
+277,91,382,6,Appliance,Repair description for property 382,2021-01-27,Open,,29,Flat,20.0,Plumbing
+278,91,382,6,Structural,Repair description for property 382,2021-02-28,Closed,2024-07-23,29,Flat,20.0,Heating
+279,92,473,3,Plumbing,Repair description for property 473,2020-05-08,Open,,73,Flat,,Heating
+280,93,363,1,Other,Repair description for property 363,2020-05-09,Closed,2024-12-17,47,Flat,18.0,Plumbing
+281,93,363,1,Plumbing,Repair description for property 363,2021-07-25,In Progress,,47,Flat,18.0,Plumbing
+282,93,363,1,Structural,Repair description for property 363,2021-07-13,Closed,2024-12-08,47,Flat,18.0,Plumbing
+283,94,325,6,Plumbing,Repair description for property 325,2020-01-29,Closed,2024-06-15,71,Block of Flats,22.0,Roofing
+284,94,325,6,Electrical,Repair description for property 325,2020-04-06,Closed,2024-06-11,71,Block of Flats,22.0,Roofing
+285,95,432,6,Appliance,Repair description for property 432,2020-01-10,Closed,2024-10-30,73,Flat,,Heating
+286,95,432,6,Other,Repair description for property 432,2020-08-29,Closed,2024-10-26,73,Flat,,Electrical
+287,96,348,4,Electrical,Repair description for property 348,2022-04-05,Closed,2025-03-13,71,Flat,22.0,Structural
+288,96,348,4,Other,Repair description for property 348,2022-08-13,Closed,2024-03-14,71,Flat,22.0,Damp
+289,97,87,6,Other,Repair description for property 87,2020-08-19,Closed,2024-04-30,49,Flat,11.0,Structural
+290,97,87,6,Electrical,Repair description for property 87,2022-02-27,In Progress,,49,Flat,11.0,Structural
+291,97,87,6,Appliance,Repair description for property 87,2020-10-10,Closed,2024-10-16,49,Flat,11.0,Structural
+292,97,87,6,Electrical,Repair description for property 87,2021-12-15,Closed,2024-12-05,49,Flat,11.0,Structural
+293,98,76,2,Appliance,Repair description for property 76,2022-01-28,Closed,2024-10-17,15,House,2.0,General
+294,99,439,7,Structural,Repair description for property 439,2022-03-12,Closed,2024-09-12,73,House,,Heating
+295,100,16,5,Appliance,Repair description for property 16,2022-02-14,Closed,2024-01-04,15,Flat,8.0,Electrical
+296,100,16,5,Structural,Repair description for property 16,2022-08-12,Closed,2024-03-05,15,Flat,8.0,Electrical
+297,100,16,5,Plumbing,Repair description for property 16,2021-12-26,Closed,2024-10-07,15,Flat,8.0,General
+298,100,16,5,Structural,Repair description for property 16,2020-07-18,In Progress,,15,Flat,8.0,General
+299,101,250,3,Appliance,Repair description for property 250,2022-08-02,In Progress,,74,House,21.0,Electrical
+300,101,250,3,Appliance,Repair description for property 250,2020-03-19,In Progress,,74,House,21.0,Heating
+301,101,250,3,Appliance,Repair description for property 250,2022-07-01,Closed,2024-03-12,74,House,21.0,Heating
+302,101,250,3,Electrical,Repair description for property 250,2022-08-13,Closed,2024-08-30,74,House,21.0,Heating
+303,102,434,8,Plumbing,Repair description for property 434,2022-05-04,Closed,2024-04-23,73,Block of Flats,,Roofing
+304,103,20,3,Structural,Repair description for property 20,2022-05-05,Closed,2024-08-09,80,Flat,10.0,Electrical
+305,104,323,4,Other,Repair description for property 323,2020-06-21,Closed,2025-11-02,74,Block of Flats,21.0,Structural
+306,104,323,4,Electrical,Repair description for property 323,2021-04-11,In Progress,,74,Block of Flats,21.0,Damp
+307,104,323,4,Structural,Repair description for property 323,2021-08-03,In Progress,,74,Block of Flats,21.0,Structural
+308,104,323,4,Plumbing,Repair description for property 323,2021-02-19,Closed,2024-08-23,74,Block of Flats,21.0,Electrical
+309,104,323,4,Other,Repair description for property 323,2022-07-28,Open,,74,Block of Flats,21.0,Damp
+310,105,333,4,Electrical,Repair description for property 333,2021-03-24,Closed,2024-03-07,29,Flat,20.0,Heating
+311,105,333,4,Plumbing,Repair description for property 333,2020-03-27,Open,,29,Flat,20.0,Windows
+312,105,333,4,Appliance,Repair description for property 333,2020-04-10,In Progress,,29,Flat,20.0,General
+313,105,333,4,Plumbing,Repair description for property 333,2020-01-08,In Progress,,29,Flat,20.0,Windows
+314,106,57,8,Appliance,Repair description for property 57,2022-04-24,Closed,2025-12-02,98,Flat,7.0,Heating
+315,107,302,1,Plumbing,Repair description for property 302,2020-07-18,Open,,47,Block of Flats,19.0,Roofing
+316,108,230,5,Structural,Repair description for property 230,2021-05-19,Closed,2024-08-30,71,Flat,22.0,Structural
+317,108,230,5,Appliance,Repair description for property 230,2020-03-27,Closed,2024-07-25,71,Flat,22.0,Damp
+318,108,230,5,Appliance,Repair description for property 230,2020-02-12,Closed,2024-06-12,71,Flat,22.0,Damp
+319,108,230,5,Other,Repair description for property 230,2021-01-19,Closed,2024-08-10,71,Flat,22.0,Electrical
+320,108,230,5,Other,Repair description for property 230,2021-09-12,Closed,2024-06-11,71,Flat,22.0,Electrical
+321,109,332,1,Structural,Repair description for property 332,2021-03-10,Closed,2024-08-31,71,Flat,22.0,Heating
+322,109,332,1,Electrical,Repair description for property 332,2021-02-11,In Progress,,71,Flat,22.0,Damp
+323,110,133,1,Appliance,Repair description for property 133,2021-04-27,Closed,2025-02-22,15,Flat,2.0,Electrical
+324,110,133,1,Plumbing,Repair description for property 133,2021-10-25,Closed,2024-05-24,15,Flat,2.0,Electrical
+325,110,133,1,Appliance,Repair description for property 133,2020-01-17,Closed,2025-01-16,15,Flat,2.0,Electrical
+326,110,133,1,Appliance,Repair description for property 133,2021-10-06,Closed,2024-04-05,15,Flat,2.0,Electrical
+327,110,133,1,Plumbing,Repair description for property 133,2020-05-27,Open,,15,Flat,2.0,Plumbing
+328,111,138,1,Electrical,Repair description for property 138,2020-10-03,Closed,2024-11-13,78,Block of Flats,5.0,Electrical
+329,111,138,1,Plumbing,Repair description for property 138,2020-08-19,Closed,2025-02-27,78,Block of Flats,5.0,Heating
+330,111,138,1,Appliance,Repair description for property 138,2022-04-05,Closed,2024-06-11,78,Block of Flats,5.0,Damp
+331,111,138,1,Appliance,Repair description for property 138,2022-07-15,Closed,2024-06-13,78,Block of Flats,5.0,Structural
+332,112,424,3,Plumbing,Repair description for property 424,2020-12-31,Closed,2024-02-07,71,Flat,22.0,Damp
+333,112,424,3,Plumbing,Repair description for property 424,2020-08-15,Closed,2025-07-01,71,Flat,22.0,Electrical
+334,112,424,3,Appliance,Repair description for property 424,2021-10-12,Closed,2024-10-12,71,Flat,22.0,Electrical
+335,112,424,3,Other,Repair description for property 424,2021-03-11,Closed,2025-01-13,71,Flat,22.0,Structural
+336,113,336,8,Appliance,Repair description for property 336,2021-02-02,In Progress,,47,Flat,18.0,Plumbing
+337,113,336,8,Structural,Repair description for property 336,2020-07-29,Closed,2025-08-03,47,Flat,18.0,Plumbing
+338,113,336,8,Electrical,Repair description for property 336,2021-01-25,Closed,2024-03-07,47,Flat,18.0,Plumbing
+339,113,336,8,Other,Repair description for property 336,2021-05-13,Closed,2025-07-01,47,Flat,18.0,Plumbing
+340,114,26,6,Structural,Repair description for property 26,2021-06-23,Closed,2024-06-22,78,Flat,5.0,Roofing
+341,114,26,6,Plumbing,Repair description for property 26,2021-07-16,Closed,2025-11-01,78,Flat,5.0,Heating
+342,114,26,6,Plumbing,Repair description for property 26,2021-05-05,Closed,2024-09-22,78,Flat,5.0,Roofing
+343,115,465,4,Appliance,Repair description for property 465,2021-03-17,Closed,2024-03-27,73,Block of Flats,,Roofing
+344,115,465,4,Electrical,Repair description for property 465,2020-09-17,Closed,2024-09-30,73,Block of Flats,,Heating
+345,115,465,4,Structural,Repair description for property 465,2022-02-11,Closed,2025-10-02,73,Block of Flats,,Roofing
+346,116,282,4,Appliance,Repair description for property 282,2020-12-15,Closed,2024-12-17,71,Flat,22.0,Roofing
+347,117,248,1,Structural,Repair description for property 248,2020-12-17,Closed,2024-10-18,47,House,19.0,Heating
+348,117,248,1,Other,Repair description for property 248,2021-06-03,Closed,2024-06-06,47,House,19.0,Roofing
+349,117,248,1,Structural,Repair description for property 248,2020-11-15,Closed,2024-12-17,47,House,19.0,Roofing
+350,117,248,1,Appliance,Repair description for property 248,2020-05-17,Closed,2024-09-06,47,House,19.0,Roofing
+351,117,248,1,Structural,Repair description for property 248,2021-07-03,Closed,2024-08-10,47,House,19.0,Plumbing
+352,118,238,6,Electrical,Repair description for property 238,2021-09-14,Open,,47,Flat,18.0,Plumbing
+353,118,238,6,Plumbing,Repair description for property 238,2022-09-18,Open,,47,Flat,18.0,Plumbing
+354,118,238,6,Plumbing,Repair description for property 238,2021-01-02,Closed,2024-04-24,47,Flat,18.0,Plumbing
+355,118,238,6,Appliance,Repair description for property 238,2020-08-07,Closed,2024-09-16,47,Flat,18.0,Plumbing
+356,118,238,6,Plumbing,Repair description for property 238,2020-12-02,Closed,2024-04-08,47,Flat,18.0,Plumbing
+357,119,118,6,Appliance,Repair description for property 118,2020-08-10,Closed,2024-10-06,80,Flat,10.0,Structural
+358,119,118,6,Plumbing,Repair description for property 118,2021-10-09,Closed,2024-09-15,80,Flat,10.0,Electrical
+359,120,43,2,Electrical,Repair description for property 43,2022-02-06,In Progress,,47,Block of Flats,16.0,Windows
+360,120,43,2,Structural,Repair description for property 43,2020-12-25,Closed,2024-03-08,47,Block of Flats,16.0,Heating
+361,120,43,2,Structural,Repair description for property 43,2022-07-09,Closed,2024-11-04,47,Block of Flats,16.0,Roofing
+362,120,43,2,Structural,Repair description for property 43,2020-11-24,Closed,2024-09-12,47,Block of Flats,16.0,Windows
+363,120,43,2,Electrical,Repair description for property 43,2022-08-19,Closed,2024-11-08,47,Block of Flats,16.0,Structural
+364,121,221,3,Electrical,Repair description for property 221,2021-04-07,Closed,2024-12-09,98,Flat,7.0,Damp
+365,121,221,3,Structural,Repair description for property 221,2022-08-03,Closed,2024-07-22,98,Flat,7.0,Structural
+366,121,221,3,Other,Repair description for property 221,2022-08-20,Closed,2024-09-23,98,Flat,7.0,Damp
+367,121,221,3,Appliance,Repair description for property 221,2021-07-14,Closed,2025-02-22,98,Flat,7.0,Heating
+368,122,177,3,Structural,Repair description for property 177,2022-03-14,In Progress,,23,Flat,15.0,General
+369,122,177,3,Appliance,Repair description for property 177,2021-01-16,Closed,2024-01-05,23,Flat,15.0,General
+370,122,177,3,Other,Repair description for property 177,2022-04-15,Closed,2024-07-05,23,Flat,15.0,Windows
+371,122,177,3,Electrical,Repair description for property 177,2021-08-12,Closed,2025-05-01,23,Flat,15.0,Plumbing
+372,123,321,8,Plumbing,Repair description for property 321,2021-09-08,Closed,2025-01-17,47,Flat,19.0,Heating
+373,123,321,8,Other,Repair description for property 321,2020-06-17,Closed,2024-07-16,47,Flat,19.0,Plumbing
+374,124,154,3,Structural,Repair description for property 154,2020-08-04,Closed,2024-12-13,23,House,15.0,Heating
+375,124,154,3,Structural,Repair description for property 154,2021-01-12,Closed,2024-03-19,23,House,15.0,Plumbing
+376,124,154,3,Plumbing,Repair description for property 154,2020-04-28,Closed,2024-06-29,23,House,15.0,General
+377,125,232,4,Structural,Repair description for property 232,2020-07-08,Open,,74,Flat,21.0,Electrical
+378,126,228,6,Other,Repair description for property 228,2022-02-05,Closed,2024-09-12,71,House,22.0,Roofing
+379,127,418,2,Plumbing,Repair description for property 418,2021-01-04,Closed,2024-12-27,74,Flat,21.0,Roofing
+380,127,418,2,Appliance,Repair description for property 418,2022-02-16,Closed,2024-02-10,74,Flat,21.0,Structural
+381,127,418,2,Other,Repair description for property 418,2020-05-28,Open,,74,Flat,21.0,Damp
+382,127,418,2,Plumbing,Repair description for property 418,2021-11-06,Closed,2024-03-08,74,Flat,21.0,Roofing
+383,128,204,1,Plumbing,Repair description for property 204,2021-10-13,Closed,2024-09-18,103,Flat,9.0,Heating
+384,128,204,1,Electrical,Repair description for property 204,2022-05-08,Closed,2024-11-22,103,Flat,9.0,Damp
+385,129,127,2,Electrical,Repair description for property 127,2021-05-02,Closed,2024-04-13,51,Flat,4.0,Structural
+386,129,127,2,Structural,Repair description for property 127,2022-02-08,Closed,2024-10-14,51,Flat,4.0,Roofing
+387,129,127,2,Electrical,Repair description for property 127,2021-01-08,Closed,2024-12-31,51,Flat,4.0,Structural
+388,130,330,8,Appliance,Repair description for property 330,2022-02-19,Closed,2024-11-26,29,Flat,20.0,Windows
+389,130,330,8,Structural,Repair description for property 330,2021-11-23,Closed,2024-10-26,29,Flat,20.0,Windows
+390,130,330,8,Electrical,Repair description for property 330,2020-06-08,Closed,2024-01-05,29,Flat,20.0,Windows
+391,131,32,1,Appliance,Repair description for property 32,2020-12-16,Closed,2024-05-21,103,House,9.0,Electrical
+392,132,114,6,Electrical,Repair description for property 114,2022-06-30,In Progress,,8,Flat,6.0,General
+393,132,114,6,Structural,Repair description for property 114,2020-10-14,Closed,2024-09-21,8,Flat,6.0,General
+394,132,114,6,Appliance,Repair description for property 114,2020-10-14,Closed,2025-01-18,8,Flat,6.0,General
+395,133,471,5,Appliance,Repair description for property 471,2022-06-10,Open,,73,House,,Damp
+396,133,471,5,Appliance,Repair description for property 471,2020-08-13,Closed,2024-12-28,73,House,,Heating
+397,133,471,5,Plumbing,Repair description for property 471,2021-06-06,Closed,2024-03-28,73,House,,Damp
+398,134,272,8,Plumbing,Repair description for property 272,2021-06-05,Closed,2025-10-03,47,Flat,19.0,Structural
+399,134,272,8,Electrical,Repair description for property 272,2022-02-21,In Progress,,47,Flat,19.0,Heating
+400,134,272,8,Other,Repair description for property 272,2020-09-29,Closed,2024-07-27,47,Flat,19.0,Windows
+401,135,141,8,Appliance,Repair description for property 141,2022-07-24,Closed,2024-05-13,24,House,14.0,Plumbing
+402,135,141,8,Appliance,Repair description for property 141,2021-02-05,Closed,2024-06-11,24,House,14.0,Plumbing
+403,135,141,8,Electrical,Repair description for property 141,2020-07-01,Closed,2024-03-18,24,House,14.0,General
+404,135,141,8,Other,Repair description for property 141,2022-08-26,Closed,2024-06-26,24,House,14.0,Heating
+405,136,58,1,Structural,Repair description for property 58,2021-10-26,Closed,2024-05-16,49,Flat,11.0,Structural
+406,136,58,1,Other,Repair description for property 58,2021-05-02,Open,,49,Flat,11.0,Structural
+407,136,58,1,Plumbing,Repair description for property 58,2022-04-06,Closed,2024-12-28,49,Flat,11.0,Structural
+408,136,58,1,Structural,Repair description for property 58,2022-04-25,Closed,2025-05-02,49,Flat,11.0,Structural
+409,137,193,1,Electrical,Repair description for property 193,2020-05-03,Closed,2024-09-08,25,Flat,17.0,Heating
+410,137,193,1,Electrical,Repair description for property 193,2022-09-11,Closed,2024-03-12,25,Flat,17.0,Plumbing
+411,137,193,1,Other,Repair description for property 193,2021-09-17,Closed,2024-07-26,25,Flat,17.0,Heating
+412,137,193,1,Appliance,Repair description for property 193,2022-02-28,Closed,2024-08-25,25,Flat,17.0,Plumbing
+413,138,25,4,Appliance,Repair description for property 25,2021-02-17,Closed,2024-03-19,24,Flat,14.0,General
+414,138,25,4,Appliance,Repair description for property 25,2022-09-06,Open,,24,Flat,14.0,General
+415,138,25,4,Structural,Repair description for property 25,2021-12-25,Closed,2025-01-22,24,Flat,14.0,Heating
+416,138,25,4,Other,Repair description for property 25,2020-06-20,In Progress,,24,Flat,14.0,Windows
+417,138,25,4,Other,Repair description for property 25,2020-10-14,Closed,2024-08-21,24,Flat,14.0,Heating
+418,139,18,8,Electrical,Repair description for property 18,2021-03-10,Open,,15,House,8.0,Electrical
+419,140,266,2,Other,Repair description for property 266,2021-11-16,Closed,2024-09-21,71,Flat,22.0,Roofing
+420,140,266,2,Electrical,Repair description for property 266,2020-04-22,Open,,71,Flat,22.0,Roofing
+421,140,266,2,Plumbing,Repair description for property 266,2022-06-06,Closed,2024-06-23,71,Flat,22.0,Structural
+422,141,67,4,Structural,Repair description for property 67,2022-07-05,Closed,2024-08-28,103,House,9.0,Roofing
+423,141,67,4,Appliance,Repair description for property 67,2022-09-21,Closed,2024-08-28,103,House,9.0,Structural
+424,141,67,4,Plumbing,Repair description for property 67,2020-05-01,Closed,2024-12-19,103,House,9.0,Electrical
+425,142,209,6,Appliance,Repair description for property 209,2021-06-27,Closed,2025-08-02,51,Flat,4.0,Structural
+426,142,209,6,Appliance,Repair description for property 209,2020-08-09,Closed,2025-02-25,51,Flat,4.0,Roofing
+427,142,209,6,Appliance,Repair description for property 209,2021-09-22,Closed,2024-03-28,51,Flat,4.0,Structural
+428,142,209,6,Appliance,Repair description for property 209,2020-02-08,In Progress,,51,Flat,4.0,Structural
+429,143,480,4,Appliance,Repair description for property 480,2021-05-11,Closed,2024-04-05,73,House,,Electrical
+430,143,480,4,Other,Repair description for property 480,2022-02-18,Closed,2024-06-30,73,House,,Heating
+431,143,480,4,Other,Repair description for property 480,2020-08-20,Closed,2024-08-30,73,House,,Damp
+432,144,95,6,Other,Repair description for property 95,2022-07-31,Closed,2024-03-19,37,House,13.0,Plumbing
+433,144,95,6,Appliance,Repair description for property 95,2021-06-13,Closed,2024-11-13,37,House,13.0,Windows
+434,144,95,6,Appliance,Repair description for property 95,2020-05-28,Closed,2024-07-29,37,House,13.0,General
+435,144,95,6,Structural,Repair description for property 95,2021-01-31,Closed,2024-04-08,37,House,13.0,Heating
+436,145,254,5,Plumbing,Repair description for property 254,2021-10-22,Closed,2024-03-08,47,Flat,19.0,Roofing
+437,145,254,5,Plumbing,Repair description for property 254,2021-09-29,Closed,2024-04-06,47,Flat,19.0,Structural
+438,145,254,5,Plumbing,Repair description for property 254,2022-06-22,Closed,2024-03-08,47,Flat,19.0,Windows
+439,146,267,4,Plumbing,Repair description for property 267,2020-10-28,Closed,2025-02-21,29,Flat,20.0,Heating
+440,146,267,4,Appliance,Repair description for property 267,2020-12-25,Closed,2024-06-22,29,Flat,20.0,General
+441,146,267,4,Appliance,Repair description for property 267,2020-08-25,In Progress,,29,Flat,20.0,Heating
+442,147,24,8,Plumbing,Repair description for property 24,2021-10-08,In Progress,,25,Flat,17.0,Plumbing
+443,147,24,8,Plumbing,Repair description for property 24,2021-10-24,Closed,2025-01-20,25,Flat,17.0,Plumbing
+444,147,24,8,Structural,Repair description for property 24,2020-08-23,Closed,2024-08-09,25,Flat,17.0,Plumbing
+445,147,24,8,Structural,Repair description for property 24,2022-01-05,Closed,2024-07-31,25,Flat,17.0,Windows
+446,147,24,8,Appliance,Repair description for property 24,2020-07-21,Open,,25,Flat,17.0,Heating
+447,148,223,6,Other,Repair description for property 223,2020-09-12,Closed,2024-11-30,24,Flat,14.0,Windows
+448,149,262,6,Other,Repair description for property 262,2021-08-20,In Progress,,74,Flat,21.0,Roofing
+449,149,262,6,Electrical,Repair description for property 262,2021-10-23,Closed,2024-07-29,74,Flat,21.0,Roofing
+450,150,427,1,Electrical,Repair description for property 427,2020-08-22,Closed,2024-05-07,73,Flat,,Electrical
+451,150,427,1,Plumbing,Repair description for property 427,2020-12-10,Closed,2024-03-17,73,Flat,,Damp
+452,150,427,1,Other,Repair description for property 427,2021-06-17,Closed,2024-07-08,73,Flat,,Structural
+453,151,6,8,Electrical,Repair description for property 6,2022-05-09,Closed,2025-09-01,57,Flat,3.0,Structural
+454,151,6,8,Appliance,Repair description for property 6,2022-03-07,Closed,2025-02-18,57,Flat,3.0,Heating
+455,151,6,8,Appliance,Repair description for property 6,2022-02-19,Closed,2024-05-21,57,Flat,3.0,Heating
+456,152,117,1,Appliance,Repair description for property 117,2021-04-10,Closed,2024-05-28,98,Flat,7.0,Electrical
+457,152,117,1,Other,Repair description for property 117,2022-02-08,Closed,2025-04-01,98,Flat,7.0,Damp
+458,152,117,1,Plumbing,Repair description for property 117,2021-06-24,Closed,2024-03-19,98,Flat,7.0,Roofing
+459,152,117,1,Appliance,Repair description for property 117,2020-07-31,Open,,98,Flat,7.0,Damp
+460,153,46,4,Structural,Repair description for property 46,2021-04-07,Closed,2024-09-27,49,Flat,11.0,Structural
+461,153,46,4,Appliance,Repair description for property 46,2021-03-11,Closed,2024-05-10,49,Flat,11.0,Structural
+462,153,46,4,Structural,Repair description for property 46,2020-10-09,Closed,2025-02-03,49,Flat,11.0,Structural
+463,153,46,4,Structural,Repair description for property 46,2021-07-15,Closed,2024-07-06,49,Flat,11.0,Structural
+464,153,46,4,Appliance,Repair description for property 46,2021-08-29,Open,,49,Flat,11.0,Structural
+465,154,17,4,Appliance,Repair description for property 17,2021-04-07,Closed,2025-01-18,24,Flat,14.0,Windows
+466,154,17,4,Electrical,Repair description for property 17,2021-02-10,Closed,2024-11-11,24,Flat,14.0,Heating
+467,154,17,4,Other,Repair description for property 17,2020-03-28,In Progress,,24,Flat,14.0,Heating
+468,154,17,4,Other,Repair description for property 17,2020-02-13,Closed,2024-08-08,24,Flat,14.0,Windows
+469,154,17,4,Structural,Repair description for property 17,2021-04-05,Closed,2024-10-19,24,Flat,14.0,Windows
+470,155,463,6,Appliance,Repair description for property 463,2020-10-04,Closed,2024-05-06,73,Flat,,Roofing
+471,155,463,6,Electrical,Repair description for property 463,2021-11-13,Closed,2024-03-08,73,Flat,,Structural
+472,155,463,6,Appliance,Repair description for property 463,2021-02-24,Closed,2024-08-24,73,Flat,,Damp
+473,155,463,6,Other,Repair description for property 463,2021-12-01,Closed,2024-04-27,73,Flat,,Heating
+474,155,463,6,Plumbing,Repair description for property 463,2020-12-18,Closed,2024-12-04,73,Flat,,Damp
+475,156,358,8,Plumbing,Repair description for property 358,2021-11-26,Closed,2024-11-24,74,Flat,21.0,Damp
+476,156,358,8,Structural,Repair description for property 358,2021-05-29,Closed,2024-10-05,74,Flat,21.0,Roofing
+477,156,358,8,Plumbing,Repair description for property 358,2021-12-03,Closed,2024-09-05,74,Flat,21.0,Heating
+478,156,358,8,Appliance,Repair description for property 358,2021-09-21,Closed,2024-10-09,74,Flat,21.0,Damp
+479,156,358,8,Electrical,Repair description for property 358,2020-01-19,Closed,2024-05-27,74,Flat,21.0,Structural
+480,157,4,7,Electrical,Repair description for property 4,2020-01-23,Open,,49,House,11.0,Structural
+481,157,4,7,Structural,Repair description for property 4,2021-02-16,Open,,49,House,11.0,Structural
+482,157,4,7,Other,Repair description for property 4,2020-01-30,Closed,2025-01-19,49,House,11.0,Structural
+483,157,4,7,Electrical,Repair description for property 4,2022-03-17,Closed,2024-07-27,49,House,11.0,Structural
+484,158,219,8,Structural,Repair description for property 219,2020-04-17,Closed,2024-09-07,25,Flat,17.0,Heating
+485,158,219,8,Plumbing,Repair description for property 219,2021-01-01,Closed,2024-12-31,25,Flat,17.0,Windows
+486,159,406,4,Appliance,Repair description for property 406,2020-10-07,Closed,2024-11-04,47,House,19.0,Plumbing
+487,160,61,3,Other,Repair description for property 61,2020-05-07,In Progress,,49,House,11.0,Structural
+488,160,61,3,Appliance,Repair description for property 61,2020-08-16,Open,,49,House,11.0,Structural
+489,160,61,3,Structural,Repair description for property 61,2020-04-20,Open,,49,House,11.0,Structural
+490,160,61,3,Structural,Repair description for property 61,2020-05-15,Open,,49,House,11.0,Structural
+491,161,111,8,Plumbing,Repair description for property 111,2020-12-27,Closed,2024-06-25,15,Flat,8.0,Electrical
+492,161,111,8,Other,Repair description for property 111,2020-07-04,Closed,2025-01-13,15,Flat,8.0,Electrical
+493,161,111,8,Appliance,Repair description for property 111,2021-10-17,In Progress,,15,Flat,8.0,General
+494,161,111,8,Appliance,Repair description for property 111,2021-08-06,Closed,2024-04-26,15,Flat,8.0,Plumbing
+495,162,319,7,Appliance,Repair description for property 319,2020-05-08,Closed,2024-04-11,74,Block of Flats,21.0,Roofing
+496,162,319,7,Structural,Repair description for property 319,2022-05-25,Closed,2024-08-03,74,Block of Flats,21.0,Electrical
+497,163,429,1,Structural,Repair description for property 429,2020-09-17,Closed,2024-06-04,73,Flat,,Heating
+498,163,429,1,Electrical,Repair description for property 429,2021-05-29,Closed,2024-05-14,73,Flat,,Roofing
+499,163,429,1,Other,Repair description for property 429,2021-03-24,Closed,2024-12-06,73,Flat,,Heating
+500,164,30,4,Structural,Repair description for property 30,2022-06-18,Closed,2024-10-23,51,Block of Flats,4.0,Roofing
+501,164,30,4,Electrical,Repair description for property 30,2020-04-13,In Progress,,51,Block of Flats,4.0,Heating
+502,164,30,4,Appliance,Repair description for property 30,2021-04-27,Closed,2024-03-28,51,Block of Flats,4.0,Structural
+503,165,438,8,Structural,Repair description for property 438,2020-08-11,Closed,2024-04-05,73,Flat,,Roofing
+504,165,438,8,Other,Repair description for property 438,2022-04-11,Closed,2024-12-22,73,Flat,,Roofing
+505,165,438,8,Structural,Repair description for property 438,2022-05-23,Closed,2024-06-27,73,Flat,,Roofing
+506,166,472,8,Other,Repair description for property 472,2022-05-15,In Progress,,73,House,,Roofing
+507,166,472,8,Electrical,Repair description for property 472,2021-05-05,Closed,2024-09-18,73,House,,Heating
+508,167,27,6,Plumbing,Repair description for property 27,2021-04-17,Closed,2024-07-24,103,Flat,9.0,Structural
+509,167,27,6,Structural,Repair description for property 27,2020-01-10,Closed,2024-11-09,103,Flat,9.0,Damp
+510,167,27,6,Electrical,Repair description for property 27,2021-02-08,Open,,103,Flat,9.0,Roofing
+511,167,27,6,Plumbing,Repair description for property 27,2022-06-14,Closed,2024-09-16,103,Flat,9.0,Electrical
+512,167,27,6,Structural,Repair description for property 27,2020-10-28,Open,,103,Flat,9.0,Roofing
+513,168,8,5,Structural,Repair description for property 8,2020-08-18,Closed,2024-08-17,24,House,14.0,Heating
+514,169,454,6,Plumbing,Repair description for property 454,2021-12-31,Open,,73,Flat,,Heating
+515,169,454,6,Electrical,Repair description for property 454,2022-07-11,Closed,2024-07-21,73,Flat,,Electrical
+516,169,454,6,Electrical,Repair description for property 454,2020-03-06,Open,,73,Flat,,Damp
+517,169,454,6,Plumbing,Repair description for property 454,2022-07-25,Open,,73,Flat,,Structural
+518,169,454,6,Electrical,Repair description for property 454,2020-04-21,Closed,2024-04-30,73,Flat,,Electrical
+519,170,109,6,Electrical,Repair description for property 109,2020-01-13,Closed,2024-12-23,47,Flat,16.0,Structural
+520,171,38,1,Plumbing,Repair description for property 38,2021-01-27,Closed,2024-09-05,25,Flat,17.0,Heating
+521,171,38,1,Electrical,Repair description for property 38,2021-05-14,Open,,25,Flat,17.0,Windows
+522,171,38,1,Plumbing,Repair description for property 38,2022-07-20,Closed,2024-06-30,25,Flat,17.0,Plumbing
+523,171,38,1,Other,Repair description for property 38,2021-08-20,Closed,2024-06-14,25,Flat,17.0,Heating
+524,171,38,1,Appliance,Repair description for property 38,2020-08-21,Closed,2025-03-22,25,Flat,17.0,Heating
+525,172,158,2,Plumbing,Repair description for property 158,2021-08-24,In Progress,,98,Flat,7.0,Heating
+526,172,158,2,Appliance,Repair description for property 158,2020-11-09,In Progress,,98,Flat,7.0,Structural
+527,173,490,5,Structural,Repair description for property 490,2021-07-19,Closed,2024-09-28,73,Flat,,Heating
+528,173,490,5,Structural,Repair description for property 490,2020-01-12,Open,,73,Flat,,Damp
+529,174,119,8,Plumbing,Repair description for property 119,2020-07-27,Closed,2024-03-26,49,House,11.0,Structural
+530,174,119,8,Other,Repair description for property 119,2022-08-31,Closed,2024-06-12,49,House,11.0,Structural
+531,174,119,8,Appliance,Repair description for property 119,2020-01-14,Closed,2024-07-07,49,House,11.0,Structural
+532,175,115,7,Structural,Repair description for property 115,2021-09-24,In Progress,,103,Flat,9.0,Damp
+533,175,115,7,Plumbing,Repair description for property 115,2021-02-21,Closed,2024-03-05,103,Flat,9.0,Structural
+534,175,115,7,Other,Repair description for property 115,2021-03-12,Closed,2024-11-17,103,Flat,9.0,Electrical
+535,176,176,6,Other,Repair description for property 176,2021-01-11,Closed,2025-04-02,8,House,6.0,General
+536,176,176,6,Appliance,Repair description for property 176,2020-01-20,Closed,2024-03-25,8,House,6.0,General
+537,176,176,6,Structural,Repair description for property 176,2021-08-09,Open,,8,House,6.0,General
+538,176,176,6,Structural,Repair description for property 176,2022-06-30,In Progress,,8,House,6.0,General
+539,177,374,8,Structural,Repair description for property 374,2022-01-24,Closed,2024-12-11,47,Block of Flats,19.0,Roofing
+540,177,374,8,Structural,Repair description for property 374,2022-01-04,Closed,2025-07-01,47,Block of Flats,19.0,Roofing
+541,178,182,7,Plumbing,Repair description for property 182,2020-03-10,Closed,2024-05-10,66,Flat,1.0,Damp
+542,178,182,7,Electrical,Repair description for property 182,2022-04-03,Closed,2024-08-18,66,Flat,1.0,Structural
+543,178,182,7,Electrical,Repair description for property 182,2020-07-29,Open,,66,Flat,1.0,Electrical
+544,178,182,7,Structural,Repair description for property 182,2020-04-10,Closed,2024-11-21,66,Flat,1.0,Heating
+545,179,145,8,Other,Repair description for property 145,2021-11-28,Closed,2024-09-28,98,Flat,7.0,Heating
+546,180,370,7,Plumbing,Repair description for property 370,2020-05-11,Closed,2024-11-23,47,Flat,18.0,Plumbing
+547,180,370,7,Other,Repair description for property 370,2021-09-14,Closed,2025-01-30,47,Flat,18.0,Plumbing
+548,181,391,3,Appliance,Repair description for property 391,2021-01-15,In Progress,,74,House,21.0,Damp
+549,181,391,3,Plumbing,Repair description for property 391,2020-05-11,Closed,2024-11-11,74,House,21.0,Electrical
+550,181,391,3,Structural,Repair description for property 391,2020-01-20,Closed,2025-01-17,74,House,21.0,Structural
+551,181,391,3,Appliance,Repair description for property 391,2022-06-24,Open,,74,House,21.0,Heating
+552,182,196,2,Electrical,Repair description for property 196,2021-06-19,Closed,2025-02-14,57,Flat,3.0,Windows
+553,182,196,2,Plumbing,Repair description for property 196,2020-08-14,Closed,2024-12-30,57,Flat,3.0,Roofing
+554,183,405,8,Structural,Repair description for property 405,2020-06-02,Closed,2024-11-11,47,Flat,19.0,Windows
+555,183,405,8,Electrical,Repair description for property 405,2022-03-15,Closed,2024-05-27,47,Flat,19.0,Windows
+556,183,405,8,Structural,Repair description for property 405,2022-01-11,In Progress,,47,Flat,19.0,Plumbing
+557,183,405,8,Electrical,Repair description for property 405,2021-04-13,Open,,47,Flat,19.0,Heating
+558,184,276,4,Structural,Repair description for property 276,2022-04-01,Closed,2024-07-14,47,House,19.0,Structural
+559,184,276,4,Plumbing,Repair description for property 276,2022-09-26,Closed,2024-11-18,47,House,19.0,Structural
+560,184,276,4,Plumbing,Repair description for property 276,2022-05-20,Closed,2024-04-17,47,House,19.0,Plumbing
+561,185,455,5,Plumbing,Repair description for property 455,2021-02-08,In Progress,,73,House,,Damp
+562,185,455,5,Structural,Repair description for property 455,2020-07-20,Closed,2024-05-15,73,House,,Structural
+563,185,455,5,Plumbing,Repair description for property 455,2020-02-07,Closed,2024-06-15,73,House,,Damp
+564,185,455,5,Other,Repair description for property 455,2022-07-30,Closed,2025-06-02,73,House,,Heating
+565,185,455,5,Other,Repair description for property 455,2022-02-10,Open,,73,House,,Electrical
+566,186,142,1,Appliance,Repair description for property 142,2020-07-06,Closed,2024-04-27,24,Block of Flats,14.0,Windows
+567,186,142,1,Electrical,Repair description for property 142,2020-02-26,Closed,2024-06-11,24,Block of Flats,14.0,Heating
+568,186,142,1,Structural,Repair description for property 142,2022-07-29,Closed,2024-05-04,24,Block of Flats,14.0,General
+569,186,142,1,Appliance,Repair description for property 142,2020-01-20,Closed,2024-01-08,24,Block of Flats,14.0,Windows
+570,187,366,7,Appliance,Repair description for property 366,2020-09-29,Closed,2024-06-08,47,Flat,18.0,Plumbing
+571,188,68,1,Electrical,Repair description for property 68,2020-04-28,Closed,2025-08-03,15,House,2.0,General
+572,189,211,7,Electrical,Repair description for property 211,2021-08-05,In Progress,,80,House,10.0,Electrical
+573,189,211,7,Electrical,Repair description for property 211,2021-05-30,Open,,80,House,10.0,Electrical
+574,189,211,7,Other,Repair description for property 211,2020-08-08,Closed,2024-12-19,80,House,10.0,Roofing
+575,189,211,7,Electrical,Repair description for property 211,2021-06-09,Open,,80,House,10.0,Roofing
+576,189,211,7,Structural,Repair description for property 211,2021-05-29,Closed,2024-05-29,80,House,10.0,Roofing
+577,190,169,7,Structural,Repair description for property 169,2021-12-28,Closed,2024-06-04,24,Flat,14.0,Heating
+578,190,169,7,Structural,Repair description for property 169,2022-01-10,Open,,24,Flat,14.0,General
+579,191,494,6,Plumbing,Repair description for property 494,2020-12-01,In Progress,,73,Flat,,Electrical
+580,192,376,4,Electrical,Repair description for property 376,2021-11-28,Closed,2025-09-03,47,Flat,19.0,Plumbing
+581,192,376,4,Electrical,Repair description for property 376,2020-02-24,Closed,2024-08-31,47,Flat,19.0,Plumbing
+582,192,376,4,Electrical,Repair description for property 376,2021-05-14,Closed,2024-08-20,47,Flat,19.0,Heating
+583,192,376,4,Electrical,Repair description for property 376,2022-06-18,Open,,47,Flat,19.0,Windows
+584,193,401,8,Structural,Repair description for property 401,2022-06-06,In Progress,,29,Flat,20.0,Heating
+585,193,401,8,Structural,Repair description for property 401,2022-02-04,Closed,2024-01-08,29,Flat,20.0,Plumbing
+586,194,273,8,Appliance,Repair description for property 273,2021-06-19,Closed,2024-03-11,47,Block of Flats,19.0,Heating
+587,194,273,8,Structural,Repair description for property 273,2020-06-10,Closed,2024-08-23,47,Block of Flats,19.0,Windows
+588,194,273,8,Structural,Repair description for property 273,2021-10-31,In Progress,,47,Block of Flats,19.0,Roofing
+589,194,273,8,Appliance,Repair description for property 273,2021-08-16,Open,,47,Block of Flats,19.0,Structural
+590,195,110,7,Structural,Repair description for property 110,2022-07-03,In Progress,,47,Flat,16.0,Structural
+591,195,110,7,Plumbing,Repair description for property 110,2020-06-07,Closed,2025-11-02,47,Flat,16.0,Heating
+592,195,110,7,Plumbing,Repair description for property 110,2020-07-06,Closed,2024-12-28,47,Flat,16.0,Roofing
+593,195,110,7,Structural,Repair description for property 110,2020-02-29,Closed,2025-02-02,47,Flat,16.0,Heating
+594,196,249,1,Electrical,Repair description for property 249,2022-07-03,Closed,2024-04-22,47,House,18.0,Plumbing
+595,196,249,1,Structural,Repair description for property 249,2022-03-27,Open,,47,House,18.0,Plumbing
+596,196,249,1,Appliance,Repair description for property 249,2020-11-14,Open,,47,House,18.0,Plumbing
+597,197,146,7,Structural,Repair description for property 146,2022-05-27,Closed,2024-05-10,37,House,13.0,Heating
+598,197,146,7,Plumbing,Repair description for property 146,2020-07-29,Closed,2024-10-05,37,House,13.0,Heating
+599,198,93,2,Appliance,Repair description for property 93,2021-02-09,Open,,47,Flat,16.0,Structural
+600,198,93,2,Other,Repair description for property 93,2021-10-25,Closed,2025-02-28,47,Flat,16.0,Plumbing
+601,198,93,2,Electrical,Repair description for property 93,2020-04-18,Closed,2024-03-12,47,Flat,16.0,Structural
+602,198,93,2,Appliance,Repair description for property 93,2020-03-16,Closed,2025-01-13,47,Flat,16.0,Roofing
+603,199,153,1,Electrical,Repair description for property 153,2021-06-25,In Progress,,47,Flat,16.0,Windows
+604,199,153,1,Structural,Repair description for property 153,2020-11-09,Open,,47,Flat,16.0,Roofing
+605,199,153,1,Structural,Repair description for property 153,2022-09-24,Closed,2024-07-27,47,Flat,16.0,Roofing
+606,199,153,1,Plumbing,Repair description for property 153,2020-04-26,Closed,2024-04-16,47,Flat,16.0,Structural
+607,200,368,2,Electrical,Repair description for property 368,2022-07-15,Open,,29,Flat,20.0,Windows
+608,200,368,2,Electrical,Repair description for property 368,2022-05-17,Closed,2024-02-12,29,Flat,20.0,Windows
+609,200,368,2,Structural,Repair description for property 368,2021-12-04,Closed,2024-03-30,29,Flat,20.0,Plumbing
+610,200,368,2,Structural,Repair description for property 368,2020-01-19,Closed,2024-04-26,29,Flat,20.0,Windows
+611,201,468,1,Electrical,Repair description for property 468,2021-03-07,In Progress,,73,Flat,,Heating
+612,201,468,1,Plumbing,Repair description for property 468,2021-11-15,Closed,2024-04-10,73,Flat,,Electrical
+613,201,468,1,Electrical,Repair description for property 468,2022-01-09,Closed,2024-08-09,73,Flat,,Damp
+614,202,84,8,Electrical,Repair description for property 84,2020-12-15,Closed,2025-11-01,8,Flat,6.0,General
+615,203,246,6,Structural,Repair description for property 246,2020-07-01,Closed,2024-09-30,47,Flat,19.0,Plumbing
+616,203,246,6,Appliance,Repair description for property 246,2020-04-22,Closed,2024-12-19,47,Flat,19.0,Heating
+617,203,246,6,Other,Repair description for property 246,2020-07-01,In Progress,,47,Flat,19.0,Heating
+618,203,246,6,Other,Repair description for property 246,2021-04-25,Closed,2024-10-19,47,Flat,19.0,Plumbing
+619,204,166,1,Structural,Repair description for property 166,2020-05-25,Open,,103,Flat,9.0,Heating
+620,204,166,1,Other,Repair description for property 166,2022-04-10,In Progress,,103,Flat,9.0,Electrical
+621,204,166,1,Other,Repair description for property 166,2021-09-19,Closed,2024-07-30,103,Flat,9.0,Electrical
+622,205,164,4,Plumbing,Repair description for property 164,2020-04-22,In Progress,,8,Flat,6.0,General
+623,205,164,4,Plumbing,Repair description for property 164,2022-02-01,Closed,2024-01-06,8,Flat,6.0,General
+624,205,164,4,Structural,Repair description for property 164,2021-04-20,Closed,2025-06-01,8,Flat,6.0,General
+625,206,200,3,Other,Repair description for property 200,2022-02-01,Closed,2024-07-13,80,Flat,10.0,Damp
+626,206,200,3,Electrical,Repair description for property 200,2020-10-29,Closed,2024-12-24,80,Flat,10.0,Damp
+627,206,200,3,Plumbing,Repair description for property 200,2022-08-28,Open,,80,Flat,10.0,Electrical
+628,207,229,1,Other,Repair description for property 229,2022-04-04,Closed,2024-09-23,47,Flat,19.0,Roofing
+629,207,229,1,Electrical,Repair description for property 229,2020-04-27,Closed,2024-06-21,47,Flat,19.0,Roofing
+630,208,75,5,Other,Repair description for property 75,2022-03-23,Closed,2024-07-12,51,House,4.0,Plumbing
+631,208,75,5,Other,Repair description for property 75,2020-06-09,Open,,51,House,4.0,Structural
+632,208,75,5,Appliance,Repair description for property 75,2021-02-04,Closed,2024-04-27,51,House,4.0,Windows
+633,208,75,5,Appliance,Repair description for property 75,2020-07-16,Closed,2024-10-15,51,House,4.0,Roofing
+634,208,75,5,Plumbing,Repair description for property 75,2020-09-16,Closed,2024-07-26,51,House,4.0,Windows
+635,209,479,1,Electrical,Repair description for property 479,2021-10-21,In Progress,,73,Flat,,Structural
+636,210,359,1,Appliance,Repair description for property 359,2022-01-21,Open,,47,Flat,19.0,Roofing
+637,210,359,1,Electrical,Repair description for property 359,2020-02-16,Closed,2025-01-13,47,Flat,19.0,Roofing
+638,210,359,1,Appliance,Repair description for property 359,2022-09-13,In Progress,,47,Flat,19.0,Structural
+639,210,359,1,Electrical,Repair description for property 359,2021-02-02,Closed,2024-05-27,47,Flat,19.0,Heating
+640,210,359,1,Other,Repair description for property 359,2021-12-10,Closed,2024-10-21,47,Flat,19.0,Windows
+641,211,251,6,Structural,Repair description for property 251,2021-07-12,Closed,2024-05-12,47,Flat,18.0,Plumbing
+642,211,251,6,Plumbing,Repair description for property 251,2020-03-18,Closed,2025-10-03,47,Flat,18.0,Plumbing
+643,212,120,5,Plumbing,Repair description for property 120,2020-05-03,Closed,2024-07-15,98,House,7.0,Electrical
+644,212,120,5,Electrical,Repair description for property 120,2020-03-15,In Progress,,98,House,7.0,Electrical
+645,212,120,5,Structural,Repair description for property 120,2022-05-20,In Progress,,98,House,7.0,Electrical
+646,212,120,5,Appliance,Repair description for property 120,2020-05-16,Closed,2025-07-03,98,House,7.0,Heating
+647,212,120,5,Appliance,Repair description for property 120,2021-08-24,Closed,2024-08-21,98,House,7.0,Damp
+648,213,311,8,Other,Repair description for property 311,2021-02-03,Closed,2024-06-11,29,Flat,20.0,Heating
+649,213,311,8,Appliance,Repair description for property 311,2022-04-16,Open,,29,Flat,20.0,Windows
+650,213,311,8,Plumbing,Repair description for property 311,2021-05-19,In Progress,,29,Flat,20.0,General
+651,214,300,8,Structural,Repair description for property 300,2021-05-14,In Progress,,47,Flat,19.0,Plumbing
+652,215,256,3,Structural,Repair description for property 256,2021-07-26,Closed,2024-08-10,71,Block of Flats,22.0,Damp
+653,215,256,3,Electrical,Repair description for property 256,2020-05-17,Closed,2025-07-02,71,Block of Flats,22.0,Structural
+654,215,256,3,Structural,Repair description for property 256,2020-02-19,Closed,2024-05-22,71,Block of Flats,22.0,Roofing
+655,215,256,3,Other,Repair description for property 256,2022-02-09,In Progress,,71,Block of Flats,22.0,Structural
+656,215,256,3,Other,Repair description for property 256,2022-08-30,In Progress,,71,Block of Flats,22.0,Structural
+657,216,355,8,Plumbing,Repair description for property 355,2021-09-10,Closed,2024-11-04,74,House,21.0,Structural
+658,216,355,8,Other,Repair description for property 355,2021-09-16,Closed,2024-02-06,74,House,21.0,Electrical
+659,216,355,8,Appliance,Repair description for property 355,2022-05-11,In Progress,,74,House,21.0,Heating
+660,216,355,8,Appliance,Repair description for property 355,2020-09-10,Closed,2025-04-03,74,House,21.0,Structural
+661,216,355,8,Appliance,Repair description for property 355,2021-09-21,Open,,74,House,21.0,Heating
+662,217,400,1,Other,Repair description for property 400,2021-12-10,Open,,74,Flat,21.0,Damp
+663,217,400,1,Appliance,Repair description for property 400,2022-04-28,Closed,2024-07-12,74,Flat,21.0,Roofing
+664,217,400,1,Structural,Repair description for property 400,2022-05-26,In Progress,,74,Flat,21.0,Damp
+665,217,400,1,Plumbing,Repair description for property 400,2021-07-16,Closed,2024-03-22,74,Flat,21.0,Damp
+666,218,226,2,Electrical,Repair description for property 226,2022-01-26,Closed,2024-07-28,71,Flat,22.0,Electrical
+667,218,226,2,Structural,Repair description for property 226,2022-07-03,Closed,2024-09-12,71,Flat,22.0,Roofing
+668,218,226,2,Appliance,Repair description for property 226,2021-03-01,Open,,71,Flat,22.0,Damp
+669,219,354,8,Electrical,Repair description for property 354,2021-06-30,Closed,2024-09-27,71,Flat,22.0,Damp
+670,220,235,4,Appliance,Repair description for property 235,2020-10-28,Closed,2024-10-17,29,Flat,20.0,Plumbing
+671,220,235,4,Appliance,Repair description for property 235,2022-07-10,Closed,2024-10-10,29,Flat,20.0,Windows
+672,220,235,4,Structural,Repair description for property 235,2021-08-03,Closed,2024-08-12,29,Flat,20.0,Plumbing
+673,221,383,4,Structural,Repair description for property 383,2020-12-14,Open,,47,Flat,18.0,Plumbing
+674,221,383,4,Other,Repair description for property 383,2022-04-11,Closed,2025-09-03,47,Flat,18.0,Plumbing
+675,221,383,4,Other,Repair description for property 383,2022-07-21,Closed,2024-03-15,47,Flat,18.0,Plumbing
+676,221,383,4,Plumbing,Repair description for property 383,2022-09-06,Closed,2024-12-20,47,Flat,18.0,Plumbing
+677,222,275,1,Structural,Repair description for property 275,2020-02-18,Closed,2024-03-28,74,Flat,21.0,Electrical
+678,223,37,4,Appliance,Repair description for property 37,2022-07-05,Closed,2024-09-18,80,Flat,10.0,Structural
+679,223,37,4,Other,Repair description for property 37,2020-03-14,In Progress,,80,Flat,10.0,Damp
+680,224,197,2,Plumbing,Repair description for property 197,2021-12-04,Closed,2025-01-23,78,Flat,5.0,Heating
+681,224,197,2,Plumbing,Repair description for property 197,2020-09-17,Closed,2024-11-15,78,Flat,5.0,Structural
+682,224,197,2,Electrical,Repair description for property 197,2020-12-21,Closed,2024-11-07,78,Flat,5.0,Structural
+683,224,197,2,Plumbing,Repair description for property 197,2021-08-04,Closed,2024-11-29,78,Flat,5.0,Structural
+684,224,197,2,Appliance,Repair description for property 197,2021-08-24,Closed,2024-09-29,78,Flat,5.0,Electrical
+685,225,140,1,Electrical,Repair description for property 140,2020-09-16,Closed,2024-08-17,66,Flat,1.0,Damp
+686,225,140,1,Appliance,Repair description for property 140,2021-09-29,Closed,2024-06-27,66,Flat,1.0,Electrical
+687,225,140,1,Structural,Repair description for property 140,2022-01-12,In Progress,,66,Flat,1.0,Damp
+688,225,140,1,Electrical,Repair description for property 140,2020-10-21,Closed,2024-08-19,66,Flat,1.0,Electrical
+689,226,365,7,Electrical,Repair description for property 365,2022-07-19,Closed,2024-06-18,74,Flat,21.0,Electrical
+690,226,365,7,Other,Repair description for property 365,2021-10-02,Closed,2024-05-31,74,Flat,21.0,Heating
+691,226,365,7,Other,Repair description for property 365,2022-03-02,Closed,2024-12-03,74,Flat,21.0,Electrical
+692,227,245,7,Appliance,Repair description for property 245,2020-11-08,Open,,29,Block of Flats,20.0,Plumbing
+693,227,245,7,Appliance,Repair description for property 245,2021-09-03,Closed,2024-10-14,29,Block of Flats,20.0,Plumbing
+694,228,440,3,Appliance,Repair description for property 440,2022-04-17,Closed,2024-06-05,73,House,,Heating
+695,228,440,3,Electrical,Repair description for property 440,2022-03-19,Closed,2024-06-14,73,House,,Electrical
+696,228,440,3,Structural,Repair description for property 440,2020-06-30,Closed,2025-01-28,73,House,,Structural
+697,228,440,3,Other,Repair description for property 440,2021-11-16,Closed,2024-09-06,73,House,,Roofing
+698,229,287,1,Appliance,Repair description for property 287,2022-04-07,Open,,47,Flat,19.0,Heating
+699,229,287,1,Structural,Repair description for property 287,2020-12-29,Closed,2024-11-18,47,Flat,19.0,Heating
+700,229,287,1,Appliance,Repair description for property 287,2020-07-06,Closed,2024-06-10,47,Flat,19.0,Plumbing
+701,229,287,1,Plumbing,Repair description for property 287,2021-07-22,In Progress,,47,Flat,19.0,Structural
+702,230,60,5,Other,Repair description for property 60,2021-06-26,In Progress,,23,Flat,15.0,Heating
+703,230,60,5,Other,Repair description for property 60,2021-08-18,Open,,23,Flat,15.0,General
+704,230,60,5,Electrical,Repair description for property 60,2021-10-25,Closed,2025-02-18,23,Flat,15.0,Windows
+705,230,60,5,Electrical,Repair description for property 60,2022-09-11,Open,,23,Flat,15.0,Heating
+706,230,60,5,Structural,Repair description for property 60,2021-07-01,Closed,2025-02-27,23,Flat,15.0,Plumbing
+707,231,112,7,Appliance,Repair description for property 112,2021-12-25,In Progress,,103,Flat,9.0,Structural
+708,232,90,2,Plumbing,Repair description for property 90,2022-07-14,Closed,2024-04-04,15,Block of Flats,8.0,Plumbing
+709,232,90,2,Structural,Repair description for property 90,2021-02-11,Closed,2024-10-13,15,Block of Flats,8.0,General
+710,232,90,2,Electrical,Repair description for property 90,2022-05-25,Closed,2024-06-25,15,Block of Flats,8.0,Electrical
+711,232,90,2,Structural,Repair description for property 90,2021-09-09,Open,,15,Block of Flats,8.0,General
+712,233,437,8,Plumbing,Repair description for property 437,2021-02-17,Closed,2025-10-01,73,House,,Electrical
+713,233,437,8,Plumbing,Repair description for property 437,2020-12-07,Closed,2024-05-29,73,House,,Roofing
+714,233,437,8,Plumbing,Repair description for property 437,2020-08-07,Closed,2024-12-06,73,House,,Structural
+715,233,437,8,Electrical,Repair description for property 437,2022-06-21,Closed,2024-09-06,73,House,,Heating
+716,234,7,5,Structural,Repair description for property 7,2020-06-11,Closed,2024-04-13,15,Flat,2.0,General
+717,234,7,5,Other,Repair description for property 7,2022-08-08,Open,,15,Flat,2.0,Electrical
+718,235,361,4,Electrical,Repair description for property 361,2020-08-07,Closed,2024-05-24,74,Flat,21.0,Electrical
+719,235,361,4,Other,Repair description for property 361,2020-09-26,Closed,2024-09-07,74,Flat,21.0,Structural
+720,235,361,4,Structural,Repair description for property 361,2021-09-23,Open,,74,Flat,21.0,Roofing
+721,236,347,3,Electrical,Repair description for property 347,2022-06-24,Closed,2025-08-01,29,Block of Flats,20.0,Heating
+722,236,347,3,Other,Repair description for property 347,2022-04-27,Closed,2025-01-26,29,Block of Flats,20.0,General
+723,236,347,3,Appliance,Repair description for property 347,2021-02-03,In Progress,,29,Block of Flats,20.0,General
+724,237,339,4,Electrical,Repair description for property 339,2020-06-30,Closed,2024-01-04,29,Flat,20.0,Heating
+725,238,159,1,Plumbing,Repair description for property 159,2022-09-17,Closed,2024-03-07,103,Flat,9.0,Electrical
+726,238,159,1,Other,Repair description for property 159,2021-09-09,Open,,103,Flat,9.0,Damp
+727,239,151,3,Other,Repair description for property 151,2021-12-29,Closed,2024-04-23,15,Flat,8.0,Electrical
+728,240,178,3,Structural,Repair description for property 178,2020-07-23,Closed,2024-06-22,47,Block of Flats,16.0,Structural
+729,240,178,3,Appliance,Repair description for property 178,2021-08-04,Closed,2024-10-10,47,Block of Flats,16.0,Structural
+730,240,178,3,Appliance,Repair description for property 178,2021-07-09,Closed,2024-07-08,47,Block of Flats,16.0,Plumbing
+731,240,178,3,Structural,Repair description for property 178,2022-04-20,Closed,2025-01-20,47,Block of Flats,16.0,Structural
+732,240,178,3,Plumbing,Repair description for property 178,2022-03-23,In Progress,,47,Block of Flats,16.0,Structural
+733,241,394,8,Other,Repair description for property 394,2020-08-15,Closed,2025-08-02,74,Flat,21.0,Electrical
+734,241,394,8,Plumbing,Repair description for property 394,2021-11-26,Closed,2024-05-31,74,Flat,21.0,Electrical
+735,241,394,8,Structural,Repair description for property 394,2021-09-10,Closed,2024-08-06,74,Flat,21.0,Roofing
+736,241,394,8,Appliance,Repair description for property 394,2021-08-18,Closed,2024-06-23,74,Flat,21.0,Roofing
+737,241,394,8,Plumbing,Repair description for property 394,2022-04-29,Closed,2024-06-17,74,Flat,21.0,Heating
+738,242,185,1,Structural,Repair description for property 185,2020-09-06,Closed,2025-01-13,24,Flat,14.0,Heating
+739,242,185,1,Electrical,Repair description for property 185,2022-05-24,In Progress,,24,Flat,14.0,Heating
+740,243,450,6,Electrical,Repair description for property 450,2021-03-16,Closed,2024-07-04,73,Flat,,Structural
+741,243,450,6,Electrical,Repair description for property 450,2021-06-16,Closed,2024-03-21,73,Flat,,Structural
+742,243,450,6,Electrical,Repair description for property 450,2020-07-14,In Progress,,73,Flat,,Heating
+743,243,450,6,Appliance,Repair description for property 450,2021-11-20,In Progress,,73,Flat,,Electrical
+744,243,450,6,Structural,Repair description for property 450,2022-07-17,Closed,2025-02-24,73,Flat,,Electrical
+745,244,11,3,Structural,Repair description for property 11,2022-09-13,Closed,2024-12-04,25,Flat,17.0,Windows
+746,244,11,3,Appliance,Repair description for property 11,2021-06-02,In Progress,,25,Flat,17.0,Plumbing
+747,244,11,3,Structural,Repair description for property 11,2020-03-10,Closed,2024-06-04,25,Flat,17.0,Heating
+748,244,11,3,Structural,Repair description for property 11,2021-09-30,In Progress,,25,Flat,17.0,Heating
+749,245,381,8,Appliance,Repair description for property 381,2021-02-02,Closed,2025-06-03,74,Flat,21.0,Roofing
+750,245,381,8,Plumbing,Repair description for property 381,2022-09-04,Closed,2024-12-31,74,Flat,21.0,Damp
+751,245,381,8,Electrical,Repair description for property 381,2021-11-02,Closed,2025-01-24,74,Flat,21.0,Roofing
+752,245,381,8,Appliance,Repair description for property 381,2022-01-29,Closed,2024-06-21,74,Flat,21.0,Roofing
+753,245,381,8,Structural,Repair description for property 381,2020-07-21,Closed,2024-10-14,74,Flat,21.0,Roofing
+754,246,104,4,Plumbing,Repair description for property 104,2020-05-27,Closed,2025-01-25,51,Flat,4.0,Plumbing
+755,247,82,4,Appliance,Repair description for property 82,2021-04-16,Closed,2024-04-07,103,Flat,9.0,Heating
+756,247,82,4,Appliance,Repair description for property 82,2021-10-16,Closed,2024-04-07,103,Flat,9.0,Roofing
+757,247,82,4,Electrical,Repair description for property 82,2022-08-01,Closed,2024-12-17,103,Flat,9.0,Damp
+758,247,82,4,Appliance,Repair description for property 82,2020-07-17,Closed,2024-02-08,103,Flat,9.0,Structural
+759,247,82,4,Electrical,Repair description for property 82,2022-07-05,Open,,103,Flat,9.0,Damp
+760,248,39,1,Structural,Repair description for property 39,2021-03-01,Closed,2025-09-02,51,House,4.0,Structural
+761,248,39,1,Plumbing,Repair description for property 39,2021-10-27,Closed,2024-06-12,51,House,4.0,Plumbing
+762,248,39,1,Electrical,Repair description for property 39,2021-05-06,Closed,2024-08-20,51,House,4.0,Roofing
+763,249,315,3,Plumbing,Repair description for property 315,2022-06-06,Closed,2024-03-05,71,Flat,22.0,Structural
+764,249,315,3,Structural,Repair description for property 315,2022-06-14,Closed,2024-07-24,71,Flat,22.0,Electrical
+765,250,168,7,Plumbing,Repair description for property 168,2020-05-21,Closed,2024-12-17,24,Flat,14.0,Heating
+766,250,168,7,Electrical,Repair description for property 168,2020-11-08,Closed,2024-02-08,24,Flat,14.0,Plumbing
+767,250,168,7,Electrical,Repair description for property 168,2020-06-13,Closed,2024-09-20,24,Flat,14.0,Plumbing
+768,250,168,7,Appliance,Repair description for property 168,2020-11-09,Closed,2025-03-14,24,Flat,14.0,General
+769,250,168,7,Plumbing,Repair description for property 168,2020-01-21,Closed,2024-05-20,24,Flat,14.0,General
+770,251,470,4,Appliance,Repair description for property 470,2020-03-22,Closed,2024-06-13,73,Flat,,Damp
+771,251,470,4,Appliance,Repair description for property 470,2021-08-03,Closed,2024-05-20,73,Flat,,Roofing
+772,251,470,4,Appliance,Repair description for property 470,2020-05-10,Open,,73,Flat,,Roofing
+773,251,470,4,Electrical,Repair description for property 470,2021-08-21,Closed,2024-10-05,73,Flat,,Roofing
+774,251,470,4,Structural,Repair description for property 470,2021-12-30,Closed,2024-07-21,73,Flat,,Roofing
+775,252,297,6,Structural,Repair description for property 297,2022-07-21,Open,,29,House,20.0,Plumbing
+776,252,297,6,Appliance,Repair description for property 297,2022-09-10,Closed,2025-02-26,29,House,20.0,General
+777,253,475,3,Appliance,Repair description for property 475,2020-10-31,Open,,73,House,,Heating
+778,253,475,3,Electrical,Repair description for property 475,2022-07-03,In Progress,,73,House,,Heating
+779,253,475,3,Appliance,Repair description for property 475,2021-01-05,Closed,2024-08-17,73,House,,Roofing
+780,253,475,3,Structural,Repair description for property 475,2022-05-06,In Progress,,73,House,,Damp
+781,254,199,5,Electrical,Repair description for property 199,2022-05-02,Closed,2024-09-18,66,Flat,1.0,Structural
+782,254,199,5,Other,Repair description for property 199,2021-01-18,Closed,2024-10-31,66,Flat,1.0,Structural
+783,254,199,5,Structural,Repair description for property 199,2022-06-26,In Progress,,66,Flat,1.0,Damp
+784,255,298,7,Appliance,Repair description for property 298,2021-03-20,Closed,2024-11-25,71,House,22.0,Roofing
+785,255,298,7,Plumbing,Repair description for property 298,2021-02-28,In Progress,,71,House,22.0,Heating
+786,255,298,7,Appliance,Repair description for property 298,2020-06-09,Closed,2024-04-12,71,House,22.0,Structural
+787,256,417,5,Electrical,Repair description for property 417,2020-06-26,Closed,2024-04-08,47,Flat,19.0,Structural
+788,256,417,5,Other,Repair description for property 417,2021-09-20,Closed,2024-08-19,47,Flat,19.0,Structural
+789,256,417,5,Electrical,Repair description for property 417,2021-12-08,Closed,2024-12-28,47,Flat,19.0,Windows
+790,256,417,5,Electrical,Repair description for property 417,2022-06-13,Closed,2024-12-26,47,Flat,19.0,Heating
+791,256,417,5,Other,Repair description for property 417,2021-05-04,Closed,2024-07-22,47,Flat,19.0,Roofing
+792,257,147,3,Plumbing,Repair description for property 147,2020-11-22,Closed,2024-03-20,57,House,3.0,Heating
+793,258,393,8,Structural,Repair description for property 393,2021-08-20,In Progress,,47,House,19.0,Roofing
+794,259,148,3,Plumbing,Repair description for property 148,2020-10-15,In Progress,,51,House,4.0,Windows
+795,259,148,3,Appliance,Repair description for property 148,2021-08-15,Closed,2024-05-09,51,House,4.0,Windows
+796,260,448,6,Structural,Repair description for property 448,2021-10-25,In Progress,,73,Flat,,Electrical
+797,260,448,6,Electrical,Repair description for property 448,2021-07-26,Open,,73,Flat,,Roofing
+798,260,448,6,Appliance,Repair description for property 448,2021-07-26,Closed,2024-12-23,73,Flat,,Electrical
+799,260,448,6,Structural,Repair description for property 448,2020-12-19,Closed,2024-12-28,73,Flat,,Roofing
+800,261,288,5,Plumbing,Repair description for property 288,2020-01-28,Closed,2025-04-01,71,House,22.0,Electrical
+801,261,288,5,Appliance,Repair description for property 288,2022-08-11,Closed,2025-02-19,71,House,22.0,Heating
+802,262,124,7,Appliance,Repair description for property 124,2020-02-12,Closed,2025-03-15,37,Flat,13.0,General
+803,262,124,7,Appliance,Repair description for property 124,2021-11-11,Closed,2024-05-18,37,Flat,13.0,Windows
+804,263,369,3,Structural,Repair description for property 369,2021-02-26,Open,,71,House,22.0,Heating
+805,263,369,3,Appliance,Repair description for property 369,2021-08-20,Closed,2025-11-02,71,House,22.0,Heating
+806,263,369,3,Electrical,Repair description for property 369,2020-06-25,Closed,2025-11-01,71,House,22.0,Structural
+807,263,369,3,Plumbing,Repair description for property 369,2021-06-12,Closed,2024-01-05,71,House,22.0,Heating
+808,263,369,3,Other,Repair description for property 369,2021-09-01,Closed,2024-09-24,71,House,22.0,Damp
+809,264,97,2,Structural,Repair description for property 97,2022-08-23,In Progress,,78,Flat,5.0,Damp
+810,264,97,2,Plumbing,Repair description for property 97,2021-05-08,Closed,2024-07-12,78,Flat,5.0,Structural
+811,264,97,2,Electrical,Repair description for property 97,2020-07-16,Closed,2024-06-27,78,Flat,5.0,Heating
+812,264,97,2,Structural,Repair description for property 97,2021-09-01,Closed,2024-03-20,78,Flat,5.0,Heating
+813,264,97,2,Plumbing,Repair description for property 97,2021-07-30,Closed,2025-03-03,78,Flat,5.0,Heating
+814,265,144,8,Other,Repair description for property 144,2022-04-21,Closed,2024-06-17,103,Flat,9.0,Electrical
+815,265,144,8,Structural,Repair description for property 144,2022-05-02,Open,,103,Flat,9.0,Roofing
+816,265,144,8,Plumbing,Repair description for property 144,2021-05-31,Closed,2024-01-09,103,Flat,9.0,Electrical
+817,266,240,8,Appliance,Repair description for property 240,2021-05-28,Closed,2024-03-19,74,Block of Flats,21.0,Roofing
+818,266,240,8,Structural,Repair description for property 240,2020-01-22,Open,,74,Block of Flats,21.0,Heating
+819,266,240,8,Plumbing,Repair description for property 240,2020-04-21,Closed,2024-01-11,74,Block of Flats,21.0,Heating
+820,267,443,1,Other,Repair description for property 443,2020-02-26,Closed,2024-11-04,73,Flat,,Electrical
+821,267,443,1,Plumbing,Repair description for property 443,2020-03-06,Closed,2025-04-01,73,Flat,,Electrical
+822,267,443,1,Other,Repair description for property 443,2022-04-21,Closed,2024-06-11,73,Flat,,Roofing
+823,267,443,1,Plumbing,Repair description for property 443,2020-04-07,Open,,73,Flat,,Damp
+824,268,98,4,Electrical,Repair description for property 98,2020-05-23,Open,,23,House,15.0,Plumbing
+825,269,408,8,Structural,Repair description for property 408,2022-05-29,In Progress,,74,Flat,21.0,Electrical
+826,269,408,8,Electrical,Repair description for property 408,2021-03-10,Closed,2024-03-27,74,Flat,21.0,Electrical
+827,269,408,8,Electrical,Repair description for property 408,2021-09-28,Open,,74,Flat,21.0,Structural
+828,269,408,8,Plumbing,Repair description for property 408,2021-11-09,Open,,74,Flat,21.0,Electrical
+829,269,408,8,Electrical,Repair description for property 408,2020-03-26,Open,,74,Flat,21.0,Structural
+830,270,123,2,Appliance,Repair description for property 123,2021-08-10,Closed,2025-07-02,23,Flat,15.0,Windows
+831,271,184,3,Appliance,Repair description for property 184,2020-12-09,Open,,49,House,11.0,Structural
+832,271,184,3,Appliance,Repair description for property 184,2022-07-24,Open,,49,House,11.0,Structural
+833,272,203,7,Structural,Repair description for property 203,2020-10-20,Closed,2024-06-18,66,Flat,1.0,Structural
+834,272,203,7,Plumbing,Repair description for property 203,2022-08-13,Open,,66,Flat,1.0,Roofing
+835,273,247,1,Electrical,Repair description for property 247,2021-07-24,Closed,2024-03-12,29,House,20.0,Heating
+836,274,306,5,Appliance,Repair description for property 306,2021-10-11,Closed,2024-08-27,47,Flat,18.0,Plumbing
+837,274,306,5,Structural,Repair description for property 306,2021-09-02,Closed,2024-06-19,47,Flat,18.0,Plumbing
+838,275,299,5,Structural,Repair description for property 299,2021-12-04,Closed,2024-06-29,74,Block of Flats,21.0,Roofing
+839,275,299,5,Plumbing,Repair description for property 299,2020-08-30,Open,,74,Block of Flats,21.0,Structural
+840,276,352,1,Appliance,Repair description for property 352,2022-04-10,Closed,2024-07-13,71,House,22.0,Structural
+841,277,387,3,Plumbing,Repair description for property 387,2021-07-14,In Progress,,71,Flat,22.0,Heating
+842,278,396,4,Other,Repair description for property 396,2022-08-17,Closed,2024-10-16,47,Block of Flats,18.0,Plumbing
+843,279,285,2,Structural,Repair description for property 285,2020-02-01,Closed,2024-07-06,47,House,19.0,Roofing
+844,280,126,8,Other,Repair description for property 126,2021-01-25,Closed,2024-09-15,15,Flat,2.0,Plumbing
+845,280,126,8,Structural,Repair description for property 126,2020-10-03,Closed,2024-11-27,15,Flat,2.0,Electrical
+846,280,126,8,Appliance,Repair description for property 126,2021-06-15,Closed,2024-08-16,15,Flat,2.0,Electrical
+847,280,126,8,Appliance,Repair description for property 126,2020-06-02,In Progress,,15,Flat,2.0,General
+848,281,303,3,Appliance,Repair description for property 303,2021-01-17,In Progress,,29,House,20.0,Heating
+849,281,303,3,Appliance,Repair description for property 303,2020-03-08,In Progress,,29,House,20.0,Windows
+850,282,224,4,Electrical,Repair description for property 224,2022-05-27,Closed,2024-08-20,25,Flat,17.0,General
+851,282,224,4,Plumbing,Repair description for property 224,2022-06-02,Closed,2024-12-17,25,Flat,17.0,General
+852,283,419,8,Appliance,Repair description for property 419,2020-08-01,Closed,2024-11-07,71,Flat,22.0,Roofing
+853,283,419,8,Other,Repair description for property 419,2021-10-16,Closed,2024-06-09,71,Flat,22.0,Damp
+854,283,419,8,Appliance,Repair description for property 419,2021-01-10,Closed,2024-10-23,71,Flat,22.0,Roofing
+855,283,419,8,Plumbing,Repair description for property 419,2022-01-13,Closed,2024-08-17,71,Flat,22.0,Electrical
+856,284,220,7,Other,Repair description for property 220,2020-07-31,Closed,2025-01-14,15,House,2.0,Plumbing
+857,284,220,7,Electrical,Repair description for property 220,2020-03-19,Closed,2024-10-18,15,House,2.0,Plumbing
+858,284,220,7,Structural,Repair description for property 220,2021-12-26,Closed,2024-07-08,15,House,2.0,General
+859,285,130,4,Electrical,Repair description for property 130,2021-09-19,Closed,2024-02-04,47,Flat,16.0,Plumbing
+860,285,130,4,Electrical,Repair description for property 130,2021-08-26,Closed,2024-06-24,47,Flat,16.0,Plumbing
+861,285,130,4,Appliance,Repair description for property 130,2022-02-20,Closed,2024-06-09,47,Flat,16.0,Plumbing
+862,286,421,2,Structural,Repair description for property 421,2022-07-11,Closed,2024-08-08,47,Flat,19.0,Windows
+863,286,421,2,Structural,Repair description for property 421,2021-01-15,In Progress,,47,Flat,19.0,Structural
+864,286,421,2,Electrical,Repair description for property 421,2021-11-10,Closed,2024-06-13,47,Flat,19.0,Heating
+865,287,290,8,Other,Repair description for property 290,2020-02-27,Open,,47,Flat,18.0,Plumbing
+866,287,290,8,Other,Repair description for property 290,2022-03-06,Closed,2024-05-17,47,Flat,18.0,Plumbing
+867,288,445,4,Electrical,Repair description for property 445,2020-01-26,Closed,2025-03-18,73,House,,Heating
+868,288,445,4,Other,Repair description for property 445,2022-05-30,Closed,2024-04-30,73,House,,Structural
+869,288,445,4,Structural,Repair description for property 445,2021-03-22,Closed,2024-10-26,73,House,,Electrical
+870,288,445,4,Appliance,Repair description for property 445,2020-03-06,Closed,2024-03-27,73,House,,Damp
+871,289,377,4,Other,Repair description for property 377,2022-07-09,Closed,2024-11-15,71,Block of Flats,22.0,Roofing
+872,289,377,4,Structural,Repair description for property 377,2022-01-29,Closed,2024-07-20,71,Block of Flats,22.0,Structural
+873,290,292,3,Electrical,Repair description for property 292,2020-09-10,Closed,2024-07-10,29,House,20.0,Heating
+874,290,292,3,Electrical,Repair description for property 292,2022-06-17,Closed,2024-07-05,29,House,20.0,General
+875,290,292,3,Electrical,Repair description for property 292,2022-08-25,In Progress,,29,House,20.0,Plumbing
+876,290,292,3,Structural,Repair description for property 292,2020-02-13,Closed,2024-09-14,29,House,20.0,Plumbing
+877,291,356,7,Appliance,Repair description for property 356,2020-04-06,Closed,2024-11-15,29,Flat,20.0,Plumbing
+878,291,356,7,Electrical,Repair description for property 356,2021-07-07,Closed,2025-11-02,29,Flat,20.0,Windows
+879,291,356,7,Appliance,Repair description for property 356,2020-08-14,Closed,2024-07-31,29,Flat,20.0,Heating
+880,292,295,2,Structural,Repair description for property 295,2022-02-12,In Progress,,71,House,22.0,Structural
+881,292,295,2,Structural,Repair description for property 295,2021-11-09,In Progress,,71,House,22.0,Electrical
+882,292,295,2,Plumbing,Repair description for property 295,2021-03-11,Closed,2024-12-16,71,House,22.0,Damp
+883,293,397,8,Appliance,Repair description for property 397,2022-03-01,Closed,2024-09-24,71,Flat,22.0,Structural
+884,294,341,3,Electrical,Repair description for property 341,2021-08-23,Closed,2025-06-03,29,Flat,20.0,Windows
+885,294,341,3,Structural,Repair description for property 341,2021-01-13,Closed,2024-07-10,29,Flat,20.0,Plumbing
+886,294,341,3,Other,Repair description for property 341,2020-06-26,Closed,2024-03-10,29,Flat,20.0,General
+887,294,341,3,Appliance,Repair description for property 341,2021-03-02,Open,,29,Flat,20.0,Heating
+888,294,341,3,Electrical,Repair description for property 341,2022-07-03,Open,,29,Flat,20.0,Heating
+889,295,113,8,Structural,Repair description for property 113,2021-12-09,Closed,2024-06-27,57,Flat,3.0,Heating
+890,296,180,3,Appliance,Repair description for property 180,2020-11-02,Closed,2024-09-17,8,House,6.0,General
+891,296,180,3,Appliance,Repair description for property 180,2022-02-17,Closed,2024-08-22,8,House,6.0,General
+892,296,180,3,Electrical,Repair description for property 180,2021-05-18,Closed,2024-04-04,8,House,6.0,General
+893,297,308,2,Electrical,Repair description for property 308,2020-09-24,Closed,2025-06-01,47,Flat,18.0,Plumbing
+894,297,308,2,Plumbing,Repair description for property 308,2021-08-08,Closed,2024-11-18,47,Flat,18.0,Plumbing
+895,297,308,2,Appliance,Repair description for property 308,2020-01-08,Open,,47,Flat,18.0,Plumbing
+896,297,308,2,Electrical,Repair description for property 308,2022-07-08,Closed,2025-02-03,47,Flat,18.0,Plumbing
+897,298,433,5,Appliance,Repair description for property 433,2021-05-22,Closed,2024-06-28,73,Flat,,Roofing
+898,298,433,5,Appliance,Repair description for property 433,2021-04-20,Closed,2025-02-27,73,Flat,,Structural
+899,299,488,4,Electrical,Repair description for property 488,2020-10-23,Closed,2025-11-02,73,Flat,,Electrical
+900,299,488,4,Other,Repair description for property 488,2020-06-12,Closed,2024-05-16,73,Flat,,Damp
+901,299,488,4,Electrical,Repair description for property 488,2021-04-29,Closed,2024-09-18,73,Flat,,Roofing
+902,299,488,4,Other,Repair description for property 488,2021-08-19,Closed,2025-10-01,73,Flat,,Roofing
+903,299,488,4,Electrical,Repair description for property 488,2020-03-12,Closed,2024-10-17,73,Flat,,Heating
+904,300,482,6,Structural,Repair description for property 482,2021-07-20,Closed,2024-04-28,73,Flat,,Heating
+905,300,482,6,Appliance,Repair description for property 482,2022-06-23,Closed,2024-08-19,73,Flat,,Electrical
+906,301,423,6,Electrical,Repair description for property 423,2021-07-12,Closed,2024-04-24,47,Flat,19.0,Structural
+907,301,423,6,Electrical,Repair description for property 423,2022-06-29,Closed,2025-01-26,47,Flat,19.0,Roofing
+908,301,423,6,Electrical,Repair description for property 423,2022-08-01,In Progress,,47,Flat,19.0,Roofing
+909,301,423,6,Appliance,Repair description for property 423,2020-08-25,In Progress,,47,Flat,19.0,Structural
+910,301,423,6,Structural,Repair description for property 423,2020-04-13,Closed,2025-07-02,47,Flat,19.0,Structural
+911,302,234,4,Electrical,Repair description for property 234,2020-07-28,Closed,2024-11-06,29,Flat,20.0,Plumbing
+912,302,234,4,Structural,Repair description for property 234,2021-07-07,Closed,2024-03-10,29,Flat,20.0,Plumbing
+913,303,312,7,Appliance,Repair description for property 312,2022-04-07,Closed,2024-08-16,47,Flat,19.0,Windows
+914,303,312,7,Electrical,Repair description for property 312,2021-04-12,Closed,2024-10-06,47,Flat,19.0,Plumbing
+915,303,312,7,Plumbing,Repair description for property 312,2021-03-29,Closed,2025-02-16,47,Flat,19.0,Roofing
+916,303,312,7,Plumbing,Repair description for property 312,2020-09-24,Closed,2024-04-16,47,Flat,19.0,Plumbing
+917,304,165,2,Plumbing,Repair description for property 165,2021-01-20,Closed,2024-02-08,23,House,15.0,General
+918,304,165,2,Appliance,Repair description for property 165,2022-02-13,Closed,2025-02-20,23,House,15.0,General
+919,304,165,2,Structural,Repair description for property 165,2022-04-27,Closed,2024-03-09,23,House,15.0,Windows
+920,305,137,1,Electrical,Repair description for property 137,2021-01-21,Closed,2025-05-01,51,Flat,4.0,Structural
+921,306,198,4,Appliance,Repair description for property 198,2022-05-26,Open,,24,Block of Flats,14.0,Windows
+922,307,259,8,Other,Repair description for property 259,2020-09-15,Closed,2025-03-15,47,Block of Flats,19.0,Heating
+923,307,259,8,Other,Repair description for property 259,2020-10-09,Closed,2024-03-17,47,Block of Flats,19.0,Windows
+924,308,233,4,Electrical,Repair description for property 233,2021-09-17,Open,,29,House,20.0,Windows
+925,308,233,4,Appliance,Repair description for property 233,2022-05-24,Closed,2025-06-02,29,House,20.0,General
+926,308,233,4,Electrical,Repair description for property 233,2020-02-09,In Progress,,29,House,20.0,Windows
+927,308,233,4,Structural,Repair description for property 233,2021-04-30,Closed,2025-02-22,29,House,20.0,General
+928,309,116,4,Structural,Repair description for property 116,2022-07-17,Closed,2024-05-07,80,House,10.0,Structural
+929,309,116,4,Plumbing,Repair description for property 116,2020-08-07,Closed,2024-07-12,80,House,10.0,Heating
+930,309,116,4,Other,Repair description for property 116,2020-05-08,In Progress,,80,House,10.0,Structural
+931,310,121,8,Structural,Repair description for property 121,2021-06-03,Open,,15,Block of Flats,2.0,Plumbing
+932,310,121,8,Appliance,Repair description for property 121,2021-09-04,Closed,2024-05-09,15,Block of Flats,2.0,General
+933,310,121,8,Other,Repair description for property 121,2022-07-16,Closed,2024-06-15,15,Block of Flats,2.0,General
+934,310,121,8,Appliance,Repair description for property 121,2022-06-10,Closed,2024-06-19,15,Block of Flats,2.0,Plumbing
+935,311,350,7,Structural,Repair description for property 350,2021-11-18,Closed,2024-05-20,74,Block of Flats,21.0,Heating
+936,311,350,7,Other,Repair description for property 350,2021-09-10,In Progress,,74,Block of Flats,21.0,Electrical
+937,312,225,2,Other,Repair description for property 225,2021-09-04,Open,,23,Flat,15.0,Windows
+938,312,225,2,Structural,Repair description for property 225,2020-09-16,In Progress,,23,Flat,15.0,Heating
+939,312,225,2,Electrical,Repair description for property 225,2022-09-16,Closed,2024-04-27,23,Flat,15.0,Plumbing
+940,312,225,2,Electrical,Repair description for property 225,2022-08-23,Closed,2025-07-03,23,Flat,15.0,Plumbing
+941,313,403,3,Other,Repair description for property 403,2020-12-31,Closed,2024-02-10,47,Flat,18.0,Plumbing
+942,313,403,3,Appliance,Repair description for property 403,2022-01-27,Open,,47,Flat,18.0,Plumbing
+943,313,403,3,Other,Repair description for property 403,2022-02-25,Open,,47,Flat,18.0,Plumbing
+944,313,403,3,Structural,Repair description for property 403,2021-06-27,Closed,2024-05-28,47,Flat,18.0,Plumbing
+945,313,403,3,Structural,Repair description for property 403,2021-10-10,Closed,2024-05-27,47,Flat,18.0,Plumbing
+946,314,398,6,Other,Repair description for property 398,2021-06-07,Closed,2025-01-25,47,House,19.0,Roofing
+947,314,398,6,Other,Repair description for property 398,2022-06-25,Closed,2024-04-09,47,House,19.0,Windows
+948,314,398,6,Electrical,Repair description for property 398,2022-03-24,Open,,47,House,19.0,Roofing
+949,314,398,6,Electrical,Repair description for property 398,2022-06-05,Closed,2024-10-04,47,House,19.0,Heating
+950,315,128,1,Electrical,Repair description for property 128,2020-01-16,In Progress,,8,Block of Flats,6.0,General
+951,316,286,3,Appliance,Repair description for property 286,2020-05-08,Open,,47,Flat,19.0,Structural
+952,317,412,8,Electrical,Repair description for property 412,2021-07-28,Closed,2024-11-15,71,Flat,22.0,Heating
+953,317,412,8,Electrical,Repair description for property 412,2020-04-18,Closed,2025-02-24,71,Flat,22.0,Damp
+954,317,412,8,Plumbing,Repair description for property 412,2022-06-05,Closed,2024-03-24,71,Flat,22.0,Electrical
+955,318,108,4,Structural,Repair description for property 108,2021-06-16,Closed,2024-08-28,49,Flat,11.0,Structural
+956,318,108,4,Other,Repair description for property 108,2021-10-31,Closed,2024-11-09,49,Flat,11.0,Structural
+957,318,108,4,Appliance,Repair description for property 108,2020-09-25,Open,,49,Flat,11.0,Structural
+958,318,108,4,Appliance,Repair description for property 108,2020-06-10,Closed,2025-02-22,49,Flat,11.0,Structural
+959,319,371,4,Other,Repair description for property 371,2020-09-16,In Progress,,29,House,20.0,Windows
+960,319,371,4,Plumbing,Repair description for property 371,2022-07-12,In Progress,,29,House,20.0,Plumbing
+961,319,371,4,Plumbing,Repair description for property 371,2020-04-11,Closed,2024-01-09,29,House,20.0,Heating
+962,319,371,4,Plumbing,Repair description for property 371,2021-05-20,Closed,2024-01-07,29,House,20.0,General
+963,320,326,6,Other,Repair description for property 326,2022-01-04,Open,,47,Flat,19.0,Heating
+964,320,326,6,Appliance,Repair description for property 326,2021-07-24,Closed,2024-11-07,47,Flat,19.0,Windows
+965,320,326,6,Electrical,Repair description for property 326,2020-09-03,Closed,2024-12-11,47,Flat,19.0,Heating
+966,320,326,6,Other,Repair description for property 326,2021-10-01,Open,,47,Flat,19.0,Structural
+967,321,134,5,Other,Repair description for property 134,2022-03-05,Closed,2025-06-02,103,Flat,9.0,Roofing
+968,321,134,5,Structural,Repair description for property 134,2022-04-16,Open,,103,Flat,9.0,Damp
+969,321,134,5,Appliance,Repair description for property 134,2021-06-20,Closed,2024-05-20,103,Flat,9.0,Structural
+970,321,134,5,Structural,Repair description for property 134,2020-05-10,Open,,103,Flat,9.0,Electrical
+971,322,453,6,Plumbing,Repair description for property 453,2020-12-18,Closed,2024-02-10,73,Flat,,Structural
+972,322,453,6,Electrical,Repair description for property 453,2020-07-14,Closed,2024-11-25,73,Flat,,Structural
+973,322,453,6,Other,Repair description for property 453,2022-03-03,Closed,2024-08-24,73,Flat,,Structural
+974,322,453,6,Plumbing,Repair description for property 453,2022-07-04,Closed,2024-04-07,73,Flat,,Heating
+975,322,453,6,Other,Repair description for property 453,2022-07-18,Closed,2025-11-01,73,Flat,,Heating
+976,323,45,4,Appliance,Repair description for property 45,2021-10-27,Closed,2025-02-26,15,House,8.0,Plumbing
+977,323,45,4,Other,Repair description for property 45,2021-01-16,In Progress,,15,House,8.0,General
+978,323,45,4,Other,Repair description for property 45,2021-10-06,Closed,2025-05-01,15,House,8.0,Electrical
+979,323,45,4,Structural,Repair description for property 45,2020-08-14,Closed,2024-07-03,15,House,8.0,Electrical
+980,323,45,4,Electrical,Repair description for property 45,2021-12-01,Closed,2024-07-28,15,House,8.0,Plumbing
+981,324,461,2,Electrical,Repair description for property 461,2021-04-20,Closed,2025-05-03,73,House,,Damp
+982,325,66,2,Other,Repair description for property 66,2021-04-21,In Progress,,24,House,14.0,Windows
+983,325,66,2,Other,Repair description for property 66,2020-09-21,Closed,2024-10-11,24,House,14.0,Plumbing
+984,325,66,2,Electrical,Repair description for property 66,2021-01-06,Closed,2024-01-08,24,House,14.0,Plumbing
+985,325,66,2,Structural,Repair description for property 66,2021-04-30,Closed,2024-10-19,24,House,14.0,Heating
+986,326,284,7,Other,Repair description for property 284,2021-03-09,Open,,74,Flat,21.0,Heating
+987,327,86,3,Electrical,Repair description for property 86,2021-10-07,Closed,2024-05-13,25,Flat,17.0,Heating
+988,327,86,3,Electrical,Repair description for property 86,2020-07-29,In Progress,,25,Flat,17.0,Plumbing
+989,327,86,3,Plumbing,Repair description for property 86,2021-07-25,Closed,2024-08-12,25,Flat,17.0,Windows
+990,328,243,4,Plumbing,Repair description for property 243,2022-07-28,Closed,2024-02-09,71,House,22.0,Heating
+991,328,243,4,Plumbing,Repair description for property 243,2021-01-11,Closed,2025-11-01,71,House,22.0,Heating
+992,329,187,2,Other,Repair description for property 187,2021-01-29,Open,,15,Flat,8.0,Electrical
+993,329,187,2,Structural,Repair description for property 187,2021-03-25,Closed,2024-12-29,15,Flat,8.0,Plumbing
+994,329,187,2,Plumbing,Repair description for property 187,2022-07-31,In Progress,,15,Flat,8.0,Electrical
+995,329,187,2,Plumbing,Repair description for property 187,2020-12-29,Closed,2024-07-31,15,Flat,8.0,General
+996,330,384,5,Appliance,Repair description for property 384,2022-05-25,In Progress,,74,Flat,21.0,Structural
+997,330,384,5,Electrical,Repair description for property 384,2021-04-01,Closed,2024-08-08,74,Flat,21.0,Electrical
+998,331,160,4,Electrical,Repair description for property 160,2021-12-25,In Progress,,66,House,1.0,Damp
+999,331,160,4,Plumbing,Repair description for property 160,2021-12-28,Closed,2024-05-11,66,House,1.0,Heating
+1000,331,160,4,Plumbing,Repair description for property 160,2020-08-13,Closed,2024-03-08,66,House,1.0,Electrical
+1001,331,160,4,Plumbing,Repair description for property 160,2022-09-08,Open,,66,House,1.0,Electrical
+1002,332,13,3,Structural,Repair description for property 13,2020-05-10,Closed,2024-10-22,25,Flat,17.0,Heating
+1003,332,13,3,Structural,Repair description for property 13,2021-08-10,In Progress,,25,Flat,17.0,General
+1004,332,13,3,Other,Repair description for property 13,2021-04-20,Closed,2024-07-14,25,Flat,17.0,General
+1005,333,36,5,Electrical,Repair description for property 36,2022-03-08,Closed,2024-05-04,37,Flat,13.0,Plumbing
+1006,333,36,5,Structural,Repair description for property 36,2022-09-12,Closed,2024-07-24,37,Flat,13.0,Plumbing
+1007,333,36,5,Structural,Repair description for property 36,2020-10-03,Closed,2024-06-20,37,Flat,13.0,Plumbing
+1008,333,36,5,Structural,Repair description for property 36,2020-06-04,Open,,37,Flat,13.0,Windows
+1009,333,36,5,Structural,Repair description for property 36,2022-01-29,Open,,37,Flat,13.0,Heating
+1010,334,29,8,Structural,Repair description for property 29,2020-08-05,In Progress,,15,Flat,8.0,Electrical
+1011,334,29,8,Other,Repair description for property 29,2020-07-08,Closed,2024-05-11,15,Flat,8.0,Plumbing
+1012,334,29,8,Electrical,Repair description for property 29,2021-02-20,In Progress,,15,Flat,8.0,Electrical
+1013,335,171,8,Appliance,Repair description for property 171,2022-09-07,Closed,2024-10-03,51,Flat,4.0,Heating
+1014,335,171,8,Structural,Repair description for property 171,2021-11-05,Closed,2024-09-05,51,Flat,4.0,Plumbing
+1015,335,171,8,Structural,Repair description for property 171,2021-11-22,Closed,2024-04-26,51,Flat,4.0,Structural
+1016,336,143,4,Electrical,Repair description for property 143,2021-06-29,In Progress,,80,House,12.0,Roofing
+1017,336,143,4,Appliance,Repair description for property 143,2020-02-10,Closed,2024-08-19,80,House,12.0,Roofing
+1018,337,399,8,Plumbing,Repair description for property 399,2020-11-02,Closed,2024-09-25,47,Flat,18.0,Plumbing
+1019,337,399,8,Plumbing,Repair description for property 399,2022-07-31,In Progress,,47,Flat,18.0,Plumbing
+1020,337,399,8,Appliance,Repair description for property 399,2020-12-03,Closed,2025-02-22,47,Flat,18.0,Plumbing
+1021,337,399,8,Other,Repair description for property 399,2020-11-09,In Progress,,47,Flat,18.0,Plumbing
+1022,337,399,8,Appliance,Repair description for property 399,2020-03-15,Closed,2024-05-21,47,Flat,18.0,Plumbing
+1023,338,343,3,Plumbing,Repair description for property 343,2022-08-10,Closed,2024-12-05,47,Block of Flats,19.0,Plumbing
+1024,338,343,3,Plumbing,Repair description for property 343,2020-10-05,Closed,2024-12-29,47,Block of Flats,19.0,Plumbing
+1025,338,343,3,Plumbing,Repair description for property 343,2020-06-24,In Progress,,47,Block of Flats,19.0,Plumbing
+1026,338,343,3,Appliance,Repair description for property 343,2022-06-14,Closed,2024-05-27,47,Block of Flats,19.0,Plumbing
+1027,339,222,3,Plumbing,Repair description for property 222,2021-10-23,Open,,51,House,4.0,Heating
+1028,339,222,3,Structural,Repair description for property 222,2020-09-29,Closed,2025-01-20,51,House,4.0,Windows
+1029,340,96,6,Structural,Repair description for property 96,2022-04-16,Closed,2024-11-15,15,Flat,8.0,General
+1030,340,96,6,Other,Repair description for property 96,2021-09-11,Closed,2024-05-28,15,Flat,8.0,General
+1031,340,96,6,Appliance,Repair description for property 96,2021-10-12,Closed,2024-11-05,15,Flat,8.0,Electrical
+1032,340,96,6,Plumbing,Repair description for property 96,2022-05-11,Closed,2024-11-15,15,Flat,8.0,Electrical
+1033,341,52,6,Appliance,Repair description for property 52,2022-02-21,In Progress,,23,Flat,15.0,Windows
+1034,341,52,6,Electrical,Repair description for property 52,2022-05-08,Closed,2025-01-22,23,Flat,15.0,Plumbing
+1035,341,52,6,Electrical,Repair description for property 52,2022-07-19,Closed,2024-04-08,23,Flat,15.0,General
+1036,341,52,6,Appliance,Repair description for property 52,2020-10-15,Closed,2024-10-14,23,Flat,15.0,General
+1037,341,52,6,Appliance,Repair description for property 52,2021-12-24,In Progress,,23,Flat,15.0,Windows
+1038,342,241,2,Appliance,Repair description for property 241,2022-06-11,Closed,2024-03-11,29,House,20.0,Heating
+1039,342,241,2,Other,Repair description for property 241,2020-09-28,Closed,2024-08-13,29,House,20.0,Plumbing
+1040,343,485,5,Appliance,Repair description for property 485,2022-07-18,Closed,2025-02-24,73,House,,Structural
+1041,343,485,5,Structural,Repair description for property 485,2020-03-06,In Progress,,73,House,,Structural
+1042,343,485,5,Appliance,Repair description for property 485,2021-04-27,Closed,2025-08-03,73,House,,Electrical
+1043,343,485,5,Other,Repair description for property 485,2022-07-24,Closed,2024-04-27,73,House,,Electrical
+1044,344,379,2,Electrical,Repair description for property 379,2020-09-04,Open,,71,Flat,22.0,Heating
+1045,344,379,2,Structural,Repair description for property 379,2020-06-04,Closed,2024-09-28,71,Flat,22.0,Structural
+1046,344,379,2,Plumbing,Repair description for property 379,2020-02-16,Closed,2024-11-29,71,Flat,22.0,Damp
+1047,344,379,2,Plumbing,Repair description for property 379,2022-07-23,Open,,71,Flat,22.0,Roofing
+1048,345,179,1,Plumbing,Repair description for property 179,2021-03-29,Closed,2025-02-27,25,House,17.0,Plumbing
+1049,345,179,1,Plumbing,Repair description for property 179,2020-07-19,Closed,2024-05-07,25,House,17.0,Heating
+1050,345,179,1,Structural,Repair description for property 179,2021-10-21,Closed,2024-07-26,25,House,17.0,General
+1051,345,179,1,Other,Repair description for property 179,2020-05-03,Closed,2024-04-07,25,House,17.0,Plumbing
+1052,346,42,7,Appliance,Repair description for property 42,2020-01-01,Open,,66,Flat,1.0,Structural
+1053,346,42,7,Electrical,Repair description for property 42,2022-08-25,Closed,2024-01-09,66,Flat,1.0,Electrical
+1054,346,42,7,Plumbing,Repair description for property 42,2022-01-28,Closed,2025-01-28,66,Flat,1.0,Damp
+1055,346,42,7,Electrical,Repair description for property 42,2022-05-04,In Progress,,66,Flat,1.0,Electrical
+1056,346,42,7,Electrical,Repair description for property 42,2021-10-01,Closed,2024-10-13,66,Flat,1.0,Damp
+1057,347,499,1,Plumbing,Repair description for property 499,2020-07-09,Closed,2024-08-18,73,Flat,,Electrical
+1058,347,499,1,Electrical,Repair description for property 499,2021-08-01,Closed,2024-06-05,73,Flat,,Electrical
+1059,348,422,2,Electrical,Repair description for property 422,2021-05-30,Closed,2024-05-06,71,Flat,22.0,Electrical
+1060,348,422,2,Other,Repair description for property 422,2021-03-17,Open,,71,Flat,22.0,Damp
+1061,348,422,2,Electrical,Repair description for property 422,2022-07-09,Closed,2024-03-24,71,Flat,22.0,Damp
+1062,349,207,8,Electrical,Repair description for property 207,2022-03-25,In Progress,,49,Block of Flats,11.0,Structural
+1063,349,207,8,Plumbing,Repair description for property 207,2022-03-16,Closed,2024-12-16,49,Block of Flats,11.0,Structural
+1064,349,207,8,Other,Repair description for property 207,2020-05-22,In Progress,,49,Block of Flats,11.0,Structural
+1065,349,207,8,Electrical,Repair description for property 207,2020-07-09,Closed,2025-03-17,49,Block of Flats,11.0,Structural
+1066,349,207,8,Electrical,Repair description for property 207,2021-06-16,Closed,2024-08-12,49,Block of Flats,11.0,Structural
+1067,350,283,6,Appliance,Repair description for property 283,2020-08-14,Closed,2024-08-31,47,Flat,18.0,Plumbing
+1068,350,283,6,Electrical,Repair description for property 283,2020-11-08,Open,,47,Flat,18.0,Plumbing
+1069,350,283,6,Appliance,Repair description for property 283,2021-09-20,Closed,2024-07-04,47,Flat,18.0,Plumbing
+1070,350,283,6,Appliance,Repair description for property 283,2022-08-06,Closed,2025-03-01,47,Flat,18.0,Plumbing
+1071,350,283,6,Other,Repair description for property 283,2020-10-28,In Progress,,47,Flat,18.0,Plumbing
+1072,351,255,1,Other,Repair description for property 255,2021-10-15,In Progress,,71,Flat,22.0,Electrical
+1073,351,255,1,Structural,Repair description for property 255,2022-09-22,In Progress,,71,Flat,22.0,Damp
+1074,351,255,1,Other,Repair description for property 255,2021-04-04,Open,,71,Flat,22.0,Heating
+1075,351,255,1,Other,Repair description for property 255,2021-02-04,Closed,2024-06-18,71,Flat,22.0,Roofing
+1076,352,413,6,Appliance,Repair description for property 413,2021-07-04,Closed,2024-10-26,29,Flat,20.0,Windows
+1077,352,413,6,Plumbing,Repair description for property 413,2021-01-27,Closed,2024-07-10,29,Flat,20.0,Plumbing
+1078,352,413,6,Appliance,Repair description for property 413,2022-05-16,Closed,2024-11-29,29,Flat,20.0,Plumbing
+1079,353,5,3,Electrical,Repair description for property 5,2022-02-02,Closed,2024-12-27,47,House,16.0,Heating
+1080,353,5,3,Structural,Repair description for property 5,2022-04-24,In Progress,,47,House,16.0,Plumbing
+1081,353,5,3,Electrical,Repair description for property 5,2020-07-25,Closed,2024-07-15,47,House,16.0,Windows
+1082,353,5,3,Electrical,Repair description for property 5,2020-07-28,Closed,2024-06-07,47,House,16.0,Heating
+1083,353,5,3,Structural,Repair description for property 5,2020-04-24,In Progress,,47,House,16.0,Structural
+1084,354,257,7,Appliance,Repair description for property 257,2022-01-06,Closed,2024-09-13,29,Flat,20.0,Windows
+1085,355,449,7,Appliance,Repair description for property 449,2021-10-07,Closed,2024-05-23,73,House,,Roofing
+1086,356,101,7,Other,Repair description for property 101,2020-09-07,Closed,2024-07-07,49,Flat,11.0,Structural
+1087,357,227,5,Other,Repair description for property 227,2020-08-06,Open,,29,Flat,20.0,Heating
+1088,357,227,5,Other,Repair description for property 227,2021-02-10,Closed,2024-10-28,29,Flat,20.0,General
+1089,358,430,4,Appliance,Repair description for property 430,2021-03-18,Closed,2025-02-25,73,Flat,,Damp
+1090,358,430,4,Other,Repair description for property 430,2021-08-25,Closed,2024-12-09,73,Flat,,Heating
+1091,358,430,4,Appliance,Repair description for property 430,2020-12-19,Closed,2024-05-18,73,Flat,,Damp
+1092,359,214,7,Other,Repair description for property 214,2022-06-06,Closed,2025-02-26,25,House,17.0,Windows
+1093,359,214,7,Appliance,Repair description for property 214,2021-07-11,Closed,2024-06-17,25,House,17.0,Windows
+1094,359,214,7,Structural,Repair description for property 214,2021-07-03,Closed,2024-09-25,25,House,17.0,Windows
+1095,359,214,7,Other,Repair description for property 214,2020-05-21,Closed,2025-01-14,25,House,17.0,Windows
+1096,359,214,7,Structural,Repair description for property 214,2021-09-03,Closed,2024-08-22,25,House,17.0,Heating
+1097,360,172,5,Electrical,Repair description for property 172,2021-05-15,Closed,2025-08-01,15,House,2.0,Electrical
+1098,361,99,6,Plumbing,Repair description for property 99,2022-04-19,Closed,2024-06-21,24,House,14.0,Windows
+1099,361,99,6,Appliance,Repair description for property 99,2021-12-02,In Progress,,24,House,14.0,General
+1100,361,99,6,Appliance,Repair description for property 99,2021-06-30,Closed,2025-02-23,24,House,14.0,Plumbing
+1101,361,99,6,Structural,Repair description for property 99,2021-10-20,Closed,2025-01-14,24,House,14.0,Heating
+1102,362,293,1,Other,Repair description for property 293,2021-06-25,In Progress,,71,Flat,22.0,Damp
+1103,362,293,1,Structural,Repair description for property 293,2022-04-25,Closed,2024-06-15,71,Flat,22.0,Roofing
+1104,362,293,1,Other,Repair description for property 293,2021-05-21,Closed,2024-04-26,71,Flat,22.0,Structural
+1105,362,293,1,Electrical,Repair description for property 293,2021-08-18,Closed,2024-01-07,71,Flat,22.0,Heating
+1106,362,293,1,Appliance,Repair description for property 293,2022-05-30,In Progress,,71,Flat,22.0,Electrical
+1107,363,216,5,Appliance,Repair description for property 216,2020-10-07,In Progress,,78,Flat,5.0,Structural
+1108,363,216,5,Structural,Repair description for property 216,2021-02-27,Closed,2024-08-22,78,Flat,5.0,Heating
+1109,363,216,5,Electrical,Repair description for property 216,2022-05-05,Open,,78,Flat,5.0,Structural
+1110,364,62,7,Other,Repair description for property 62,2020-09-26,Open,,25,Flat,17.0,Plumbing
+1111,364,62,7,Other,Repair description for property 62,2020-06-02,Closed,2024-07-07,25,Flat,17.0,Heating
+1112,365,48,7,Plumbing,Repair description for property 48,2021-09-05,Closed,2024-02-10,51,Flat,4.0,Structural
+1113,365,48,7,Appliance,Repair description for property 48,2021-12-27,Open,,51,Flat,4.0,Heating
+1114,365,48,7,Appliance,Repair description for property 48,2021-10-23,Open,,51,Flat,4.0,Windows
+1115,366,33,4,Electrical,Repair description for property 33,2022-08-01,Closed,2025-02-23,23,Block of Flats,15.0,Plumbing
+1116,366,33,4,Appliance,Repair description for property 33,2020-03-23,In Progress,,23,Block of Flats,15.0,General
+1117,366,33,4,Structural,Repair description for property 33,2021-09-13,Closed,2024-05-15,23,Block of Flats,15.0,Heating
+1118,366,33,4,Other,Repair description for property 33,2022-08-04,Closed,2024-10-31,23,Block of Flats,15.0,Heating
+1119,367,268,8,Plumbing,Repair description for property 268,2022-06-17,Closed,2024-02-05,74,Block of Flats,21.0,Heating
+1120,367,268,8,Plumbing,Repair description for property 268,2021-03-01,Closed,2025-08-03,74,Block of Flats,21.0,Electrical
+1121,367,268,8,Electrical,Repair description for property 268,2020-10-01,Closed,2024-08-03,74,Block of Flats,21.0,Structural
+1122,368,328,7,Structural,Repair description for property 328,2021-12-13,Closed,2025-01-16,71,House,22.0,Electrical
+1123,369,201,7,Plumbing,Repair description for property 201,2020-10-10,Closed,2025-11-02,80,Flat,10.0,Structural
+1124,369,201,7,Plumbing,Repair description for property 201,2022-09-06,Open,,80,Flat,10.0,Roofing
+1125,369,201,7,Electrical,Repair description for property 201,2020-06-21,Closed,2024-05-18,80,Flat,10.0,Damp
+1126,369,201,7,Plumbing,Repair description for property 201,2020-11-22,In Progress,,80,Flat,10.0,Structural
+1127,369,201,7,Plumbing,Repair description for property 201,2021-12-18,Closed,2024-02-11,80,Flat,10.0,Electrical
+1128,370,447,3,Structural,Repair description for property 447,2020-03-03,Closed,2024-10-19,73,Flat,,Roofing
+1129,370,447,3,Appliance,Repair description for property 447,2020-03-13,Closed,2024-12-31,73,Flat,,Structural
+1130,370,447,3,Structural,Repair description for property 447,2022-02-01,Closed,2024-02-05,73,Flat,,Heating
+1131,370,447,3,Structural,Repair description for property 447,2021-09-27,Closed,2024-08-04,73,Flat,,Damp
+1132,370,447,3,Appliance,Repair description for property 447,2021-01-09,Closed,2024-02-07,73,Flat,,Structural
+1133,371,28,2,Structural,Repair description for property 28,2021-09-24,In Progress,,80,Flat,12.0,Roofing
+1134,371,28,2,Plumbing,Repair description for property 28,2021-05-22,Closed,2024-11-16,80,Flat,12.0,Roofing
+1135,371,28,2,Plumbing,Repair description for property 28,2022-02-25,Closed,2025-02-15,80,Flat,12.0,Roofing
+1136,371,28,2,Structural,Repair description for property 28,2022-07-31,Closed,2024-05-08,80,Flat,12.0,Roofing
+1137,372,425,8,Plumbing,Repair description for property 425,2021-02-01,Closed,2024-05-22,47,Flat,18.0,Plumbing
+1138,372,425,8,Other,Repair description for property 425,2020-04-29,Closed,2024-04-25,47,Flat,18.0,Plumbing
+1139,372,425,8,Appliance,Repair description for property 425,2022-07-22,Open,,47,Flat,18.0,Plumbing
+1140,373,231,6,Plumbing,Repair description for property 231,2021-03-12,Closed,2024-08-31,71,Flat,22.0,Structural
+1141,374,261,1,Appliance,Repair description for property 261,2022-04-08,Closed,2024-11-16,71,Flat,22.0,Heating
+1142,375,289,1,Appliance,Repair description for property 289,2021-11-06,Closed,2024-07-22,71,House,22.0,Heating
+1143,375,289,1,Electrical,Repair description for property 289,2022-07-24,Closed,2024-04-25,71,House,22.0,Damp
+1144,375,289,1,Structural,Repair description for property 289,2021-04-09,Open,,71,House,22.0,Heating
+1145,376,163,8,Electrical,Repair description for property 163,2020-10-12,Closed,2025-01-21,51,Flat,4.0,Plumbing
+1146,376,163,8,Electrical,Repair description for property 163,2020-09-21,Closed,2024-12-11,51,Flat,4.0,Roofing
+1147,376,163,8,Structural,Repair description for property 163,2020-11-15,Closed,2024-12-21,51,Flat,4.0,Windows
+1148,376,163,8,Plumbing,Repair description for property 163,2021-11-03,Closed,2024-03-19,51,Flat,4.0,Structural
+1149,377,426,5,Electrical,Repair description for property 426,2021-01-10,Open,,73,House,,Structural
+1150,378,139,7,Other,Repair description for property 139,2022-03-30,Closed,2024-07-10,24,House,14.0,Heating
+1151,378,139,7,Other,Repair description for property 139,2020-03-29,Closed,2024-07-11,24,House,14.0,Heating
+1152,379,63,5,Plumbing,Repair description for property 63,2021-10-15,Closed,2024-05-14,66,Flat,1.0,Heating
+1153,379,63,5,Other,Repair description for property 63,2020-07-21,In Progress,,66,Flat,1.0,Roofing
+1154,379,63,5,Other,Repair description for property 63,2022-03-31,Closed,2024-07-19,66,Flat,1.0,Damp
+1155,379,63,5,Appliance,Repair description for property 63,2022-01-08,Open,,66,Flat,1.0,Roofing
+1156,379,63,5,Structural,Repair description for property 63,2022-08-12,Open,,66,Flat,1.0,Electrical
+1157,380,136,5,Plumbing,Repair description for property 136,2020-11-29,Closed,2024-11-14,78,Flat,5.0,Structural
+1158,380,136,5,Structural,Repair description for property 136,2020-08-09,Closed,2024-11-20,78,Flat,5.0,Structural
+1159,380,136,5,Appliance,Repair description for property 136,2020-02-10,Closed,2025-02-26,78,Flat,5.0,Damp
+1160,380,136,5,Plumbing,Repair description for property 136,2021-12-08,Closed,2024-10-11,78,Flat,5.0,Structural
+1161,380,136,5,Appliance,Repair description for property 136,2020-03-08,Closed,2024-07-11,78,Flat,5.0,Structural
+1162,381,129,4,Other,Repair description for property 129,2022-09-14,In Progress,,49,Flat,11.0,Structural
+1163,382,477,1,Other,Repair description for property 477,2022-02-14,Open,,73,Flat,,Damp
+1164,383,9,7,Appliance,Repair description for property 9,2021-05-28,Open,,49,Flat,11.0,Structural
+1165,383,9,7,Other,Repair description for property 9,2022-05-22,Open,,49,Flat,11.0,Structural
+1166,383,9,7,Structural,Repair description for property 9,2021-09-28,Closed,2024-04-19,49,Flat,11.0,Structural
+1167,383,9,7,Electrical,Repair description for property 9,2021-09-13,Closed,2024-04-17,49,Flat,11.0,Structural
+1168,383,9,7,Appliance,Repair description for property 9,2021-08-20,Closed,2024-10-27,49,Flat,11.0,Structural
+1169,384,327,3,Structural,Repair description for property 327,2022-07-25,Closed,2024-07-29,47,Flat,19.0,Plumbing
+1170,384,327,3,Plumbing,Repair description for property 327,2021-09-23,Open,,47,Flat,19.0,Plumbing
+1171,385,464,1,Electrical,Repair description for property 464,2020-05-06,Open,,73,Flat,,Electrical
+1172,385,464,1,Electrical,Repair description for property 464,2020-09-11,In Progress,,73,Flat,,Structural
+1173,386,65,7,Other,Repair description for property 65,2021-11-25,Closed,2024-07-27,15,Flat,8.0,Electrical
+1174,387,301,1,Plumbing,Repair description for property 301,2020-01-16,Closed,2024-02-07,74,Block of Flats,21.0,Electrical
+1175,387,301,1,Electrical,Repair description for property 301,2021-04-21,In Progress,,74,Block of Flats,21.0,Heating
+1176,387,301,1,Plumbing,Repair description for property 301,2020-03-02,In Progress,,74,Block of Flats,21.0,Roofing
+1177,387,301,1,Plumbing,Repair description for property 301,2022-05-30,Open,,74,Block of Flats,21.0,Structural
+1178,388,15,8,Other,Repair description for property 15,2021-03-07,Closed,2024-12-31,37,Flat,13.0,Plumbing
+1179,388,15,8,Structural,Repair description for property 15,2021-10-31,Closed,2024-12-19,37,Flat,13.0,General
+1180,389,157,7,Plumbing,Repair description for property 157,2020-09-24,In Progress,,37,Flat,13.0,General
+1181,390,41,3,Appliance,Repair description for property 41,2020-02-04,Closed,2024-11-08,103,Block of Flats,9.0,Roofing
+1182,390,41,3,Electrical,Repair description for property 41,2022-02-17,Open,,103,Block of Flats,9.0,Roofing
+1183,390,41,3,Other,Repair description for property 41,2021-07-29,In Progress,,103,Block of Flats,9.0,Damp
+1184,390,41,3,Plumbing,Repair description for property 41,2021-05-08,Closed,2024-07-28,103,Block of Flats,9.0,Structural
+1185,390,41,3,Plumbing,Repair description for property 41,2021-07-15,Closed,2025-09-02,103,Block of Flats,9.0,Roofing
+1186,391,380,1,Structural,Repair description for property 380,2021-04-13,Closed,2024-04-24,29,Flat,20.0,Plumbing
+1187,391,380,1,Other,Repair description for property 380,2022-02-05,Closed,2024-07-31,29,Flat,20.0,Plumbing
+1188,391,380,1,Appliance,Repair description for property 380,2021-10-22,Open,,29,Flat,20.0,General
+1189,392,469,5,Plumbing,Repair description for property 469,2020-11-20,In Progress,,73,Flat,,Damp
+1190,392,469,5,Electrical,Repair description for property 469,2020-10-30,In Progress,,73,Flat,,Structural
+1191,392,469,5,Plumbing,Repair description for property 469,2020-10-02,Closed,2024-04-10,73,Flat,,Electrical
+1192,392,469,5,Structural,Repair description for property 469,2022-05-18,Open,,73,Flat,,Heating
+1193,393,404,1,Plumbing,Repair description for property 404,2022-08-20,Closed,2025-07-01,47,Flat,18.0,Plumbing
+1194,393,404,1,Structural,Repair description for property 404,2021-11-14,Closed,2024-06-16,47,Flat,18.0,Plumbing
+1195,393,404,1,Plumbing,Repair description for property 404,2022-07-17,Closed,2024-12-08,47,Flat,18.0,Plumbing
+1196,393,404,1,Structural,Repair description for property 404,2020-07-19,Open,,47,Flat,18.0,Plumbing
+1197,394,217,4,Structural,Repair description for property 217,2021-03-20,In Progress,,78,House,5.0,Damp
+1198,395,280,2,Electrical,Repair description for property 280,2022-06-23,Closed,2024-12-14,29,House,20.0,Heating
+1199,396,435,4,Other,Repair description for property 435,2020-11-19,Closed,2024-02-11,73,House,,Damp
+1200,397,431,1,Other,Repair description for property 431,2020-02-04,Closed,2024-03-18,73,House,,Roofing
+1201,398,338,3,Plumbing,Repair description for property 338,2022-09-03,Closed,2024-05-24,47,Flat,19.0,Structural
+1202,398,338,3,Plumbing,Repair description for property 338,2021-04-26,In Progress,,47,Flat,19.0,Roofing
+1203,398,338,3,Plumbing,Repair description for property 338,2021-12-28,Closed,2024-04-20,47,Flat,19.0,Roofing
+1204,399,237,6,Appliance,Repair description for property 237,2021-04-24,Closed,2024-05-30,71,House,22.0,Heating
+1205,400,208,4,Other,Repair description for property 208,2020-03-05,Closed,2024-12-08,25,Flat,17.0,Windows
+1206,400,208,4,Other,Repair description for property 208,2020-01-08,Closed,2024-10-29,25,Flat,17.0,General
+1207,400,208,4,Appliance,Repair description for property 208,2020-10-27,Open,,25,Flat,17.0,General
+1208,401,213,5,Other,Repair description for property 213,2020-12-08,Closed,2024-03-25,8,Block of Flats,6.0,General
+1209,401,213,5,Other,Repair description for property 213,2021-03-06,Open,,8,Block of Flats,6.0,General
+1210,402,296,4,Appliance,Repair description for property 296,2021-02-27,Open,,47,Flat,18.0,Plumbing
+1211,402,296,4,Appliance,Repair description for property 296,2020-11-27,Closed,2024-05-06,47,Flat,18.0,Plumbing
+1212,402,296,4,Structural,Repair description for property 296,2021-03-13,In Progress,,47,Flat,18.0,Plumbing
+1213,403,458,8,Other,Repair description for property 458,2021-08-10,In Progress,,73,House,,Heating
+1214,403,458,8,Plumbing,Repair description for property 458,2020-06-22,Closed,2024-10-22,73,House,,Structural
+1215,404,252,1,Plumbing,Repair description for property 252,2021-07-12,Closed,2024-04-11,47,Flat,19.0,Windows
+1216,404,252,1,Electrical,Repair description for property 252,2021-06-10,Closed,2024-08-27,47,Flat,19.0,Heating
+1217,404,252,1,Electrical,Repair description for property 252,2022-05-22,Closed,2024-05-28,47,Flat,19.0,Plumbing
+1218,404,252,1,Electrical,Repair description for property 252,2021-10-20,Open,,47,Flat,19.0,Plumbing
+1219,405,489,1,Structural,Repair description for property 489,2020-01-26,Closed,2025-01-26,73,Block of Flats,,Damp
+1220,406,487,3,Plumbing,Repair description for property 487,2022-03-30,Closed,2024-05-15,73,Flat,,Damp
+1221,407,304,6,Plumbing,Repair description for property 304,2021-08-27,Closed,2025-01-18,71,Block of Flats,22.0,Electrical
+1222,407,304,6,Other,Repair description for property 304,2021-02-09,Closed,2024-05-09,71,Block of Flats,22.0,Electrical
+1223,407,304,6,Electrical,Repair description for property 304,2020-08-19,Closed,2024-06-04,71,Block of Flats,22.0,Roofing
+1224,407,304,6,Electrical,Repair description for property 304,2021-06-16,Closed,2024-11-20,71,Block of Flats,22.0,Roofing
+1225,408,351,4,Plumbing,Repair description for property 351,2022-03-29,In Progress,,47,House,18.0,Plumbing
+1226,408,351,4,Plumbing,Repair description for property 351,2021-07-03,Closed,2024-04-11,47,House,18.0,Plumbing
+1227,408,351,4,Structural,Repair description for property 351,2022-02-26,Closed,2024-07-14,47,House,18.0,Plumbing
+1228,408,351,4,Plumbing,Repair description for property 351,2021-05-19,Closed,2024-12-22,47,House,18.0,Plumbing
+1229,409,270,3,Electrical,Repair description for property 270,2021-10-30,Closed,2024-06-15,71,House,22.0,Heating
+1230,409,270,3,Appliance,Repair description for property 270,2020-06-27,Closed,2024-08-08,71,House,22.0,Damp
+1231,409,270,3,Electrical,Repair description for property 270,2020-05-11,Closed,2024-08-27,71,House,22.0,Electrical
+1232,409,270,3,Appliance,Repair description for property 270,2022-04-02,In Progress,,71,House,22.0,Damp
+1233,410,202,8,Structural,Repair description for property 202,2021-03-30,Closed,2024-06-19,8,Flat,6.0,General
+1234,410,202,8,Other,Repair description for property 202,2020-12-13,Closed,2024-09-13,8,Flat,6.0,General
+1235,411,162,1,Plumbing,Repair description for property 162,2021-06-23,Closed,2024-08-23,24,Block of Flats,14.0,Heating
+1236,411,162,1,Electrical,Repair description for property 162,2022-02-10,In Progress,,24,Block of Flats,14.0,General
+1237,411,162,1,Appliance,Repair description for property 162,2021-02-09,Open,,24,Block of Flats,14.0,Heating
+1238,412,44,8,Other,Repair description for property 44,2020-03-16,Closed,2025-02-26,80,Flat,12.0,Roofing
+1239,412,44,8,Electrical,Repair description for property 44,2022-07-29,Closed,2024-07-28,80,Flat,12.0,Roofing
+1240,412,44,8,Structural,Repair description for property 44,2021-08-01,In Progress,,80,Flat,12.0,Roofing
+1241,412,44,8,Appliance,Repair description for property 44,2022-05-03,Open,,80,Flat,12.0,Roofing
+1242,412,44,8,Plumbing,Repair description for property 44,2021-05-06,In Progress,,80,Flat,12.0,Roofing
+1243,413,218,5,Plumbing,Repair description for property 218,2020-07-12,Closed,2024-07-29,15,House,2.0,General
+1244,413,218,5,Structural,Repair description for property 218,2022-09-10,Closed,2024-02-10,15,House,2.0,General
+1245,413,218,5,Plumbing,Repair description for property 218,2020-06-10,Closed,2024-07-07,15,House,2.0,Electrical
+1246,413,218,5,Plumbing,Repair description for property 218,2020-12-12,Closed,2025-10-01,15,House,2.0,Electrical
+1247,414,402,4,Other,Repair description for property 402,2022-08-08,Closed,2024-07-26,71,House,22.0,Structural
+1248,414,402,4,Electrical,Repair description for property 402,2020-12-26,Open,,71,House,22.0,Roofing
+1249,415,191,7,Other,Repair description for property 191,2022-02-07,Closed,2024-08-30,80,Flat,12.0,Roofing
+1250,415,191,7,Appliance,Repair description for property 191,2021-08-06,Closed,2024-10-08,80,Flat,12.0,Roofing
+1251,416,310,6,Plumbing,Repair description for property 310,2020-03-27,Closed,2025-01-18,71,Flat,22.0,Heating
+1252,416,310,6,Plumbing,Repair description for property 310,2022-07-22,Open,,71,Flat,22.0,Damp
+1253,417,260,3,Plumbing,Repair description for property 260,2020-09-18,Closed,2024-03-17,71,Flat,22.0,Roofing
+1254,417,260,3,Appliance,Repair description for property 260,2020-08-01,Open,,71,Flat,22.0,Damp
+1255,417,260,3,Other,Repair description for property 260,2021-10-26,Closed,2024-09-27,71,Flat,22.0,Structural
+1256,417,260,3,Structural,Repair description for property 260,2021-12-22,Closed,2024-10-30,71,Flat,22.0,Roofing
+1257,418,106,2,Other,Repair description for property 106,2022-07-01,Closed,2024-05-19,80,House,10.0,Heating
+1258,418,106,2,Electrical,Repair description for property 106,2021-07-26,Closed,2025-02-23,80,House,10.0,Structural
+1259,418,106,2,Electrical,Repair description for property 106,2022-02-18,Open,,80,House,10.0,Roofing
+1260,418,106,2,Appliance,Repair description for property 106,2020-09-18,Closed,2024-11-21,80,House,10.0,Heating
+1261,419,54,4,Electrical,Repair description for property 54,2021-12-30,Closed,2024-04-20,47,Flat,16.0,Roofing
+1262,419,54,4,Appliance,Repair description for property 54,2020-10-09,Closed,2024-09-21,47,Flat,16.0,Roofing
+1263,420,390,1,Appliance,Repair description for property 390,2021-10-09,Closed,2024-09-04,47,House,19.0,Heating
+1264,420,390,1,Appliance,Repair description for property 390,2021-04-11,Closed,2025-02-25,47,House,19.0,Structural
+1265,421,2,4,Plumbing,Repair description for property 2,2021-01-14,Open,,23,Flat,15.0,Heating
+1266,422,442,8,Electrical,Repair description for property 442,2020-12-27,Closed,2024-06-08,73,House,,Structural
+1267,422,442,8,Appliance,Repair description for property 442,2021-03-24,In Progress,,73,House,,Heating
+1268,423,483,5,Appliance,Repair description for property 483,2021-03-16,Closed,2024-05-17,73,Flat,,Damp
+1269,423,483,5,Structural,Repair description for property 483,2020-04-02,Closed,2024-08-20,73,Flat,,Roofing
+1270,424,50,6,Plumbing,Repair description for property 50,2021-09-12,Closed,2024-11-15,51,Flat,4.0,Heating
+1271,424,50,6,Appliance,Repair description for property 50,2022-01-22,Closed,2024-01-12,51,Flat,4.0,Structural
+1272,424,50,6,Electrical,Repair description for property 50,2022-05-16,Open,,51,Flat,4.0,Structural
+1273,425,420,6,Other,Repair description for property 420,2021-02-27,Open,,29,Flat,20.0,Plumbing
+1274,426,81,7,Plumbing,Repair description for property 81,2020-05-21,Open,,25,Flat,17.0,General
+1275,426,81,7,Electrical,Repair description for property 81,2020-10-17,Closed,2024-05-07,25,Flat,17.0,Heating
+1276,426,81,7,Electrical,Repair description for property 81,2021-03-07,Open,,25,Flat,17.0,General
+1277,426,81,7,Plumbing,Repair description for property 81,2022-01-18,Closed,2024-07-06,25,Flat,17.0,Plumbing
+1278,427,206,5,Plumbing,Repair description for property 206,2022-05-01,Closed,2024-10-21,80,Flat,10.0,Roofing
+1279,427,206,5,Electrical,Repair description for property 206,2022-04-03,Closed,2024-08-19,80,Flat,10.0,Electrical
+1280,427,206,5,Appliance,Repair description for property 206,2021-11-19,Closed,2024-03-23,80,Flat,10.0,Roofing
+1281,428,35,6,Structural,Repair description for property 35,2021-10-14,Open,,15,Block of Flats,8.0,Electrical
+1282,429,264,1,Plumbing,Repair description for property 264,2021-12-01,Closed,2025-01-01,71,Flat,22.0,Roofing
+1283,429,264,1,Plumbing,Repair description for property 264,2022-09-24,Open,,71,Flat,22.0,Structural
+1284,429,264,1,Other,Repair description for property 264,2020-02-18,Closed,2025-09-02,71,Flat,22.0,Electrical
+1285,429,264,1,Plumbing,Repair description for property 264,2020-10-28,Closed,2025-01-23,71,Flat,22.0,Structural
+1286,430,428,4,Other,Repair description for property 428,2022-05-30,Closed,2024-05-29,73,Flat,,Roofing
+1287,430,428,4,Structural,Repair description for property 428,2020-07-08,In Progress,,73,Flat,,Damp
+1288,430,428,4,Structural,Repair description for property 428,2020-05-15,Closed,2024-11-09,73,Flat,,Electrical
+1289,430,428,4,Electrical,Repair description for property 428,2021-07-08,Closed,2024-03-10,73,Flat,,Roofing
+1290,431,367,6,Other,Repair description for property 367,2021-02-07,Closed,2024-06-04,71,Flat,22.0,Electrical
+1291,431,367,6,Other,Repair description for property 367,2022-06-10,Closed,2025-02-14,71,Flat,22.0,Heating
+1292,431,367,6,Appliance,Repair description for property 367,2022-05-14,In Progress,,71,Flat,22.0,Structural
+1293,431,367,6,Plumbing,Repair description for property 367,2021-08-24,Closed,2024-07-15,71,Flat,22.0,Heating
+1294,431,367,6,Electrical,Repair description for property 367,2022-03-17,Closed,2024-05-18,71,Flat,22.0,Roofing
+1295,432,92,4,Other,Repair description for property 92,2020-12-06,Closed,2024-06-09,37,House,13.0,Windows
+1296,432,92,4,Plumbing,Repair description for property 92,2022-01-26,Closed,2024-10-22,37,House,13.0,Heating
+1297,432,92,4,Electrical,Repair description for property 92,2022-08-02,Closed,2024-11-24,37,House,13.0,Heating
+1298,432,92,4,Electrical,Repair description for property 92,2021-12-04,Closed,2024-09-17,37,House,13.0,Heating
+1299,433,340,4,Appliance,Repair description for property 340,2020-11-13,Open,,47,Block of Flats,18.0,Plumbing
+1300,433,340,4,Other,Repair description for property 340,2021-09-09,Closed,2025-07-02,47,Block of Flats,18.0,Plumbing
+1301,433,340,4,Plumbing,Repair description for property 340,2020-12-28,Closed,2024-05-29,47,Block of Flats,18.0,Plumbing
+1302,433,340,4,Electrical,Repair description for property 340,2022-04-01,Open,,47,Block of Flats,18.0,Plumbing
+1303,433,340,4,Plumbing,Repair description for property 340,2021-01-16,Closed,2025-02-19,47,Block of Flats,18.0,Plumbing
+1304,434,474,4,Other,Repair description for property 474,2020-08-20,Open,,73,House,,Damp
+1305,434,474,4,Structural,Repair description for property 474,2022-02-15,In Progress,,73,House,,Roofing
+1306,434,474,4,Electrical,Repair description for property 474,2020-12-09,Closed,2024-04-19,73,House,,Roofing
+1307,434,474,4,Other,Repair description for property 474,2021-07-02,Closed,2024-06-30,73,House,,Damp
+1308,435,53,3,Electrical,Repair description for property 53,2022-03-27,Closed,2024-11-08,103,Flat,9.0,Heating
+1309,436,346,7,Other,Repair description for property 346,2021-07-06,Closed,2024-10-05,74,House,21.0,Structural
+1310,436,346,7,Structural,Repair description for property 346,2021-06-12,Closed,2024-04-26,74,House,21.0,Heating
+1311,436,346,7,Electrical,Repair description for property 346,2022-05-05,Closed,2025-05-01,74,House,21.0,Electrical
+1312,436,346,7,Electrical,Repair description for property 346,2022-02-27,In Progress,,74,House,21.0,Damp
+1313,437,265,3,Plumbing,Repair description for property 265,2022-03-29,In Progress,,71,Flat,22.0,Heating
+1314,438,242,7,Appliance,Repair description for property 242,2021-07-24,In Progress,,74,Flat,21.0,Roofing
+1315,438,242,7,Structural,Repair description for property 242,2022-07-23,Closed,2025-02-01,74,Flat,21.0,Electrical
+1316,438,242,7,Structural,Repair description for property 242,2020-07-01,Closed,2025-03-03,74,Flat,21.0,Electrical
+1317,438,242,7,Plumbing,Repair description for property 242,2020-02-10,Closed,2024-11-09,74,Flat,21.0,Heating
+1318,439,14,3,Structural,Repair description for property 14,2021-07-04,Closed,2024-07-15,49,House,11.0,Structural
+1319,440,316,8,Electrical,Repair description for property 316,2021-01-31,Open,,29,Flat,20.0,Windows
+1320,440,316,8,Other,Repair description for property 316,2021-12-04,Closed,2025-01-20,29,Flat,20.0,Windows
+1321,440,316,8,Structural,Repair description for property 316,2022-02-17,In Progress,,29,Flat,20.0,Heating
+1322,440,316,8,Structural,Repair description for property 316,2021-05-08,Closed,2025-01-16,29,Flat,20.0,General
+1323,440,316,8,Structural,Repair description for property 316,2021-10-20,Closed,2025-02-28,29,Flat,20.0,General
+1324,441,89,4,Structural,Repair description for property 89,2022-06-25,Open,,25,Flat,17.0,Windows
+1325,441,89,4,Other,Repair description for property 89,2020-11-28,In Progress,,25,Flat,17.0,General
+1326,442,388,7,Electrical,Repair description for property 388,2020-05-06,Closed,2024-03-25,29,Flat,20.0,Plumbing
+1327,442,388,7,Other,Repair description for property 388,2021-07-11,Closed,2025-01-28,29,Flat,20.0,Plumbing
+1328,442,388,7,Other,Repair description for property 388,2021-07-10,Open,,29,Flat,20.0,General
+1329,443,274,8,Other,Repair description for property 274,2020-01-01,Open,,29,Flat,20.0,General
+1330,444,167,8,Appliance,Repair description for property 167,2020-06-16,Closed,2024-04-25,57,House,3.0,Structural
+1331,445,329,8,Plumbing,Repair description for property 329,2021-09-11,Closed,2024-11-17,47,Flat,19.0,Roofing
+1332,445,329,8,Structural,Repair description for property 329,2020-01-19,In Progress,,47,Flat,19.0,Heating
+1333,445,329,8,Other,Repair description for property 329,2020-11-27,Closed,2024-08-28,47,Flat,19.0,Windows
+1334,446,493,1,Plumbing,Repair description for property 493,2021-08-06,Closed,2025-02-28,73,Flat,,Damp
+1335,446,493,1,Plumbing,Repair description for property 493,2021-03-31,Closed,2025-02-22,73,Flat,,Heating
+1336,446,493,1,Plumbing,Repair description for property 493,2022-08-14,Closed,2024-10-06,73,Flat,,Heating
+1337,446,493,1,Appliance,Repair description for property 493,2020-04-18,Closed,2024-04-11,73,Flat,,Damp
+1338,446,493,1,Appliance,Repair description for property 493,2020-09-24,Open,,73,Flat,,Heating
+1339,447,135,7,Structural,Repair description for property 135,2021-03-20,Closed,2024-04-28,47,House,16.0,Roofing
+1340,448,307,4,Plumbing,Repair description for property 307,2020-08-27,Closed,2025-02-17,47,House,18.0,Plumbing
+1341,448,307,4,Other,Repair description for property 307,2022-07-17,Closed,2024-06-21,47,House,18.0,Plumbing
+1342,449,481,4,Plumbing,Repair description for property 481,2020-10-27,Closed,2024-11-20,73,Block of Flats,,Heating
+1343,449,481,4,Electrical,Repair description for property 481,2021-08-24,Closed,2024-05-16,73,Block of Flats,,Roofing
+1344,449,481,4,Electrical,Repair description for property 481,2020-04-12,Closed,2024-11-25,73,Block of Flats,,Structural
+1345,450,320,6,Structural,Repair description for property 320,2022-09-14,Closed,2024-10-23,29,Flat,20.0,Plumbing
+1346,450,320,6,Electrical,Repair description for property 320,2020-09-06,Closed,2025-08-03,29,Flat,20.0,Plumbing
+1347,450,320,6,Structural,Repair description for property 320,2021-03-28,Closed,2024-06-29,29,Flat,20.0,Heating
+1348,450,320,6,Appliance,Repair description for property 320,2021-06-03,Closed,2024-06-05,29,Flat,20.0,Heating

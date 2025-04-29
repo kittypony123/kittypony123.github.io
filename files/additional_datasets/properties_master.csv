@@ -1,0 +1,501 @@
+propertyid,uprn,address,estateid,estatename,blockid,blockname,coreid,corename,propertytype,bedrooms,num_floors,is_higher_risk,buildingregistrationdate,accountableperson,buildingsafetymanager,safetycasereportdate,laststructuralinspectiondate,lastfireriskassessmentdate,firesafety_certificate_date,gas_safety_certificate_date,enforcementnotices,golden_thread,compliance_status,property_age_years,epc_rating,gas_safety_certified,electrical_safety_certified,asbestos_present,asbestos_high_risk,is_void,ownership_type
+1,342319992484,"167 Pembridge Road, London",1.0,Estate 1,1.0,Block 1,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,31.0,D,True,True,False,False,False,General Needs Rent
+2,566854953850,"2 Ladbroke Grove, London",9.0,Estate 9,15.0,Block 15,28.0,Core 28,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,F,True,True,False,False,False,Leasehold
+3,199223237613,"196 Notting Hill Gate, London",5.0,Estate 5,10.0,Block 10,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,True,False,False,General Needs Rent
+4,150711229823,"155 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+5,424493543665,"97 Portobello Road, London",9.0,Estate 9,16.0,Block 16,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+6,826046287257,"181 Portobello Road, London",1.0,Estate 1,3.0,Block 3,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Leasehold
+7,406575307735,"60 Portobello Road, London",1.0,Estate 1,2.0,Block 2,5.0,Core 5,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,Shared Ownership
+8,394936156580,"91 Ladbroke Grove, London",9.0,Estate 9,14.0,Block 14,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,33.0,F,True,True,False,False,False,General Needs Rent
+9,369419548116,"44 Pembridge Road, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+10,852562516774,"164 Pembridge Road, London",4.0,Estate 4,6.0,Block 6,15.0,Core 15,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+11,393780765787,"9 Notting Hill Gate, London",10.0,Estate 10,17.0,Block 17,34.0,Core 34,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+12,605272201394,"128 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,32.0,Core 32,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,False,False,False,False,General Needs Rent
+13,921467220156,"144 Pembridge Road, London",10.0,Estate 10,17.0,Block 17,34.0,Core 34,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,False,False,False,False,General Needs Rent
+14,200903882207,"36 Pembridge Road, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,True,False,General Needs Rent
+15,171281034036,"41 Westbourne Grove, London",8.0,Estate 8,13.0,Block 13,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,True,False,False,General Needs Rent
+16,893195777447,"142 Portobello Road, London",4.0,Estate 4,8.0,Block 8,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,False,True,False,False,General Needs Rent
+17,578001943304,"88 Portobello Road, London",9.0,Estate 9,14.0,Block 14,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,True,Leasehold
+18,653930041483,"185 Notting Hill Gate, London",4.0,Estate 4,8.0,Block 8,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,29.0,D,True,True,False,False,False,General Needs Rent
+19,317363871943,"77 Pembridge Road, London",4.0,Estate 4,7.0,Block 7,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,False,False,False,False,False,General Needs Rent
+20,103944899549,"200 Pembridge Road, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,Leasehold
+21,161157982007,"93 Notting Hill Gate, London",8.0,Estate 8,13.0,Block 13,25.0,Core 25,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,True,False,False,General Needs Rent
+22,937424066816,"125 Portobello Road, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,True,False,False,False,General Needs Rent
+23,388472023723,"122 Pembridge Road, London",1.0,Estate 1,2.0,Block 2,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,False,False,False,False,False,General Needs Rent
+24,442364508902,"139 Ladbroke Grove, London",10.0,Estate 10,17.0,Block 17,32.0,Core 32,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,True,True,False,General Needs Rent
+25,371102648727,"133 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,False,False,False,False,General Needs Rent
+26,343045499634,"142 Ladbroke Grove, London",3.0,Estate 3,5.0,Block 5,13.0,Core 13,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,33.0,E,True,True,False,False,False,General Needs Rent
+27,662945045779,"9 Notting Hill Gate, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Shared Ownership
+28,622165852995,"34 Pembridge Road, London",7.0,Estate 7,12.0,Block 12,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+29,821970820395,"49 Portobello Road, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,29.0,D,True,True,False,False,True,General Needs Rent
+30,820151617123,"187 Portobello Road, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Block of Flats,1,1.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+31,311521368324,"87 Portobello Road, London",4.0,Estate 4,6.0,Block 6,14.0,Core 14,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+32,372569912085,"47 Notting Hill Gate, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,False,True,False,False,False,General Needs Rent
+33,813181846360,"141 Portobello Road, London",9.0,Estate 9,15.0,Block 15,,,Block of Flats,1,2.0,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,False,True,False,False,False,Leasehold
+34,634321479802,"61 Ladbroke Grove, London",9.0,Estate 9,16.0,Block 16,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,F,True,True,False,False,True,General Needs Rent
+35,389439657508,"43 Westbourne Grove, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Block of Flats,4,5.0,False,,,,,,,,,,Not Required,Not Applicable,29.0,G,True,True,False,False,False,General Needs Rent
+36,888821730785,"188 Pembridge Road, London",8.0,Estate 8,13.0,Block 13,25.0,Core 25,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,E,True,True,True,False,False,General Needs Rent
+37,695865453957,"15 Pembridge Road, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,True,True,False,General Needs Rent
+38,683482989002,"150 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Temporary Accommodation
+39,839026264592,"18 Pembridge Road, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,True,False,General Needs Rent
+40,755321467395,"146 Ladbroke Grove, London",3.0,Estate 3,5.0,Block 5,12.0,Core 12,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,False,False,False,General Needs Rent
+41,445842718357,"150 Pembridge Road, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Block of Flats,2,6.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,False,True,False,False,False,General Needs Rent
+42,811554491388,"102 Ladbroke Grove, London",1.0,Estate 1,1.0,Block 1,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,31.0,D,True,True,True,False,False,Temporary Accommodation
+43,784868121383,"19 Portobello Road, London",9.0,Estate 9,16.0,Block 16,,,Block of Flats,1,2.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,True,False,False,False,General Needs Rent
+44,504776119396,"130 Notting Hill Gate, London",7.0,Estate 7,12.0,Block 12,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+45,989003396697,"181 Notting Hill Gate, London",4.0,Estate 4,8.0,Block 8,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,True,False,False,False,Leasehold
+46,829851334750,"142 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+47,397020387114,"28 Pembridge Road, London",4.0,Estate 4,8.0,Block 8,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,True,False,False,False,General Needs Rent
+48,639041627377,"53 Notting Hill Gate, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+49,100189351213,"109 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,True,False,False,General Needs Rent
+50,588514866975,"68 Ladbroke Grove, London",2.0,Estate 2,4.0,Block 4,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+51,697640637435,"29 Portobello Road, London",1.0,Estate 1,3.0,Block 3,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,G,True,True,False,False,False,General Needs Rent
+52,143497047298,"38 Westbourne Grove, London",9.0,Estate 9,15.0,Block 15,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,E,True,True,False,False,False,General Needs Rent
+53,214533606906,"54 Ladbroke Grove, London",5.0,Estate 5,9.0,Block 9,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,False,False,False,False,General Needs Rent
+54,992493718889,"192 Ladbroke Grove, London",9.0,Estate 9,16.0,Block 16,31.0,Core 31,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,F,True,True,False,False,False,General Needs Rent
+55,982236590250,"189 Notting Hill Gate, London",9.0,Estate 9,15.0,Block 15,29.0,Core 29,House,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,False,False,False,False,General Needs Rent
+56,342539766821,"180 Portobello Road, London",1.0,Estate 1,3.0,Block 3,7.0,Core 7,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,32.0,F,True,True,False,False,False,Temporary Accommodation
+57,821656143707,"59 Ladbroke Grove, London",4.0,Estate 4,7.0,Block 7,16.0,Core 16,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+58,805882797681,"18 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+59,736422102747,"30 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,31.0,Core 31,Block of Flats,3,1.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,True,False,False,False,General Needs Rent
+60,966417503705,"112 Notting Hill Gate, London",9.0,Estate 9,15.0,Block 15,28.0,Core 28,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Temporary Accommodation
+61,148338665100,"148 Ladbroke Grove, London",6.0,Estate 6,11.0,Block 11,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+62,574010721878,"138 Ladbroke Grove, London",10.0,Estate 10,17.0,Block 17,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,False,False,False,False,General Needs Rent
+63,655340655504,"170 Portobello Road, London",1.0,Estate 1,1.0,Block 1,3.0,Core 3,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,31.0,E,True,True,False,False,False,General Needs Rent
+64,239820136955,"179 Notting Hill Gate, London",1.0,Estate 1,1.0,Block 1,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,31.0,C,True,True,False,False,False,General Needs Rent
+65,433156770265,"45 Pembridge Road, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,True,False,False,False,General Needs Rent
+66,739029968283,"54 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,House,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,False,False,False,General Needs Rent
+67,621886518414,"114 Ladbroke Grove, London",5.0,Estate 5,9.0,Block 9,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+68,798635932470,"73 Pembridge Road, London",1.0,Estate 1,2.0,Block 2,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,Temporary Accommodation
+69,442192051776,"193 Ladbroke Grove, London",3.0,Estate 3,5.0,Block 5,12.0,Core 12,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+70,623917015844,"12 Ladbroke Grove, London",8.0,Estate 8,13.0,Block 13,24.0,Core 24,House,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,G,True,True,False,False,False,General Needs Rent
+71,886814108140,"162 Pembridge Road, London",1.0,Estate 1,2.0,Block 2,4.0,Core 4,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+72,928467665569,"38 Portobello Road, London",4.0,Estate 4,7.0,Block 7,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+73,669924601388,"57 Ladbroke Grove, London",1.0,Estate 1,1.0,Block 1,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,31.0,A,True,True,False,False,False,General Needs Rent
+74,981040982753,"32 Westbourne Grove, London",3.0,Estate 3,5.0,Block 5,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,E,True,True,False,False,False,General Needs Rent
+75,893774408754,"114 Pembridge Road, London",2.0,Estate 2,4.0,Block 4,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+76,275652171321,"141 Westbourne Grove, London",1.0,Estate 1,2.0,Block 2,5.0,Core 5,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,Shared Ownership
+77,803686852877,"193 Ladbroke Grove, London",6.0,Estate 6,11.0,Block 11,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,True,False,Shared Ownership
+78,882016836343,"71 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,33.0,Core 33,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+79,263803069319,"139 Portobello Road, London",9.0,Estate 9,16.0,Block 16,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+80,462527878842,"17 Westbourne Grove, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,False,False,False,False,Shared Ownership
+81,949994808961,"108 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,Leasehold
+82,625619734196,"196 Pembridge Road, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,False,True,False,False,False,Shared Ownership
+83,922650393259,"100 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,House,2,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+84,132150587583,"70 Westbourne Grove, London",4.0,Estate 4,6.0,Block 6,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+85,787111968895,"120 Ladbroke Grove, London",5.0,Estate 5,9.0,Block 9,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,False,False,False,False,Leasehold
+86,804735188129,"170 Portobello Road, London",10.0,Estate 10,17.0,Block 17,34.0,Core 34,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+87,333334202984,"67 Westbourne Grove, London",6.0,Estate 6,11.0,Block 11,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+88,563134588274,"98 Notting Hill Gate, London",1.0,Estate 1,3.0,Block 3,7.0,Core 7,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,False,False,False,General Needs Rent
+89,486340553307,"192 Pembridge Road, London",10.0,Estate 10,17.0,Block 17,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,False,False,False,False,General Needs Rent
+90,133304178029,"167 Portobello Road, London",4.0,Estate 4,8.0,Block 8,,,Block of Flats,2,1.0,False,,,,,,,,,,Not Required,Not Applicable,29.0,D,True,True,False,False,False,General Needs Rent
+91,836473336882,"62 Ladbroke Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,False,False,False,False,General Needs Rent
+92,766440579767,"66 Notting Hill Gate, London",8.0,Estate 8,13.0,Block 13,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,E,True,True,False,False,False,Temporary Accommodation
+93,736119440405,"42 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,True,True,False,General Needs Rent
+94,890022600581,"97 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,33.0,Core 33,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,Leasehold
+95,855271258456,"198 Notting Hill Gate, London",8.0,Estate 8,13.0,Block 13,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,E,True,True,False,False,False,General Needs Rent
+96,685606781064,"145 Portobello Road, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,29.0,D,True,True,False,False,False,General Needs Rent
+97,218069517293,"166 Notting Hill Gate, London",3.0,Estate 3,5.0,Block 5,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,False,False,False,Temporary Accommodation
+98,295143931370,"118 Ladbroke Grove, London",9.0,Estate 9,15.0,Block 15,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,True,False,False,General Needs Rent
+99,578737987515,"138 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,House,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,B,True,True,True,False,False,General Needs Rent
+100,368224152205,"63 Portobello Road, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,House,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+101,633356940935,"127 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,True,False,False,General Needs Rent
+102,110977038883,"153 Notting Hill Gate, London",10.0,Estate 10,17.0,Block 17,32.0,Core 32,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,Leasehold
+103,711983781912,"185 Westbourne Grove, London",9.0,Estate 9,15.0,Block 15,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Shared Ownership
+104,120585489939,"126 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+105,738506846386,"63 Notting Hill Gate, London",3.0,Estate 3,5.0,Block 5,11.0,Core 11,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,F,True,False,True,False,True,General Needs Rent
+106,487967794459,"191 Pembridge Road, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,House,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+107,313551290143,"60 Portobello Road, London",9.0,Estate 9,16.0,Block 16,31.0,Core 31,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,True,False,True,Leasehold
+108,895756506622,"190 Westbourne Grove, London",6.0,Estate 6,11.0,Block 11,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+109,496114023998,"50 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+110,705824576198,"33 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+111,727117904706,"193 Westbourne Grove, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,29.0,C,True,True,False,False,False,General Needs Rent
+112,627687082060,"48 Portobello Road, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,True,General Needs Rent
+113,854322725516,"19 Pembridge Road, London",1.0,Estate 1,3.0,Block 3,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,F,True,True,False,False,False,Leasehold
+114,374851785492,"78 Portobello Road, London",4.0,Estate 4,6.0,Block 6,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,False,False,False,General Needs Rent
+115,674562228753,"159 Ladbroke Grove, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+116,724081856069,"151 Westbourne Grove, London",5.0,Estate 5,10.0,Block 10,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,F,True,True,False,False,False,Shared Ownership
+117,826986119473,"54 Ladbroke Grove, London",4.0,Estate 4,7.0,Block 7,16.0,Core 16,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+118,546688090938,"20 Ladbroke Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+119,412273997497,"60 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+120,970967089400,"60 Notting Hill Gate, London",4.0,Estate 4,7.0,Block 7,16.0,Core 16,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+121,265990327202,"140 Ladbroke Grove, London",1.0,Estate 1,2.0,Block 2,6.0,Core 6,Block of Flats,2,2.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+122,582275910205,"79 Pembridge Road, London",9.0,Estate 9,14.0,Block 14,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,F,True,False,True,False,False,General Needs Rent
+123,643485082462,"70 Pembridge Road, London",9.0,Estate 9,15.0,Block 15,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,General Needs Rent
+124,377470837308,"189 Notting Hill Gate, London",8.0,Estate 8,13.0,Block 13,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,General Needs Rent
+125,125558432468,"148 Pembridge Road, London",3.0,Estate 3,5.0,Block 5,11.0,Core 11,Block of Flats,3,10.0,True,,John Smith 125,Sarah Johnson 125,,,,,,Notice 1,Complete,Non-compliant,33.0,C,True,True,True,False,False,Leasehold
+126,996079577156,"150 Westbourne Grove, London",1.0,Estate 1,2.0,Block 2,4.0,Core 4,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+127,835818342333,"105 Notting Hill Gate, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+128,827087359039,"178 Westbourne Grove, London",4.0,Estate 4,6.0,Block 6,,,Block of Flats,1,8.0,True,,John Smith 128,Sarah Johnson 128,,,,,,Notice 2,Complete,Non-compliant,34.0,F,True,True,False,False,False,General Needs Rent
+129,552955739389,"1 Pembridge Road, London",6.0,Estate 6,11.0,Block 11,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,A,True,True,True,False,False,Temporary Accommodation
+130,159098709360,"128 Westbourne Grove, London",9.0,Estate 9,16.0,Block 16,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,Leasehold
+131,130586292150,"113 Westbourne Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Block of Flats,2,3.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,Leasehold
+132,200536554489,"4 Pembridge Road, London",8.0,Estate 8,13.0,Block 13,26.0,Core 26,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Leasehold
+133,420905367754,"31 Ladbroke Grove, London",1.0,Estate 1,2.0,Block 2,5.0,Core 5,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,True,Shared Ownership
+134,599263022595,"124 Westbourne Grove, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+135,400947542743,"154 Pembridge Road, London",9.0,Estate 9,16.0,Block 16,31.0,Core 31,House,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,F,True,True,False,False,False,General Needs Rent
+136,103524233168,"130 Notting Hill Gate, London",3.0,Estate 3,5.0,Block 5,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+137,266925023221,"149 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+138,599836311191,"142 Pembridge Road, London",3.0,Estate 3,5.0,Block 5,,,Block of Flats,2,4.0,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,True,False,False,Leasehold
+139,448079814698,"60 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,House,4,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,False,False,False,General Needs Rent
+140,237597951504,"170 Ladbroke Grove, London",1.0,Estate 1,1.0,Block 1,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,31.0,G,True,True,False,False,False,General Needs Rent
+141,114847393047,"113 Portobello Road, London",9.0,Estate 9,14.0,Block 14,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,33.0,G,True,True,False,False,False,General Needs Rent
+142,961009905968,"40 Portobello Road, London",9.0,Estate 9,14.0,Block 14,,,Block of Flats,3,10.0,True,2018-10-12 08:40:37.311550,,Sarah Johnson 142,2020-07-19 08:40:37.311550,2021-01-27 08:40:37.311550,2021-11-02 08:40:37.311550,2021-12-11 08:40:37.311550,2019-01-10 08:40:37.311550,Notice 1,Complete,Non-compliant,33.0,C,True,True,False,False,False,Shared Ownership
+143,933646465420,"192 Portobello Road, London",7.0,Estate 7,12.0,Block 12,23.0,Core 23,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+144,133944947897,"178 Notting Hill Gate, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+145,366913189856,"96 Westbourne Grove, London",4.0,Estate 4,7.0,Block 7,16.0,Core 16,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,True,General Needs Rent
+146,520352055311,"21 Pembridge Road, London",8.0,Estate 8,13.0,Block 13,26.0,Core 26,House,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,B,True,True,False,False,False,General Needs Rent
+147,607803382689,"150 Ladbroke Grove, London",1.0,Estate 1,3.0,Block 3,8.0,Core 8,House,4,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,True,False,False,Shared Ownership
+148,417403277612,"3 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+149,801364526954,"89 Pembridge Road, London",8.0,Estate 8,13.0,Block 13,,,Block of Flats,3,8.0,True,2021-04-22 08:40:37.316520,John Smith 149,Sarah Johnson 149,2022-08-25 08:40:37.316520,2023-07-15 08:40:37.316520,2024-01-12 08:40:37.316520,,2021-08-31 08:40:37.316520,Notice 2,Complete,Non-compliant,32.0,B,True,True,False,False,False,Leasehold
+150,769631000910,"200 Portobello Road, London",4.0,Estate 4,6.0,Block 6,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+151,489991328169,"59 Pembridge Road, London",4.0,Estate 4,8.0,Block 8,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,29.0,F,True,True,True,False,False,General Needs Rent
+152,205777520189,"174 Ladbroke Grove, London",7.0,Estate 7,12.0,Block 12,,,Block of Flats,1,5.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+153,904725951409,"9 Pembridge Road, London",9.0,Estate 9,16.0,Block 16,31.0,Core 31,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,Leasehold
+154,242596327861,"107 Ladbroke Grove, London",9.0,Estate 9,15.0,Block 15,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,False,False,False,General Needs Rent
+155,425586388909,"70 Ladbroke Grove, London",1.0,Estate 1,3.0,Block 3,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,G,True,True,True,True,False,General Needs Rent
+156,929533234908,"120 Portobello Road, London",1.0,Estate 1,2.0,Block 2,,,Block of Flats,4,9.0,True,2017-12-27 08:40:37.320442,John Smith 156,Sarah Johnson 156,2019-04-18 08:40:37.320442,2020-04-26 08:40:37.320442,2020-12-07 08:40:37.320442,2021-04-11 08:40:37.320442,2018-03-26 08:40:37.320442,Notice 2,Complete,Compliant,35.0,C,True,True,False,False,False,General Needs Rent
+157,773945892375,"144 Notting Hill Gate, London",8.0,Estate 8,13.0,Block 13,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,False,False,False,Shared Ownership
+158,549465060984,"119 Notting Hill Gate, London",4.0,Estate 4,7.0,Block 7,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+159,203577948775,"78 Westbourne Grove, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+160,746045230097,"95 Pembridge Road, London",1.0,Estate 1,1.0,Block 1,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,31.0,E,True,True,False,False,False,General Needs Rent
+161,640451596522,"168 Portobello Road, London",9.0,Estate 9,15.0,Block 15,30.0,Core 30,House,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,False,False,False,General Needs Rent
+162,587235620303,"95 Ladbroke Grove, London",9.0,Estate 9,14.0,Block 14,,,Block of Flats,3,2.0,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,False,True,False,False,False,General Needs Rent
+163,493611533984,"95 Pembridge Road, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+164,826243207371,"32 Westbourne Grove, London",4.0,Estate 4,6.0,Block 6,14.0,Core 14,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+165,241685906927,"86 Ladbroke Grove, London",9.0,Estate 9,15.0,Block 15,29.0,Core 29,House,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,General Needs Rent
+166,745134828528,"196 Pembridge Road, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+167,400659889315,"38 Pembridge Road, London",1.0,Estate 1,3.0,Block 3,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Shared Ownership
+168,292408151781,"139 Notting Hill Gate, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+169,454716422315,"92 Ladbroke Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,B,True,True,True,False,False,Leasehold
+170,226813571724,"190 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+171,218513893124,"93 Pembridge Road, London",2.0,Estate 2,4.0,Block 4,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+172,603806666041,"12 Pembridge Road, London",1.0,Estate 1,2.0,Block 2,6.0,Core 6,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,False,False,False,False,General Needs Rent
+173,853450108054,"123 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+174,261526407509,"21 Notting Hill Gate, London",6.0,Estate 6,11.0,Block 11,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+175,459540958538,"150 Pembridge Road, London",3.0,Estate 3,5.0,Block 5,11.0,Core 11,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,D,True,True,False,False,False,General Needs Rent
+176,972304329325,"155 Westbourne Grove, London",4.0,Estate 4,6.0,Block 6,15.0,Core 15,House,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,False,True,False,False,False,General Needs Rent
+177,540034427145,"59 Westbourne Grove, London",9.0,Estate 9,15.0,Block 15,30.0,Core 30,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,True,True,False,False,General Needs Rent
+178,852274855980,"81 Notting Hill Gate, London",9.0,Estate 9,16.0,Block 16,,,Block of Flats,1,2.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,Shared Ownership
+179,916458527301,"24 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,False,True,True,False,False,Leasehold
+180,463189664618,"151 Pembridge Road, London",4.0,Estate 4,6.0,Block 6,14.0,Core 14,House,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+181,158931506885,"171 Westbourne Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Block of Flats,3,6.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,False,False,False,False,General Needs Rent
+182,822219066762,"130 Ladbroke Grove, London",1.0,Estate 1,1.0,Block 1,2.0,Core 2,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,31.0,C,True,True,False,False,False,General Needs Rent
+183,938012051386,"143 Notting Hill Gate, London",7.0,Estate 7,12.0,Block 12,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,True,General Needs Rent
+184,841369652067,"144 Pembridge Road, London",6.0,Estate 6,11.0,Block 11,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,False,False,False,False,General Needs Rent
+185,297692848598,"169 Notting Hill Gate, London",9.0,Estate 9,14.0,Block 14,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,True,False,False,General Needs Rent
+186,719090551088,"90 Portobello Road, London",8.0,Estate 8,13.0,Block 13,25.0,Core 25,House,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,D,True,False,False,False,True,General Needs Rent
+187,920732849790,"163 Portobello Road, London",4.0,Estate 4,8.0,Block 8,17.0,Core 17,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,29.0,E,True,True,False,False,False,General Needs Rent
+188,440891782309,"88 Ladbroke Grove, London",7.0,Estate 7,12.0,Block 12,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+189,781845110195,"40 Ladbroke Grove, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+190,767805832031,"170 Westbourne Grove, London",9.0,Estate 9,15.0,Block 15,28.0,Core 28,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,Leasehold
+191,573928908678,"132 Portobello Road, London",7.0,Estate 7,12.0,Block 12,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+192,534738816383,"79 Portobello Road, London",10.0,Estate 10,17.0,Block 17,33.0,Core 33,Block of Flats,1,1.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,Shared Ownership
+193,382454920303,"55 Ladbroke Grove, London",10.0,Estate 10,17.0,Block 17,32.0,Core 32,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,True,Temporary Accommodation
+194,242488524208,"192 Westbourne Grove, London",2.0,Estate 2,4.0,Block 4,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,General Needs Rent
+195,534101258787,"172 Notting Hill Gate, London",1.0,Estate 1,1.0,Block 1,2.0,Core 2,House,1,,False,,,,,,,,,,Not Required,Not Applicable,31.0,C,True,True,False,False,False,General Needs Rent
+196,447300118003,"118 Portobello Road, London",1.0,Estate 1,3.0,Block 3,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,True,False,False,General Needs Rent
+197,542876297368,"107 Notting Hill Gate, London",3.0,Estate 3,5.0,Block 5,11.0,Core 11,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,33.0,E,True,False,True,False,False,Shared Ownership
+198,859487768166,"159 Westbourne Grove, London",9.0,Estate 9,14.0,Block 14,27.0,Core 27,Block of Flats,1,7.0,True,2021-01-21 08:40:37.346056,John Smith 198,Sarah Johnson 198,,,,,2021-05-17 08:40:37.346056,None,Complete,Non-compliant,33.0,F,True,False,True,False,False,Shared Ownership
+199,660624678846,"163 Portobello Road, London",1.0,Estate 1,1.0,Block 1,1.0,Core 1,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,31.0,F,True,True,False,False,False,General Needs Rent
+200,212683916677,"166 Ladbroke Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,False,False,False,General Needs Rent
+201,790514124625,"40 Portobello Road, London",5.0,Estate 5,10.0,Block 10,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+202,791365064899,"145 Pembridge Road, London",4.0,Estate 4,6.0,Block 6,14.0,Core 14,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+203,404067920664,"114 Notting Hill Gate, London",1.0,Estate 1,1.0,Block 1,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,31.0,C,True,True,False,False,False,General Needs Rent
+204,140595660945,"80 Westbourne Grove, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,True,Shared Ownership
+205,656602334572,"24 Pembridge Road, London",4.0,Estate 4,7.0,Block 7,16.0,Core 16,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+206,762805910527,"147 Ladbroke Grove, London",5.0,Estate 5,10.0,Block 10,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,A,False,True,True,False,False,Leasehold
+207,477258662365,"116 Portobello Road, London",6.0,Estate 6,11.0,Block 11,20.0,Core 20,Block of Flats,1,9.0,True,2022-03-15 08:40:37.351919,John Smith 207,Sarah Johnson 207,2023-12-10 08:40:37.351919,2024-07-13 08:40:37.351919,2025-01-03 08:40:37.351919,2025-04-29 08:40:37.351919,2022-04-27 08:40:37.351919,Notice 2,Complete,Compliant,35.0,C,True,True,False,False,False,Shared Ownership
+208,845425775966,"85 Portobello Road, London",10.0,Estate 10,17.0,Block 17,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+209,266959464855,"169 Pembridge Road, London",2.0,Estate 2,4.0,Block 4,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,A,True,True,False,False,True,General Needs Rent
+210,753388872137,"80 Westbourne Grove, London",5.0,Estate 5,10.0,Block 10,19.0,Core 19,House,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,False,False,False,False,General Needs Rent
+211,240931555521,"97 Notting Hill Gate, London",5.0,Estate 5,10.0,Block 10,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,True,False,False,General Needs Rent
+212,118733909032,"109 Pembridge Road, London",7.0,Estate 7,12.0,Block 12,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,General Needs Rent
+213,345637792072,"88 Westbourne Grove, London",4.0,Estate 4,6.0,Block 6,14.0,Core 14,Block of Flats,2,2.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+214,696016368562,"26 Pembridge Road, London",10.0,Estate 10,17.0,Block 17,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+215,753397880348,"197 Pembridge Road, London",5.0,Estate 5,9.0,Block 9,18.0,Core 18,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,True,General Needs Rent
+216,890984967762,"178 Pembridge Road, London",3.0,Estate 3,5.0,Block 5,12.0,Core 12,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+217,589495655793,"185 Ladbroke Grove, London",3.0,Estate 3,5.0,Block 5,12.0,Core 12,House,4,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,True,False,False,General Needs Rent
+218,993205436233,"62 Notting Hill Gate, London",1.0,Estate 1,2.0,Block 2,5.0,Core 5,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,False,True,False,False,False,General Needs Rent
+219,943796490407,"147 Westbourne Grove, London",10.0,Estate 10,17.0,Block 17,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+220,322551853248,"108 Ladbroke Grove, London",1.0,Estate 1,2.0,Block 2,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,True,Leasehold
+221,511776196814,"14 Westbourne Grove, London",4.0,Estate 4,7.0,Block 7,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,True,False,False,General Needs Rent
+222,191418649552,"133 Portobello Road, London",2.0,Estate 2,4.0,Block 4,10.0,Core 10,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,General Needs Rent
+223,580310688331,"132 Ladbroke Grove, London",9.0,Estate 9,14.0,Block 14,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,33.0,C,True,True,False,False,False,General Needs Rent
+224,157616543512,"90 Portobello Road, London",10.0,Estate 10,17.0,Block 17,32.0,Core 32,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,True,True,False,General Needs Rent
+225,131029157713,"21 Notting Hill Gate, London",9.0,Estate 9,15.0,Block 15,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,32.0,C,True,True,False,False,False,General Needs Rent
+226,262312743925,"167 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,Shared Ownership
+227,876353311207,"121 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,True,False,False,False,General Needs Rent
+228,337322386179,"21 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+229,431733138815,"29 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,False,False,False,False,General Needs Rent
+230,170682764789,"108 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+231,791560323940,"153 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+232,569402438924,"184 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+233,303652607135,"62 Pembridge Road, London",,Orphan Estate,20.0,Block 20,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+234,699259862247,"135 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+235,795971680889,"100 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+236,964822132994,"65 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+237,738968732973,"188 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+238,698513567016,"35 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,True,True,True,False,Temporary Accommodation
+239,868716765015,"200 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+240,953478914707,"35 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,1,5.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+241,322441120293,"52 Portobello Road, London",,Orphan Estate,20.0,Block 20,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+242,700502596590,"80 Pembridge Road, London",,Orphan Estate,21.0,Block 21,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+243,492070860877,"193 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+244,234317442585,"168 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,General Needs Rent
+245,471027814103,"103 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Block of Flats,4,8.0,True,2017-12-14 08:40:37.367312,John Smith 245,Sarah Johnson 245,2018-06-12 08:40:37.367312,2019-09-06 08:40:37.367312,2020-03-04 08:40:37.367312,2020-04-23 08:40:37.367312,2018-03-29 08:40:37.367312,Notice 2,Complete,Compliant,35.0,B,True,True,False,False,False,Leasehold
+246,856629977923,"184 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+247,402515765955,"11 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,True,False,General Needs Rent
+248,664201125215,"20 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,True,False,False,False,General Needs Rent
+249,769364937804,"8 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,G,True,False,False,False,False,Shared Ownership
+250,357986802853,"9 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,True,False,General Needs Rent
+251,726848188124,"93 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+252,507802091871,"174 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+253,501705971417,"147 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,General Needs Rent
+254,907565148591,"64 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+255,951527846849,"144 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+256,861435754729,"55 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Block of Flats,4,4.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+257,180972272366,"32 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+258,480825472103,"23 Notting Hill Gate, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+259,880446277380,"77 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Block of Flats,2,6.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,General Needs Rent
+260,968446597902,"131 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Shared Ownership
+261,729444729179,"7 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+262,439584802361,"157 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,True,False,False,True,General Needs Rent
+263,549980135389,"135 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+264,180068234568,"33 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+265,746992988388,"33 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,True,False,False,Leasehold
+266,667468951032,"111 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+267,881403749000,"42 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+268,796627812257,"21 Notting Hill Gate, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,3,3.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+269,686754501625,"161 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+270,285345853061,"152 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+271,186021209147,"145 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+272,730359289027,"167 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+273,805618766834,"128 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Block of Flats,4,4.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,Leasehold
+274,599493675091,"176 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+275,630066059214,"41 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+276,450977696076,"156 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+277,506993957088,"103 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,False,False,True,Leasehold
+278,235147470601,"82 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+279,418044927983,"37 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Block of Flats,4,4.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+280,735370624829,"41 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+281,613311834571,"196 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,True,False,True,General Needs Rent
+282,655739743515,"128 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+283,153055280441,"56 Pembridge Road, London",,Orphan Estate,18.0,Block 18,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,Shared Ownership
+284,689637799519,"153 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Shared Ownership
+285,391552927358,"111 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+286,157555059831,"94 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+287,178548946195,"93 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+288,787147912287,"196 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+289,509713696703,"33 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,Shared Ownership
+290,257861373383,"143 Notting Hill Gate, London",,Orphan Estate,18.0,Block 18,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+291,138849282100,"129 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,True,True,False,False,General Needs Rent
+292,265171508177,"122 Pembridge Road, London",,Orphan Estate,20.0,Block 20,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,Shared Ownership
+293,277461735201,"84 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+294,686304757644,"152 Notting Hill Gate, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+295,462359337607,"122 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,True,False,Temporary Accommodation
+296,794444859626,"150 Notting Hill Gate, London",,Orphan Estate,18.0,Block 18,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,True,True,False,General Needs Rent
+297,351589024007,"68 Pembridge Road, London",,Orphan Estate,20.0,Block 20,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+298,892975625286,"44 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,True,False,General Needs Rent
+299,727200819527,"38 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,1,4.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,True,False,General Needs Rent
+300,560908799623,"5 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,Leasehold
+301,773343378855,"106 Pembridge Road, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,1,3.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+302,458891275909,"133 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Block of Flats,4,9.0,True,2017-01-21 08:40:37.376114,John Smith 302,Sarah Johnson 302,2018-04-28 08:40:37.376114,2019-08-15 08:40:37.376114,2020-01-27 08:40:37.376114,2020-04-15 08:40:37.376114,2017-05-02 08:40:37.376114,None,Complete,Compliant,35.0,D,True,False,False,False,False,Temporary Accommodation
+303,330660793161,"77 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+304,715678421562,"82 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Block of Flats,3,5.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+305,699906524574,"32 Pembridge Road, London",,Orphan Estate,18.0,Block 18,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,False,False,False,General Needs Rent
+306,144197157631,"89 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,G,True,True,False,False,False,General Needs Rent
+307,381990252760,"89 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+308,866918027702,"52 Pembridge Road, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,True,False,False,General Needs Rent
+309,367315681022,"158 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,True,False,General Needs Rent
+310,207599629988,"164 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+311,275789144602,"26 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,False,True,False,False,False,Leasehold
+312,453421026328,"123 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+313,729866826929,"197 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,Leasehold
+314,142604507117,"45 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,Block of Flats,4,8.0,True,2018-03-23 08:40:37.378009,John Smith 314,Sarah Johnson 314,2018-07-10 08:40:37.378009,2019-06-13 08:40:37.378009,2019-12-31 08:40:37.378009,2020-06-17 08:40:37.378009,2018-05-26 08:40:37.378009,Notice 1,Complete,Compliant,34.0,G,True,True,True,False,False,General Needs Rent
+315,223732913451,"70 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,General Needs Rent
+316,304949818591,"166 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+317,931825218965,"76 Pembridge Road, London",,Orphan Estate,20.0,Block 20,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+318,195897714803,"110 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,True,General Needs Rent
+319,454237968022,"48 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,1,5.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,True,Leasehold
+320,926552435289,"99 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+321,730169982027,"78 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+322,830411262281,"178 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,General Needs Rent
+323,652702477657,"41 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,3,2.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+324,775888454502,"164 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+325,922292872033,"123 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Block of Flats,3,7.0,True,2017-04-21 08:40:37.379711,John Smith 325,Sarah Johnson 325,2018-03-10 08:40:37.379711,2019-03-23 08:40:37.379711,2019-06-02 08:40:37.379711,2019-11-14 08:40:37.379711,2017-06-09 08:40:37.379711,None,Complete,Compliant,35.0,F,True,False,False,False,False,Leasehold
+326,657928656291,"16 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+327,674900639822,"43 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,False,False,Leasehold
+328,200883747961,"184 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+329,663207412387,"15 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+330,987652778287,"144 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,True,General Needs Rent
+331,103506639908,"102 Notting Hill Gate, London",,Orphan Estate,18.0,Block 18,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+332,870278886192,"12 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+333,413668912860,"18 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+334,520440076410,"197 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,False,False,False,False,General Needs Rent
+335,248345165064,"97 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,False,False,False,False,Shared Ownership
+336,692674763992,"31 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,True,False,False,False,Leasehold
+337,103585531525,"187 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,Shared Ownership
+338,685937168273,"119 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,True,Leasehold
+339,268990469296,"64 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+340,944454665058,"9 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,Block of Flats,1,4.0,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+341,753268377067,"53 Portobello Road, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Shared Ownership
+342,582764053664,"63 Portobello Road, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+343,650357691607,"194 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,Block of Flats,2,10.0,True,2019-01-26 08:40:37.382504,John Smith 343,Sarah Johnson 343,2021-10-19 08:40:37.382504,2022-10-22 08:40:37.382504,2023-06-20 08:40:37.382504,2023-08-04 08:40:37.382504,2019-04-10 08:40:37.382504,Notice 1,Complete,Compliant,35.0,C,True,True,False,False,False,General Needs Rent
+344,837202429065,"143 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,False,True,False,False,False,General Needs Rent
+345,264962217070,"179 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+346,364026752906,"194 Pembridge Road, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+347,610266923198,"182 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Block of Flats,4,7.0,True,2021-09-02 08:40:37.383192,John Smith 347,Sarah Johnson 347,2022-03-01 08:40:37.383192,2023-06-07 08:40:37.383192,2023-10-12 08:40:37.383192,,2021-10-12 08:40:37.383192,None,Complete,Non-compliant,35.0,D,True,True,True,False,False,General Needs Rent
+348,837550274915,"195 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,False,True,True,False,False,General Needs Rent
+349,116789002083,"54 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+350,627225835972,"190 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Block of Flats,2,7.0,True,2019-04-30 08:40:37.383663,John Smith 350,Sarah Johnson 350,2021-06-02 08:40:37.383663,2021-11-12 08:40:37.383663,2022-08-23 08:40:37.383663,2023-01-20 08:40:37.383663,2019-08-19 08:40:37.383663,Notice 1,Complete,Compliant,35.0,D,True,True,False,False,False,General Needs Rent
+351,718671636967,"81 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+352,738163557720,"5 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+353,350524863789,"40 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Shared Ownership
+354,472308581268,"128 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+355,286662839208,"186 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+356,700094177194,"44 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+357,837952673289,"135 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,False,False,False,False,General Needs Rent
+358,795108436649,"106 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,True,General Needs Rent
+359,600388312673,"3 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,True,Leasehold
+360,104362534724,"169 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+361,892547813921,"4 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,Leasehold
+362,867996662339,"5 Pembridge Road, London",,Orphan Estate,21.0,Block 21,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+363,265460975402,"28 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,True,False,False,General Needs Rent
+364,537205922440,"91 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+365,347807743042,"118 Pembridge Road, London",,Orphan Estate,21.0,Block 21,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,Shared Ownership
+366,542783213089,"168 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+367,287702290673,"15 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,True,True,True,False,General Needs Rent
+368,349290861585,"166 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,False,True,False,False,General Needs Rent
+369,185573612460,"70 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+370,137186296056,"140 Pembridge Road, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,C,True,True,False,False,False,General Needs Rent
+371,257140123551,"5 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,False,False,False,False,General Needs Rent
+372,719173009122,"20 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+373,522331563827,"174 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+374,918194675138,"177 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,Block of Flats,1,2.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+375,185206458852,"112 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+376,795911943199,"199 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+377,707118586200,"126 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Block of Flats,4,3.0,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+378,519449391948,"175 Pembridge Road, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,General Needs Rent
+379,392410126704,"64 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+380,496497113885,"190 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+381,934769489293,"79 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+382,591477314669,"23 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+383,486931966626,"27 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,False,False,False,False,General Needs Rent
+384,552225040924,"99 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+385,370489193682,"186 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,False,False,General Needs Rent
+386,251051859836,"176 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Shared Ownership
+387,280660356787,"127 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+388,184965906196,"77 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+389,776860244526,"185 Westbourne Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,False,False,False,False,General Needs Rent
+390,466771704281,"35 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+391,573884083684,"85 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,G,True,True,True,False,False,General Needs Rent
+392,322029589779,"77 Notting Hill Gate, London",,Orphan Estate,18.0,Block 18,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,Shared Ownership
+393,908705611934,"102 Notting Hill Gate, London",,Orphan Estate,19.0,Block 19,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Shared Ownership
+394,513716531159,"148 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,General Needs Rent
+395,722478488545,"94 Portobello Road, London",,Orphan Estate,21.0,Block 21,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Shared Ownership
+396,609929498554,"175 Pembridge Road, London",,Orphan Estate,18.0,Block 18,,,Block of Flats,2,8.0,True,2017-10-05 08:40:37.390985,John Smith 396,Sarah Johnson 396,2019-03-07 08:40:37.390985,2019-06-16 08:40:37.390985,2019-11-16 08:40:37.390985,2020-01-24 08:40:37.390985,2018-02-08 08:40:37.390985,,Complete,Non-compliant,34.0,F,True,True,False,False,False,Temporary Accommodation
+397,540587383200,"154 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+398,870343313387,"140 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,True,True,False,Leasehold
+399,832968817887,"28 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,False,False,False,General Needs Rent
+400,928786143023,"145 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,True,General Needs Rent
+401,383891353475,"28 Portobello Road, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+402,608486049382,"115 Notting Hill Gate, London",,Orphan Estate,22.0,Block 22,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,True,True,False,General Needs Rent
+403,213742635729,"89 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,True,Temporary Accommodation
+404,440798476551,"30 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,34.0,E,True,True,True,False,False,General Needs Rent
+405,621186981193,"134 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+406,148534264683,"82 Portobello Road, London",,Orphan Estate,19.0,Block 19,,,House,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,Leasehold
+407,218747126613,"6 Notting Hill Gate, London",,Orphan Estate,20.0,Block 20,,,House,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Shared Ownership
+408,291194737973,"190 Ladbroke Grove, London",,Orphan Estate,21.0,Block 21,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,B,True,True,False,False,False,Temporary Accommodation
+409,610922706541,"144 Westbourne Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+410,800880194987,"162 Ladbroke Grove, London",,Orphan Estate,22.0,Block 22,,,House,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,True,False,False,General Needs Rent
+411,318541239164,"8 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+412,334955050419,"100 Portobello Road, London",,Orphan Estate,22.0,Block 22,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,True,General Needs Rent
+413,304169383658,"148 Portobello Road, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,F,True,True,False,False,False,General Needs Rent
+414,835566206848,"118 Portobello Road, London",,Orphan Estate,18.0,Block 18,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,D,True,True,False,False,False,General Needs Rent
+415,532122279285,"153 Westbourne Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,Leasehold
+416,291630113537,"91 Westbourne Grove, London",,Orphan Estate,21.0,Block 21,,,House,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,False,False,False,False,General Needs Rent
+417,839098381853,"158 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+418,298070787352,"62 Notting Hill Gate, London",,Orphan Estate,21.0,Block 21,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,General Needs Rent
+419,754631352267,"131 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+420,797874934613,"109 Ladbroke Grove, London",,Orphan Estate,20.0,Block 20,,,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,False,False,False,False,General Needs Rent
+421,415635609113,"143 Ladbroke Grove, London",,Orphan Estate,19.0,Block 19,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,False,False,False,Leasehold
+422,632617105267,"116 Pembridge Road, London",,Orphan Estate,22.0,Block 22,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,E,True,True,True,True,False,General Needs Rent
+423,643970792573,"144 Pembridge Road, London",,Orphan Estate,19.0,Block 19,,,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,35.0,C,True,True,False,False,False,Leasehold
+424,282487574878,"107 Westbourne Grove, London",,Orphan Estate,22.0,Block 22,,,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,35.0,D,True,True,False,False,False,General Needs Rent
+425,135614254976,"195 Ladbroke Grove, London",,Orphan Estate,18.0,Block 18,,,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,34.0,B,True,False,False,False,False,Leasehold
+426,918473236457,"44 Westbourne Grove, London",,Orphan Estate,,Orphan Block,39.0,Core 39,House,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,False,True,False,False,General Needs Rent
+427,727551462751,"141 Pembridge Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+428,893538175339,"139 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,False,False,False,False,General Needs Rent
+429,927441219419,"109 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Shared Ownership
+430,197997103103,"116 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,True,False,False,General Needs Rent
+431,989959650135,"199 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+432,570869164423,"182 Pembridge Road, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,False,False,False,Temporary Accommodation
+433,167883850039,"53 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,False,True,False,False,False,Leasehold
+434,452910493548,"153 Pembridge Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Block of Flats,3,5.0,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+435,846895479712,"147 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,2,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Leasehold
+436,168370591034,"193 Westbourne Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Block of Flats,2,3.0,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+437,455242735878,"64 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,4,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+438,793969758420,"126 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,False,False,False,General Needs Rent
+439,796109041872,"97 Westbourne Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Shared Ownership
+440,408163054733,"104 Pembridge Road, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,True,True,True,Shared Ownership
+441,737060856551,"117 Westbourne Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,False,True,False,False,General Needs Rent
+442,832871059709,"188 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,False,False,False,General Needs Rent
+443,642075774411,"137 Westbourne Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+444,244216126870,"87 Pembridge Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Temporary Accommodation
+445,207571505778,"88 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,4,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,False,False,False,Temporary Accommodation
+446,581714871195,"5 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+447,816753366914,"52 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,False,False,False,Leasehold
+448,191269726979,"24 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,True,True,False,Leasehold
+449,437694399000,"14 Westbourne Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,False,False,False,False,General Needs Rent
+450,206101575193,"110 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+451,347362969914,"20 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,True,False,False,General Needs Rent
+452,476649721582,"3 Portobello Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+453,179361118255,"178 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+454,444040630909,"188 Portobello Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+455,996675185035,"36 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,2,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Shared Ownership
+456,680114410575,"165 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,False,False,False,False,General Needs Rent
+457,335031055932,"113 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,2,,False,,,,,,,,,,Not Required,Not Applicable,,B,True,True,False,False,False,General Needs Rent
+458,588280083708,"106 Pembridge Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+459,236375715642,"26 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,B,True,True,False,False,False,General Needs Rent
+460,968934176751,"90 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+461,706656257986,"166 Portobello Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,True,False,False,General Needs Rent
+462,324633873429,"200 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+463,809938947274,"192 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,E,True,True,False,False,False,General Needs Rent
+464,362477235394,"127 Westbourne Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+465,499375619431,"136 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Block of Flats,2,7.0,True,2019-03-27 08:40:37.403095,John Smith 465,Sarah Johnson 465,2020-10-29 08:40:37.403095,2021-12-27 08:40:37.403095,,,2019-04-29 08:40:37.403095,None,Complete,Non-compliant,,G,True,False,False,False,False,General Needs Rent
+466,415708488576,"16 Westbourne Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Leasehold
+467,800433694008,"109 Westbourne Grove, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,False,True,False,False,General Needs Rent
+468,187230385877,"72 Portobello Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+469,530900111440,"40 Pembridge Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Leasehold
+470,365628557943,"80 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,True,False,False,General Needs Rent
+471,771962115421,"112 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,B,True,True,True,True,False,General Needs Rent
+472,113397905703,"171 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,False,False,False,Leasehold
+473,482050295460,"42 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,B,True,True,False,False,False,General Needs Rent
+474,920883916351,"43 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+475,465198304316,"188 Portobello Road, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Leasehold
+476,882813408006,"135 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Block of Flats,1,8.0,True,2020-05-27 08:40:37.404909,,Sarah Johnson 476,2021-02-12 08:40:37.404909,2021-05-05 08:40:37.404909,2021-08-02 08:40:37.404909,2022-01-09 08:40:37.404909,,None,Complete,Non-compliant,,G,True,True,False,False,True,Leasehold
+477,501458172019,"63 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Temporary Accommodation
+478,982842831851,"46 Portobello Road, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Block of Flats,4,4.0,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,True,General Needs Rent
+479,450985964040,"83 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,False,False,False,General Needs Rent
+480,650268636982,"147 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+481,670390288563,"46 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Block of Flats,4,2.0,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,True,False,False,General Needs Rent
+482,457816722354,"120 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+483,418689455961,"3 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+484,607848031261,"190 Pembridge Road, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Shared Ownership
+485,935571109496,"198 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,House,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,True,False,False,General Needs Rent
+486,353505764245,"2 Westbourne Grove, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,True,False,False,General Needs Rent
+487,824814081630,"86 Portobello Road, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,3,,False,,,,,,,,,,Not Required,Not Applicable,,B,True,True,False,False,False,General Needs Rent
+488,560584422688,"27 Ladbroke Grove, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+489,147644186640,"37 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Block of Flats,4,6.0,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+490,205573605970,"118 Portobello Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,F,True,True,False,False,False,General Needs Rent
+491,166863280923,"20 Pembridge Road, London",,Orphan Estate,,Orphan Block,37.0,Core 37,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+492,532936211675,"61 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,True,True,False,General Needs Rent
+493,354571112052,"82 Westbourne Grove, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,Shared Ownership
+494,267971759299,"35 Pembridge Road, London",,Orphan Estate,,Orphan Block,36.0,Core 36,Flat,4,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,True,False,False,Shared Ownership
+495,230594976994,"120 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,General Needs Rent
+496,389752867299,"116 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,35.0,Core 35,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,False,False,False,General Needs Rent
+497,876643417060,"41 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,39.0,Core 39,House,1,,False,,,,,,,,,,Not Required,Not Applicable,,D,True,True,False,False,False,Shared Ownership
+498,199421293684,"56 Notting Hill Gate, London",,Orphan Estate,,Orphan Block,38.0,Core 38,House,3,,False,,,,,,,,,,Not Required,Not Applicable,,C,True,True,True,False,False,Shared Ownership
+499,843239583508,"102 Pembridge Road, London",,Orphan Estate,,Orphan Block,39.0,Core 39,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,G,False,True,True,False,False,General Needs Rent
+500,597591723702,"8 Westbourne Grove, London",,Orphan Estate,,Orphan Block,35.0,Core 35,Flat,2,,False,,,,,,,,,,Not Required,Not Applicable,,G,True,True,False,False,False,Leasehold

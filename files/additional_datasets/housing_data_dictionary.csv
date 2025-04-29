@@ -1,0 +1,224 @@
+Dataset,Variable,Sample Type,Sample Value
+imputed_master_properties_enriched.csv,propertyid,int64,1
+imputed_master_properties_enriched.csv,address,object,"167 Pembridge Road, London"
+imputed_master_properties_enriched.csv,estateid,float64,1.0
+imputed_master_properties_enriched.csv,estatename,object,Estate 1
+imputed_master_properties_enriched.csv,blockid,float64,1.0
+imputed_master_properties_enriched.csv,blockname,object,Block 1
+imputed_master_properties_enriched.csv,coreid,float64,28.0
+imputed_master_properties_enriched.csv,corename,object,Core 28
+imputed_master_properties_enriched.csv,propertytype,object,Flat
+imputed_master_properties_enriched.csv,bedrooms,int64,3
+imputed_master_properties_enriched.csv,num_floors,float64,
+imputed_master_properties_enriched.csv,is_higher_risk,bool,False
+imputed_master_properties_enriched.csv,accountableperson,float64,
+imputed_master_properties_enriched.csv,buildingsafetymanager,float64,
+imputed_master_properties_enriched.csv,safetycasereportdate,float64,
+imputed_master_properties_enriched.csv,laststructuralinspectiondate,object,2023-02-11
+imputed_master_properties_enriched.csv,lastfireriskassessmentdate,float64,
+imputed_master_properties_enriched.csv,firesafety_certificate_date,float64,
+imputed_master_properties_enriched.csv,gas_safety_certificate_date,float64,
+imputed_master_properties_enriched.csv,enforcementnotices,float64,
+imputed_master_properties_enriched.csv,golden_thread,object,Not Required
+imputed_master_properties_enriched.csv,compliance_status,object,Not Applicable
+imputed_master_properties_enriched.csv,total_repairs,int64,5
+imputed_master_properties_enriched.csv,avg_repair_cost,float64,2576.783333
+imputed_master_properties_enriched.csv,avg_inspection_score,float64,1.8
+imputed_master_properties_enriched.csv,inspection_count,int64,5
+imputed_master_properties_enriched.csv,asb_incidents,int64,0
+imputed_master_properties_enriched.csv,patch_id,int64,7
+imputed_master_properties_enriched.csv,region_id,int64,4
+imputed_master_properties_enriched.csv,property_age_years,int64,66
+imputed_master_properties_enriched.csv,days_since_last_structural_inspection,int64,690
+imputed_master_properties_enriched.csv,days_since_last_fire_assessment,int64,251
+imputed_master_properties_enriched.csv,buildingregistrationdate,object,1959-01-01
+imputed_master_properties_enriched.csv,patchid,int64,7
+imputed_master_properties_enriched.csv,days_since_last_compliance_audit,int64,722
+imputed_master_properties_enriched.csv,fire_risk_flag,bool,False
+imputed_master_properties_enriched.csv,compliance_overdue_flag,bool,False
+properties_updated.csv,propertyid,int64,1
+properties_updated.csv,uprn,int64,342319992484
+properties_updated.csv,address,object,"167 Pembridge Road, London"
+properties_updated.csv,estateid,float64,1.0
+properties_updated.csv,estatename,object,Estate 1
+properties_updated.csv,blockid,float64,1.0
+properties_updated.csv,blockname,object,Block 1
+properties_updated.csv,coreid,float64,28.0
+properties_updated.csv,corename,object,Core 28
+properties_updated.csv,propertytype,object,Flat
+properties_updated.csv,bedrooms,int64,3
+properties_updated.csv,num_floors,float64,
+properties_updated.csv,is_higher_risk,bool,False
+properties_updated.csv,buildingregistrationdate,float64,
+properties_updated.csv,accountableperson,float64,
+properties_updated.csv,buildingsafetymanager,float64,
+properties_updated.csv,safetycasereportdate,float64,
+properties_updated.csv,laststructuralinspectiondate,float64,
+properties_updated.csv,lastfireriskassessmentdate,float64,
+properties_updated.csv,firesafety_certificate_date,float64,
+properties_updated.csv,gas_safety_certificate_date,float64,
+properties_updated.csv,enforcementnotices,float64,
+properties_updated.csv,golden_thread,object,Not Required
+properties_updated.csv,compliance_status,object,Not Applicable
+properties_updated.csv,property_age_years,float64,31.0
+tenants_enriched.csv,tenantid,int64,1
+tenants_enriched.csv,propertyid,int64,362
+tenants_enriched.csv,tenant_name,object,Tenant 1
+tenants_enriched.csv,contact_number,int64,7201710492
+tenants_enriched.csv,email,object,tenant1@example.com
+tenants_enriched.csv,move_in_date,object,2018-12-24 08:40:37.449713
+tenants_enriched.csv,blockid,float64,21.0
+tenants_enriched.csv,estateid,float64,3.0
+tenants_enriched.csv,patchid,int64,1
+tenants_enriched.csv,property_age_years,int64,74
+tenants_enriched.csv,propertytype,object,House
+tenants_enriched.csv,tenancy_start_date,object,2015-10-27
+tenants_enriched.csv,tenancy_type,object,Introductory
+tenants_enriched.csv,household_size,int64,2
+tenants_enriched.csv,vulnerability_flag,bool,False
+tenants_enriched.csv,disability_flag,bool,False
+tenants_enriched.csv,income_band,object,<£15k
+tenants_enriched.csv,age_of_tenant,int64,78
+repairs_enriched.csv,repairid,int64,1
+repairs_enriched.csv,propertyid,int64,362
+repairs_enriched.csv,tenantid,int64,1
+repairs_enriched.csv,datereported,object,2024-10-31
+repairs_enriched.csv,dateresolved,object,2024-11-26
+repairs_enriched.csv,cost,float64,675.33
+repairs_enriched.csv,status,object,Closed
+repairs_enriched.csv,description,object,Repair description for property 362
+repairs_enriched.csv,category,object,Plumbing
+repairs_enriched.csv,property_age_years,int64,74
+repairs_enriched.csv,propertytype,object,House
+repairs_enriched.csv,blockid,float64,21.0
+repairs_enriched.csv,estateid,float64,3.0
+repairs_enriched.csv,simulated_repair_type,object,Damp
+repairs_enriched.csv,simulated_cost,float64,213.87
+maintenance_requests_enriched.csv,request_id,int64,1
+maintenance_requests_enriched.csv,tenantid,int64,93
+maintenance_requests_enriched.csv,propertyid,int64,87
+maintenance_requests_enriched.csv,patch_id,int64,6
+maintenance_requests_enriched.csv,request_type,object,Pest Control
+maintenance_requests_enriched.csv,description,object,Auto-generated Pest Control issue
+maintenance_requests_enriched.csv,request_date,object,2025-02-15 11:55:29.644921
+maintenance_requests_enriched.csv,status,object,In Progress
+maintenance_requests_enriched.csv,resolution_date,object,2025-01-06 11:55:29.646358
+maintenance_requests_enriched.csv,property_age_years,int64,49
+maintenance_requests_enriched.csv,propertytype,object,Flat
+maintenance_requests_enriched.csv,blockid,float64,11.0
+maintenance_requests_enriched.csv,simulated_request_type,object,Access Issue
+inspections_updated.csv,inspectionid,int64,1
+inspections_updated.csv,propertyid,int64,1
+inspections_updated.csv,lastinspectiondate,object,2021-05-14
+inspections_updated.csv,inspector,object,Inspector 2
+inspections_updated.csv,outcome,object,Needs Attention
+inspections_updated.csv,notes,object,Inspection notes for property 1
+inspections_updated.csv,inspection_type,object,General Inspection
+inspections_updated.csv,buildingregistrationdate,object,1959-01-01
+inspections_updated.csv,property_age_years,int64,66
+inspections_updated.csv,patchid,int64,7
+inspections_updated.csv,patchname,object,West Patch 1
+inspections_updated.csv,days_since_last_inspection,int64,1328
+planned_maintenance_phases_enriched.csv,phase_id,int64,1
+planned_maintenance_phases_enriched.csv,program_id,int64,1
+planned_maintenance_phases_enriched.csv,patch_id,int64,6
+planned_maintenance_phases_enriched.csv,phase_name,object,Design
+planned_maintenance_phases_enriched.csv,phase_start,object,2025-05-26 11:55:30.355272
+planned_maintenance_phases_enriched.csv,phase_end,object,2025-06-27 11:55:30.355272
+planned_maintenance_phases_enriched.csv,patchid,int64,6
+planned_maintenance_phases_enriched.csv,avg_patch_age,float64,53.30645161290322
+planned_maintenance_phases_enriched.csv,need_score,float64,0.56
+planned_maintenance_phases_enriched.csv,priority_level,object,Medium
+planned_maintenance_phases_enriched.csv,projected_cost,float64,33977.71
+planned_maintenance_phases_enriched.csv,priority_misalignment,bool,False
+planned_maintenance_programs_enriched.csv,program_id,int64,1
+planned_maintenance_programs_enriched.csv,program_name,object,Roof Renewal
+planned_maintenance_programs_enriched.csv,overall_start,object,2025-05-26 11:55:30.355272
+planned_maintenance_programs_enriched.csv,overall_end,object,2025-10-23 11:55:30.355272
+planned_maintenance_programs_enriched.csv,total_phases,int64,9
+planned_maintenance_programs_enriched.csv,total_cost,float64,270951.53
+planned_maintenance_programs_enriched.csv,avg_need_score,float64,0.51
+planned_maintenance_programs_enriched.csv,misaligned_phases,int64,2
+planned_maintenance_programs_enriched.csv,pct_misaligned,float64,22.2
+planned_maintenance_programs_enriched.csv,program_risk_flag,bool,False
+iot_enriched.csv,sensorid,object,S1_2025031812
+iot_enriched.csv,propertyid,int64,1
+iot_enriched.csv,reading_datetime,object,2025-03-18 12:55:30.359483
+iot_enriched.csv,temperature_c,float64,18.0
+iot_enriched.csv,humidity_pct,float64,62.8
+iot_enriched.csv,property_age_years,int64,66
+iot_enriched.csv,propertytype,object,Flat
+iot_enriched.csv,blockid,float64,1.0
+iot_enriched.csv,anomaly_flag,bool,False
+energy_enriched.csv,propertyid,int64,1
+energy_enriched.csv,period_start,object,2024-05-01 11:52:28.455679
+energy_enriched.csv,energy_kwh,int64,295
+energy_enriched.csv,property_age_years,int64,66
+energy_enriched.csv,propertytype,object,Flat
+energy_enriched.csv,blockid,float64,1.0
+energy_enriched.csv,simulated_energy_kwh,float64,3562.85
+asb_enriched.csv,asb_id,int64,1
+asb_enriched.csv,propertyid,int64,480
+asb_enriched.csv,date_reported,object,2024-08-08
+asb_enriched.csv,description,object,Loitering near entrance
+asb_enriched.csv,severity,object,Medium
+asb_enriched.csv,status,object,Resolved
+asb_enriched.csv,property_age_years,int64,73
+asb_enriched.csv,propertytype,object,House
+asb_enriched.csv,blockid,float64,17.0
+asb_enriched.csv,simulated_asb_type,object,Other
+tenant_feedback_enriched.csv,feedback_id,int64,1
+tenant_feedback_enriched.csv,tenantid,int64,426
+tenant_feedback_enriched.csv,repairid,int64,379
+tenant_feedback_enriched.csv,feedback_date,object,2025-02-05 11:55:29.924498
+tenant_feedback_enriched.csv,satisfaction_score,int64,1
+tenant_feedback_enriched.csv,comments,object,Very satisfied
+tenant_feedback_enriched.csv,propertyid,int64,81
+tenant_feedback_enriched.csv,blockid,float64,17.0
+tenant_feedback_enriched.csv,estateid,float64,10.0
+tenant_feedback_enriched.csv,patchid,int64,7
+tenant_feedback_enriched.csv,property_age_years,int64,25
+tenant_feedback_enriched.csv,propertytype,object,Flat
+tenant_feedback_enriched.csv,simulated_satisfaction,float64,4.1
+rent_payments_enriched.csv,payment_id,int64,1
+rent_payments_enriched.csv,tenantid,int64,1
+rent_payments_enriched.csv,propertyid,int64,362
+rent_payments_enriched.csv,payment_date,object,2019-01-02
+rent_payments_enriched.csv,amount_gbp,int64,973
+rent_payments_enriched.csv,payment_method,object,Direct Debit
+rent_payments_enriched.csv,propertytype,object,House
+rent_payments_enriched.csv,property_age_years,int64,74
+rent_payments_enriched.csv,arrears_flag,bool,False
+rent_payments_enriched.csv,arrears_amount,float64,0.0
+planned_maintenance_phases_raw.csv,phase_id,int64,1
+planned_maintenance_phases_raw.csv,program_id,int64,1
+planned_maintenance_phases_raw.csv,patch_id,int64,6
+planned_maintenance_phases_raw.csv,phase_name,object,Design
+planned_maintenance_phases_raw.csv,phase_start,object,2025-05-26 11:55:30.355272
+planned_maintenance_phases_raw.csv,phase_end,object,2025-06-27 11:55:30.355272
+planned_maintenance_phases_raw.csv,patchid,int64,6
+planned_maintenance_phases_raw.csv,average_patch_property_age_years,float64,53.30645161290322
+planned_maintenance_phases_raw.csv,projected_cost,float64,33977.71
+planned_maintenance_phases_raw.csv,priority_misalignment_flag,bool,False
+planned_maintenance_programs_raw.csv,program_id,int64,1
+planned_maintenance_programs_raw.csv,program_name,object,Roof Renewal
+planned_maintenance_programs_raw.csv,overall_start,object,2025-05-26 11:55:30.355272
+planned_maintenance_programs_raw.csv,overall_end,object,2025-10-23 11:55:30.355272
+planned_maintenance_programs_raw.csv,total_phases,int64,9
+planned_maintenance_programs_raw.csv,total_cost,float64,270951.53
+planned_maintenance_programs_raw.csv,misaligned_phases,int64,2
+planned_maintenance_programs_raw.csv,program_risk_flag_based_on_misalignment,bool,False
+block_dim_raw.csv,blockid,int64,1
+block_dim_raw.csv,blockname,object,Block 1
+block_dim_raw.csv,estateid,float64,1.0
+estate_dim_raw.csv,estateid,int64,1
+estate_dim_raw.csv,estatename,object,Estate 1
+core_dim_raw.csv,coreid,int64,1
+core_dim_raw.csv,corename,object,Core 1
+core_dim_raw.csv,blockid,float64,1.0
+core_dim_raw.csv,estateid,float64,1.0
+patches_raw.csv,patch_id,int64,1
+patches_raw.csv,patch_name,object,North Patch 1
+patches_raw.csv,region_id,int64,1
+regions_raw.csv,region_id,int64,1
+regions_raw.csv,region_name,object,North
