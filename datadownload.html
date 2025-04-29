@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Downloadable Files</title>
+
+  <!-- ────────────────  STYLES  ──────────────── -->
   <style>
-    /* Theme variables */
     :root {
       --bg-color: #f9fafe;
       --accent: #3b82f6;
@@ -15,9 +16,9 @@
       --border-radius: 8px;
       --transition: 0.2s ease-in-out;
       --file-csv: #3b82f6;
-      --file-pdf: #ef4444;
-      --file-zip: #f59e0b;
+      --file-xlsx: #10b981;
     }
+
     body {
       margin: 0;
       padding: 2rem;
@@ -25,10 +26,31 @@
       background: var(--bg-color);
       color: var(--text-primary);
     }
+
     .container {
-      max-width: 800px;
+      max-width: 860px;
       margin: 0 auto;
     }
+
+    /* Action bar */
+    .actions {
+      margin-bottom: 1rem;
+    }
+    button {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background var(--transition);
+    }
+    button:hover {
+      background: #2563eb;
+    }
+
+    /* Collapsible groups */
     details.file-group {
       background: #fff;
       border: 1px solid #cbd5e1;
@@ -37,118 +59,391 @@
       transition: box-shadow var(--transition);
     }
     details.file-group[open] {
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     }
-    details.file-group summary {
+    summary {
       padding: 1rem 1.25rem;
       font-size: 1.125rem;
       font-weight: 500;
-      cursor: pointer;
       display: flex;
+      align-items: center;
       justify-content: space-between;
+      cursor: pointer;
       list-style: none;
     }
-    summary::-webkit-details-marker { display: none; }
+    summary::-webkit-details-marker {
+      display: none;
+    }
     summary::after {
       content: "▸";
-      transition: transform var(--transition);
       color: var(--accent);
+      transition: transform var(--transition);
     }
     details[open] summary::after {
       transform: rotate(90deg);
     }
+
+    /* File list */
     .file-list {
+      list-style: none;
       margin: 0;
       padding: 0 1.25rem 1rem;
-      list-style: none;
     }
     .file-item {
       display: flex;
       align-items: center;
       padding: 0.75rem;
       border-radius: var(--border-radius);
-      text-decoration: none;
-      color: inherit;
       transition: background var(--transition);
     }
     .file-item:hover {
       background: var(--accent-light);
     }
+    .file-select {
+      margin-right: 0.75rem;
+    }
     .file-icon {
       width: 24px;
       height: 24px;
       margin-right: 0.75rem;
+      flex-shrink: 0;
     }
-    .file-icon.csv { color: var(--file-csv); }
-    .file-icon.pdf { color: var(--file-pdf); }
-    .file-icon.zip { color: var(--file-zip); }
+    .file-icon.csv  { color: var(--file-csv); }
+    .file-icon.xlsx { color: var(--file-xlsx); }
+
     .file-info { flex: 1; }
     .file-name { font-weight: 500; }
     .file-desc { font-size: 0.875rem; color: var(--text-secondary); }
+
+    .select-all {
+      margin-left: auto;
+      font-size: 0.875rem;
+      cursor: pointer;
+      user-select: none;
+    }
+    .select-all input { margin-right: 0.25rem; }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Available Downloads</h1>
 
-    <details class="file-group" open>
-      <summary>Monthly Reports</summary>
-      <ul class="file-list">
-        <li>
-          <a class="file-item" href="/files/january-report.csv" download>
-            <i data-feather="file-text" class="file-icon csv"></i>
-            <div class="file-info">
-              <div class="file-name">January Report.csv</div>
-              <div class="file-desc">Sales and expense data for January 2025</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="file-item" href="/files/february-report.csv" download>
-            <i data-feather="file-text" class="file-icon csv"></i>
-            <div class="file-info">
-              <div class="file-name">February Report.csv</div>
-              <div class="file-desc">Sales and expense data for February 2025</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </details>
+    <!-- Action buttons -->
+    <div class="actions">
+      <button id="download-selected" type="button">Download Selected</button>
+    </div>
 
-    <details class="file-group">
-      <summary>Project Archives</summary>
-      <ul class="file-list">
-        <li>
-          <a class="file-item" href="/files/project-docs.zip" download>
-            <i data-feather="archive" class="file-icon zip"></i>
-            <div class="file-info">
-              <div class="file-name">Project Documents.zip</div>
-              <div class="file-desc">All source files and assets (v1.2)</div>
-            </div>
-          </a>
-        </li>
-        <li>
-          <a class="file-item" href="/files/best_use_datasets/imputed_master_properties_enriched.csv" download>
-            <i data-feather="file-text" class="file-icon pdf"></i>
-            <div class="file-info">
-              <div class="file-name">Master Properties</div>
-              <div class="file-desc">Main enriched properties dataset</div>
-            </div>
-          </a>
-        </li>
-      </ul>
-    </details>
+    <form id="file-form">
+
+      <!-- ───────── CORE DATA FILES ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Core Data Files
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="core" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <!-- Repeat pattern for each file -->
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="core"
+                     value="/files/best_use_datasets/imputed_master_properties_enriched.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">imputed_master_properties_enriched.csv</div>
+                <div class="file-desc">Full property dataset with 37 columns</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="core"
+                     value="/files/best_use_datasets/tenants_enriched_master.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">tenants_enriched_master.csv</div>
+                <div class="file-desc">Tenant details inc. demographics & contact</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="core"
+                     value="/files/best_use_datasets/damp_mould_incidents_master.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">damp_mould_incidents_master.csv</div>
+                <div class="file-desc">Damp & mould incident reports</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="core"
+                     value="/files/best_use_datasets/maintenance_requests_master.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">maintenance_requests_master.csv</div>
+                <div class="file-desc">Maintenance request history</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="core"
+                     value="/files/best_use_datasets/tenant_feedback_master.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">tenant_feedback_master.csv</div>
+                <div class="file-desc">Tenant feedback & satisfaction scores</div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </details>
+
+      <!-- ───────── TRANSACTIONAL / EVENT DATA ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Transactional / Event Data
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="txn" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/rent_payments_enriched_final.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">rent_payments_enriched_final.csv</div>
+                <div class="file-desc">Tenant rent payment history</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/tenant_contacts_final.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">tenant_contacts_final.csv</div>
+                <div class="file-desc">Log of tenant contacts</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/tenancy_events.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">tenancy_events.csv</div>
+                <div class="file-desc">Key tenancy lifecycle events</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/inspections_compliance_enriched.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">inspections_compliance_enriched.csv</div>
+                <div class="file-desc">Inspection records with compliance info</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/energy_enriched.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">energy_enriched.csv</div>
+                <div class="file-desc">Energy consumption data</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/iot_updated.xlsx" />
+              <i data-feather="file" class="file-icon xlsx"></i>
+              <div class="file-info">
+                <div class="file-name">iot_updated.xlsx</div>
+                <div class="file-desc">IoT sensor readings (Excel)</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="txn"
+                     value="/files/best_use_datasets/asb_enriched.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">asb_enriched.csv</div>
+                <div class="file-desc">Anti-social behaviour incidents</div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </details>
+
+      <!-- ───────── DIMENSION TABLES ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Dimension Tables
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="dim" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="dim"
+                     value="/files/best_use_datasets/block_dim_raw.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">block_dim_raw.csv</div>
+                <div class="file-desc">Block-level reference data</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="dim"
+                     value="/files/best_use_datasets/estate_dim_raw.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">estate_dim_raw.csv</div>
+                <div class="file-desc">Estate-level reference data</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="dim"
+                     value="/files/best_use_datasets/core_dim_raw.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">core_dim_raw.csv</div>
+                <div class="file-desc">Core-level reference data</div>
+              </div>
+            </label>
+          </li>
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="dim"
+                     value="/files/best_use_datasets/patches_raw.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">patches_raw.csv</div>
+                <div class="file-desc">Patch / region reference data</div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </details>
+
+      <!-- ───────── PLANNED MAINTENANCE ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Planned Maintenance
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="plan" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <li>
+            <label class="file-item">
+              <input type="checkbox" class="file-select" data-group="plan"
+                     value="/files/best_use_datasets/planned_maintenance_phases_compliance_enriched.csv" />
+              <i data-feather="file-text" class="file-icon csv"></i>
+              <div class="file-info">
+                <div class="file-name">planned_maintenance_phases_compliance_enriched.csv</div>
+                <div class="file-desc">Maintenance planning with compliance</div>
+              </div>
+            </label>
+          </li>
+        </ul>
+      </details>
+
+      <!-- ───────── FINANCE DATA ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Finance Data
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="fin" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_budgets_block.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_budgets_block.csv</div><div class="file-desc">Budgets at block level</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_budgets_estate.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_budgets_estate.csv</div><div class="file-desc">Budgets at estate level</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_budgets_property.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_budgets_property.csv</div><div class="file-desc">Budgets at property level</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_performance_property.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_performance_property.csv</div><div class="file-desc">Performance by property</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_property_valuations.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_property_valuations.csv</div><div class="file-desc">Property valuation data</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="fin" value="/files/additional_datasets/financial_service_charges.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">financial_service_charges.csv</div><div class="file-desc">Service charge records</div></div></label></li>
+        </ul>
+      </details>
+
+      <!-- ───────── ADDITIONAL DATASETS ───────── -->
+      <details class="file-group" open>
+        <summary>
+          Additional Datasets
+          <label class="select-all">
+            <input type="checkbox" class="select-all-checkbox" data-group="add" />
+            Select All
+          </label>
+        </summary>
+        <ul class="file-list">
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="add" value="/files/additional_datasets/compliance_master.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">compliance_master.csv</div><div class="file-desc">Compliance tracking master</div></div></label></li>
+          <li><label class="file-item"><input type="checkbox" class="file-select" data-group="add" value="/files/additional_datasets/damp_mould_incidents_balanced.csv" /><i data-feather="file-text" class="file-icon csv"></i><div class="file-info"><div class="file-name">damp_mould_incidents_balanced.csv</div><div class="file-desc">Balanced damp/mould incidents</div></div></label></li>
+          <!-- Add remaining additional dataset entries as needed ... -->
+        </ul>
+      </details>
+    </form>
   </div>
 
-  <!-- Feather Icons CDN -->
+  <!-- ────────────────  SCRIPTS  ──────────────── -->
   <script src="https://unpkg.com/feather-icons"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (window.feather && typeof feather.replace === 'function') {
-        feather.replace({ 'stroke-width': 1.5, width: 24, height: 24 });
-      } else {
-        console.warn('Feather icons failed to load.');
-      }
+    document.addEventListener("DOMContentLoaded", () => {
+      // Replace feather icons
+      if (window.feather) feather.replace({ "stroke-width": 1.5, width: 24, height: 24 });
+
+      // "Download Selected" button
+      document.getElementById("download-selected").addEventListener("click", () => {
+        const checked = Array.from(document.querySelectorAll(".file-select:checked"));
+        if (!checked.length) {
+          alert("Select at least one file."); return;
+        }
+        checked.forEach(cb => {
+          const a = document.createElement("a");
+          a.href = cb.value;
+          a.download = "";
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+        });
+      });
+
+      // Section "Select All" toggles
+      document.querySelectorAll(".select-all-checkbox").forEach(box => {
+        box.addEventListener("change", e => {
+          const group = e.target.dataset.group;
+          document.querySelectorAll(\`.file-select[data-group=\"\${group}\"]\`).forEach(f => {
+            f.checked = e.target.checked;
+          });
+        });
+      });
     });
   </script>
 </body>
