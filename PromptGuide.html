@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Analysis Prompt Examples</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+    :root {
+      --primary-text: #333333;
+      --secondary-text: #555555;
+      --bg: #f8f9fa;
+      --card-bg: #ffffff;
+      --accent: #4e8eff;
+      --border: #e0e0e0;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--bg);
+      color: var(--primary-text);
+      line-height: 1.6;
+    }
+    .container { max-width: 1000px; margin: 0 auto; padding: 40px; }
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-container { display: flex; max-width: 1000px; margin: 0 auto; padding: 16px 40px; }
+    .nav-container a {
+      margin-right: 24px;
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--secondary-text);
+      transition: color 0.3s;
+    }
+    .nav-container a:hover {
+      color: var(--accent);
+    }
+    h1, h2, h3 {
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    h1 { font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+    h2 { font-size: 2rem; border-bottom: 2px solid var(--accent); padding-bottom: 8px; margin-top: 40px; }
+    h3 { font-size: 1.5rem; margin-top: 32px; }
+    p { margin-bottom: 24px; color: var(--secondary-text); }
+    pre {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 20px;
+      overflow-x: auto;
+      margin-bottom: 32px;
+    }
+    code { font-family: 'Courier New', monospace; font-size: 0.95rem; }
+    ol, ul { margin-left: 20px; margin-bottom: 32px; }
+    li { margin-bottom: 12px; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <a href="#beginner">Beginner</a>
+      <a href="#intermediate">Intermediate</a>
+      <a href="#advanced">Advanced</a>
+      <a href="#tips">Tips</a>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>AI Analysis Prompt Examples for Housing Association Dataset</h1>
+    <p>This document provides example prompts for analyzing the housing association dataset using AI tools like large language models. The examples are organized by skill level (beginner, intermediate, advanced) to help users effectively leverage AI for data analysis and insights.</p>
+
+    <h2 id="beginner">Beginner Prompts</h2>
+    <p>These prompts require minimal data preparation and focus on basic exploration and simple insights.</p>
+
+    <h3>B1: Basic Property Overview</h3>
+    <pre><code>Analyze the imputed_master_properties_enriched.csv file to provide a summary of the housing stock.
+Include:
+- Total number of properties
+- Breakdown by property type (flat, house, etc.)
+- Average property age
+- Distribution across estates and blocks
+- Percentage of properties with damp/mould issues</code></pre>
+
+    <h3>B2: Tenant Satisfaction Analysis</h3>
+    <pre><code>Using the tenant_feedback_master.csv file, analyze tenant satisfaction scores.
+Include:
+- Average satisfaction score overall
+- Satisfaction trends over time
+- Common themes in feedback comments
+- Factors that seem to correlate with higher or lower satisfaction
+- Recommendations for improving tenant satisfaction</code></pre>
+
+    <h3>B3: Maintenance Request Patterns</h3>
+    <pre><code>Analyze the maintenance_requests_master.csv file to identify patterns in repair requests.
+Include:
+- Most common types of repairs
+- Average time to complete repairs
+- Seasonal patterns in repair requests
+- Properties with unusually high numbers of requests
+- Recommendations for preventative maintenance</code></pre>
+
+    <h3>B4: Compliance Status Overview</h3>
+    <pre><code>Using the compliance_master.csv file, provide an overview of compliance status.
+Include:
+- Percentage of properties compliant vs. overdue
+- Breakdown by compliance type (Fire Risk Assessment, Gas Safety, etc.)
+- Properties with critical overdue items
+- Recommendations for improving compliance rates</code></pre>
+
+    <h2 id="intermediate">Intermediate Prompts</h2>
+    <p>These prompts involve combining multiple datasets and more complex analysis.</p>
+
+    <h3>I1: Damp & Mould Risk Factors</h3>
+    <pre><code>Combine data from damp_mould_incidents_master.csv, imputed_master_properties_enriched.csv, and iot_enriched.csv to identify risk factors for damp and mould.
+Include:
+- Correlation between property characteristics and damp/mould incidents
+- Impact of temperature and humidity readings on damp/mould occurrence
+- Property age and construction type as risk factors
+- Block or estate-level patterns
+- Recommendations for targeted preventative measures</code></pre>
+
+    <h3>I2: Financial Performance Analysis</h3>
+    <pre><code>Analyze financial_performance_property.csv, financial_property_valuations.csv, and rent_payments_enriched_final.csv to assess the financial health of the housing stock.
+Include:
+- Properties with the best and worst ROI
+- Correlation between property characteristics and financial performance
+- Impact of void periods on overall returns
+- Trends in property valuations over time
+- Recommendations for improving financial performance</code></pre>
+
+    <h3>I3: Tenant Vulnerability and Support Needs</h3>
+    <pre><code>Combine tenants_enriched_master.csv, tenant_feedback_master.csv, and maintenance_requests_master.csv to identify vulnerable tenants and their support needs.
+Include:
+- Patterns in vulnerability flags and their correlation with other factors
+- Maintenance needs specific to vulnerable tenants
+- Satisfaction levels among vulnerable tenants compared to others
+- Areas where additional support services might be needed
+- Recommendations for targeted support programs</code></pre>
+
+    <h3>I4: Compliance Risk Assessment</h3>
+    <pre><code>Analyze compliance_master.csv, imputed_master_properties_enriched.csv, and financial_budgets_property.csv to create a risk-based compliance strategy.
+Include:
+- High-risk properties based on compliance history and property characteristics
+- Correlation between maintenance spending and compliance status
+- Cost implications of compliance failures
+- Prioritized list of properties needing immediate attention
+- Recommendations for a risk-based inspection schedule</code></pre>
+
+    <h2 id="advanced">Advanced Prompts</h2>
+    <p>These prompts involve complex multi-dataset analysis, predictive elements, and strategic recommendations.</p>
+
+    <h3>A1: Predictive Maintenance Model</h3>
+    <pre><code>Using maintenance_requests_master.csv, imputed_master_properties_enriched.csv, iot_enriched.csv, and energy_enriched.csv, develop a framework for a predictive maintenance model.
+Include:
+- Key indicators that predict future maintenance needs
+- Property characteristics that correlate with specific repair types
+- Role of IoT data in predicting maintenance issues
+- Cost-benefit analysis of preventative vs. reactive maintenance
+- Implementation plan for a predictive maintenance program</code></pre>
+
+    <h3>A2: Comprehensive Damp & Mould Strategy</h3>
+    <pre><code>Perform a holistic analysis using damp_mould_incidents_master.csv, iot_enriched.csv, tenant_feedback_linked_to_damp.csv, maintenance_requests_master.csv, and financial_budgets_property.csv to develop a comprehensive damp and mould strategy.
+Include:
+- Root cause analysis of damp/mould issues
+- Impact on tenant health and satisfaction
+- Cost implications of remediation vs. prevention
+- Effectiveness of current interventions
+- Detailed strategic plan with short, medium, and long-term actions
+- KPIs for measuring strategy effectiveness</code></pre>
+
+    <h3>A3: Asset Management Optimization</h3>
+    <pre><code>Analyze financial_property_valuations.csv, financial_performance_property.csv, compliance_master.csv, maintenance_requests_master.csv, and imputed_master_properties_enriched.csv to optimize the housing asset portfolio.
+Include:
+- Properties that should be prioritized for investment
+- Properties that might be candidates for disposal
+- Optimal maintenance investment levels by property type
+- Long-term value trends and their implications
+- Strategic recommendations for portfolio management
+- Financial modeling of different investment scenarios</code></pre>
+
+    <h3>A4: Tenant Experience Enhancement Strategy</h3>
+    <pre><code>Combine tenants_enriched_master.csv, tenant_feedback_master.csv, tenant_contacts_final.csv, maintenance_requests_master.csv, and compliance_master.csv to develop a comprehensive tenant experience strategy.
+Include:
+- Journey mapping of key tenant touchpoints
+- Correlation between service quality and tenant satisfaction
+- Impact of property conditions on tenant experience
+- Communication effectiveness analysis
+- Segmentation of tenants by needs and preferences
+- Detailed recommendations for enhancing tenant experience
+- Implementation roadmap with prioritized initiatives</code></pre>
+
+    <h2 id="tips">Tips for Effective AI Analysis</h2>
+    <ol>
+      <li><strong>Data Preparation</strong>: Ensure your data is properly loaded and formatted. For large files, consider using sample data first.</li>
+      <li><strong>Context Matters</strong>: Provide AI with context about the housing association, objectives, and any specific concerns.</li>
+      <li><strong>Iterative Approach</strong>: Start simple and build complexity as you become familiar with the data.</li>
+      <li><strong>Verification</strong>: Always verify AI-generated insights against raw data for critical decisions.</li>
+      <li><strong>Prompt Refinement</strong>: Refine prompts to be more specific if initial results aren't helpful.</li>
+      <li><strong>Combine Approaches</strong>: Use AI along with traditional statistical methods and domain expertise.</li>
+      <li><strong>Ethical Considerations</strong>: Be mindful of privacy and ethics when analyzing tenant data.</li>
+    </ol>
+  </div>
+</body>
+</html>
