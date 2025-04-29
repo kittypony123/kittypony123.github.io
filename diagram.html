@@ -2,202 +2,243 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Housing Data ER Diagram</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Housing-Data ER Diagram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --bg:#f8fafc;      --bg-dark:#0f172a;
-    --text:#0f172a;    --text-dark:#f1f5f9;
-    --accent:#3b82f6;
-    /* colour classes for boxes */
-    --core:#e0f2fe;    --core-stroke:#0284c7;    --core-text:#0c4a6e;
-    --people:#dbeafe;  --people-stroke:#2563eb;  --people-text:#1e3a8a;
-    --inc:#fee2e2;     --inc-stroke:#dc2626;     --inc-text:#7f1d1d;
-    --misc:#ecfccb;    --misc-stroke:#65a30d;    --misc-text:#365314;
-  }
-  *{box-sizing:border-box}
-  body{
-    margin:0;font-family:"Inter",sans-serif;
-    background:var(--bg);color:var(--text);
-    display:flex;flex-direction:column;min-height:100vh;
-    transition:background .3s,color .3s
-  }
-  body.dark{background:var(--bg-dark);color:var(--text-dark)}
-  header{text-align:center;padding:1rem 0}
-  h1{font-size:clamp(1.4rem,2vw+1rem,2.2rem);font-weight:600;margin:0}
+/* ---------- Design tokens ---------- */
+:root{
+  /* light theme */
+  --bg       : #f9fafc;
+  --text     : #0f172a;
+  --surface  : #ffffff;
+  --accent   : #3b82f6;
+  --border   : #cbd5e1;
 
-  /* controls */
-  #controls{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
-  button{
-    cursor:pointer;border:none;border-radius:6px;
-    padding:.55rem 1rem;font-weight:600;
-    display:inline-flex;align-items:center;gap:.4rem
-  }
-  .primary{background:var(--accent);color:#fff}
-  .secondary{background:#e2e8f0}
-  body.dark .secondary{background:#334155;color:#e2e8f0}
+  /* entity colours */
+  --core-bg  : #e0f2fe; --core-stroke  : #0284c7; --core-text  : #075985;
+  --people-bg: #dbeafe; --people-stroke: #2563eb; --people-text: #1e40af;
+  --inc-bg   : #fee2e2; --inc-stroke   : #dc2626; --inc-text   : #7f1d1d;
+  --misc-bg  : #ecfccb; --misc-stroke  : #65a30d; --misc-text  : #365314;
 
-  /* legend */
-  .legend{max-width:240px;margin:0 auto 1rem;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden}
-  .legend-row{display:flex;align-items:center;padding:.4rem .6rem;font-size:.9rem}
-  .swatch{flex:0 0 18px;height:18px;border-radius:4px;margin-right:.5rem}
-  body.dark .legend{border-color:#475569}
+  /* dark theme overrides (applied via .dark on <html>) */
+  --bg-dark       : #0f172a;
+  --text-dark     : #f1f5f9;
+  --surface-dark  : #1e293b;
+  --border-dark   : #475569;
+}
+html{color-scheme:light dark;font-family:"Inter",system-ui,sans-serif}
 
-  /* diagram wrapper */
-  #diagram-wrapper{flex:1;overflow:hidden;padding:0 1rem 1.5rem}
-  #diagram{width:100%;height:100%}
-  svg{max-width:1800px;width:100%;height:auto}
+/* ---------- Layout & typography ---------- */
+*{box-sizing:border-box}
+body{
+  margin:0;display:flex;flex-direction:column;min-height:100vh;
+  background:var(--bg);color:var(--text);transition:background .3s,color .3s
+}
+html.dark body{background:var(--bg-dark);color:var(--text-dark)}
+header{
+  padding:1.25rem 1rem;
+  background:linear-gradient(135deg,var(--accent),#60a5fa);
+  color:#fff;text-align:center;box-shadow:0 2px 8px rgb(0 0 0 /.08)
+}
+h1{margin:0;font-size:clamp(1.4rem,2vw+1rem,2.4rem);font-weight:600}
+
+#controls{
+  display:flex;flex-wrap:wrap;gap:.75rem;justify-content:center;
+  padding:1rem 0 .25rem
+}
+button{
+  cursor:pointer;border:none;border-radius:6px;font-weight:600;
+  padding:.55rem 1rem;display:inline-flex;align-items:center;gap:.4rem;
+  transition:background .2s,transform .15s
+}
+button:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-secondary{
+  background:var(--surface);color:var(--text);border:1px solid var(--border)}
+html.dark .btn-secondary{
+  background:var(--surface-dark);color:var(--text-dark);border:1px solid var(--border-dark)}
+
+#legend{
+  max-width:270px;margin:0 auto 1rem;
+  border:1px solid var(--border);border-radius:8px;overflow:hidden;
+  background:var(--surface)
+}
+html.dark #legend{border-color:var(--border-dark);background:var(--surface-dark)}
+.legend-row{display:flex;align-items:center;padding:.5rem .75rem;font-size:.9rem}
+.swatch{flex:0 0 18px;height:18px;border-radius:4px;margin-right:.6rem}
+
+#diagram-wrapper{
+  flex:1;overflow:hidden;padding:0 1rem 1.5rem;
+  display:flex;justify-content:center
+}
+svg{max-width:2000px;width:100%;height:auto}
+
+/* ---------- SVG reusable styles ---------- */
+svg .box{rx:8;ry:8;width:155;height:56}
+svg text{font:600 14px/1.2 "Inter",sans-serif;dominant-baseline:middle;text-anchor:middle}
+svg .lbl{font:italic 12px/1 "Inter",sans-serif;fill:var(--text)}
+html.dark svg .lbl{fill:var(--text-dark)}
 </style>
 </head>
 <body>
-  <header><h1>Housing Data Model – Interactive ER Diagram</h1></header>
+<header><h1>Housing Data – ER Diagram</h1></header>
 
-  <div id="controls">
-    <button id="toggleTheme" class="primary"><span id="themeLabel">Dark&nbsp;Mode</span></button>
-    <button id="downloadSvg" class="secondary">Download SVG</button>
-    <button id="resetZoom"   class="secondary">Reset&nbsp;Zoom</button>
-  </div>
+<!-- controls -->
+<div id="controls">
+  <button id="toggleTheme" class="btn-primary"><span id="themeLabel">Dark Mode</span></button>
+  <button id="downloadSvg" class="btn-secondary">Download SVG</button>
+  <button id="resetZoom"   class="btn-secondary">Reset Zoom</button>
+</div>
 
-  <!-- Legend -->
-  <div class="legend">
-    <div class="legend-row"><span class="swatch" style="background:var(--core);border:1px solid var(--core-stroke)"></span>Core Entities</div>
-    <div class="legend-row"><span class="swatch" style="background:var(--people);border:1px solid var(--people-stroke)"></span>People / Finance</div>
-    <div class="legend-row"><span class="swatch" style="background:var(--inc);border:1px solid var(--inc-stroke)"></span>Incidents &amp; Maintenance</div>
-    <div class="legend-row"><span class="swatch" style="background:var(--misc);border:1px solid var(--misc-stroke)"></span>Other / Misc</div>
-  </div>
+<!-- legend -->
+<div id="legend">
+  <div class="legend-row"><span class="swatch" style="background:var(--core-bg);border:1px solid var(--core-stroke)"></span>Core Entities</div>
+  <div class="legend-row"><span class="swatch" style="background:var(--people-bg);border:1px solid var(--people-stroke)"></span>People / Finance</div>
+  <div class="legend-row"><span class="swatch" style="background:var(--inc-bg);border:1px solid var(--inc-stroke)"></span>Incidents &amp; Maintenance</div>
+  <div class="legend-row"><span class="swatch" style="background:var(--misc-bg);border:1px solid var(--misc-stroke)"></span>Other / Misc</div>
+</div>
 
-  <div id="diagram-wrapper">
-    <div id="diagram">
-      <!-- **************  SVG DIAGRAM  ************** -->
-      <svg viewBox="0 0 800 860" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"
-                  markerUnits="strokeWidth">
-            <path d="M0,0 L9,3 L0,6 Z" fill="currentColor"/>
-          </marker>
-          <!-- reusable box style -->
-          <style><![CDATA[
-            .box{rx:6;ry:6;width:140;height:50}
-            .core{fill:var(--core);stroke:var(--core-stroke);stroke-width:1}
-            .people{fill:var(--people);stroke:var(--people-stroke);stroke-width:1}
-            .inc{fill:var(--inc);stroke:var(--inc-stroke);stroke-width:1}
-            .misc{fill:var(--misc);stroke:var(--misc-stroke);stroke-width:1}
-            text{font:600 12px Inter, sans-serif;dominant-baseline:middle;text-anchor:middle}
-            .lbl{font:italic 11px Inter, sans-serif;fill:var(--text)}
-            /* dark-mode overrides */
-            .dark text{fill:var(--text-dark)} .dark .lbl{fill:var(--text-dark)}
-          ]]></style>
-        </defs>
+<!-- diagram -->
+<div id="diagram-wrapper">
+  <svg id="diagram" viewBox="0 0 850 880" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <!-- arrowhead -->
+      <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L10,3.5 L0,7 Z" fill="currentColor"/>
+      </marker>
+      <!-- drop shadow -->
+      <filter id="ds" height="150%">
+        <feDropShadow dx="0" dy="2" stdDeviation="2" flood-opacity=".12"/>
+      </filter>
+    </defs>
 
-        <!-- ===== Boxes ===== -->
-        <!-- row 0 -->
-        <rect x="330" y="20"   class="box core"/><text x="400" y="45">ESTATE</text>
-        <!-- row 1 -->
-        <rect x="330" y="120"  class="box core"/><text x="400" y="145">BLOCK</text>
-        <!-- row 2 -->
-        <rect x="330" y="270"  class="box core"/><text x="400" y="295">PROPERTY</text>
-        <rect x="80"  y="270"  class="box core"/><text x="150" y="295">TENANT</text>
-        <rect x="580" y="170"  class="box inc"/><text x="650" y="195">DAMP_INCIDENT</text>
-        <rect x="580" y="270"  class="box inc"/><text x="650" y="295">MAINT_REQUEST</text>
-        <rect x="580" y="370"  class="box inc"/><text x="650" y="395">INSPECTION</text>
-        <!-- row 3 -->
-        <rect x="330" y="470"  class="box misc"/><text x="400" y="495">TENANCY_EVENT</text>
-        <rect x="580" y="470"  class="box inc"/><text x="650" y="495">ASB_INCIDENT</text>
-        <!-- row 4 -->
-        <rect x="580" y="570"  class="box misc"/><text x="650" y="595">COMPLIANCE_RECORD</text>
-        <rect x="580" y="670"  class="box misc"/><text x="650" y="695">ENERGY_READING</text>
-        <rect x="580" y="770"  class="box misc"/><text x="650" y="795">IOT_SENSOR</text>
-        <rect x="80"  y="190"  class="box misc"/><text x="150" y="215">RENT_PAYMENT</text>
-        <rect x="80"  y="350"  class="box misc"/><text x="150" y="375">TENANT_FEEDBACK</text>
+    <!-- ========= boxes ========= -->
+    <!-- row 0 -->
+    <rect x="347" y="20"   class="box core"   style="filter:url(#ds);fill:var(--core-bg);stroke:var(--core-stroke)"/>
+    <text x="425" y="48" fill="var(--core-text)">ESTATE</text>
 
-        <!-- ===== Lines (with arrowheads) ===== -->
-        <!-- PROPERTY ↔ TENANT -->
-        <path d="M330 295 H190" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="260" y="285" class="lbl">occupied by</text>
+    <!-- row 1 -->
+    <rect x="347" y="130"  class="box core"   style="filter:url(#ds);fill:var(--core-bg);stroke:var(--core-stroke)"/>
+    <text x="425" y="158" fill="var(--core-text)">BLOCK</text>
 
-        <!-- PROPERTY ↔ TENANCY_EVENT -->
-        <path d="M400 320 V470" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="410" y="395" class="lbl">tenancy history</text>
+    <!-- row 2 -->
+    <rect x="347" y="285"  class="box core"   style="filter:url(#ds);fill:var(--core-bg);stroke:var(--core-stroke)"/>
+    <text x="425" y="313" fill="var(--core-text)">PROPERTY</text>
 
-        <!-- PROPERTY ↔ BLOCK -->
-        <path d="M400 270 V170" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="410" y="215" class="lbl">in block</text>
+    <rect x="80"  y="285"  class="box core"   style="filter:url(#ds);fill:var(--core-bg);stroke:var(--core-stroke)"/>
+    <text x="158" y="313" fill="var(--core-text)">TENANT</text>
 
-        <!-- BLOCK ↔ ESTATE -->
-        <path d="M400 120 V70" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="410" y="90" class="lbl">in estate</text>
+    <!-- incidents / maintenance (row 2 shifted right) -->
+    <g style="filter:url(#ds)">
+      <rect x="600" y="190" class="box inc" style="fill:var(--inc-bg);stroke:var(--inc-stroke)"/>
+      <rect x="600" y="300" class="box inc" style="fill:var(--inc-bg);stroke:var(--inc-stroke)"/>
+      <rect x="600" y="410" class="box inc" style="fill:var(--inc-bg);stroke:var(--inc-stroke)"/>
+    </g>
+    <text x="678" y="218" fill="var(--inc-text)">DAMP_INCIDENT</text>
+    <text x="678" y="328" fill="var(--inc-text)">MAINT_REQUEST</text>
+    <text x="678" y="438" fill="var(--inc-text)">INSPECTION</text>
 
-        <!-- Tenancy lines left side -->
-        <path d="M150 270 V215" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="160" y="240" class="lbl">makes</text>
+    <!-- row 3 -->
+    <rect x="347" y="510"  class="box misc" style="filter:url(#ds);fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+    <text x="425" y="538" fill="var(--misc-text)">TENANCY_EVENT</text>
 
-        <path d="M150 270 V350" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="160" y="315" class="lbl">gives</text>
+    <rect x="600" y="510"  class="box inc"  style="filter:url(#ds);fill:var(--inc-bg);stroke:var(--inc-stroke)"/>
+    <text x="678" y="538" fill="var(--inc-text)">ASB_INCIDENT</text>
 
-        <!-- Incident & maintenance lines -->
-        <path d="M470 285 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="275" class="lbl">has</text>
+    <!-- row 4 -->
+    <g style="filter:url(#ds)">
+      <rect x="600" y="620" class="box misc" style="fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+      <rect x="600" y="730" class="box misc" style="fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+      <rect x="600" y="840" class="box misc" style="fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+    </g>
+    <text x="678" y="648" fill="var(--misc-text)">COMPLIANCE_RECORD</text>
+    <text x="678" y="758" fill="var(--misc-text)">ENERGY_READING</text>
+    <text x="678" y="868" fill="var(--misc-text)">IOT_SENSOR</text>
 
-        <path d="M470 295 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="305" class="lbl">maintenance</text>
+    <rect x="80"  y="205"  class="box misc" style="filter:url(#ds);fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+    <text x="158" y="233" fill="var(--misc-text)">RENT_PAYMENT</text>
+    <rect x="80"  y="365"  class="box misc" style="filter:url(#ds);fill:var(--misc-bg);stroke:var(--misc-stroke)"/>
+    <text x="158" y="393" fill="var(--misc-text)">TENANT_FEEDBACK</text>
 
-        <path d="M470 305 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="335" class="lbl">inspected</text>
+    <!-- ========= relationships ========= -->
+    <!-- property ↔ tenant -->
+    <path d="M347 312 H235" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="290" y="300" class="lbl">occupied by</text>
 
-        <path d="M470 355 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="445" class="lbl">ASB</text>
+    <!-- property ↔ tenancy_event -->
+    <path d="M425 341 V510" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="435" y="430" class="lbl">tenancy history</text>
 
-        <!-- Compliance / energy / IoT -->
-        <path d="M470 325 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="565" class="lbl">compliance</text>
+    <!-- property ↔ block / block ↔ estate -->
+    <path d="M425 285 V210" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="435" y="248" class="lbl">in block</text>
+    <path d="M425 130 V70"  stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="435" y="100" class="lbl">in estate</text>
 
-        <path d="M470 335 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="665" class="lbl">energy usage</text>
+    <!-- tenant → payments / feedback -->
+    <path d="M158 285 V233" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="168" y="260" class="lbl">makes</text>
+    <path d="M158 313 V365" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="168" y="335" class="lbl">gives</text>
 
-        <path d="M470 345 H580" stroke="currentColor" marker-end="url(#arrow)"/>
-        <text x="525" y="765" class="lbl">monitored by</text>
-      </svg>
-      <!-- ***************************************** -->
-    </div>
-  </div>
+    <!-- property → incidents / maint / inspect / ASB -->
+    <path d="M502 313 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="300" class="lbl">has</text>
+    <path d="M502 323 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="360" class="lbl">maintenance</text>
+    <path d="M502 333 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="390" class="lbl">inspected</text>
+    <path d="M502 510 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="500" class="lbl">ASB</text>
 
-<!-- ====== JS: theme, zoom/pan, download ====== -->
+    <!-- property → compliance / energy / IoT -->
+    <path d="M502 620 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="610" class="lbl">compliance</text>
+    <path d="M502 730 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="720" class="lbl">energy usage</text>
+    <path d="M502 840 H600" stroke="currentColor" marker-end="url(#arrow)"/>
+    <text x="552" y="830" class="lbl">monitored by</text>
+  </svg>
+</div>
+
+<!-- ========== JS ========== -->
 <script type="module">
+/* svg-pan-zoom (tiny ESM build) */
 import svgPanZoom from 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
 
-const body = document.body;
-const label = document.getElementById('themeLabel');
-let theme  = localStorage.getItem('diagram-theme') ||
-             (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark':'light');
+const root   = document.documentElement;
+const label  = document.getElementById('themeLabel');
+let theme    = localStorage.getItem('er-theme') ||
+               (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark':'light');
 
-function setTheme(t){
-  body.classList.toggle('dark', t==='dark');
-  label.textContent = t==='dark' ? 'Light Mode' : 'Dark Mode';
-  localStorage.setItem('diagram-theme', t);
+function applyTheme(){
+  root.classList.toggle('dark', theme==='dark');
+  label.textContent = theme==='dark' ? 'Light Mode' : 'Dark Mode';
 }
-setTheme(theme);
+applyTheme();
 
-/* pan / zoom */
-let pz = svgPanZoom(document.querySelector('#diagram svg'),{
-   controlIconsEnabled:true, zoomScaleSensitivity:0.6,
-   minZoom:0.4,maxZoom:6
+/* pan-zoom */
+const panZoom = svgPanZoom(document.getElementById('diagram'),{
+  controlIconsEnabled:true,minZoom:0.35,maxZoom:6,zoomScaleSensitivity:.6
 });
-window.addEventListener('resize',()=>pz.resize());
+addEventListener('resize',()=>panZoom.resize());
 
 /* buttons */
-document.getElementById('toggleTheme').onclick = () =>{
-  theme = (theme==='dark') ? 'light' : 'dark';
-  setTheme(theme);
+document.getElementById('toggleTheme').onclick = ()=>{
+  theme = theme==='dark'?'light':'dark';
+  localStorage.setItem('er-theme',theme);
+  applyTheme();
 };
-document.getElementById('resetZoom').onclick = () => pz.resetZoom();
-document.getElementById('downloadSvg').onclick = () =>{
-  const svg = document.querySelector('#diagram svg');
-  const blob = new Blob([svg.outerHTML],{type:'image/svg+xml;charset=utf-8'});
-  const link = document.createElement('a');
-  link.href = URL.createObjectURL(blob);
-  link.download = 'housing_er_diagram.svg';
+document.getElementById('resetZoom').onclick = () => panZoom.resetZoom();
+document.getElementById('downloadSvg').onclick = ()=>{
+  const svg = document.getElementById('diagram').outerHTML;
+  const blob = new Blob([svg],{type:'image/svg+xml;charset=utf-8'});
+  const link = Object.assign(document.createElement('a'),{
+    href:URL.createObjectURL(blob),download:'housing_er_diagram.svg'
+  });
   link.click();
+  URL.revokeObjectURL(link.href);
 };
 </script>
 </body>
