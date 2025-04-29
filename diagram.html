@@ -7,40 +7,47 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#f8fafc;--bg-dark:#0f172a;
-    --text:#0f172a;--text-dark:#f1f5f9;
+    --bg:#f8fafc;      --bg-dark:#0f172a;
+    --text:#0f172a;    --text-dark:#f1f5f9;
     --accent:#3b82f6;
+    /* colour classes for boxes */
+    --core:#e0f2fe;    --core-stroke:#0284c7;    --core-text:#0c4a6e;
+    --people:#dbeafe;  --people-stroke:#2563eb;  --people-text:#1e3a8a;
+    --inc:#fee2e2;     --inc-stroke:#dc2626;     --inc-text:#7f1d1d;
+    --misc:#ecfccb;    --misc-stroke:#65a30d;    --misc-text:#365314;
   }
   *{box-sizing:border-box}
   body{
     margin:0;font-family:"Inter",sans-serif;
     background:var(--bg);color:var(--text);
     display:flex;flex-direction:column;min-height:100vh;
-    transition:background .3s,color .3s}
+    transition:background .3s,color .3s
+  }
   body.dark{background:var(--bg-dark);color:var(--text-dark)}
   header{text-align:center;padding:1rem 0}
   h1{font-size:clamp(1.4rem,2vw+1rem,2.2rem);font-weight:600;margin:0}
 
-  /* Controls */
+  /* controls */
   #controls{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-bottom:1rem}
   button{
     cursor:pointer;border:none;border-radius:6px;
     padding:.55rem 1rem;font-weight:600;
-    display:inline-flex;align-items:center;gap:.4rem}
+    display:inline-flex;align-items:center;gap:.4rem
+  }
   .primary{background:var(--accent);color:#fff}
   .secondary{background:#e2e8f0}
   body.dark .secondary{background:#334155;color:#e2e8f0}
 
-  /* Diagram area */
-  #diagram-wrapper{flex:1;overflow:hidden;padding:0 1rem 1.5rem}
-  #diagram{width:100%;height:100%}
-  svg{max-width:1600px;width:100%;height:auto}
-
-  /* Legend */
+  /* legend */
   .legend{max-width:240px;margin:0 auto 1rem;border:1px solid #cbd5e1;border-radius:6px;overflow:hidden}
   .legend-row{display:flex;align-items:center;padding:.4rem .6rem;font-size:.9rem}
   .swatch{flex:0 0 18px;height:18px;border-radius:4px;margin-right:.5rem}
   body.dark .legend{border-color:#475569}
+
+  /* diagram wrapper */
+  #diagram-wrapper{flex:1;overflow:hidden;padding:0 1rem 1.5rem}
+  #diagram{width:100%;height:100%}
+  svg{max-width:1800px;width:100%;height:auto}
 </style>
 </head>
 <body>
@@ -54,115 +61,144 @@
 
   <!-- Legend -->
   <div class="legend">
-    <div class="legend-row"><span class="swatch" style="background:#e0f2fe;border:1px solid #0284c7"></span>Core Entities</div>
-    <div class="legend-row"><span class="swatch" style="background:#dbeafe;border:1px solid #2563eb"></span>People / Finance</div>
-    <div class="legend-row"><span class="swatch" style="background:#fee2e2;border:1px solid #dc2626"></span>Incidents &amp; Maintenance</div>
-    <div class="legend-row"><span class="swatch" style="background:#ecfccb;border:1px solid #65a30d"></span>Other / Misc</div>
+    <div class="legend-row"><span class="swatch" style="background:var(--core);border:1px solid var(--core-stroke)"></span>Core Entities</div>
+    <div class="legend-row"><span class="swatch" style="background:var(--people);border:1px solid var(--people-stroke)"></span>People / Finance</div>
+    <div class="legend-row"><span class="swatch" style="background:var(--inc);border:1px solid var(--inc-stroke)"></span>Incidents &amp; Maintenance</div>
+    <div class="legend-row"><span class="swatch" style="background:var(--misc);border:1px solid var(--misc-stroke)"></span>Other / Misc</div>
   </div>
 
-  <!-- Diagram -->
   <div id="diagram-wrapper">
     <div id="diagram">
-<pre class="mermaid">
-erDiagram
-    %% === Core Entities =========
-    PROPERTY ||--o{ TENANCY_EVENT : "tenancy history"
-    PROPERTY }o--|| BLOCK : "in block"
-    BLOCK }o--|| ESTATE : "in estate"
+      <!-- **************  SVG DIAGRAM  ************** -->
+      <svg viewBox="0 0 800 860" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"
+                  markerUnits="strokeWidth">
+            <path d="M0,0 L9,3 L0,6 Z" fill="currentColor"/>
+          </marker>
+          <!-- reusable box style -->
+          <style><![CDATA[
+            .box{rx:6;ry:6;width:140;height:50}
+            .core{fill:var(--core);stroke:var(--core-stroke);stroke-width:1}
+            .people{fill:var(--people);stroke:var(--people-stroke);stroke-width:1}
+            .inc{fill:var(--inc);stroke:var(--inc-stroke);stroke-width:1}
+            .misc{fill:var(--misc);stroke:var(--misc-stroke);stroke-width:1}
+            text{font:600 12px Inter, sans-serif;dominant-baseline:middle;text-anchor:middle}
+            .lbl{font:italic 11px Inter, sans-serif;fill:var(--text)}
+            /* dark-mode overrides */
+            .dark text{fill:var(--text-dark)} .dark .lbl{fill:var(--text-dark)}
+          ]]></style>
+        </defs>
 
-    %% === People ================
-    PROPERTY ||--o{ TENANT : "occupied by"
-    TENANT   ||--o{ RENT_PAYMENT    : "makes"
-    TENANT   ||--o{ TENANT_FEEDBACK : "gives"
+        <!-- ===== Boxes ===== -->
+        <!-- row 0 -->
+        <rect x="330" y="20"   class="box core"/><text x="400" y="45">ESTATE</text>
+        <!-- row 1 -->
+        <rect x="330" y="120"  class="box core"/><text x="400" y="145">BLOCK</text>
+        <!-- row 2 -->
+        <rect x="330" y="270"  class="box core"/><text x="400" y="295">PROPERTY</text>
+        <rect x="80"  y="270"  class="box core"/><text x="150" y="295">TENANT</text>
+        <rect x="580" y="170"  class="box inc"/><text x="650" y="195">DAMP_INCIDENT</text>
+        <rect x="580" y="270"  class="box inc"/><text x="650" y="295">MAINT_REQUEST</text>
+        <rect x="580" y="370"  class="box inc"/><text x="650" y="395">INSPECTION</text>
+        <!-- row 3 -->
+        <rect x="330" y="470"  class="box misc"/><text x="400" y="495">TENANCY_EVENT</text>
+        <rect x="580" y="470"  class="box inc"/><text x="650" y="495">ASB_INCIDENT</text>
+        <!-- row 4 -->
+        <rect x="580" y="570"  class="box misc"/><text x="650" y="595">COMPLIANCE_RECORD</text>
+        <rect x="580" y="670"  class="box misc"/><text x="650" y="695">ENERGY_READING</text>
+        <rect x="580" y="770"  class="box misc"/><text x="650" y="795">IOT_SENSOR</text>
+        <rect x="80"  y="190"  class="box misc"/><text x="150" y="215">RENT_PAYMENT</text>
+        <rect x="80"  y="350"  class="box misc"/><text x="150" y="375">TENANT_FEEDBACK</text>
 
-    %% === Incidents & Maintenance
-    PROPERTY ||--o{ DAMP_INCIDENT : "has"
-    PROPERTY ||--o{ MAINT_REQUEST : "maintenance"
-    PROPERTY ||--o{ INSPECTION    : "inspected"
-    PROPERTY ||--o{ ASB_INCIDENT  : "ASB"
+        <!-- ===== Lines (with arrowheads) ===== -->
+        <!-- PROPERTY ↔ TENANT -->
+        <path d="M330 295 H190" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="260" y="285" class="lbl">occupied by</text>
 
-    %% === Compliance & Energy ===
-    PROPERTY ||--o{ COMPLIANCE_RECORD : "compliance"
-    PROPERTY ||--o{ ENERGY_READING    : "energy usage"
-    PROPERTY ||--o{ IOT_SENSOR        : "monitored by"
+        <!-- PROPERTY ↔ TENANCY_EVENT -->
+        <path d="M400 320 V470" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="410" y="395" class="lbl">tenancy history</text>
 
-    %% === Styling ===============
-    classDef core    fill:#e0f2fe,stroke:#0284c7,stroke-width:1px,color:#0c4a6e;
-    classDef people  fill:#dbeafe,stroke:#2563eb,stroke-width:1px,color:#1e3a8a;
-    classDef incident fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#7f1d1d;
-    classDef misc    fill:#ecfccb,stroke:#65a30d,stroke-width:1px,color:#365314;
+        <!-- PROPERTY ↔ BLOCK -->
+        <path d="M400 270 V170" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="410" y="215" class="lbl">in block</text>
 
-    class PROPERTY,BLOCK,ESTATE core;
-    class TENANT core;
-    class TENANCY_EVENT misc;
-    class RENT_PAYMENT misc;
-    class DAMP_INCIDENT,MAINT_REQUEST,INSPECTION,ASB_INCIDENT incident;
-    class COMPLIANCE_RECORD,ENERGY_READING,IOT_SENSOR misc;
-    class TENANT_FEEDBACK misc;
-</pre>
+        <!-- BLOCK ↔ ESTATE -->
+        <path d="M400 120 V70" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="410" y="90" class="lbl">in estate</text>
+
+        <!-- Tenancy lines left side -->
+        <path d="M150 270 V215" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="160" y="240" class="lbl">makes</text>
+
+        <path d="M150 270 V350" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="160" y="315" class="lbl">gives</text>
+
+        <!-- Incident & maintenance lines -->
+        <path d="M470 285 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="275" class="lbl">has</text>
+
+        <path d="M470 295 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="305" class="lbl">maintenance</text>
+
+        <path d="M470 305 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="335" class="lbl">inspected</text>
+
+        <path d="M470 355 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="445" class="lbl">ASB</text>
+
+        <!-- Compliance / energy / IoT -->
+        <path d="M470 325 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="565" class="lbl">compliance</text>
+
+        <path d="M470 335 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="665" class="lbl">energy usage</text>
+
+        <path d="M470 345 H580" stroke="currentColor" marker-end="url(#arrow)"/>
+        <text x="525" y="765" class="lbl">monitored by</text>
+      </svg>
+      <!-- ***************************************** -->
     </div>
   </div>
 
-<!-- JS: Mermaid + svg-pan-zoom + interactivity -->
+<!-- ====== JS: theme, zoom/pan, download ====== -->
 <script type="module">
-  import mermaid     from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-  import svgPanZoom  from 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
+import svgPanZoom from 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
 
-  /* ---------- Theme handling ---------- */
-  let theme = localStorage.getItem('mermaid-theme') ||
-              (matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'default');
-  const body   = document.body;
-  const label  = document.getElementById('themeLabel');
-  function applyTheme() {
-    body.classList.toggle('dark', theme==='dark');
-    label.textContent = theme==='dark' ? 'Light Mode' : 'Dark Mode';
-  }
-  applyTheme();
+const body = document.body;
+const label = document.getElementById('themeLabel');
+let theme  = localStorage.getItem('diagram-theme') ||
+             (window.matchMedia('(prefers-color-scheme:dark)').matches ? 'dark':'light');
 
-  mermaid.initialize({ startOnLoad:true, theme });
+function setTheme(t){
+  body.classList.toggle('dark', t==='dark');
+  label.textContent = t==='dark' ? 'Light Mode' : 'Dark Mode';
+  localStorage.setItem('diagram-theme', t);
+}
+setTheme(theme);
 
-  /* ---------- Zoom & Pan ---------- */
-  let panZoom = null;
-  function initPanZoom(){
-     const svg = document.querySelector('#diagram svg');
-     if(svg && !panZoom){
-        panZoom = svgPanZoom(svg,{
-           controlIconsEnabled:true,
-           zoomScaleSensitivity:0.6,
-           minZoom:0.4,maxZoom:6
-        });
-        window.addEventListener('resize',()=>panZoom.resize());
-     }
-  }
-  mermaid.on('render',()=>{
-     const svg = document.querySelector('#diagram svg');
-     if(svg){
-       svg.removeAttribute('width');
-       svg.removeAttribute('height');
-       svg.setAttribute('preserveAspectRatio','xMidYMid meet');
-     }
-     initPanZoom();
-  });
+/* pan / zoom */
+let pz = svgPanZoom(document.querySelector('#diagram svg'),{
+   controlIconsEnabled:true, zoomScaleSensitivity:0.6,
+   minZoom:0.4,maxZoom:6
+});
+window.addEventListener('resize',()=>pz.resize());
 
-  /* ---------- Buttons ---------- */
-  document.getElementById('toggleTheme').onclick = () =>{
-     theme = theme==='dark' ? 'default' : 'dark';
-     localStorage.setItem('mermaid-theme', theme);
-     mermaid.initialize({ startOnLoad:true, theme });
-     mermaid.contentLoaded();          // re-render
-     panZoom = null;                   // reset pan-zoom
-     applyTheme();
-  };
-  document.getElementById('downloadSvg').onclick = () =>{
-     const svg = document.querySelector('#diagram svg');
-     if(!svg) return;
-     const blob = new Blob([svg.outerHTML],{type:'image/svg+xml;charset=utf-8'});
-     const link = document.createElement('a');
-     link.href = URL.createObjectURL(blob);
-     link.download = 'housing_er_diagram.svg';
-     link.click();
-  };
-  document.getElementById('resetZoom').onclick = () =>{ panZoom && panZoom.resetZoom(); };
+/* buttons */
+document.getElementById('toggleTheme').onclick = () =>{
+  theme = (theme==='dark') ? 'light' : 'dark';
+  setTheme(theme);
+};
+document.getElementById('resetZoom').onclick = () => pz.resetZoom();
+document.getElementById('downloadSvg').onclick = () =>{
+  const svg = document.querySelector('#diagram svg');
+  const blob = new Blob([svg.outerHTML],{type:'image/svg+xml;charset=utf-8'});
+  const link = document.createElement('a');
+  link.href = URL.createObjectURL(blob);
+  link.download = 'housing_er_diagram.svg';
+  link.click();
+};
 </script>
 </body>
 </html>
