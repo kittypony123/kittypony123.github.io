@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UK Housing Association Dataset Guide</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    :root {
+      --page-bg: #eef2f7;
+      --section-bg: #ffffff;
+      --accent: #4e8eff;
+      --text-main: #1a202c;
+      --text-secondary: #2d3748;
+      --border-color: #cbd5e0;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--page-bg);
+      color: var(--text-main);
+      line-height: 1.8;
+      display: flex;
+      min-height: 100vh;
+    }
+    /* Sidebar navigation */
+    nav {
+      width: 260px;
+      background: var(--section-bg);
+      border-right: 1px solid var(--border-color);
+      position: sticky;
+      top: 0;
+      align-self: flex-start;
+      height: 100vh;
+      overflow-y: auto;
+      padding-top: 20px;
+    }
+    .nav-container {
+      list-style: none;
+      padding: 0 20px;
+    }
+    .nav-container li {
+      margin-bottom: 12px;
+    }
+    .nav-container a {
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 600;
+      font-size: 1.1rem;
+      display: block;
+      padding: 10px 16px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-container a:hover,
+    .nav-container a.active {
+      background: var(--accent);
+      color: #ffffff;
+    }
+    /* Content area */
+    .content {
+      flex: 1;
+      padding: 40px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .content h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-align: center;
+      color: var(--text-main);
+    }
+    .content em {
+      display: block;
+      text-align: center;
+      margin-bottom: 36px;
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+    }
+    /* Section styling */
+    section {
+      background: var(--section-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 28px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+      color: var(--accent);
+    }
+    section h3 {
+      font-size: 1.35rem;
+      margin-top: 20px;
+      margin-bottom: 14px;
+      color: var(--text-main);
+    }
+    section p,
+    section ul,
+    section ol {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+    }
+    section ul,
+    section ol {
+      margin-left: 28px;
+    }
+    section li {
+      margin-bottom: 10px;
+    }
+    code {
+      background: #edf2f7;
+      padding: 3px 6px;
+      border-radius: 4px;
+      font-family: 'Courier New', monospace;
+      color: var(--text-main);
+      font-size: 1rem;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      nav {
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+      }
+      .content {
+        padding: 24px;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <ul class="nav-container">
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#overview">Dataset Overview</a></li>
+      <li><a href="#structure">Data Structure</a></li>
+      <li><a href="#core">Key Files</a></li>
+      <li><a href="#relations">Relationships</a></li>
+      <li><a href="#dictionary">Data Dictionary</a></li>
+      <li><a href="#notes">Additional Notes</a></li>
+    </ul>
+  </nav>
+  <div class="content">
+    <h1>UK Housing Association Dataset Guide</h1>
+    <em>April 2025</em>
+
+    <section id="introduction">
+      <h2>1. Introduction</h2>
+      <p>This guide presents a comprehensive simulated dataset for a UK Housing Association, tailored for analysis, predictive modeling, and strategic planning. It covers file organization, dataset descriptions, relationships, and best practices.</p>
+    </section>
+
+    <section id="overview">
+      <h2>2. Dataset Overview</h2>
+      <ul>
+        <li><strong>Properties & Assets:</strong> Physical attributes, organisational hierarchy (Estate &gt; Block &gt; Core), and location (Patch).</li>
+        <li><strong>Tenants:</strong> Demographics, tenancy details, contact information, vulnerability indicators, and satisfaction metrics.</li>
+        <li><strong>Maintenance & Repairs:</strong> Service requests, repair histories, and scheduled works.</li>
+        <li><strong>Compliance:</strong> Safety inspections, certification statuses, and risk assessments.</li>
+        <li><strong>Financials:</strong> Rent payments, arrears, property valuations, service charges, budgets, and performance metrics.</li>
+        <li><strong>Incidents:</strong> Anti-social behaviour (ASB) logs and damp & mould reports.</li>
+        <li><strong>Environment:</strong> Energy consumption and IoT sensor data.</li>
+        <li><strong>Dimensions:</strong> Lookup tables for estates, blocks, cores, and patches.</li>
+      </ul>
+    </section>
+
+    <section id="structure">
+      <h2>3. Data Structure</h2>
+      <p>Data is organized into CSV files by domain. Key categories include:</p>
+      <ul>
+        <li><strong>Property:</strong> Core housing stock details.</li>
+        <li><strong>Tenant:</strong> Resident information and engagement.</li>
+        <li><strong>Maintenance:</strong> Repair and maintenance records.</li>
+        <li><strong>Incidents:</strong> Event and incident logs.</li>
+        <li><strong>Compliance:</strong> Regulatory and safety tracking.</li>
+        <li><strong>Financial:</strong> Revenue, expenses, and budget analysis.</li>
+        <li><strong>Environment:</strong> Sensor and energy data streams.</li>
+        <li><strong>Dimensions:</strong> Hierarchy and geographical references.</li>
+      </ul>
+    </section>
+
+    <section id="core">
+      <h2>4. Key Files</h2>
+      <ul>
+        <li><strong>Property Details</strong> (<code>imputed_master_properties_enriched.csv</code>): Comprehensive property attributes and hierarchical structure.</li>
+        <li><strong>Tenant Profiles</strong> (<code>tenants_enriched_master.csv</code>): Demographic and satisfaction data for each tenant.</li>
+        <li><strong>Maintenance Requests</strong> (<code>maintenance_requests_master.csv</code>): All maintenance work orders consolidated.</li>
+        <li><strong>Tenant Feedback</strong> (<code>tenant_feedback_master.csv</code>): Satisfaction scores and comments linked to services.</li>
+        <li><strong>Damp & Mould Incidents</strong> (<code>damp_mould_incidents_master.csv</code>): Recorded reports of damp and mould issues.</li>
+        <li><strong>Compliance Records</strong> (<code>compliance_master.csv</code>): Inspection dates, statuses, and risk assessments.</li>
+        <li><strong>Rent Payments</strong> (<code>rent_payments_enriched_final.csv</code>): Historical rent transactions and arrears tracking.</li>
+        <li><strong>Property Valuations</strong> (<code>financial_property_valuations.csv</code>): Valuation trends and rental yield estimates.</li>
+        <li><strong>Service Charges</strong> (<code>financial_service_charges.csv</code>): Quarterly service charge breakdowns by property.</li>
+        <li><strong>Maintenance Budgets</strong> (<code>financial_budgets_property.csv</code>, <code>financial_budgets_block.csv</code>, <code>financial_budgets_estate.csv</code>): Budget versus actual spend at property, block, and estate levels.</li>
+        <li><strong>Financial Performance</strong> (<code>financial_performance_property.csv</code>): Quarterly revenue, collection rates, void losses, and ROI metrics.</li>
+      </ul>
+    </section>
+
+    <section id="relations">
+      <h2>5. Relationships</h2>
+      <p>Datasets are linked using these identifiers:</p>
+      <ul>
+        <li><code>propertyid</code>: Primary key for properties.</li>
+        <li><code>tenantid</code>: Links tenants to feedback and payments.</li>
+        <li><code>blockid</code>, <code>estateid</code>, <code>coreid</code>, <code>patchid</code>: Hierarchical and geographic references.</li>
+        <li>Transaction IDs: <code>request_id</code>, <code>repairid</code>, <code>feedback_id</code>, <code>asb_id</code>, <code>compliance_id</code>.</li>
+      </ul>
+    </section>
+
+    <section id="dictionary">
+      <h2>6. Data Dictionary</h2>
+      <p>Refer to <code>housing_data_dictionary_final.csv</code> for comprehensive field definitions, data types, and example values.</p>
+    </section>
+
+    <section id="notes">
+      <h2>7. Additional Notes</h2>
+      <ul>
+        <li><strong>Simulation:</strong> Data is synthetic; distributions may not precisely match real-world scenarios.</li>
+        <li><strong>Data Quality:</strong> Intentional nulls simulate real data challenges.</li>
+        <li><strong>File Naming:</strong> Files ending in "_master" or "_final" are the preferred consolidated sources.</li>
+        <li><strong>Date Formats:</strong> Use YYYY-MM-DD; verify consistency.</li>
+        <li><strong>Data Period:</strong> Covers data up to early 2025.</li>
+      </ul>
+    </section>
+  </div>
+</body>
+</html>
