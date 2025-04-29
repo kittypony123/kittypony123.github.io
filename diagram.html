@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Housing Data ER Diagram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f8fafc;          --bg-dark: #0f172a;
+    --text: #0f172a;        --text-dark: #f1f5f9;
+    --accent: #3b82f6;
+  }
+  *        { box-sizing: border-box }
+  body     { margin:0; font-family:'Inter',sans-serif;
+             background:var(--bg); color:var(--text);
+             display:flex; flex-direction:column; min-height:100vh;
+             transition:background .3s,color .3s }
+  body.dark{ background:var(--bg-dark); color:var(--text-dark) }
+
+  header   { text-align:center; padding:1rem 0 }
+  h1       { margin:0; font-weight:600;
+             font-size:clamp(1.4rem,2vw+1rem,2.2rem) }
+
+  #controls{ display:flex; gap:1rem; justify-content:center;
+             flex-wrap:wrap; margin-bottom:.75rem }
+  button   { cursor:pointer; border:none; border-radius:6px;
+             padding:.55rem 1rem; font-weight:600;
+             display:inline-flex; align-items:center; gap:.4rem }
+  .primary { background:var(--accent); color:#fff }
+  .secondary{ background:#e2e8f0 }
+  body.dark .secondary{ background:#334155; color:#e2e8f0 }
+
+  /* diagram container */
+  #canvas  { flex:1; overflow:hidden; padding:0 1rem 1rem }
+  #diagram { width:100%; height:100% }
+  svg      { max-width:1600px; width:100%; height:auto }
+
+  /* legend */
+  .legend      { max-width:250px; margin:0 auto 1rem;
+                 border:1px solid #cbd5e1; border-radius:6px; overflow:hidden }
+  .legend-row  { display:flex; align-items:center;
+                 padding:.4rem .6rem; font-size:.9rem }
+  .swatch      { flex:0 0 18px; height:18px; border-radius:4px; margin-right:.5rem }
+  body.dark .legend{ border-color:#475569 }
+</style>
+</head>
+<body>
+<header><h1>Housing Data Model – Interactive ER Diagram</h1></header>
+
+<div id="controls">
+  <button id="toggleTheme"  class="primary"><span id="themeTxt">Dark Mode</span></button>
+  <button id="downloadSvg"  class="secondary">Download SVG</button>
+  <button id="resetZoom"    class="secondary">Reset Zoom</button>
+</div>
+
+<!-- colour legend -->
+<div class="legend">
+  <div class="legend-row"><span class="swatch" style="background:#e0f2fe;border:1px solid #0284c7"></span>Core entities</div>
+  <div class="legend-row"><span class="swatch" style="background:#dbeafe;border:1px solid #2563eb"></span>People / Finance</div>
+  <div class="legend-row"><span class="swatch" style="background:#fee2e2;border:1px solid #dc2626"></span>Incidents & Maintenance</div>
+  <div class="legend-row"><span class="swatch" style="background:#ecfccb;border:1px solid #65a30d"></span>Other / Misc</div>
+</div>
+
+<!-- diagram -->
+<div id="canvas">
+  <div id="diagram">
+<pre class="mermaid">
+erDiagram
+    %% === Core Entities =========
+    PROPERTY ||--o{ TENANCY_EVENT : "tenancy history"
+    PROPERTY }o--|| BLOCK : "in block"
+    BLOCK }o--|| ESTATE : "in estate"
+
+    %% === People ================
+    PROPERTY ||--o{ TENANT : "occupied by"
+    TENANT ||--o{ RENT_PAYMENT : "makes"
+    TENANT ||--o{ TENANT_FEEDBACK : "gives"
+
+    %% === Incidents & Maintenance
+    PROPERTY ||--o{ DAMP_INCIDENT    : "has"
+    PROPERTY ||--o{ MAINT_REQUEST    : "maintenance"
+    PROPERTY ||--o{ INSPECTION       : "inspected"
+    PROPERTY ||--o{ ASB_INCIDENT     : "ASB"
+
+    %% === Compliance & Energy ===
+    PROPERTY ||--o{ COMPLIANCE_RECORD: "compliance"
+    PROPERTY ||--o{ ENERGY_READING   : "energy"
+    PROPERTY ||--o{ IOT_SENSOR       : "monitored by"
+
+    %% === Styling =================
+    classDef core    fill:#e0f2fe,stroke:#0284c7,stroke-width:1px,color:#0c4a6e;
+    classDef people  fill:#dbeafe,stroke:#2563eb,stroke-width:1px,color:#1e3a8a;
+    classDef incident fill:#fee2e2,stroke:#dc2626,stroke-width:1px,color:#7f1d1d;
+    classDef misc    fill:#ecfccb,stroke:#65a30d,stroke-width:1px,color:#365314;
+
+    class PROPERTY,BLOCK,ESTATE core;
+    class TENANT core;
+    class TENANCY_EVENT misc;
+    class RENT_PAYMENT misc;
+    class DAMP_INCIDENT,MAINT_REQUEST,INSPECTION,ASB_INCIDENT incident;
+    class COMPLIANCE_RECORD,ENERGY_READING,IOT_SENSOR misc;
+    class TENANT_FEEDBACK misc;
+</pre>
+  </div>
+</div>
+
+<!-- dependencies -->
+<script type="module">
+  import mermaid    from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  import svgPanZoom from 'https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.6.1/dist/svg-pan-zoom.min.js';
+
+  /* ---------- theme ---------- */
+  const prefersDark = matchMedia('(prefers-color-scheme: dark)').matches;
+  let theme = localStorage.getItem('mermaidTheme') || (prefersDark ? 'dark' : 'default');
+  const body  = document.body;
+  const tBtn  = document.getElementById('toggleTheme');
+  const tText = document.getElementById('themeTxt');
+  function syncTheme() {
+    body.classList.toggle('dark', theme === 'dark');
+    tText.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+  }
+  syncTheme();
+
+  /* ---------- mermaid ---------- */
+  mermaid.initialize({ startOnLoad:true, theme });
+
+  /* ---------- pan/zoom ---------- */
+  let panZoom;
+  function setupPanZoom() {
+    const svg = document.querySelector('#diagram svg');
+    if (svg && !panZoom) {
+      svg.removeAttribute('width');
+      svg.removeAttribute('height');
+      svg.setAttribute('preserveAspectRatio','xMidYMid meet');
+      panZoom = svgPanZoom(svg, {
+        controlIconsEnabled:true,
+        zoomScaleSensitivity:.6,
+        minZoom:.4, maxZoom:6
+      });
+      window.addEventListener('resize', () => panZoom.resize());
+    }
+  }
+  mermaid.on('render', setupPanZoom);
+
+  /* ---------- buttons ---------- */
+  tBtn.addEventListener('click', () => {
+    theme = theme === 'dark' ? 'default' : 'dark';
+    localStorage.setItem('mermaidTheme', theme);
+    mermaid.initialize({ startOnLoad:true, theme });
+    mermaid.contentLoaded();         // redraw
+    panZoom = null;                  // will re-init on next render
+    syncTheme();
+  });
+
+  document.getElementById('downloadSvg').addEventListener('click', () => {
+    const svg = document.querySelector('#diagram svg');
+    if (!svg) return;
+    const blob = new Blob([svg.outerHTML], {type:'image/svg+xml;charset=utf-8'});
+    const url  = URL.createObjectURL(blob);
+    const a    = Object.assign(document.createElement('a'), {href:url, download:'housing_er_diagram.svg'});
+    a.click(); URL.revokeObjectURL(url);
+  });
+
+  document.getElementById('resetZoom').addEventListener('click', () => {
+    if (panZoom) panZoom.resetZoom();
+  });
+</script>
+</body>
+</html>
