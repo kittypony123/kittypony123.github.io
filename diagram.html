@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
-<title>Housing-Data – Interactive ER Network</title>
+<title>Housing-Data ER Network</title>
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
@@ -12,44 +12,61 @@
 
 <style>
 :root{
-  --bg:#f8fafc;       --bg-dark:#0f172a;
-  --surface:#ffffff;  --surface-dark:#1e293b;
-  --text:#0f172a;     --text-dark:#e2e8f0;
+  /* light theme */
+  --bg:#f8fafc;     --text:#0f172a;
+  --surface:#ffffff;--border:#cbd5e1;
   --accent:#2563eb;
-  --core:#0ea5e9;     --people:#6366f1;   --inc:#ef4444; --misc:#65a30d;
+
+  /* entity colours */
+  --core:#0ea5e9;   --people:#6366f1;
+  --inc:#ef4444;    --misc:#65a30d;
+
+  /* dark theme */
+  --bg-dark:#0f172a;     --text-dark:#f1f5f9;
+  --surface-dark:#1e293b; --border-dark:#475569;
 }
 *{box-sizing:border-box}
 body{
-  margin:0;font-family:"Inter",sans-serif;
-  background:var(--bg);color:var(--text);display:flex;flex-direction:column;
-  height:100vh;transition:background .3s,color .3s
+  margin:0;font-family:"Inter",sans-serif;height:100vh;
+  display:flex;flex-direction:column;
+  background:var(--bg);color:var(--text);
+  transition:background .3s,color .3s
 }
-body.dark{background:var(--bg-dark);color:var(--text-dark)}
+html.dark body{background:var(--bg-dark);color:var(--text-dark)}
+
 header{
   padding:1rem .5rem;text-align:center;
   background:linear-gradient(135deg,var(--accent),#60a5fa);color:#fff;
-  font-size:clamp(1.3rem,2vw+1rem,2.1rem);font-weight:600
+  font-size:clamp(1.3rem,2vw+1rem,2.15rem);font-weight:600
 }
+
 #toolbar{
-  display:flex;justify-content:center;gap:.75rem;flex-wrap:wrap;
-  padding:.6rem 0;background:var(--surface);transition:background .3s;box-shadow:0 1px 4px rgb(0 0 0/.05)
+  display:flex;gap:.8rem;flex-wrap:wrap;justify-content:center;
+  padding:.7rem 0;background:var(--surface);
+  box-shadow:0 1px 4px rgb(0 0 0/.05);transition:background .3s
 }
-body.dark #toolbar{background:var(--surface-dark)}
+html.dark #toolbar{background:var(--surface-dark)}
+
 .btn{
-  border:none;border-radius:6px;cursor:pointer;font-weight:600;
-  padding:.45rem .9rem;display:flex;align-items:center;gap:.4rem;
+  cursor:pointer;border:none;border-radius:6px;font-weight:600;
+  padding:.5rem 1rem;display:inline-flex;align-items:center;gap:.35rem;
   background:var(--accent);color:#fff;transition:transform .15s
 }
 .btn:active{transform:scale(.96)}
-#network{flex:1 1 auto;min-height:0}          /* allow network to fill remaining height */
+.btn.grey {background:#6b7280}
+.btn.green{background:#10b981}
+
+#network{flex:1 1 auto;min-height:0}
+
 .legend{
   position:absolute;right:1rem;bottom:1rem;
-  background:var(--surface);padding:.6rem;border-radius:8px;font-size:.85rem;
-  box-shadow:0 2px 6px rgb(0 0 0/.08);transition:background .3s
+  background:var(--surface);padding:.6rem .8rem;border-radius:8px;
+  font-size:.85rem;box-shadow:0 2px 6px rgb(0 0 0/.08);
+  transition:background .3s
 }
-body.dark .legend{background:var(--surface-dark)}
+html.dark .legend{background:var(--surface-dark)}
 .legend-item{display:flex;align-items:center;margin:.2rem 0}
-.swatch{width:14px;height:14px;border-radius:3px;margin-right:.4rem}
+.swatch{width:14px;height:14px;border-radius:3px;margin-right:.45rem}
 </style>
 </head>
 <body>
@@ -57,57 +74,55 @@ body.dark .legend{background:var(--surface-dark)}
 
 <div id="toolbar">
   <button id="themeBtn" class="btn">🌙 Dark Mode</button>
-  <button id="fitBtn"   class="btn" style="background:#6b7280">� center</button>
-  <button id="pngBtn"   class="btn" style="background:#10b981">⬇ PNG</button>
+  <button id="fitBtn"   class="btn grey">🖱️ Center</button>
+  <button id="pngBtn"   class="btn green">⬇ PNG</button>
 </div>
 
 <div id="network"></div>
 
 <!-- colour legend -->
-<div class="legend" id="legend">
+<div class="legend">
   <div class="legend-item"><span class="swatch" style="background:var(--core)"></span>Core</div>
-  <div class="legend-item"><span class="swatch" style="background:var(--people)"></span>People/Finance</div>
-  <div class="legend-item"><span class="swatch" style="background:var(--inc)"></span>Incidents&nbsp;&amp;&nbsp;Maintenance</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--people)"></span>People / Finance</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--inc)"></span>Incidents &amp; Maintenance</div>
   <div class="legend-item"><span class="swatch" style="background:var(--misc)"></span>Misc</div>
 </div>
 
 <script>
-/* ---------- Theme ---------- */
-const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-let dark = JSON.parse(localStorage.getItem("dark-theme") ?? prefersDark);
-const setTheme = () => {
-  document.body.classList.toggle("dark", dark);
-  document.getElementById("themeBtn").textContent = dark ? "☀ Light Mode" : "🌙 Dark Mode";
-  localStorage.setItem("dark-theme", JSON.stringify(dark));
-};
-setTheme();
-document.getElementById("themeBtn").onclick = () => { dark = !dark; setTheme(); };
+/* -------------- Theme helpers -------------- */
+const prefersDark = matchMedia("(prefers-color-scheme:dark)").matches;
+let dark = JSON.parse(localStorage.getItem("er-dark") ?? prefersDark);
+const htmlEl = document.documentElement;
+const themeBtn = document.getElementById("themeBtn");
 
-/* ---------- Define nodes & edges ---------- */
-const node = (id, label, group, title="") => ({ id, label, group, title });
-const edge = (from, to, label) => ({ from, to, arrows:"to", label, font:{align:"middle"} });
+function applyTheme(){
+  htmlEl.classList.toggle("dark",dark);
+  themeBtn.textContent = dark ? "☀ Light Mode" : "🌙 Dark Mode";
+  localStorage.setItem("er-dark",JSON.stringify(dark));
+}
+applyTheme();
+
+/* -------------- Build network data -------------- */
+const node = (id,label,group,title="")=>({id,label,group,title});
 
 const nodes = new vis.DataSet([
-  /* core */
-  node("ESTATE","ESTATE","core","Top-level estate"),
+  node("ESTATE","ESTATE","core"),
   node("BLOCK","BLOCK","core"),
   node("PROPERTY","PROPERTY","core"),
   node("TENANT","TENANT","core"),
-  /* people / money */
   node("RENT_PAYMENT","RENT_PAYMENT","people"),
   node("TENANT_FEEDBACK","TENANT_FEEDBACK","people"),
-  /* incidents */
   node("DAMP_INCIDENT","DAMP_INCIDENT","inc"),
   node("MAINT_REQUEST","MAINT_REQUEST","inc"),
   node("INSPECTION","INSPECTION","inc"),
   node("ASB_INCIDENT","ASB_INCIDENT","inc"),
-  /* misc */
   node("TENANCY_EVENT","TENANCY_EVENT","misc"),
   node("COMPLIANCE_RECORD","COMPLIANCE_RECORD","misc"),
   node("ENERGY_READING","ENERGY_READING","misc"),
   node("IOT_SENSOR","IOT_SENSOR","misc")
 ]);
 
+const edge = (from,to,label)=>({from,to,label,arrows:"to",font:{align:"middle"}});
 const edges = new vis.DataSet([
   edge("BLOCK","ESTATE","in estate"),
   edge("PROPERTY","BLOCK","in block"),
@@ -124,38 +139,53 @@ const edges = new vis.DataSet([
   edge("IOT_SENSOR","PROPERTY","monitors")
 ]);
 
-/* ---------- Network options ---------- */
-const container = document.getElementById("network");
-const data = { nodes, edges };
-const options = {
+/* -------------- Network options -------------- */
+const networkContainer = document.getElementById("network");
+
+const makeOptions = (fontColor)=>({
   nodes:{
-    shape:"box", margin:10, font:{face:"Inter",size:14,color:"#fff"},
-    borderWidth:1, widthConstraint:{maximum:140}
+    shape:"box",margin:10,borderWidth:1,widthConstraint:{maximum:140},
+    font:{face:"Inter",size:14,color:fontColor}
   },
   groups:{
-    core   :{color:{background:"var(--core)",   border:"var(--core)"}},
-    people :{color:{background:"var(--people)", border:"var(--people)"}},
-    inc    :{color:{background:"var(--inc)",    border:"var(--inc)"}},
-    misc   :{color:{background:"var(--misc)",   border:"var(--misc)"}},
+    core  :{color:{background:"var(--core)",  border:"var(--core)"}},
+    people:{color:{background:"var(--people)",border:"var(--people)"}},
+    inc   :{color:{background:"var(--inc)",   border:"var(--inc)"}},
+    misc  :{color:{background:"var(--misc)",  border:"var(--misc)"}}
   },
   edges:{
-    color:{color:"#64748b"}, smooth:{type:"continuous"}, arrows:{to:{enabled:true,scaleFactor:.7}}
+    color:{color:"#64748b"},smooth:{type:"continuous"},
+    arrows:{to:{enabled:true,scaleFactor:.7}},
+    font:{color:fontColor}
   },
-  physics:{enabled:true, stabilization:{iterations:600}, barnesHut:{springLength:120}},
-  interaction:{hover:true, tooltipDelay:50}
+  physics:{enabled:true,stabilization:{iterations:600},barnesHut:{springLength:120}},
+  interaction:{hover:true,tooltipDelay:50}
+});
+
+/* determine font colours from CSS vars */
+const getVar = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+let options = makeOptions(getVar("--text"));
+
+const network = new vis.Network(networkContainer,{nodes,edges},options);
+
+/* -------------- helpers -------------- */
+function refreshFontColour(){
+  const col = getVar(dark ? "--text-dark" : "--text");
+  network.setOptions({nodes:{font:{color:col}},edges:{font:{color:col}}});
+}
+
+/* -------------- Toolbar buttons -------------- */
+document.getElementById("fitBtn").onclick = ()=>network.fit({animation:true});
+document.getElementById("pngBtn").onclick = ()=>{
+  const url = networkContainer.querySelector("canvas").toDataURL("image/png");
+  const a=document.createElement("a");a.href=url;a.download="housing_er_network.png";a.click();
+};
+themeBtn.onclick = ()=>{
+  dark=!dark;applyTheme();refreshFontColour();
 };
 
-const network = new vis.Network(container, data, options);
-
-/* ---------- toolbar actions ---------- */
-document.getElementById("fitBtn").onclick = () => network.fit({animation:true});
-document.getElementById("pngBtn").onclick = () =>{
-  const url = container.querySelector("canvas").toDataURL("image/png");
-  const a = document.createElement("a"); a.href = url; a.download = "housing_er_network.png"; a.click();
-};
-
-/* ----- resize observer so legend stays above toolbox icons ----- */
-new ResizeObserver(()=>network.redraw()).observe(container);
+/* refresh on resize so overview minimap keeps centre */
+new ResizeObserver(()=>network.redraw()).observe(networkContainer);
 </script>
 </body>
 </html>
