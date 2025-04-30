@@ -1,0 +1,428 @@
+feedback_id,tenantid,repairid,feedback_date,satisfaction_score,comments,propertyid,blockid,estateid,patchid,property_age_years,propertytype,simulated_satisfaction,humidity,temperature,incident_source,is_iot_alert,unresolved_flag,response_days,repeat_incident_flag,high_priority_flag,damp_incident_nearby,damp_unresolved_flag,damp_high_priority_flag,propertyid_damp,reading_date,date_diff
+4,6,684,2025-01-23 11:55:30.127886,4,Very satisfied,395,21.0,,3,74,Flat,5.0,,,,,,,,,False,False,False,,,
+8,219,429,2025-04-22 11:55:29.958030,4,Very satisfied,354,22.0,,8,71,Flat,3.7,71.1,13.8,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+9,157,896,2025-01-08 11:55:30.272626,1,Issue recurred shortly after,4,11.0,6.0,7,49,House,3.6,,,,,,,,,False,False,False,,,
+11,176,563,2025-01-06 11:55:30.049181,2,Issue recurred shortly after,176,6.0,4.0,6,8,House,4.0,,,,,,,,,False,False,False,,,
+12,13,817,2025-04-25 11:55:30.216394,4,Excellent service,407,20.0,,6,29,House,4.4,70.3,13.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+12,13,817,2025-04-25 11:55:30.216394,4,Excellent service,407,20.0,,6,29,House,4.4,70.1,14.5,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+15,446,638,2025-03-18 11:55:30.097601,2,Quick and efficient,493,,,1,73,Flat,4.2,70.7,14.8,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+16,261,737,2025-03-25 11:55:30.163670,4,Unsatisfactory follow-up,288,22.0,,5,71,House,3.5,72.8,13.8,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+17,40,496,2025-03-24 11:55:30.004880,5,Unsatisfactory follow-up,64,1.0,1.0,1,66,Flat,4.2,,,,,,,,,False,False,False,,,
+20,297,849,2024-10-22 11:55:30.238615,4,Unsatisfactory follow-up,308,18.0,,2,47,Flat,3.7,,,,,,,,,False,False,False,,,
+21,355,94,2025-01-17 11:55:29.705774,1,Could be faster,449,,,7,73,House,3.1,,,,,,,,,False,False,False,,,
+25,199,53,2025-01-12 11:55:29.679277,4,Excellent service,153,16.0,9.0,1,47,Flat,4.1,,,,,,,,,False,False,False,,,
+26,224,677,2025-04-17 11:55:30.122249,1,Excellent service,197,5.0,3.0,2,78,Flat,3.9,71.4,15.5,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+26,224,677,2025-04-17 11:55:30.122249,1,Excellent service,197,5.0,3.0,2,78,Flat,3.9,71.0,13.1,IoT Alert,True,True,7.0,True,False,True,True,False,,,
+27,76,185,2025-05-02 11:55:29.764226,4,Excellent service,305,18.0,,2,47,Flat,4.3,77.3,15.5,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+28,365,954,2025-01-03 11:55:30.312033,3,Issue recurred shortly after,48,4.0,2.0,7,51,Flat,4.7,,,,,,,,,False,False,False,,,
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,74.9,15.4,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,74.6,15.4,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,71.8,14.7,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+35,347,658,2025-03-30 11:55:30.110469,2,Unsatisfactory follow-up,499,,,1,73,Flat,4.5,,,,,,,,,False,False,False,,,
+36,21,90,2024-11-17 11:55:29.703201,3,Repairman was courteous,491,,,8,73,Flat,4.4,,,,,,,,,False,False,False,,,
+37,327,262,2024-10-27 11:55:29.811461,3,Repairman was courteous,86,17.0,10.0,3,25,Flat,4.0,,,,,,,,,False,False,False,,,
+38,320,5,2025-03-03 11:55:29.647881,1,Repairman was courteous,326,19.0,,6,47,Flat,3.7,70.1,14.0,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+40,308,142,2025-02-28 11:55:29.736346,5,Quick and efficient,233,20.0,,4,29,House,4.0,82.0,12.4,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+44,185,102,2025-04-22 11:55:29.710756,1,Very satisfied,455,,,5,73,House,3.5,74.1,14.8,IoT Alert,True,True,7.0,True,False,True,True,False,,,
+45,200,365,2025-04-05 11:55:29.908605,4,Unsatisfactory follow-up,368,20.0,,2,29,Flat,4.4,70.5,15.4,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+50,413,331,2024-11-20 11:55:29.872907,2,Unsatisfactory follow-up,218,2.0,1.0,5,15,House,4.2,,,,,,,,,False,False,False,,,
+51,217,567,2025-03-05 11:55:30.051541,2,Repairman was courteous,400,21.0,,1,74,Flat,4.4,,,,,,,,,False,False,False,,,
+54,136,174,2025-04-10 11:55:29.757455,3,Issue recurred shortly after,58,11.0,6.0,1,49,Flat,4.7,71.3,15.3,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+55,48,797,2025-03-28 11:55:30.202983,2,Excellent service,12,17.0,10.0,7,25,Flat,3.9,,,,,,,,,False,False,False,,,
+57,318,964,2025-01-31 11:55:30.318063,4,Quick and efficient,108,11.0,6.0,4,49,Flat,4.0,,,,,,,,,False,False,False,,,
+60,130,72,2025-01-03 11:55:29.691679,3,Quick and efficient,330,20.0,,8,29,Flat,3.9,,,,,,,,,False,False,False,,,
+62,290,77,2025-03-30 11:55:29.694895,4,Very satisfied,292,20.0,,3,29,House,3.7,72.9,15.7,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+62,290,77,2025-03-30 11:55:29.694895,4,Very satisfied,292,20.0,,3,29,House,3.7,72.2,14.2,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+65,313,101,2024-10-30 11:55:29.710100,5,Parts delay,403,18.0,,3,47,Flat,4.0,,,,,,,,,False,False,False,,,
+66,21,90,2024-11-26 11:55:29.703201,4,Could be faster,491,,,8,73,Flat,4.7,,,,,,,,,False,False,False,,,
+67,55,367,2025-04-22 11:55:29.910354,4,Repairman was courteous,194,4.0,2.0,7,51,Flat,3.8,70.3,13.1,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+68,235,692,2024-11-28 11:55:30.133130,4,Issue recurred shortly after,361,21.0,,4,74,Flat,3.3,,,,,,,,,False,False,False,,,
+70,158,683,2025-01-01 11:55:30.127138,3,Parts delay,219,17.0,10.0,8,25,Flat,3.8,,,,,,,,,False,False,False,,,
+75,276,112,2024-11-19 11:55:29.716924,4,Excellent service,352,22.0,,1,71,House,3.7,,,,,,,,,False,False,False,,,
+76,112,669,2024-12-13 11:55:30.117319,2,Unsatisfactory follow-up,424,22.0,,3,71,Flat,3.8,,,,,,,,,False,False,False,,,
+79,106,793,2025-03-17 11:55:30.200407,2,Could be faster,57,7.0,4.0,8,98,Flat,3.9,,,,,,,,,False,False,False,,,
+83,121,843,2025-03-16 11:55:30.234602,5,Parts delay,221,7.0,4.0,3,98,Flat,4.2,78.1,11.1,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+90,30,158,2025-04-11 11:55:29.747793,4,Very satisfied,335,21.0,,6,74,House,3.9,71.4,15.9,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+91,271,356,2025-02-17 11:55:29.899546,1,Very satisfied,184,11.0,6.0,3,49,House,4.4,,,,,,,,,False,False,False,,,
+93,386,619,2025-01-22 11:55:30.085560,3,Parts delay,65,8.0,4.0,7,15,Flat,3.9,,,,,,,,,False,False,False,,,
+95,130,168,2025-04-23 11:55:29.753851,4,Quick and efficient,330,20.0,,8,29,Flat,4.8,,,,,,,,,False,False,False,,,
+96,287,715,2024-12-26 11:55:30.148648,1,Quick and efficient,290,18.0,,8,47,Flat,4.4,,,,,,,,,False,False,False,,,
+99,167,218,2025-03-24 11:55:29.784197,4,Repairman was courteous,27,9.0,5.0,6,103,Flat,4.9,71.8,12.8,IoT Alert,True,True,60.0,True,False,True,True,False,,,
+99,167,218,2025-03-24 11:55:29.784197,4,Repairman was courteous,27,9.0,5.0,6,103,Flat,4.9,70.3,15.2,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+105,304,826,2025-03-01 11:55:30.222451,4,Very satisfied,165,15.0,9.0,2,23,House,4.1,73.9,15.5,IoT Alert,True,True,60.0,True,False,True,True,False,,,
+109,365,189,2024-12-09 11:55:29.766654,4,Parts delay,48,4.0,2.0,7,51,Flat,4.3,,,,,,,,,False,False,False,,,
+111,251,993,2025-03-07 11:55:30.336594,5,Unsatisfactory follow-up,470,,,4,73,Flat,3.4,73.4,14.0,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+111,251,993,2025-03-07 11:55:30.336594,5,Unsatisfactory follow-up,470,,,4,73,Flat,3.4,70.3,9.8,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+112,229,419,2025-01-04 11:55:29.951840,1,Quick and efficient,287,19.0,,1,47,Flat,3.8,,,,,,,,,False,False,False,,,
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,76.2,15.7,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,82.6,13.6,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,70.2,14.6,IoT Alert,True,True,7.0,True,False,True,True,False,,,
+118,297,849,2024-11-05 11:55:30.238615,2,Unsatisfactory follow-up,308,18.0,,2,47,Flat,4.4,,,,,,,,,False,False,False,,,
+119,229,268,2024-11-08 11:55:29.815205,2,Issue recurred shortly after,287,19.0,,1,47,Flat,4.6,,,,,,,,,False,False,False,,,
+121,361,951,2024-12-21 11:55:30.310135,4,Repairman was courteous,99,14.0,9.0,6,24,House,4.7,,,,,,,,,False,False,False,,,
+122,121,698,2025-03-04 11:55:30.136836,2,Issue recurred shortly after,221,7.0,4.0,3,98,Flat,4.1,78.1,11.1,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+124,187,978,2025-02-11 11:55:30.326766,3,Excellent service,366,18.0,,7,47,Flat,4.7,,,,,,,,,False,False,False,,,
+125,422,721,2025-05-08 11:55:30.152782,3,Repairman was courteous,442,,,8,73,House,4.6,76.1,15.5,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+126,285,914,2025-04-10 11:55:30.285166,1,Parts delay,130,16.0,9.0,4,47,Flat,4.4,73.5,11.7,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+127,265,810,2025-04-05 11:55:30.211790,1,Unsatisfactory follow-up,144,9.0,5.0,8,103,Flat,3.3,72.2,15.0,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+127,265,810,2025-04-05 11:55:30.211790,1,Unsatisfactory follow-up,144,9.0,5.0,8,103,Flat,3.3,76.0,15.8,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+128,51,749,2025-03-07 11:55:30.171402,4,Quick and efficient,73,1.0,1.0,1,66,Flat,3.9,,,,,,,,,False,False,False,,,
+131,181,872,2025-01-10 11:55:30.255369,1,Unsatisfactory follow-up,391,21.0,,3,74,House,4.2,,,,,,,,,False,False,False,,,
+132,51,719,2025-05-08 11:55:30.151421,5,Very satisfied,73,1.0,1.0,1,66,Flat,4.3,,,,,,,,,False,False,False,,,
+133,42,783,2025-04-18 11:55:30.193769,5,Very satisfied,94,17.0,10.0,6,25,Flat,3.9,73.1,14.7,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+136,271,404,2025-02-23 11:55:29.942221,2,Excellent service,184,11.0,6.0,3,49,House,3.7,,,,,,,,,False,False,False,,,
+138,93,400,2025-03-02 11:55:29.939809,1,Quick and efficient,363,18.0,,1,47,Flat,3.3,,,,,,,,,False,False,False,,,
+140,48,797,2025-04-08 11:55:30.202983,4,Very satisfied,12,17.0,10.0,7,25,Flat,4.3,,,,,,,,,False,False,False,,,
+141,258,832,2025-04-20 11:55:30.226801,5,Very satisfied,393,19.0,,8,47,House,4.4,74.8,15.3,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+142,102,441,2024-12-30 11:55:29.965617,1,Excellent service,434,,,8,73,Block of Flats,3.9,,,,,,,,,False,False,False,,,
+146,352,718,2025-03-27 11:55:30.150730,2,Very satisfied,413,20.0,,6,29,Flat,5.0,,,,,,,,,False,False,False,,,
+150,241,537,2025-01-03 11:55:30.031806,5,Repairman was courteous,394,21.0,,8,74,Flat,3.8,,,,,,,,,False,False,False,,,
+158,309,626,2025-03-24 11:55:30.089998,1,Parts delay,116,10.0,5.0,4,80,House,4.8,74.3,14.3,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+160,51,995,2024-11-19 11:55:30.337778,2,Excellent service,73,1.0,1.0,1,66,Flat,4.7,,,,,,,,,False,False,False,,,
+162,181,587,2025-01-30 11:55:30.064054,4,Quick and efficient,391,21.0,,3,74,House,4.0,,,,,,,,,False,False,False,,,
+163,109,942,2024-12-23 11:55:30.304325,5,Issue recurred shortly after,332,22.0,,1,71,Flat,3.6,,,,,,,,,False,False,False,,,
+164,33,517,2025-04-19 11:55:30.018613,4,Excellent service,441,,,1,73,Flat,4.4,70.5,15.0,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+164,33,517,2025-04-19 11:55:30.018613,4,Excellent service,441,,,1,73,Flat,4.4,70.5,13.3,IoT Alert,True,True,90.0,False,False,True,True,False,,,
+165,296,123,2025-04-18 11:55:29.723855,5,Issue recurred shortly after,180,6.0,4.0,3,8,House,3.6,74.3,13.3,IoT Alert,True,True,14.0,True,False,True,True,False,,,
+166,305,283,2025-03-14 11:55:29.824335,5,Parts delay,137,4.0,2.0,1,51,Flat,3.7,,,,,,,,,False,False,False,,,
+168,172,493,2024-12-23 11:55:30.002928,4,Parts delay,158,7.0,4.0,2,98,Flat,4.0,,,,,,,,,False,False,False,,,
+169,302,260,2024-10-26 11:55:29.810218,1,Quick and efficient,234,20.0,,4,29,Flat,3.0,,,,,,,,,False,False,False,,,
+171,263,26,2025-01-08 11:55:29.661806,2,Repairman was courteous,369,22.0,,3,71,House,4.7,,,,,,,,,False,False,False,,,
+173,183,444,2025-01-29 11:55:29.967565,4,Very satisfied,405,19.0,,8,47,Flat,4.7,,,,,,,,,False,False,False,,,
+174,365,954,2024-12-16 11:55:30.312033,3,Could be faster,48,4.0,2.0,7,51,Flat,3.7,,,,,,,,,False,False,False,,,
+178,318,964,2025-01-31 11:55:30.318063,5,Could be faster,108,11.0,6.0,4,49,Flat,4.8,,,,,,,,,False,False,False,,,
+180,212,856,2025-03-14 11:55:30.243639,3,Repairman was courteous,120,7.0,4.0,5,98,House,3.9,72.2,15.5,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+181,121,698,2025-03-05 11:55:30.136836,3,Parts delay,221,7.0,4.0,3,98,Flat,4.3,78.1,11.1,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+183,355,602,2025-04-19 11:55:30.074274,4,Unsatisfactory follow-up,449,,,7,73,House,4.4,,,,,,,,,False,False,False,,,
+184,33,517,2025-05-03 11:55:30.018613,5,Issue recurred shortly after,441,,,1,73,Flat,4.1,70.5,15.0,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+184,33,517,2025-05-03 11:55:30.018613,5,Issue recurred shortly after,441,,,1,73,Flat,4.1,70.5,13.3,IoT Alert,True,True,90.0,False,False,True,True,False,,,
+186,270,209,2025-03-16 11:55:29.778814,2,Excellent service,123,15.0,9.0,2,23,Flat,4.1,75.5,15.8,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+190,273,765,2024-11-21 11:55:30.182139,2,Quick and efficient,247,20.0,,1,29,House,3.4,,,,,,,,,False,False,False,,,
+191,388,639,2024-11-26 11:55:30.098249,4,Could be faster,15,13.0,8.0,8,37,Flat,4.7,,,,,,,,,False,False,False,,,
+192,187,141,2025-01-25 11:55:29.735700,4,Repairman was courteous,366,18.0,,7,47,Flat,4.2,,,,,,,,,False,False,False,,,
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,70.8,15.7,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,74.4,12.7,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,72.3,14.9,IoT Alert,True,True,60.0,False,False,True,True,False,,,
+194,51,749,2025-03-01 11:55:30.171402,3,Very satisfied,73,1.0,1.0,1,66,Flat,4.2,,,,,,,,,False,False,False,,,
+196,302,962,2025-03-08 11:55:30.316879,5,Could be faster,234,20.0,,4,29,Flat,4.0,,,,,,,,,False,False,False,,,
+199,203,352,2025-04-24 11:55:29.895259,3,Excellent service,246,19.0,,6,47,Flat,4.2,72.1,11.8,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+200,264,980,2025-03-06 11:55:30.328119,3,Unsatisfactory follow-up,97,5.0,3.0,2,78,Flat,4.1,71.3,14.9,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+201,383,457,2024-12-09 11:55:29.977507,4,Quick and efficient,9,11.0,6.0,7,49,Flat,4.4,,,,,,,,,False,False,False,,,
+204,309,626,2025-03-22 11:55:30.089998,5,Unsatisfactory follow-up,116,10.0,5.0,4,80,House,4.1,74.3,14.3,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+206,48,797,2025-03-30 11:55:30.202983,1,Issue recurred shortly after,12,17.0,10.0,7,25,Flat,4.4,,,,,,,,,False,False,False,,,
+207,33,517,2025-04-22 11:55:30.018613,2,Unsatisfactory follow-up,441,,,1,73,Flat,3.6,70.5,15.0,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+207,33,517,2025-04-22 11:55:30.018613,2,Unsatisfactory follow-up,441,,,1,73,Flat,3.6,70.5,13.3,IoT Alert,True,True,90.0,False,False,True,True,False,,,
+209,297,931,2025-03-25 11:55:30.297241,3,Quick and efficient,308,18.0,,2,47,Flat,3.8,,,,,,,,,False,False,False,,,
+210,183,453,2025-04-04 11:55:29.974492,2,Very satisfied,405,19.0,,8,47,Flat,3.9,,,,,,,,,False,False,False,,,
+211,275,257,2025-03-25 11:55:29.808430,5,Unsatisfactory follow-up,299,21.0,,5,74,Block of Flats,3.8,,,,,,,,,False,False,False,,,
+216,218,746,2025-04-21 11:55:30.169477,3,Very satisfied,226,22.0,,2,71,Flat,3.7,75.1,15.8,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+216,218,746,2025-04-21 11:55:30.169477,3,Very satisfied,226,22.0,,2,71,Flat,3.7,70.6,13.5,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+218,444,467,2025-03-14 11:55:29.984932,5,Excellent service,167,3.0,1.0,8,57,House,3.9,76.2,15.7,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+218,444,467,2025-03-14 11:55:29.984932,5,Excellent service,167,3.0,1.0,8,57,House,3.9,82.6,13.6,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+219,187,285,2024-10-27 11:55:29.826164,5,Issue recurred shortly after,366,18.0,,7,47,Flat,3.4,,,,,,,,,False,False,False,,,
+224,383,799,2025-01-19 11:55:30.204528,4,Issue recurred shortly after,9,11.0,6.0,7,49,Flat,3.7,,,,,,,,,False,False,False,,,
+227,338,555,2025-04-21 11:55:30.043499,1,Unsatisfactory follow-up,343,19.0,,3,47,Block of Flats,3.9,70.4,15.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+227,338,555,2025-04-21 11:55:30.043499,1,Unsatisfactory follow-up,343,19.0,,3,47,Block of Flats,3.9,71.4,13.4,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+228,31,21,2025-04-30 11:55:29.658591,4,Very satisfied,476,,,8,73,Block of Flats,4.4,76.3,14.3,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,73.3,14.8,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,74.6,15.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,72.4,13.9,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+230,239,79,2025-02-19 11:55:29.696170,3,Very satisfied,151,8.0,4.0,3,15,Flat,4.1,,,,,,,,,False,False,False,,,
+232,388,621,2025-04-19 11:55:30.086909,2,Very satisfied,15,13.0,8.0,8,37,Flat,4.0,,,,,,,,,False,False,False,,,
+234,385,629,2025-03-01 11:55:30.091884,4,Quick and efficient,464,,,1,73,Flat,3.8,88.2,12.7,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+236,105,10,2025-03-23 11:55:29.651364,1,Quick and efficient,333,20.0,,4,29,Flat,3.8,78.8,14.9,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+236,105,10,2025-03-23 11:55:29.651364,1,Quick and efficient,333,20.0,,4,29,Flat,3.8,73.9,12.1,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+238,269,265,2025-04-02 11:55:29.813299,3,Quick and efficient,408,21.0,,8,74,Flat,3.4,73.0,14.1,IoT Alert,True,True,60.0,True,False,True,True,False,,,
+244,336,841,2025-03-21 11:55:30.233240,5,Very satisfied,143,12.0,7.0,4,80,House,3.8,72.1,9.5,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+251,423,474,2025-01-09 11:55:29.989806,3,Very satisfied,483,,,5,73,Flat,4.3,,,,,,,,,False,False,False,,,
+252,395,952,2025-02-25 11:55:30.310823,4,Excellent service,280,20.0,,2,29,House,4.3,70.1,13.2,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+254,318,964,2025-02-09 11:55:30.318063,4,Could be faster,108,11.0,6.0,4,49,Flat,4.2,,,,,,,,,False,False,False,,,
+255,187,285,2024-11-21 11:55:29.826164,1,Issue recurred shortly after,366,18.0,,7,47,Flat,3.5,,,,,,,,,False,False,False,,,
+256,23,358,2025-03-12 11:55:29.901625,5,Quick and efficient,281,20.0,,4,29,Flat,4.4,,,,,,,,,False,False,False,,,
+258,242,74,2024-12-04 11:55:29.692947,3,Unsatisfactory follow-up,185,14.0,9.0,1,24,Flat,4.5,,,,,,,,,False,False,False,,,
+260,447,694,2025-03-29 11:55:30.134323,1,Quick and efficient,135,16.0,9.0,7,47,House,4.0,72.0,14.5,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+263,423,474,2024-12-20 11:55:29.989806,4,Unsatisfactory follow-up,483,,,5,73,Flat,3.6,,,,,,,,,False,False,False,,,
+264,48,790,2025-01-05 11:55:30.198311,1,Repairman was courteous,12,17.0,10.0,7,25,Flat,3.9,,,,,,,,,False,False,False,,,
+269,220,556,2025-04-18 11:55:30.044385,1,Very satisfied,235,20.0,,4,29,Flat,4.7,,,,,,,,,False,False,False,,,
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,76.2,15.7,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,82.6,13.6,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,70.2,14.6,IoT Alert,True,True,7.0,True,False,True,True,False,,,
+273,48,790,2025-01-03 11:55:30.198311,3,Very satisfied,12,17.0,10.0,7,25,Flat,4.4,,,,,,,,,False,False,False,,,
+274,439,891,2025-03-07 11:55:30.269225,5,Unsatisfactory follow-up,14,11.0,6.0,3,49,House,4.2,74.3,14.9,IoT Alert,True,True,30.0,True,False,True,True,False,,,
+279,305,673,2024-12-19 11:55:30.119800,3,Could be faster,137,4.0,2.0,1,51,Flat,3.4,,,,,,,,,False,False,False,,,
+281,36,842,2025-04-01 11:55:30.233886,4,Issue recurred shortly after,334,19.0,,3,47,Flat,4.1,73.8,15.0,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+281,36,842,2025-04-01 11:55:30.233886,4,Issue recurred shortly after,334,19.0,,3,47,Flat,4.1,78.2,14.6,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+283,199,858,2025-03-30 11:55:30.244941,1,Issue recurred shortly after,153,16.0,9.0,1,47,Flat,4.1,,,,,,,,,False,False,False,,,
+284,159,877,2025-04-15 11:55:30.259264,1,Issue recurred shortly after,406,19.0,,4,47,House,4.7,74.6,15.7,IoT Alert,True,True,14.0,True,False,True,True,False,,,
+286,380,655,2025-03-23 11:55:30.108586,2,Very satisfied,136,5.0,3.0,5,78,Flat,3.4,70.7,12.1,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+293,375,314,2025-03-14 11:55:29.855861,1,Could be faster,289,22.0,,1,71,House,4.0,73.5,14.3,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+294,68,328,2024-12-11 11:55:29.870032,3,Issue recurred shortly after,47,8.0,4.0,8,15,Flat,4.0,,,,,,,,,False,False,False,,,
+296,311,565,2025-04-21 11:55:30.050381,5,Issue recurred shortly after,350,21.0,,7,74,Block of Flats,4.5,73.2,14.2,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+300,49,337,2025-04-28 11:55:29.879729,5,Unsatisfactory follow-up,416,21.0,,1,74,House,4.6,,,,,,,,,False,False,False,,,
+302,416,961,2025-04-18 11:55:30.316252,1,Parts delay,310,22.0,,6,71,Flat,3.7,79.6,15.3,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+303,305,136,2025-03-09 11:55:29.732426,4,Repairman was courteous,137,4.0,2.0,1,51,Flat,3.7,,,,,,,,,False,False,False,,,
+304,346,831,2025-03-17 11:55:30.226041,2,Parts delay,42,1.0,1.0,7,66,Flat,3.9,74.0,13.5,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+305,144,527,2025-04-20 11:55:30.025249,3,Very satisfied,95,13.0,8.0,6,37,House,4.5,72.9,15.3,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,74.7,12.4,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,73.0,15.0,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,74.9,15.8,IoT Alert,True,True,60.0,False,False,True,True,False,,,
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,71.6,15.7,IoT Alert,True,True,60.0,False,False,True,True,False,,,
+308,1,226,2025-03-06 11:55:29.788964,2,Parts delay,362,21.0,,1,74,House,4.0,,,,,,,,,False,False,False,,,
+311,346,506,2025-03-09 11:55:30.011552,1,Could be faster,42,1.0,1.0,7,66,Flat,4.5,74.0,13.5,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+312,116,105,2025-05-03 11:55:29.712615,2,Could be faster,282,22.0,,4,71,Flat,2.9,75.1,13.3,IoT Alert,True,True,90.0,False,False,True,True,False,,,
+313,434,985,2025-03-14 11:55:30.331649,3,Repairman was courteous,474,,,4,73,House,4.1,71.4,15.5,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+313,434,985,2025-03-14 11:55:30.331649,3,Repairman was courteous,474,,,4,73,House,4.1,72.1,15.4,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+315,347,658,2025-04-17 11:55:30.110469,2,Repairman was courteous,499,,,1,73,Flat,4.5,,,,,,,,,False,False,False,,,
+316,23,631,2025-03-27 11:55:30.093154,1,Very satisfied,281,20.0,,4,29,Flat,3.9,,,,,,,,,False,False,False,,,
+317,21,343,2024-12-08 11:55:29.885663,5,Could be faster,491,,,8,73,Flat,4.0,,,,,,,,,False,False,False,,,
+319,48,108,2025-04-22 11:55:29.714476,3,Excellent service,12,17.0,10.0,7,25,Flat,3.9,,,,,,,,,False,False,False,,,
+322,199,858,2025-03-31 11:55:30.244941,1,Very satisfied,153,16.0,9.0,1,47,Flat,4.2,,,,,,,,,False,False,False,,,
+323,294,725,2024-11-10 11:55:30.155452,4,Unsatisfactory follow-up,341,20.0,,3,29,Flat,4.2,,,,,,,,,False,False,False,,,
+324,399,465,2024-12-21 11:55:29.983575,4,Issue recurred shortly after,237,22.0,,6,71,House,3.1,,,,,,,,,False,False,False,,,
+326,198,1000,2025-03-31 11:55:30.341021,3,Could be faster,93,16.0,9.0,2,47,Flat,4.5,76.8,15.1,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+326,198,1000,2025-03-31 11:55:30.341021,3,Could be faster,93,16.0,9.0,2,47,Flat,4.5,71.2,15.5,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+328,385,629,2025-03-01 11:55:30.091884,2,Parts delay,464,,,1,73,Flat,4.2,88.2,12.7,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+329,320,421,2025-04-11 11:55:29.953041,2,Parts delay,326,19.0,,6,47,Flat,4.6,70.1,14.0,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+332,177,900,2025-04-07 11:55:30.275359,3,Could be faster,374,19.0,,8,47,Block of Flats,4.2,,,,,,,,,False,False,False,,,
+335,26,154,2025-02-13 11:55:29.745101,4,Unsatisfactory follow-up,462,,,5,73,Flat,3.8,,,,,,,,,False,False,False,,,
+337,330,712,2025-04-05 11:55:30.146543,1,Issue recurred shortly after,384,21.0,,5,74,Flat,3.9,70.3,14.6,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+337,330,712,2025-04-05 11:55:30.146543,1,Issue recurred shortly after,384,21.0,,5,74,Flat,3.9,70.4,10.1,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+338,383,457,2024-12-13 11:55:29.977507,5,Excellent service,9,11.0,6.0,7,49,Flat,3.4,,,,,,,,,False,False,False,,,
+339,328,92,2025-03-01 11:55:29.704538,1,Unsatisfactory follow-up,243,22.0,,4,71,House,4.0,,,,,,,,,False,False,False,,,
+341,30,158,2025-03-29 11:55:29.747793,3,Parts delay,335,21.0,,6,74,House,4.1,71.4,15.9,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+342,251,993,2025-02-21 11:55:30.336594,2,Unsatisfactory follow-up,470,,,4,73,Flat,4.5,73.4,14.0,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+344,307,969,2025-04-29 11:55:30.321172,5,Excellent service,259,19.0,,8,47,Block of Flats,4.2,72.3,15.5,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+345,136,174,2025-05-03 11:55:29.757455,1,Repairman was courteous,58,11.0,6.0,1,49,Flat,4.2,71.3,15.3,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+348,39,376,2025-03-17 11:55:29.920874,3,Issue recurred shortly after,210,10.0,5.0,5,80,House,4.0,,,,,,,,,False,False,False,,,
+354,215,98,2025-04-12 11:55:29.708247,3,Quick and efficient,256,22.0,,3,71,Block of Flats,4.1,73.1,11.8,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+356,237,201,2025-01-27 11:55:29.773930,4,Very satisfied,339,20.0,,4,29,Flat,3.7,,,,,,,,,False,False,False,,,
+361,71,401,2024-12-24 11:55:29.940384,1,Parts delay,353,22.0,,1,71,Flat,3.7,,,,,,,,,False,False,False,,,
+364,177,900,2025-04-18 11:55:30.275359,5,Quick and efficient,374,19.0,,8,47,Block of Flats,3.8,,,,,,,,,False,False,False,,,
+365,193,928,2025-03-30 11:55:30.295404,1,Unsatisfactory follow-up,401,20.0,,8,29,Flat,4.1,78.9,15.0,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+365,193,928,2025-03-30 11:55:30.295404,1,Unsatisfactory follow-up,401,20.0,,8,29,Flat,4.1,72.3,15.5,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+367,347,658,2025-04-23 11:55:30.110469,2,Issue recurred shortly after,499,,,1,73,Flat,4.1,,,,,,,,,False,False,False,,,
+368,297,849,2024-11-05 11:55:30.238615,4,Repairman was courteous,308,18.0,,2,47,Flat,4.7,,,,,,,,,False,False,False,,,
+370,37,64,2024-12-27 11:55:29.686253,3,Quick and efficient,410,22.0,,6,71,House,4.0,,,,,,,,,False,False,False,,,
+372,384,70,2025-01-24 11:55:29.690041,1,Parts delay,327,19.0,,3,47,Flat,4.7,,,,,,,,,False,False,False,,,
+374,328,92,2025-03-14 11:55:29.704538,5,Very satisfied,243,22.0,,4,71,House,4.2,,,,,,,,,False,False,False,,,
+375,51,995,2024-11-25 11:55:30.337778,2,Issue recurred shortly after,73,1.0,1.0,1,66,Flat,4.5,,,,,,,,,False,False,False,,,
+379,23,290,2024-12-19 11:55:29.831031,3,Issue recurred shortly after,281,20.0,,4,29,Flat,4.6,,,,,,,,,False,False,False,,,
+381,273,678,2025-01-11 11:55:30.122988,4,Unsatisfactory follow-up,247,20.0,,1,29,House,4.8,,,,,,,,,False,False,False,,,
+384,428,439,2025-04-27 11:55:29.964353,4,Very satisfied,35,8.0,4.0,6,15,Block of Flats,4.9,77.6,14.9,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+386,260,224,2025-04-06 11:55:29.787735,4,Issue recurred shortly after,448,,,6,73,Flat,2.9,71.3,14.5,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+386,260,224,2025-04-06 11:55:29.787735,4,Issue recurred shortly after,448,,,6,73,Flat,2.9,70.9,13.4,IoT Alert,True,True,60.0,False,False,True,True,False,,,
+387,339,615,2025-04-17 11:55:30.082815,5,Parts delay,222,4.0,2.0,3,51,House,3.8,,,,,,,,,False,False,False,,,
+390,229,419,2025-01-29 11:55:29.951840,3,Quick and efficient,287,19.0,,1,47,Flat,4.3,,,,,,,,,False,False,False,,,
+391,223,521,2025-04-20 11:55:30.021240,4,Quick and efficient,37,10.0,5.0,4,80,Flat,4.2,72.8,15.9,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+391,223,521,2025-04-20 11:55:30.021240,4,Quick and efficient,37,10.0,5.0,4,80,Flat,4.2,75.1,13.1,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+392,352,718,2025-04-12 11:55:30.150730,1,Excellent service,413,20.0,,6,29,Flat,4.6,,,,,,,,,False,False,False,,,
+394,330,712,2025-04-20 11:55:30.146543,3,Issue recurred shortly after,384,21.0,,5,74,Flat,3.2,70.3,14.6,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+394,330,712,2025-04-20 11:55:30.146543,3,Issue recurred shortly after,384,21.0,,5,74,Flat,3.2,70.4,10.1,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+395,383,799,2025-01-26 11:55:30.204528,4,Issue recurred shortly after,9,11.0,6.0,7,49,Flat,4.9,,,,,,,,,False,False,False,,,
+398,384,657,2025-03-11 11:55:30.109849,3,Excellent service,327,19.0,,3,47,Flat,4.0,,,,,,,,,False,False,False,,,
+400,347,516,2024-10-27 11:55:30.017979,3,Issue recurred shortly after,499,,,1,73,Flat,3.4,,,,,,,,,False,False,False,,,
+401,37,64,2024-11-30 11:55:29.686253,4,Parts delay,410,22.0,,6,71,House,3.5,,,,,,,,,False,False,False,,,
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,73.3,14.8,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,74.6,15.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,72.4,13.9,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+405,365,59,2025-04-12 11:55:29.683125,1,Repairman was courteous,48,4.0,2.0,7,51,Flat,3.5,,,,,,,,,False,False,False,,,
+406,30,158,2025-03-28 11:55:29.747793,1,Very satisfied,335,21.0,,6,74,House,3.9,71.4,15.9,IoT Alert,True,True,90.0,True,False,True,True,False,,,
+408,389,381,2025-03-30 11:55:29.926374,1,Excellent service,157,13.0,8.0,7,37,Flat,3.6,71.9,15.9,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+409,273,592,2025-03-23 11:55:30.067368,1,Issue recurred shortly after,247,20.0,,1,29,House,4.8,,,,,,,,,False,False,False,,,
+410,397,625,2024-12-07 11:55:30.089379,2,Issue recurred shortly after,431,,,1,73,House,4.1,,,,,,,,,False,False,False,,,
+412,338,555,2025-04-27 11:55:30.043499,3,Excellent service,343,19.0,,3,47,Block of Flats,4.8,71.4,13.4,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+415,248,476,2025-02-24 11:55:29.991239,4,Very satisfied,39,4.0,2.0,1,51,House,4.5,70.9,13.8,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+416,55,868,2025-03-19 11:55:30.251944,3,Quick and efficient,194,4.0,2.0,7,51,Flat,3.6,70.3,13.1,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+419,157,294,2024-12-12 11:55:29.835383,5,Issue recurred shortly after,4,11.0,6.0,7,49,House,4.4,,,,,,,,,False,False,False,,,
+420,235,692,2024-12-01 11:55:30.133130,5,Quick and efficient,361,21.0,,4,74,Flat,3.5,,,,,,,,,False,False,False,,,
+422,220,252,2024-12-14 11:55:29.805252,4,Unsatisfactory follow-up,235,20.0,,4,29,Flat,3.6,,,,,,,,,False,False,False,,,
+425,174,772,2025-03-24 11:55:30.186662,1,Parts delay,119,11.0,6.0,8,49,House,3.7,75.5,15.5,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+429,287,570,2025-02-28 11:55:30.053308,3,Could be faster,290,18.0,,8,47,Flat,3.9,,,,,,,,,False,False,False,,,
+430,53,933,2024-12-25 11:55:30.298516,1,Quick and efficient,132,13.0,8.0,5,37,Flat,3.6,,,,,,,,,False,False,False,,,
+432,219,233,2025-05-01 11:55:29.793095,5,Unsatisfactory follow-up,354,22.0,,8,71,Flat,3.9,71.1,13.8,IoT Alert,True,False,30.0,False,False,True,False,False,,,
+436,107,137,2025-03-28 11:55:29.733097,4,Issue recurred shortly after,302,19.0,,1,47,Block of Flats,3.7,74.4,14.8,IoT Alert,True,True,60.0,True,False,True,True,False,,,
+436,107,137,2025-03-28 11:55:29.733097,4,Issue recurred shortly after,302,19.0,,1,47,Block of Flats,3.7,73.0,10.7,IoT Alert,True,True,0.0,False,False,True,True,False,,,
+437,384,542,2024-12-30 11:55:30.035005,2,Very satisfied,327,19.0,,3,47,Flat,4.3,,,,,,,,,False,False,False,,,
+438,232,860,2024-11-19 11:55:30.246281,2,Repairman was courteous,90,8.0,4.0,2,15,Block of Flats,4.4,,,,,,,,,False,False,False,,,
+440,165,997,2025-03-20 11:55:30.339215,5,Very satisfied,438,,,8,73,Flat,4.0,75.1,10.5,IoT Alert,True,True,14.0,False,False,True,True,False,,,
+441,93,566,2025-04-07 11:55:30.050995,1,Could be faster,363,18.0,,1,47,Flat,4.7,,,,,,,,,False,False,False,,,
+445,18,246,2025-02-15 11:55:29.801583,1,Could be faster,31,6.0,4.0,5,8,Flat,4.4,,,,,,,,,False,False,False,,,
+446,39,884,2025-03-21 11:55:30.264360,2,Unsatisfactory follow-up,210,10.0,5.0,5,80,House,4.2,,,,,,,,,False,False,False,,,
+448,375,258,2025-04-20 11:55:29.809019,4,Quick and efficient,289,22.0,,1,71,House,3.7,73.5,14.3,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+449,222,253,2025-03-05 11:55:29.805839,3,Quick and efficient,275,21.0,,1,74,Flat,2.8,70.8,13.6,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,73.3,14.8,IoT Alert,True,False,0.0,False,False,True,False,False,,,
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,74.6,15.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,72.4,13.9,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+451,172,949,2025-04-04 11:55:30.308915,4,Unsatisfactory follow-up,158,7.0,4.0,2,98,Flat,3.8,,,,,,,,,False,False,False,,,
+453,307,969,2025-04-29 11:55:30.321172,3,Very satisfied,259,19.0,,8,47,Block of Flats,4.4,72.3,15.5,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+454,193,928,2025-03-29 11:55:30.295404,3,Excellent service,401,20.0,,8,29,Flat,4.2,78.9,15.0,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+454,193,928,2025-03-29 11:55:30.295404,3,Excellent service,401,20.0,,8,29,Flat,4.2,72.3,15.5,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+456,199,502,2024-12-03 11:55:30.008860,4,Quick and efficient,153,16.0,9.0,1,47,Flat,4.5,,,,,,,,,False,False,False,,,
+465,13,817,2025-04-02 11:55:30.216394,5,Could be faster,407,20.0,,6,29,House,4.3,70.3,13.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+465,13,817,2025-04-02 11:55:30.216394,5,Could be faster,407,20.0,,6,29,House,4.3,70.1,14.5,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+467,85,407,2025-04-21 11:55:29.944155,3,Excellent service,322,19.0,,5,47,Flat,3.7,72.4,15.5,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+468,175,622,2025-03-01 11:55:30.087524,2,Could be faster,115,9.0,5.0,7,103,Flat,4.6,71.6,10.3,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+473,205,854,2025-01-10 11:55:30.242071,2,Parts delay,164,6.0,4.0,4,8,Flat,4.0,,,,,,,,,False,False,False,,,
+476,210,882,2024-12-26 11:55:30.262933,5,Could be faster,359,19.0,,1,47,Flat,4.5,,,,,,,,,False,False,False,,,
+477,428,439,2025-04-17 11:55:29.964353,4,Quick and efficient,35,8.0,4.0,6,15,Block of Flats,4.4,71.7,15.9,IoT Alert,True,True,60.0,False,False,True,True,False,,,
+477,428,439,2025-04-17 11:55:29.964353,4,Quick and efficient,35,8.0,4.0,6,15,Block of Flats,4.4,77.6,14.9,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+478,13,649,2025-04-18 11:55:30.104681,5,Excellent service,407,20.0,,6,29,House,4.4,70.3,13.6,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+478,13,649,2025-04-18 11:55:30.104681,5,Excellent service,407,20.0,,6,29,House,4.4,70.1,14.5,IoT Alert,True,True,0.0,True,False,True,True,False,,,
+479,199,858,2025-03-17 11:55:30.244941,5,Could be faster,153,16.0,9.0,1,47,Flat,4.4,,,,,,,,,False,False,False,,,
+481,51,995,2024-11-18 11:55:30.337778,1,Could be faster,73,1.0,1.0,1,66,Flat,3.6,,,,,,,,,False,False,False,,,
+483,410,219,2025-04-19 11:55:29.784798,5,Parts delay,202,6.0,4.0,8,8,Flat,4.4,70.1,10.0,IoT Alert,True,False,7.0,False,False,True,False,False,,,
+484,53,933,2024-12-19 11:55:30.298516,5,Parts delay,132,13.0,8.0,5,37,Flat,4.6,,,,,,,,,False,False,False,,,
+486,309,626,2025-04-06 11:55:30.089998,5,Very satisfied,116,10.0,5.0,4,80,House,3.3,74.3,14.3,IoT Alert,True,False,90.0,False,False,True,False,False,,,
+488,254,709,2025-04-11 11:55:30.144390,3,Excellent service,199,1.0,1.0,5,66,Flat,4.0,78.9,13.5,IoT Alert,True,True,7.0,False,False,True,True,False,,,
+488,254,709,2025-04-11 11:55:30.144390,3,Excellent service,199,1.0,1.0,5,66,Flat,4.0,73.3,14.9,IoT Alert,True,True,30.0,False,False,True,True,False,,,
+489,189,203,2025-03-19 11:55:29.775161,5,Quick and efficient,211,10.0,5.0,7,80,House,3.7,70.8,15.6,IoT Alert,True,False,14.0,False,False,True,False,False,,,
+490,346,831,2025-03-26 11:55:30.226041,2,Could be faster,42,1.0,1.0,7,66,Flat,4.8,74.0,13.5,IoT Alert,True,False,60.0,False,False,True,False,False,,,
+491,304,466,2025-04-04 11:55:29.984260,2,Could be faster,165,15.0,9.0,2,23,House,4.6,73.9,15.5,IoT Alert,True,True,60.0,True,False,True,True,False,,,
+499,106,793,2025-03-08 11:55:30.200407,4,Repairman was courteous,57,7.0,4.0,8,98,Flat,3.8,,,,,,,,,False,False,False,,,
+8,219,429,2025-04-22 11:55:29.958030,4,Very satisfied,354,22.0,,8,71,Flat,3.7,71.1,13.8,IoT Alert,True,False,30.0,False,False,,,,354.0,2025-04-13 01:55:30.359483,9.0
+12,13,817,2025-04-25 11:55:30.216394,4,Excellent service,407,20.0,,6,29,House,4.4,70.3,13.6,IoT Alert,True,False,7.0,False,False,,,,407.0,2025-03-26 22:55:30.359483,29.0
+12,13,817,2025-04-25 11:55:30.216394,4,Excellent service,407,20.0,,6,29,House,4.4,70.1,14.5,IoT Alert,True,True,0.0,True,False,,,,407.0,2025-04-13 16:55:30.359483,11.0
+15,446,638,2025-03-18 11:55:30.097601,2,Quick and efficient,493,,,1,73,Flat,4.2,70.7,14.8,IoT Alert,True,False,60.0,False,False,,,,493.0,2025-03-29 05:55:30.359483,-11.0
+16,261,737,2025-03-25 11:55:30.163670,4,Unsatisfactory follow-up,288,22.0,,5,71,House,3.5,72.8,13.8,IoT Alert,True,True,0.0,True,False,,,,288.0,2025-03-19 03:55:30.359483,6.0
+26,224,677,2025-04-17 11:55:30.122249,1,Excellent service,197,5.0,3.0,2,78,Flat,3.9,71.4,15.5,IoT Alert,True,True,0.0,False,False,,,,197.0,2025-04-04 01:55:30.359483,13.0
+26,224,677,2025-04-17 11:55:30.122249,1,Excellent service,197,5.0,3.0,2,78,Flat,3.9,71.0,13.1,IoT Alert,True,True,7.0,True,False,,,,197.0,2025-04-12 18:55:30.359483,4.0
+27,76,185,2025-05-02 11:55:29.764226,4,Excellent service,305,18.0,,2,47,Flat,4.3,77.3,15.5,IoT Alert,True,False,30.0,False,False,,,,305.0,2025-04-10 04:55:30.359483,22.0
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,74.9,15.4,IoT Alert,True,True,7.0,False,False,,,,224.0,2025-03-28 03:55:30.359483,29.0
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,74.6,15.4,IoT Alert,True,False,30.0,False,False,,,,224.0,2025-03-29 04:55:30.359483,28.0
+31,282,525,2025-04-26 11:55:30.023958,2,Excellent service,224,17.0,10.0,4,25,Flat,4.0,71.8,14.7,IoT Alert,True,True,14.0,False,False,,,,224.0,2025-04-02 13:55:30.359483,23.0
+38,320,5,2025-03-03 11:55:29.647881,1,Repairman was courteous,326,19.0,,6,47,Flat,3.7,70.1,14.0,IoT Alert,True,False,60.0,False,False,,,,326.0,2025-03-31 00:55:30.359483,-28.0
+40,308,142,2025-02-28 11:55:29.736346,5,Quick and efficient,233,20.0,,4,29,House,4.0,82.0,12.4,IoT Alert,True,False,0.0,False,False,,,,233.0,2025-03-19 15:55:30.359483,-20.0
+44,185,102,2025-04-22 11:55:29.710756,1,Very satisfied,455,,,5,73,House,3.5,74.1,14.8,IoT Alert,True,True,7.0,True,False,,,,455.0,2025-04-15 12:55:30.359483,6.0
+45,200,365,2025-04-05 11:55:29.908605,4,Unsatisfactory follow-up,368,20.0,,2,29,Flat,4.4,70.5,15.4,IoT Alert,True,False,7.0,False,False,,,,368.0,2025-04-01 20:55:30.359483,3.0
+54,136,174,2025-04-10 11:55:29.757455,3,Issue recurred shortly after,58,11.0,6.0,1,49,Flat,4.7,71.3,15.3,IoT Alert,True,True,30.0,False,False,,,,58.0,2025-04-12 06:55:30.359483,-2.0
+62,290,77,2025-03-30 11:55:29.694895,4,Very satisfied,292,20.0,,3,29,House,3.7,72.9,15.7,IoT Alert,True,False,90.0,False,False,,,,292.0,2025-04-16 03:55:30.359483,-17.0
+62,290,77,2025-03-30 11:55:29.694895,4,Very satisfied,292,20.0,,3,29,House,3.7,72.2,14.2,IoT Alert,True,True,7.0,False,False,,,,292.0,2025-04-16 12:55:30.359483,-18.0
+67,55,367,2025-04-22 11:55:29.910354,4,Repairman was courteous,194,4.0,2.0,7,51,Flat,3.8,70.3,13.1,IoT Alert,True,False,60.0,False,False,,,,194.0,2025-04-06 04:55:30.359483,16.0
+83,121,843,2025-03-16 11:55:30.234602,5,Parts delay,221,7.0,4.0,3,98,Flat,4.2,78.1,11.1,IoT Alert,True,False,60.0,False,False,,,,221.0,2025-03-30 06:55:30.359483,-14.0
+90,30,158,2025-04-11 11:55:29.747793,4,Very satisfied,335,21.0,,6,74,House,3.9,71.4,15.9,IoT Alert,True,True,90.0,True,False,,,,335.0,2025-03-29 12:55:30.359483,12.0
+99,167,218,2025-03-24 11:55:29.784197,4,Repairman was courteous,27,9.0,5.0,6,103,Flat,4.9,71.8,12.8,IoT Alert,True,True,60.0,True,False,,,,27.0,2025-04-04 21:55:30.359483,-12.0
+99,167,218,2025-03-24 11:55:29.784197,4,Repairman was courteous,27,9.0,5.0,6,103,Flat,4.9,70.3,15.2,IoT Alert,True,True,30.0,False,False,,,,27.0,2025-04-05 03:55:30.359483,-12.0
+105,304,826,2025-03-01 11:55:30.222451,4,Very satisfied,165,15.0,9.0,2,23,House,4.1,73.9,15.5,IoT Alert,True,True,60.0,True,False,,,,165.0,2025-03-30 08:55:30.359483,-29.0
+111,251,993,2025-03-07 11:55:30.336594,5,Unsatisfactory follow-up,470,,,4,73,Flat,3.4,73.4,14.0,IoT Alert,True,True,14.0,False,False,,,,470.0,2025-03-20 17:55:30.359483,-14.0
+111,251,993,2025-03-07 11:55:30.336594,5,Unsatisfactory follow-up,470,,,4,73,Flat,3.4,70.3,9.8,IoT Alert,True,True,90.0,True,False,,,,470.0,2025-04-02 18:55:30.359483,-27.0
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,76.2,15.7,IoT Alert,True,False,60.0,False,False,,,,167.0,2025-03-18 15:55:30.359483,29.0
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,82.6,13.6,IoT Alert,True,True,0.0,False,False,,,,167.0,2025-03-24 13:55:30.359483,23.0
+113,444,133,2025-04-17 11:55:29.730436,2,Very satisfied,167,3.0,1.0,8,57,House,3.8,70.2,14.6,IoT Alert,True,True,7.0,True,False,,,,167.0,2025-04-15 18:55:30.359483,1.0
+122,121,698,2025-03-04 11:55:30.136836,2,Issue recurred shortly after,221,7.0,4.0,3,98,Flat,4.1,78.1,11.1,IoT Alert,True,False,60.0,False,False,,,,221.0,2025-03-30 06:55:30.359483,-26.0
+125,422,721,2025-05-08 11:55:30.152782,3,Repairman was courteous,442,,,8,73,House,4.6,76.1,15.5,IoT Alert,True,False,0.0,False,False,,,,442.0,2025-04-11 11:55:30.359483,26.0
+126,285,914,2025-04-10 11:55:30.285166,1,Parts delay,130,16.0,9.0,4,47,Flat,4.4,73.5,11.7,IoT Alert,True,False,7.0,False,False,,,,130.0,2025-04-01 13:55:30.359483,8.0
+127,265,810,2025-04-05 11:55:30.211790,1,Unsatisfactory follow-up,144,9.0,5.0,8,103,Flat,3.3,72.2,15.0,IoT Alert,True,False,14.0,False,False,,,,144.0,2025-04-06 03:55:30.359483,-1.0
+127,265,810,2025-04-05 11:55:30.211790,1,Unsatisfactory follow-up,144,9.0,5.0,8,103,Flat,3.3,76.0,15.8,IoT Alert,True,False,30.0,False,False,,,,144.0,2025-04-09 21:55:30.359483,-5.0
+133,42,783,2025-04-18 11:55:30.193769,5,Very satisfied,94,17.0,10.0,6,25,Flat,3.9,73.1,14.7,IoT Alert,True,True,30.0,False,False,,,,94.0,2025-04-05 14:55:30.359483,12.0
+141,258,832,2025-04-20 11:55:30.226801,5,Very satisfied,393,19.0,,8,47,House,4.4,74.8,15.3,IoT Alert,True,False,7.0,False,False,,,,393.0,2025-03-27 11:55:30.359483,23.0
+158,309,626,2025-03-24 11:55:30.089998,1,Parts delay,116,10.0,5.0,4,80,House,4.8,74.3,14.3,IoT Alert,True,False,90.0,False,False,,,,116.0,2025-04-13 05:55:30.359483,-20.0
+164,33,517,2025-04-19 11:55:30.018613,4,Excellent service,441,,,1,73,Flat,4.4,70.5,15.0,IoT Alert,True,False,7.0,False,False,,,,441.0,2025-04-09 05:55:30.359483,10.0
+164,33,517,2025-04-19 11:55:30.018613,4,Excellent service,441,,,1,73,Flat,4.4,70.5,13.3,IoT Alert,True,True,90.0,False,False,,,,441.0,2025-04-16 14:55:30.359483,2.0
+165,296,123,2025-04-18 11:55:29.723855,5,Issue recurred shortly after,180,6.0,4.0,3,8,House,3.6,74.3,13.3,IoT Alert,True,True,14.0,True,False,,,,180.0,2025-03-18 21:55:30.359483,30.0
+180,212,856,2025-03-14 11:55:30.243639,3,Repairman was courteous,120,7.0,4.0,5,98,House,3.9,72.2,15.5,IoT Alert,True,False,0.0,False,False,,,,120.0,2025-03-27 23:55:30.359483,-14.0
+181,121,698,2025-03-05 11:55:30.136836,3,Parts delay,221,7.0,4.0,3,98,Flat,4.3,78.1,11.1,IoT Alert,True,False,60.0,False,False,,,,221.0,2025-03-30 06:55:30.359483,-25.0
+184,33,517,2025-05-03 11:55:30.018613,5,Issue recurred shortly after,441,,,1,73,Flat,4.1,70.5,15.0,IoT Alert,True,False,7.0,False,False,,,,441.0,2025-04-09 05:55:30.359483,24.0
+184,33,517,2025-05-03 11:55:30.018613,5,Issue recurred shortly after,441,,,1,73,Flat,4.1,70.5,13.3,IoT Alert,True,True,90.0,False,False,,,,441.0,2025-04-16 14:55:30.359483,16.0
+186,270,209,2025-03-16 11:55:29.778814,2,Excellent service,123,15.0,9.0,2,23,Flat,4.1,75.5,15.8,IoT Alert,True,False,7.0,False,False,,,,123.0,2025-03-29 05:55:30.359483,-13.0
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,70.8,15.7,IoT Alert,True,False,7.0,False,False,,,,450.0,2025-03-19 00:55:30.359483,-16.0
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,74.4,12.7,IoT Alert,True,True,7.0,False,False,,,,450.0,2025-03-26 17:55:30.359483,-24.0
+193,243,413,2025-03-03 11:55:29.948157,5,Repairman was courteous,450,,,6,73,Flat,3.9,72.3,14.9,IoT Alert,True,True,60.0,False,False,,,,450.0,2025-03-29 01:55:30.359483,-26.0
+199,203,352,2025-04-24 11:55:29.895259,3,Excellent service,246,19.0,,6,47,Flat,4.2,72.1,11.8,IoT Alert,True,False,30.0,False,False,,,,246.0,2025-03-26 15:55:30.359483,28.0
+200,264,980,2025-03-06 11:55:30.328119,3,Unsatisfactory follow-up,97,5.0,3.0,2,78,Flat,4.1,71.3,14.9,IoT Alert,True,False,7.0,False,False,,,,97.0,2025-03-30 10:55:30.359483,-24.0
+204,309,626,2025-03-22 11:55:30.089998,5,Unsatisfactory follow-up,116,10.0,5.0,4,80,House,4.1,74.3,14.3,IoT Alert,True,False,90.0,False,False,,,,116.0,2025-04-13 05:55:30.359483,-22.0
+207,33,517,2025-04-22 11:55:30.018613,2,Unsatisfactory follow-up,441,,,1,73,Flat,3.6,70.5,15.0,IoT Alert,True,False,7.0,False,False,,,,441.0,2025-04-09 05:55:30.359483,13.0
+207,33,517,2025-04-22 11:55:30.018613,2,Unsatisfactory follow-up,441,,,1,73,Flat,3.6,70.5,13.3,IoT Alert,True,True,90.0,False,False,,,,441.0,2025-04-16 14:55:30.359483,5.0
+216,218,746,2025-04-21 11:55:30.169477,3,Very satisfied,226,22.0,,2,71,Flat,3.7,75.1,15.8,IoT Alert,True,False,7.0,False,False,,,,226.0,2025-04-04 01:55:30.359483,17.0
+216,218,746,2025-04-21 11:55:30.169477,3,Very satisfied,226,22.0,,2,71,Flat,3.7,70.6,13.5,IoT Alert,True,True,7.0,False,False,,,,226.0,2025-04-13 13:55:30.359483,7.0
+218,444,467,2025-03-14 11:55:29.984932,5,Excellent service,167,3.0,1.0,8,57,House,3.9,76.2,15.7,IoT Alert,True,False,60.0,False,False,,,,167.0,2025-03-18 15:55:30.359483,-5.0
+218,444,467,2025-03-14 11:55:29.984932,5,Excellent service,167,3.0,1.0,8,57,House,3.9,82.6,13.6,IoT Alert,True,True,0.0,False,False,,,,167.0,2025-03-24 13:55:30.359483,-11.0
+227,338,555,2025-04-21 11:55:30.043499,1,Unsatisfactory follow-up,343,19.0,,3,47,Block of Flats,3.9,70.4,15.6,IoT Alert,True,False,7.0,False,False,,,,343.0,2025-03-25 21:55:30.359483,26.0
+227,338,555,2025-04-21 11:55:30.043499,1,Unsatisfactory follow-up,343,19.0,,3,47,Block of Flats,3.9,71.4,13.4,IoT Alert,True,False,90.0,False,False,,,,343.0,2025-04-10 09:55:30.359483,11.0
+228,31,21,2025-04-30 11:55:29.658591,4,Very satisfied,476,,,8,73,Block of Flats,4.4,76.3,14.3,IoT Alert,True,True,30.0,False,False,,,,476.0,2025-04-06 06:55:30.359483,24.0
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,73.3,14.8,IoT Alert,True,False,0.0,False,False,,,,163.0,2025-03-20 17:55:30.359483,25.0
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,74.6,15.6,IoT Alert,True,False,7.0,False,False,,,,163.0,2025-03-25 05:55:30.359483,21.0
+229,376,589,2025-04-15 11:55:30.065320,2,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,4.7,72.4,13.9,IoT Alert,True,False,60.0,False,False,,,,163.0,2025-04-14 15:55:30.359483,0.0
+234,385,629,2025-03-01 11:55:30.091884,4,Quick and efficient,464,,,1,73,Flat,3.8,88.2,12.7,IoT Alert,True,False,14.0,False,False,,,,464.0,2025-03-26 01:55:30.359483,-25.0
+236,105,10,2025-03-23 11:55:29.651364,1,Quick and efficient,333,20.0,,4,29,Flat,3.8,78.8,14.9,IoT Alert,True,False,0.0,False,False,,,,333.0,2025-03-20 09:55:30.359483,3.0
+236,105,10,2025-03-23 11:55:29.651364,1,Quick and efficient,333,20.0,,4,29,Flat,3.8,73.9,12.1,IoT Alert,True,True,14.0,False,False,,,,333.0,2025-04-16 10:55:30.359483,-24.0
+238,269,265,2025-04-02 11:55:29.813299,3,Quick and efficient,408,21.0,,8,74,Flat,3.4,73.0,14.1,IoT Alert,True,True,60.0,True,False,,,,408.0,2025-04-05 23:55:30.359483,-4.0
+244,336,841,2025-03-21 11:55:30.233240,5,Very satisfied,143,12.0,7.0,4,80,House,3.8,72.1,9.5,IoT Alert,True,True,14.0,False,False,,,,143.0,2025-03-25 12:55:30.359483,-5.0
+252,395,952,2025-02-25 11:55:30.310823,4,Excellent service,280,20.0,,2,29,House,4.3,70.1,13.2,IoT Alert,True,True,0.0,True,False,,,,280.0,2025-03-24 03:55:30.359483,-27.0
+260,447,694,2025-03-29 11:55:30.134323,1,Quick and efficient,135,16.0,9.0,7,47,House,4.0,72.0,14.5,IoT Alert,True,False,7.0,False,False,,,,135.0,2025-04-03 11:55:30.359483,-6.0
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,76.2,15.7,IoT Alert,True,False,60.0,False,False,,,,167.0,2025-03-18 15:55:30.359483,9.0
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,82.6,13.6,IoT Alert,True,True,0.0,False,False,,,,167.0,2025-03-24 13:55:30.359483,3.0
+270,444,323,2025-03-28 11:55:29.864879,2,Excellent service,167,3.0,1.0,8,57,House,3.7,70.2,14.6,IoT Alert,True,True,7.0,True,False,,,,167.0,2025-04-15 18:55:30.359483,-19.0
+274,439,891,2025-03-07 11:55:30.269225,5,Unsatisfactory follow-up,14,11.0,6.0,3,49,House,4.2,74.3,14.9,IoT Alert,True,True,30.0,True,False,,,,14.0,2025-03-19 12:55:30.359483,-13.0
+281,36,842,2025-04-01 11:55:30.233886,4,Issue recurred shortly after,334,19.0,,3,47,Flat,4.1,73.8,15.0,IoT Alert,True,False,0.0,False,False,,,,334.0,2025-03-26 03:55:30.359483,6.0
+281,36,842,2025-04-01 11:55:30.233886,4,Issue recurred shortly after,334,19.0,,3,47,Flat,4.1,78.2,14.6,IoT Alert,True,True,0.0,False,False,,,,334.0,2025-03-28 18:55:30.359483,3.0
+284,159,877,2025-04-15 11:55:30.259264,1,Issue recurred shortly after,406,19.0,,4,47,House,4.7,74.6,15.7,IoT Alert,True,True,14.0,True,False,,,,406.0,2025-04-15 07:55:30.359483,0.0
+286,380,655,2025-03-23 11:55:30.108586,2,Very satisfied,136,5.0,3.0,5,78,Flat,3.4,70.7,12.1,IoT Alert,True,False,30.0,False,False,,,,136.0,2025-04-09 09:55:30.359483,-17.0
+293,375,314,2025-03-14 11:55:29.855861,1,Could be faster,289,22.0,,1,71,House,4.0,73.5,14.3,IoT Alert,True,False,0.0,False,False,,,,289.0,2025-04-13 03:55:30.359483,-30.0
+296,311,565,2025-04-21 11:55:30.050381,5,Issue recurred shortly after,350,21.0,,7,74,Block of Flats,4.5,73.2,14.2,IoT Alert,True,False,0.0,False,False,,,,350.0,2025-04-08 14:55:30.359483,12.0
+302,416,961,2025-04-18 11:55:30.316252,1,Parts delay,310,22.0,,6,71,Flat,3.7,79.6,15.3,IoT Alert,True,True,7.0,False,False,,,,310.0,2025-03-31 03:55:30.359483,18.0
+304,346,831,2025-03-17 11:55:30.226041,2,Parts delay,42,1.0,1.0,7,66,Flat,3.9,74.0,13.5,IoT Alert,True,False,60.0,False,False,,,,42.0,2025-03-20 05:55:30.359483,-3.0
+305,144,527,2025-04-20 11:55:30.025249,3,Very satisfied,95,13.0,8.0,6,37,House,4.5,72.9,15.3,IoT Alert,True,True,0.0,True,False,,,,95.0,2025-03-28 17:55:30.359483,22.0
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,74.7,12.4,IoT Alert,True,True,90.0,True,False,,,,375.0,2025-03-27 09:55:30.359483,0.0
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,73.0,15.0,IoT Alert,True,False,7.0,False,False,,,,375.0,2025-03-30 16:55:30.359483,-4.0
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,74.9,15.8,IoT Alert,True,True,60.0,False,False,,,,375.0,2025-04-04 04:55:30.359483,-8.0
+306,3,148,2025-03-27 11:55:29.740311,3,Parts delay,375,22.0,,1,71,Flat,3.7,71.6,15.7,IoT Alert,True,True,60.0,False,False,,,,375.0,2025-04-06 12:55:30.359483,-11.0
+311,346,506,2025-03-09 11:55:30.011552,1,Could be faster,42,1.0,1.0,7,66,Flat,4.5,74.0,13.5,IoT Alert,True,False,60.0,False,False,,,,42.0,2025-03-20 05:55:30.359483,-11.0
+312,116,105,2025-05-03 11:55:29.712615,2,Could be faster,282,22.0,,4,71,Flat,2.9,75.1,13.3,IoT Alert,True,True,90.0,False,False,,,,282.0,2025-04-03 17:55:30.359483,29.0
+313,434,985,2025-03-14 11:55:30.331649,3,Repairman was courteous,474,,,4,73,House,4.1,71.4,15.5,IoT Alert,True,False,30.0,False,False,,,,474.0,2025-04-05 16:55:30.359483,-23.0
+313,434,985,2025-03-14 11:55:30.331649,3,Repairman was courteous,474,,,4,73,House,4.1,72.1,15.4,IoT Alert,True,False,30.0,False,False,,,,474.0,2025-04-10 21:55:30.359483,-28.0
+326,198,1000,2025-03-31 11:55:30.341021,3,Could be faster,93,16.0,9.0,2,47,Flat,4.5,76.8,15.1,IoT Alert,True,False,7.0,False,False,,,,93.0,2025-04-01 15:55:30.359483,-2.0
+326,198,1000,2025-03-31 11:55:30.341021,3,Could be faster,93,16.0,9.0,2,47,Flat,4.5,71.2,15.5,IoT Alert,True,True,90.0,True,False,,,,93.0,2025-04-09 23:55:30.359483,-10.0
+328,385,629,2025-03-01 11:55:30.091884,2,Parts delay,464,,,1,73,Flat,4.2,88.2,12.7,IoT Alert,True,False,14.0,False,False,,,,464.0,2025-03-26 01:55:30.359483,-25.0
+329,320,421,2025-04-11 11:55:29.953041,2,Parts delay,326,19.0,,6,47,Flat,4.6,70.1,14.0,IoT Alert,True,False,60.0,False,False,,,,326.0,2025-03-31 00:55:30.359483,11.0
+337,330,712,2025-04-05 11:55:30.146543,1,Issue recurred shortly after,384,21.0,,5,74,Flat,3.9,70.3,14.6,IoT Alert,True,True,30.0,False,False,,,,384.0,2025-03-28 07:55:30.359483,8.0
+337,330,712,2025-04-05 11:55:30.146543,1,Issue recurred shortly after,384,21.0,,5,74,Flat,3.9,70.4,10.1,IoT Alert,True,True,0.0,False,False,,,,384.0,2025-04-15 14:55:30.359483,-11.0
+341,30,158,2025-03-29 11:55:29.747793,3,Parts delay,335,21.0,,6,74,House,4.1,71.4,15.9,IoT Alert,True,True,90.0,True,False,,,,335.0,2025-03-29 12:55:30.359483,-1.0
+342,251,993,2025-02-21 11:55:30.336594,2,Unsatisfactory follow-up,470,,,4,73,Flat,4.5,73.4,14.0,IoT Alert,True,True,14.0,False,False,,,,470.0,2025-03-20 17:55:30.359483,-28.0
+344,307,969,2025-04-29 11:55:30.321172,5,Excellent service,259,19.0,,8,47,Block of Flats,4.2,72.3,15.5,IoT Alert,True,False,7.0,False,False,,,,259.0,2025-03-30 21:55:30.359483,29.0
+345,136,174,2025-05-03 11:55:29.757455,1,Repairman was courteous,58,11.0,6.0,1,49,Flat,4.2,71.3,15.3,IoT Alert,True,True,30.0,False,False,,,,58.0,2025-04-12 06:55:30.359483,21.0
+354,215,98,2025-04-12 11:55:29.708247,3,Quick and efficient,256,22.0,,3,71,Block of Flats,4.1,73.1,11.8,IoT Alert,True,False,14.0,False,False,,,,256.0,2025-04-01 06:55:30.359483,11.0
+365,193,928,2025-03-30 11:55:30.295404,1,Unsatisfactory follow-up,401,20.0,,8,29,Flat,4.1,78.9,15.0,IoT Alert,True,False,90.0,False,False,,,,401.0,2025-03-28 16:55:30.359483,1.0
+365,193,928,2025-03-30 11:55:30.295404,1,Unsatisfactory follow-up,401,20.0,,8,29,Flat,4.1,72.3,15.5,IoT Alert,True,False,90.0,False,False,,,,401.0,2025-03-29 22:55:30.359483,0.0
+384,428,439,2025-04-27 11:55:29.964353,4,Very satisfied,35,8.0,4.0,6,15,Block of Flats,4.9,77.6,14.9,IoT Alert,True,True,7.0,False,False,,,,35.0,2025-03-28 08:55:30.359483,30.0
+386,260,224,2025-04-06 11:55:29.787735,4,Issue recurred shortly after,448,,,6,73,Flat,2.9,71.3,14.5,IoT Alert,True,False,14.0,False,False,,,,448.0,2025-03-24 10:55:30.359483,13.0
+386,260,224,2025-04-06 11:55:29.787735,4,Issue recurred shortly after,448,,,6,73,Flat,2.9,70.9,13.4,IoT Alert,True,True,60.0,False,False,,,,448.0,2025-04-14 20:55:30.359483,-9.0
+391,223,521,2025-04-20 11:55:30.021240,4,Quick and efficient,37,10.0,5.0,4,80,Flat,4.2,72.8,15.9,IoT Alert,True,False,0.0,False,False,,,,37.0,2025-04-03 12:55:30.359483,16.0
+391,223,521,2025-04-20 11:55:30.021240,4,Quick and efficient,37,10.0,5.0,4,80,Flat,4.2,75.1,13.1,IoT Alert,True,True,90.0,True,False,,,,37.0,2025-04-11 14:55:30.359483,8.0
+394,330,712,2025-04-20 11:55:30.146543,3,Issue recurred shortly after,384,21.0,,5,74,Flat,3.2,70.3,14.6,IoT Alert,True,True,30.0,False,False,,,,384.0,2025-03-28 07:55:30.359483,23.0
+394,330,712,2025-04-20 11:55:30.146543,3,Issue recurred shortly after,384,21.0,,5,74,Flat,3.2,70.4,10.1,IoT Alert,True,True,0.0,False,False,,,,384.0,2025-04-15 14:55:30.359483,4.0
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,73.3,14.8,IoT Alert,True,False,0.0,False,False,,,,163.0,2025-03-20 17:55:30.359483,5.0
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,74.6,15.6,IoT Alert,True,False,7.0,False,False,,,,163.0,2025-03-25 05:55:30.359483,1.0
+402,376,194,2025-03-26 11:55:29.769679,3,Parts delay,163,4.0,2.0,8,51,Flat,3.3,72.4,13.9,IoT Alert,True,False,60.0,False,False,,,,163.0,2025-04-14 15:55:30.359483,-20.0
+406,30,158,2025-03-28 11:55:29.747793,1,Very satisfied,335,21.0,,6,74,House,3.9,71.4,15.9,IoT Alert,True,True,90.0,True,False,,,,335.0,2025-03-29 12:55:30.359483,-2.0
+408,389,381,2025-03-30 11:55:29.926374,1,Excellent service,157,13.0,8.0,7,37,Flat,3.6,71.9,15.9,IoT Alert,True,False,7.0,False,False,,,,157.0,2025-03-18 14:55:30.359483,11.0
+412,338,555,2025-04-27 11:55:30.043499,3,Excellent service,343,19.0,,3,47,Block of Flats,4.8,71.4,13.4,IoT Alert,True,False,90.0,False,False,,,,343.0,2025-04-10 09:55:30.359483,17.0
+415,248,476,2025-02-24 11:55:29.991239,4,Very satisfied,39,4.0,2.0,1,51,House,4.5,70.9,13.8,IoT Alert,True,False,60.0,False,False,,,,39.0,2025-03-20 22:55:30.359483,-25.0
+416,55,868,2025-03-19 11:55:30.251944,3,Quick and efficient,194,4.0,2.0,7,51,Flat,3.6,70.3,13.1,IoT Alert,True,False,60.0,False,False,,,,194.0,2025-04-06 04:55:30.359483,-18.0
+425,174,772,2025-03-24 11:55:30.186662,1,Parts delay,119,11.0,6.0,8,49,House,3.7,75.5,15.5,IoT Alert,True,False,14.0,False,False,,,,119.0,2025-03-23 10:55:30.359483,1.0
+432,219,233,2025-05-01 11:55:29.793095,5,Unsatisfactory follow-up,354,22.0,,8,71,Flat,3.9,71.1,13.8,IoT Alert,True,False,30.0,False,False,,,,354.0,2025-04-13 01:55:30.359483,18.0
+436,107,137,2025-03-28 11:55:29.733097,4,Issue recurred shortly after,302,19.0,,1,47,Block of Flats,3.7,74.4,14.8,IoT Alert,True,True,60.0,True,False,,,,302.0,2025-03-25 04:55:30.359483,3.0
+436,107,137,2025-03-28 11:55:29.733097,4,Issue recurred shortly after,302,19.0,,1,47,Block of Flats,3.7,73.0,10.7,IoT Alert,True,True,0.0,False,False,,,,302.0,2025-03-27 13:55:30.359483,0.0
+440,165,997,2025-03-20 11:55:30.339215,5,Very satisfied,438,,,8,73,Flat,4.0,75.1,10.5,IoT Alert,True,True,14.0,False,False,,,,438.0,2025-03-22 16:55:30.359483,-3.0
+448,375,258,2025-04-20 11:55:29.809019,4,Quick and efficient,289,22.0,,1,71,House,3.7,73.5,14.3,IoT Alert,True,False,0.0,False,False,,,,289.0,2025-04-13 03:55:30.359483,7.0
+449,222,253,2025-03-05 11:55:29.805839,3,Quick and efficient,275,21.0,,1,74,Flat,2.8,70.8,13.6,IoT Alert,True,True,30.0,False,False,,,,275.0,2025-03-27 21:55:30.359483,-23.0
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,73.3,14.8,IoT Alert,True,False,0.0,False,False,,,,163.0,2025-03-20 17:55:30.359483,6.0
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,74.6,15.6,IoT Alert,True,False,7.0,False,False,,,,163.0,2025-03-25 05:55:30.359483,2.0
+450,376,784,2025-03-27 11:55:30.194441,5,Unsatisfactory follow-up,163,4.0,2.0,8,51,Flat,3.4,72.4,13.9,IoT Alert,True,False,60.0,False,False,,,,163.0,2025-04-14 15:55:30.359483,-19.0
+453,307,969,2025-04-29 11:55:30.321172,3,Very satisfied,259,19.0,,8,47,Block of Flats,4.4,72.3,15.5,IoT Alert,True,False,7.0,False,False,,,,259.0,2025-03-30 21:55:30.359483,29.0
+454,193,928,2025-03-29 11:55:30.295404,3,Excellent service,401,20.0,,8,29,Flat,4.2,78.9,15.0,IoT Alert,True,False,90.0,False,False,,,,401.0,2025-03-28 16:55:30.359483,0.0
+454,193,928,2025-03-29 11:55:30.295404,3,Excellent service,401,20.0,,8,29,Flat,4.2,72.3,15.5,IoT Alert,True,False,90.0,False,False,,,,401.0,2025-03-29 22:55:30.359483,-1.0
+465,13,817,2025-04-02 11:55:30.216394,5,Could be faster,407,20.0,,6,29,House,4.3,70.3,13.6,IoT Alert,True,False,7.0,False,False,,,,407.0,2025-03-26 22:55:30.359483,6.0
+465,13,817,2025-04-02 11:55:30.216394,5,Could be faster,407,20.0,,6,29,House,4.3,70.1,14.5,IoT Alert,True,True,0.0,True,False,,,,407.0,2025-04-13 16:55:30.359483,-12.0
+467,85,407,2025-04-21 11:55:29.944155,3,Excellent service,322,19.0,,5,47,Flat,3.7,72.4,15.5,IoT Alert,True,False,60.0,False,False,,,,322.0,2025-04-10 16:55:30.359483,10.0
+468,175,622,2025-03-01 11:55:30.087524,2,Could be faster,115,9.0,5.0,7,103,Flat,4.6,71.6,10.3,IoT Alert,True,False,90.0,False,False,,,,115.0,2025-03-25 08:55:30.359483,-24.0
+477,428,439,2025-04-17 11:55:29.964353,4,Quick and efficient,35,8.0,4.0,6,15,Block of Flats,4.4,71.7,15.9,IoT Alert,True,True,60.0,False,False,,,,35.0,2025-03-22 18:55:30.359483,25.0
+477,428,439,2025-04-17 11:55:29.964353,4,Quick and efficient,35,8.0,4.0,6,15,Block of Flats,4.4,77.6,14.9,IoT Alert,True,True,7.0,False,False,,,,35.0,2025-03-28 08:55:30.359483,20.0
+478,13,649,2025-04-18 11:55:30.104681,5,Excellent service,407,20.0,,6,29,House,4.4,70.3,13.6,IoT Alert,True,False,7.0,False,False,,,,407.0,2025-03-26 22:55:30.359483,22.0
+478,13,649,2025-04-18 11:55:30.104681,5,Excellent service,407,20.0,,6,29,House,4.4,70.1,14.5,IoT Alert,True,True,0.0,True,False,,,,407.0,2025-04-13 16:55:30.359483,4.0
+483,410,219,2025-04-19 11:55:29.784798,5,Parts delay,202,6.0,4.0,8,8,Flat,4.4,70.1,10.0,IoT Alert,True,False,7.0,False,False,,,,202.0,2025-04-11 00:55:30.359483,8.0
+486,309,626,2025-04-06 11:55:30.089998,5,Very satisfied,116,10.0,5.0,4,80,House,3.3,74.3,14.3,IoT Alert,True,False,90.0,False,False,,,,116.0,2025-04-13 05:55:30.359483,-7.0
+488,254,709,2025-04-11 11:55:30.144390,3,Excellent service,199,1.0,1.0,5,66,Flat,4.0,78.9,13.5,IoT Alert,True,True,7.0,False,False,,,,199.0,2025-03-26 22:55:30.359483,15.0
+488,254,709,2025-04-11 11:55:30.144390,3,Excellent service,199,1.0,1.0,5,66,Flat,4.0,73.3,14.9,IoT Alert,True,True,30.0,False,False,,,,199.0,2025-04-08 02:55:30.359483,3.0
+489,189,203,2025-03-19 11:55:29.775161,5,Quick and efficient,211,10.0,5.0,7,80,House,3.7,70.8,15.6,IoT Alert,True,False,14.0,False,False,,,,211.0,2025-03-24 22:55:30.359483,-6.0
+490,346,831,2025-03-26 11:55:30.226041,2,Could be faster,42,1.0,1.0,7,66,Flat,4.8,74.0,13.5,IoT Alert,True,False,60.0,False,False,,,,42.0,2025-03-20 05:55:30.359483,6.0
+491,304,466,2025-04-04 11:55:29.984260,2,Could be faster,165,15.0,9.0,2,23,House,4.6,73.9,15.5,IoT Alert,True,True,60.0,True,False,,,,165.0,2025-03-30 08:55:30.359483,5.0

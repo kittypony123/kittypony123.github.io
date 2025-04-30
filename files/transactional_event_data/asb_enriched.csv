@@ -1,0 +1,201 @@
+asb_id,propertyid,date_reported,description,severity,status,property_age_years,propertytype,blockid,simulated_asb_type
+1,480,2024-08-08,Loitering near entrance,Medium,Resolved,73,House,,Other
+2,24,2024-06-06,Disturbance in communal areas,Low,Open,25,Flat,17.0,Other
+3,383,2024-12-23,Loitering near entrance,Low,Open,47,Flat,18.0,Other
+4,484,2024-11-20,Loud noise at night,High,Open,73,Flat,,Other
+5,185,2024-11-08,Loitering near entrance,High,Open,24,Flat,14.0,Vandalism
+6,419,2025-02-13,Loitering near entrance,Low,Resolved,71,Flat,22.0,Other
+7,234,2025-01-20,Harassment reported by residents,High,Open,29,Flat,20.0,Other
+8,52,2024-11-29,Vandalism on building facade,Medium,In Progress,23,Flat,15.0,Other
+9,183,2025-01-31,Loitering near entrance,High,Resolved,80,Flat,12.0,Substance Misuse
+10,94,2024-07-18,Graffiti on walls,Low,In Progress,25,Flat,17.0,Other
+11,321,2024-06-23,Loitering near entrance,High,Resolved,47,Flat,19.0,Other
+12,463,2024-12-15,Graffiti on walls,Low,Resolved,73,Flat,,Other
+13,426,2024-10-14,Harassment reported by residents,High,Open,73,House,,Other
+14,60,2024-10-26,Harassment reported by residents,High,Open,23,Flat,15.0,Other
+15,407,2024-01-06,Loitering near entrance,Low,In Progress,29,House,20.0,Other
+16,153,2024-10-28,Loitering near entrance,High,Resolved,47,Flat,16.0,Other
+17,378,2024-01-06,Vandalism on building facade,Medium,Open,29,Flat,20.0,Other
+18,109,2024-10-30,Disturbance in communal areas,Medium,Resolved,47,Flat,16.0,Other
+19,371,2024-12-25,Loud noise at night,Low,Resolved,29,House,20.0,Other
+20,190,2024-10-07,Disturbance in communal areas,High,Open,23,Flat,15.0,Other
+21,311,2025-02-02,Graffiti on walls,Medium,Resolved,29,Flat,20.0,Other
+22,298,2024-01-03,Loud noise at night,Medium,In Progress,71,House,22.0,Other
+23,294,2024-11-25,Loud noise at night,High,In Progress,47,Flat,18.0,Other
+24,131,2024-04-05,Vandalism on building facade,Medium,Resolved,80,Block of Flats,10.0,Other
+25,362,2024-09-05,Graffiti on walls,High,In Progress,74,House,21.0,Other
+26,393,2024-04-13,Graffiti on walls,Medium,Resolved,47,House,19.0,Other
+27,152,2024-05-20,Disturbance in communal areas,High,Resolved,80,Block of Flats,12.0,Substance Misuse
+28,382,2024-03-17,Disturbance in communal areas,Medium,Open,29,Flat,20.0,Other
+29,456,2024-04-06,Harassment reported by residents,Low,Resolved,73,Flat,,Other
+30,402,2024-08-23,Graffiti on walls,Medium,Resolved,71,House,22.0,Other
+31,488,2024-11-05,Vandalism on building facade,Low,In Progress,73,Flat,,Other
+32,290,2025-05-01,Harassment reported by residents,Low,Resolved,47,Flat,18.0,Other
+33,455,2024-09-21,Graffiti on walls,High,Open,73,House,,Other
+34,489,2024-11-29,Vandalism on building facade,Low,Open,73,Block of Flats,,Other
+35,430,2024-04-11,Harassment reported by residents,Low,In Progress,73,Flat,,Other
+36,207,2024-05-14,Graffiti on walls,Low,In Progress,49,Block of Flats,11.0,Other
+37,319,2024-05-03,Loud noise at night,High,In Progress,74,Block of Flats,21.0,Other
+38,80,2024-07-08,Disturbance in communal areas,Low,In Progress,103,Flat,9.0,Other
+39,392,2024-07-28,Loud noise at night,High,In Progress,47,Flat,18.0,Other
+40,90,2024-08-11,Harassment reported by residents,High,Resolved,15,Block of Flats,8.0,Vandalism
+41,117,2024-05-06,Graffiti on walls,Low,In Progress,98,Flat,7.0,Other
+42,344,2024-03-24,Graffiti on walls,Medium,Resolved,71,Flat,22.0,Other
+43,125,2024-05-06,Vandalism on building facade,High,Resolved,78,Block of Flats,5.0,Vandalism
+44,388,2025-02-18,Harassment reported by residents,Low,In Progress,29,Flat,20.0,Other
+45,492,2024-02-08,Disturbance in communal areas,Low,Open,73,House,,Other
+46,462,2024-08-03,Graffiti on walls,High,In Progress,73,Flat,,Other
+47,175,2025-11-02,Graffiti on walls,Low,In Progress,78,Flat,5.0,Vandalism
+48,303,2024-08-27,Graffiti on walls,High,Open,29,House,20.0,Other
+49,223,2024-03-25,Harassment reported by residents,Low,Resolved,24,Flat,14.0,Vandalism
+50,196,2024-09-05,Loitering near entrance,Medium,In Progress,57,Flat,3.0,Other
+51,323,2025-01-20,Vandalism on building facade,Low,Resolved,74,Block of Flats,21.0,Other
+52,247,2024-07-23,Loud noise at night,High,Resolved,29,House,20.0,Other
+53,452,2024-12-14,Vandalism on building facade,High,In Progress,73,House,,Other
+54,293,2024-07-09,Loud noise at night,Medium,Open,71,Flat,22.0,Other
+55,398,2024-10-13,Loitering near entrance,High,Open,47,House,19.0,Other
+56,124,2024-02-05,Harassment reported by residents,High,In Progress,37,Flat,13.0,Other
+57,321,2025-06-02,Loud noise at night,Low,In Progress,47,Flat,19.0,Other
+58,386,2024-04-11,Loud noise at night,Low,Resolved,29,Flat,20.0,Other
+59,437,2024-08-06,Loitering near entrance,High,In Progress,73,House,,Other
+60,465,2024-11-08,Loud noise at night,Low,Open,73,Block of Flats,,Other
+61,427,2024-12-08,Graffiti on walls,Low,Open,73,Flat,,Other
+62,42,2024-03-21,Vandalism on building facade,High,In Progress,66,Flat,1.0,Other
+63,422,2025-02-13,Loud noise at night,Low,In Progress,71,Flat,22.0,Other
+64,271,2025-01-29,Graffiti on walls,High,In Progress,74,Flat,21.0,Other
+65,42,2024-09-29,Disturbance in communal areas,High,Open,66,Flat,1.0,Other
+66,440,2024-09-15,Loud noise at night,Medium,In Progress,73,House,,Other
+67,397,2024-11-28,Disturbance in communal areas,High,Open,71,Flat,22.0,Other
+68,447,2024-04-05,Loitering near entrance,High,In Progress,73,Flat,,Other
+69,322,2024-12-15,Loud noise at night,High,In Progress,47,Flat,19.0,Other
+70,113,2024-06-04,Harassment reported by residents,Medium,Open,57,Flat,3.0,Other
+71,459,2024-06-18,Loitering near entrance,Medium,Resolved,73,Flat,,Other
+72,145,2024-10-08,Vandalism on building facade,Low,Resolved,98,Flat,7.0,Other
+73,483,2024-12-07,Vandalism on building facade,High,In Progress,73,Flat,,Other
+74,391,2024-07-31,Disturbance in communal areas,Low,Resolved,74,House,21.0,Other
+75,71,2024-03-09,Loud noise at night,High,Open,15,House,2.0,Other
+76,382,2024-06-20,Disturbance in communal areas,High,In Progress,29,Flat,20.0,Other
+77,473,2024-08-14,Loud noise at night,Low,Resolved,73,Flat,,Other
+78,359,2024-04-24,Loud noise at night,Medium,Open,47,Flat,19.0,Other
+79,204,2024-03-06,Disturbance in communal areas,High,In Progress,103,Flat,9.0,Other
+80,35,2024-11-19,Vandalism on building facade,Low,In Progress,15,Block of Flats,8.0,Vandalism
+81,119,2025-12-01,Vandalism on building facade,Medium,In Progress,49,House,11.0,Other
+82,367,2024-01-12,Vandalism on building facade,Medium,In Progress,71,Flat,22.0,Other
+83,56,2024-02-07,Graffiti on walls,Low,In Progress,57,Flat,3.0,Other
+84,6,2024-11-14,Vandalism on building facade,High,Open,57,Flat,3.0,Other
+85,41,2024-04-24,Vandalism on building facade,Low,In Progress,103,Block of Flats,9.0,Other
+86,58,2024-06-11,Loitering near entrance,Low,Resolved,49,Flat,11.0,Other
+87,343,2024-09-17,Vandalism on building facade,Medium,In Progress,47,Block of Flats,19.0,Other
+88,280,2024-09-05,Harassment reported by residents,Medium,Open,29,House,20.0,Other
+89,98,2024-07-11,Loitering near entrance,Low,Resolved,23,House,15.0,Other
+90,280,2024-09-28,Harassment reported by residents,Medium,Resolved,29,House,20.0,Other
+91,26,2024-02-12,Graffiti on walls,Medium,Open,78,Flat,5.0,Vandalism
+92,73,2024-08-08,Harassment reported by residents,High,Open,66,Flat,1.0,Other
+93,499,2025-09-01,Loitering near entrance,Medium,In Progress,73,Flat,,Other
+94,28,2024-10-28,Loitering near entrance,Low,Resolved,80,Flat,12.0,Substance Misuse
+95,129,2025-05-01,Loitering near entrance,Medium,Resolved,49,Flat,11.0,Other
+96,56,2024-12-16,Loitering near entrance,High,In Progress,57,Flat,3.0,Other
+97,342,2024-09-06,Vandalism on building facade,Low,Open,29,Flat,20.0,Other
+98,8,2024-06-12,Disturbance in communal areas,Low,In Progress,24,House,14.0,Vandalism
+99,458,2024-01-05,Graffiti on walls,Low,Open,73,House,,Other
+100,322,2024-11-19,Harassment reported by residents,High,In Progress,47,Flat,19.0,Other
+101,88,2024-09-05,Graffiti on walls,Medium,Resolved,57,Flat,3.0,Other
+102,425,2024-06-20,Disturbance in communal areas,High,Resolved,47,Flat,18.0,Other
+103,225,2024-10-30,Loitering near entrance,Low,Resolved,23,Flat,15.0,Other
+104,125,2024-12-30,Graffiti on walls,Low,Resolved,78,Block of Flats,5.0,Vandalism
+105,349,2024-09-16,Loitering near entrance,Low,In Progress,71,Flat,22.0,Other
+106,118,2024-09-05,Loitering near entrance,High,Open,80,Flat,10.0,Other
+107,253,2024-04-03,Graffiti on walls,High,Resolved,71,Flat,22.0,Other
+108,326,2024-07-22,Loitering near entrance,High,Open,47,Flat,19.0,Other
+109,233,2024-06-27,Disturbance in communal areas,Low,In Progress,29,House,20.0,Other
+110,441,2024-06-17,Vandalism on building facade,Medium,Resolved,73,Flat,,Other
+111,400,2024-12-13,Loud noise at night,Medium,Open,74,Flat,21.0,Other
+112,193,2024-05-26,Vandalism on building facade,Low,Resolved,25,Flat,17.0,Other
+113,431,2024-01-12,Vandalism on building facade,Low,Resolved,73,House,,Other
+114,179,2024-12-09,Disturbance in communal areas,Low,Open,25,House,17.0,Other
+115,202,2024-03-16,Disturbance in communal areas,Medium,Open,8,Flat,6.0,Other
+116,398,2024-08-09,Graffiti on walls,Medium,Open,47,House,19.0,Other
+117,352,2024-10-14,Loitering near entrance,High,Open,71,House,22.0,Other
+118,376,2025-01-20,Graffiti on walls,High,Open,47,Flat,19.0,Other
+119,38,2024-10-05,Vandalism on building facade,Medium,Resolved,25,Flat,17.0,Other
+120,204,2024-08-07,Graffiti on walls,Low,Resolved,103,Flat,9.0,Other
+121,303,2024-05-29,Disturbance in communal areas,Medium,Open,29,House,20.0,Other
+122,221,2024-04-13,Graffiti on walls,High,In Progress,98,Flat,7.0,Other
+123,402,2024-05-23,Loud noise at night,Low,Open,71,House,22.0,Other
+124,457,2025-07-02,Harassment reported by residents,Low,Resolved,73,House,,Other
+125,355,2024-01-11,Disturbance in communal areas,High,In Progress,74,House,21.0,Other
+126,500,2024-04-26,Disturbance in communal areas,High,In Progress,73,Flat,,Other
+127,260,2024-09-30,Disturbance in communal areas,Low,In Progress,71,Flat,22.0,Other
+128,452,2024-04-22,Harassment reported by residents,High,Resolved,73,House,,Other
+129,263,2024-05-19,Disturbance in communal areas,Low,Resolved,47,House,19.0,Other
+130,44,2024-04-10,Harassment reported by residents,Medium,Resolved,80,Flat,12.0,Substance Misuse
+131,280,2024-12-06,Loitering near entrance,Low,Resolved,29,House,20.0,Other
+132,336,2024-07-16,Loud noise at night,Medium,Open,47,Flat,18.0,Other
+133,121,2024-05-24,Loitering near entrance,Medium,In Progress,15,Block of Flats,2.0,Other
+134,245,2024-11-18,Graffiti on walls,High,Open,29,Block of Flats,20.0,Other
+135,14,2024-04-17,Loitering near entrance,Medium,In Progress,49,House,11.0,Other
+136,400,2025-01-18,Graffiti on walls,Low,Resolved,74,Flat,21.0,Other
+137,322,2024-03-24,Loitering near entrance,Medium,Resolved,47,Flat,19.0,Other
+138,273,2024-06-19,Loitering near entrance,High,Open,47,Block of Flats,19.0,Other
+139,439,2024-04-13,Graffiti on walls,Medium,Resolved,73,House,,Other
+140,255,2024-10-12,Vandalism on building facade,Medium,Resolved,71,Flat,22.0,Other
+141,296,2024-11-18,Loitering near entrance,High,Open,47,Flat,18.0,Other
+142,405,2024-03-04,Graffiti on walls,Medium,Resolved,47,Flat,19.0,Other
+143,269,2025-02-26,Loitering near entrance,High,Open,47,Flat,19.0,Other
+144,350,2024-12-04,Vandalism on building facade,Medium,Open,74,Block of Flats,21.0,Other
+145,357,2024-12-10,Loud noise at night,High,In Progress,47,Flat,19.0,Other
+146,387,2024-11-08,Loitering near entrance,High,Resolved,71,Flat,22.0,Other
+147,170,2024-12-03,Loitering near entrance,High,Open,51,House,4.0,Other
+148,16,2024-03-19,Loud noise at night,Low,In Progress,15,Flat,8.0,Vandalism
+149,461,2024-05-25,Vandalism on building facade,High,In Progress,73,House,,Other
+150,437,2024-08-19,Harassment reported by residents,Medium,Open,73,House,,Other
+151,479,2024-03-06,Loitering near entrance,Medium,Resolved,73,Flat,,Other
+152,202,2024-11-18,Vandalism on building facade,Medium,Resolved,8,Flat,6.0,Other
+153,151,2024-11-23,Disturbance in communal areas,Low,Resolved,15,Flat,8.0,Vandalism
+154,488,2024-12-20,Disturbance in communal areas,High,Resolved,73,Flat,,Other
+155,295,2024-12-10,Loitering near entrance,Low,Open,71,House,22.0,Other
+156,280,2024-09-05,Loud noise at night,Medium,In Progress,29,House,20.0,Other
+157,85,2024-10-16,Loud noise at night,High,Resolved,103,Flat,9.0,Other
+158,469,2024-12-09,Vandalism on building facade,High,In Progress,73,Flat,,Other
+159,370,2024-06-24,Vandalism on building facade,Medium,In Progress,47,Flat,18.0,Other
+160,86,2024-08-05,Vandalism on building facade,Medium,Resolved,25,Flat,17.0,Other
+161,114,2024-08-03,Vandalism on building facade,Medium,Resolved,8,Flat,6.0,Other
+162,312,2024-12-03,Harassment reported by residents,Low,Open,47,Flat,19.0,Other
+163,441,2024-06-13,Loud noise at night,High,Resolved,73,Flat,,Other
+164,201,2024-08-21,Harassment reported by residents,Low,Resolved,80,Flat,10.0,Other
+165,251,2024-06-06,Harassment reported by residents,Medium,Resolved,47,Flat,18.0,Other
+166,167,2025-02-18,Graffiti on walls,Medium,In Progress,57,House,3.0,Other
+167,396,2024-03-15,Harassment reported by residents,Medium,Open,47,Block of Flats,18.0,Other
+168,4,2024-11-19,Harassment reported by residents,High,Resolved,49,House,11.0,Other
+169,62,2024-03-18,Graffiti on walls,High,Open,25,Flat,17.0,Other
+170,475,2024-12-31,Loitering near entrance,High,In Progress,73,House,,Other
+171,85,2025-02-02,Vandalism on building facade,High,Resolved,103,Flat,9.0,Other
+172,171,2024-05-05,Vandalism on building facade,Medium,Open,51,Flat,4.0,Other
+173,45,2024-08-24,Vandalism on building facade,Medium,In Progress,15,House,8.0,Vandalism
+174,46,2024-09-13,Harassment reported by residents,Medium,Open,49,Flat,11.0,Other
+175,168,2024-12-09,Vandalism on building facade,Low,Open,24,Flat,14.0,Vandalism
+176,374,2024-11-30,Harassment reported by residents,High,Open,47,Block of Flats,19.0,Other
+177,419,2024-07-27,Loitering near entrance,High,Resolved,71,Flat,22.0,Other
+178,50,2024-10-28,Loitering near entrance,Medium,In Progress,51,Flat,4.0,Other
+179,24,2025-02-18,Graffiti on walls,Medium,Open,25,Flat,17.0,Other
+180,357,2024-03-04,Loud noise at night,Medium,Open,47,Flat,19.0,Other
+181,19,2024-08-29,Vandalism on building facade,Medium,In Progress,98,Flat,7.0,Other
+182,316,2024-01-06,Loud noise at night,High,Resolved,29,Flat,20.0,Other
+183,269,2024-06-29,Graffiti on walls,Low,Resolved,47,Flat,19.0,Other
+184,376,2024-12-21,Loitering near entrance,Low,In Progress,47,Flat,19.0,Other
+185,185,2024-12-22,Vandalism on building facade,High,Resolved,24,Flat,14.0,Vandalism
+186,286,2024-01-09,Loitering near entrance,Low,Open,47,Flat,19.0,Other
+187,479,2024-10-09,Graffiti on walls,Medium,In Progress,73,Flat,,Other
+188,30,2024-09-13,Graffiti on walls,High,In Progress,51,Block of Flats,4.0,Other
+189,406,2024-11-07,Graffiti on walls,Medium,In Progress,47,House,19.0,Other
+190,153,2024-03-12,Vandalism on building facade,Medium,Resolved,47,Flat,16.0,Other
+191,173,2024-10-06,Harassment reported by residents,High,Resolved,51,Flat,4.0,Other
+192,144,2024-05-25,Disturbance in communal areas,Medium,Resolved,103,Flat,9.0,Other
+193,302,2024-07-25,Harassment reported by residents,Medium,Resolved,47,Block of Flats,19.0,Other
+194,431,2024-04-18,Harassment reported by residents,Low,Resolved,73,House,,Other
+195,66,2024-09-24,Graffiti on walls,Low,Open,24,House,14.0,Vandalism
+196,416,2024-09-03,Loitering near entrance,Medium,Open,74,House,21.0,Other
+197,70,2025-02-23,Loud noise at night,Low,Open,37,House,13.0,Other
+198,411,2024-09-22,Harassment reported by residents,High,Open,47,Flat,19.0,Other
+199,301,2024-01-04,Vandalism on building facade,Low,Open,74,Block of Flats,21.0,Other
+200,68,2024-03-04,Loud noise at night,Medium,In Progress,15,House,2.0,Other
