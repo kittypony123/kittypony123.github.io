@@ -199,8 +199,8 @@
 
         async function fetchInitialCoordinatorData() {
             showLoading(true);
-            try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+            try {'
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
                 const sitesResponse = await fetch(`${SCRIPT_URL}?action=getSites`);
                 if (!sitesResponse.ok) throw new Error(`Fetching sites: ${sitesResponse.statusText} (${sitesResponse.status})`);
                 const sitesData = await sitesResponse.json();
@@ -326,7 +326,7 @@
             selectedAvailableIds.clear();
             selectedRegisteredIds.clear();
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
                 const response = await fetch(`${SCRIPT_URL}?action=getRegisteredAttendees&sessionId=${currentSessionId}`);
                 if (!response.ok) throw new Error(`Fetching registered list: ${response.statusText} (${response.status})`);
                 const data = await response.json();
@@ -422,7 +422,7 @@
 
             showLoading(true);
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
                     headers: { 

@@ -239,7 +239,7 @@
         async function fetchInitialSiteData() {
             showLoading(true);
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
                 const response = await fetch(`${SCRIPT_URL}?action=getSites`);
                 if (!response.ok) {
                     throw new Error(`Fetching sites: ${response.statusText} (${response.status})`);
@@ -307,7 +307,7 @@
             volunteersListDiv.innerHTML = ''; 
             participantsListDiv.innerHTML = ''; 
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec; // IMPORTANT: Replace this
                 // The date parameter for getRegisteredAttendees is mostly for future use or if your script filters by it.
                 // Currently, the Apps Script for getRegisteredAttendees primarily uses sessionId.
                 const response = await fetch(`${SCRIPT_URL}?action=getRegisteredAttendees&sessionId=${currentSessionId}&date=${selectedDate}`);
@@ -420,7 +420,7 @@
 
             showLoading(true);
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxkFgBmC8LvsOTZG3MeYayxURW4Zq4J0dvuDlk8d5tGYcMvMw_FfeJidKJJU6Q8JzycHw/exec'; // IMPORTANT: Replace this
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
                     headers: { 
