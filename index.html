@@ -1,135 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-WCR6HWM1TV"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-WCR6HWM1TV');
-</script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kittypony Projects</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --font-sans: 'Inter', sans-serif;
-      --color-bg: #273240;
-      --color-gradient-start: #60a5fa;
-      --color-gradient-end: #f472b6;
-      --color-card: rgba(255, 255, 255, 0.18);
-      --color-input-bg: rgba(255, 255, 255, 0.3);
-      --color-text: #ffffff;
-      --radius: 0.75rem;
-      --spacing: 1rem;
-      --transition: 0.3s ease;
-      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.25);
-      --text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: var(--font-sans);
-      background: linear-gradient(135deg, var(--color-bg), #334155 85%);
-      color: var(--color-text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      position: relative;
-      overflow: hidden;
-      text-shadow: var(--text-shadow);
-    }
-    body::before, body::after {
-      content: '✨';
-      position: absolute;
-      font-size: 2.5rem;
-      opacity: 0.04;
-      animation: float 12s infinite alternate;
-    }
-    body::before { top: 12%; left: 8%; }
-    body::after { top: 68%; left: 78%; animation-duration: 10s; }
-    @keyframes float { from { transform: translateY(0) rotate(0); } to { transform: translateY(-20px) rotate(45deg); } }
-    @keyframes sparkle { 0%,100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.3); opacity: 1; } }
-    header {
-      background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end));
-      padding: calc(var(--spacing)*2) var(--spacing);
-      box-shadow: var(--shadow-md);
-      z-index: 1;
-    }
-    .container { max-width: 1024px; margin: 0 auto; }
-    .header-content { display: flex; flex-direction: column; gap: 0.75rem; }
-    .title { display: flex; align-items: center; font-size: 2rem; font-weight: 600; gap: 0.5rem; color: var(--color-text); text-shadow: var(--text-shadow); }
-    .sparkle { animation: sparkle 1.5s var(--transition) infinite; font-size: 1.5rem; }
-    .subtitle { font-size: 1rem; opacity: 0.85; color: var(--color-text); text-shadow: var(--text-shadow); }
-    .search-bar { margin-top: var(--spacing); width: 100%; padding: 0.75rem 1rem; border: none; border-radius: var(--radius); background: var(--color-input-bg); color: var(--color-text); font-size: 1rem; box-shadow: var(--shadow-md); outline: none; transition: background var(--transition); text-shadow: none; }
-    .search-bar::placeholder { color: rgba(255,255,255,0.7); }
-    .search-bar:focus { background: rgba(255,255,255,0.4); }
-    main { flex: 1; padding: calc(var(--spacing)*3) var(--spacing); position: relative; z-index: 1; display: flex; align-items: flex-start; justify-content: flex-start; }
-    .card { background: var(--color-card); backdrop-filter: blur(12px); border-radius: var(--radius); box-shadow: var(--shadow-md); padding: calc(var(--spacing)*2); max-width: 400px; width: 100%; margin: 0; }
-    .btn { display: block; background: linear-gradient(90deg, var(--color-gradient-start), var(--color-gradient-end)); padding: 0.75rem 1.5rem; border: none; border-radius: var(--radius); color: var(--color-text); font-size: 1rem; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; cursor: pointer; transition: transform var(--transition), box-shadow var(--transition); margin-bottom: var(--spacing); text-shadow: none; justify-content: flex-start; width: 100%; }
-    .btn:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 6px 20px rgba(0,0,0,0.35); }
-    .icon { width: 1.25rem; height: 1.25rem; fill: var(--color-text); }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Tracking System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -2px rgba(0,0,0,0.05);
+        }
+        .btn {
+            padding: 0.625rem 1.25rem;
+            border-radius: 0.375rem;
+            font-weight: 500;
+            transition: background-color 0.15s ease-in-out;
+            cursor: pointer;
+            line-height: 1.5;
+            display: inline-block;
+            text-decoration: none;
+        }
+        .btn-primary {
+            background-color: #2563eb;
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+        }
+    </style>
 </head>
-<body>
-  <header>
-    <div class="container header-content">
-      <div class="title">
-        <span class="sparkle">✨</span>
-        <span>Kittypony Projects</span>
-        <span class="sparkle">✨</span>
-      </div>
-      <div class="subtitle">Explore our magical toolkit—search, discover, and embark on sparkly adventures!</div>
-      <input type="text" class="search-bar" placeholder="Search projects, challenges, or sparkles..." />
+<body class="p-4 md:p-8">
+    <div class="max-w-4xl mx-auto">
+        <header class="mb-8 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-4">Attendance Tracking System</h1>
+            <p class="text-xl text-gray-600">A complete solution for managing volunteers and participants</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-3">Coordinator App</h2>
+                <p class="text-gray-600 mb-6">For volunteer coordinators to manage registered attendees for each session.</p>
+                <ul class="list-disc list-inside text-gray-700 mb-6">
+                    <li>View master list of all people</li>
+                    <li>Add/remove people from session registrations</li>
+                    <li>Filter by volunteer or participant type</li>
+                    <li>Save registration changes</li>
+                </ul>
+                <a href="coordinator_app.html" class="btn btn-primary">Open Coordinator App</a>
+            </div>
+
+            <div class="card">
+                <h2 class="text-2xl font-semibold text-gray-700 mb-3">Attendance Tracker App</h2>
+                <p class="text-gray-600 mb-6">For lead volunteers to mark daily attendance for pre-registered individuals.</p>
+                <ul class="list-disc list-inside text-gray-700 mb-6">
+                    <li>Select site, session, and date</li>
+                    <li>View pre-registered volunteers and participants</li>
+                    <li>Mark attendance with simple toggles</li>
+                    <li>Save attendance records</li>
+                </ul>
+                <a href="attendance_app.html" class="btn btn-primary">Open Attendance Tracker App</a>
+            </div>
+        </div>
+
+        <div class="card mt-8">
+            <h2 class="text-2xl font-semibold text-gray-700 mb-3">Setup Instructions</h2>
+            <p class="text-gray-600 mb-4">Before using these applications, you need to set up the backend:</p>
+            <ol class="list-decimal list-inside text-gray-700 space-y-2 mb-6">
+                <li>Create a Google Sheet with four sheets: Sites, Master People List, Registered Attendees, and Attendance Log</li>
+                <li>Set up the Google Apps Script backend in your Google Sheet</li>
+                <li>Deploy the Apps Script as a web app</li>
+                <li>Configure the Apps Script URL in both frontend applications</li>
+            </ol>
+            <p class="text-gray-600">For detailed instructions, please refer to the <a href="deployment_guide.md" class="text-blue-600 hover:underline">Deployment Guide</a>.</p>
+        </div>
     </div>
-  </header>
-  <main>
-    <div class="card">
-      <a href="#" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M12 2a2 2 0 012 2v1h4a2 2 0 012 2v3a4 4 0 01-4 4h-1v1a2 2 0 11-4 0v-1H8a4 4 0 01-4-4V7a2 2 0 012-2h4V4a2 2 0 012-2z" />
-        </svg>
-        AI Data Challenge
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3 3h2v18H3V3zm4 9h2v9H7v-9zm4-6h2v15h-2V6zm4 3h2v12h-2V9zm4-7h2v19h-2V2z" />
-        </svg>
-      </a>
-      <a href="https://aidatachallenge.replit.app/" target="_blank" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3.9 4.2l11.3 8.3-11.3 8.3V4.2zm1.8 2.1v10.2l7.5-5.1-7.5-5.1z"/>
-        </svg>
-        AI Data Replit
-      </a>
-      <a href="/PromptGuide" target="_blank" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3.9 4.2l11.3 8.3-11.3 8.3V4.2zm1.8 2.1v10.2l7.5-5.1-7.5-5.1z"/>
-        </svg>
-        Prompt Guide
-      </a>
-	  </a>
-      <a href="/guide" target="_blank" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3.9 4.2l11.3 8.3-11.3 8.3V4.2zm1.8 2.1v10.2l7.5-5.1-7.5-5.1z"/>
-        </svg>
-        User Guide
-      </a>
-	  </a>
-      <a href="/datadownload" target="_blank" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3.9 4.2l11.3 8.3-11.3 8.3V4.2zm1.8 2.1v10.2l7.5-5.1-7.5-5.1z"/>
-        </svg>
-        Data Downloads
-      </a>
-	  </a>
-      <a href="/diagram" target="_blank" class="btn">
-        <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24">
-          <path d="M3.9 4.2l11.3 8.3-11.3 8.3V4.2zm1.8 2.1v10.2l7.5-5.1-7.5-5.1z"/>
-        </svg>
-        Data Model/Relationships
-      </a>
-    </div>
-  </main>
 </body>
 </html>
