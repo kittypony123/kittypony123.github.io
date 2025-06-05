@@ -135,42 +135,43 @@
     </div>
 
     <script>
+        // DOM Element variables
         const siteSelect = document.getElementById('siteSelect');
         const sessionNameDisplay = document.getElementById('sessionNameDisplay');
         const loadRegisteredBtn = document.getElementById('loadRegisteredBtn');
         const managementSection = document.getElementById('managementSection');
-        
         const availablePeopleListDiv = document.getElementById('availablePeopleListDiv');
         const registeredPeopleListDiv = document.getElementById('registeredPeopleListDiv');
-        
         const filterAvailableInput = document.getElementById('filterAvailableInput');
         const filterRegisteredInput = document.getElementById('filterRegisteredInput');
-
         const availablePeopleListFilters = document.getElementById('availablePeopleListFilters');
-
         const addSelectedBtn = document.getElementById('addSelectedBtn');
         const removeSelectedBtn = document.getElementById('removeSelectedBtn');
         const saveChangesBtn = document.getElementById('saveChangesBtn');
-        
         const messageBox = document.getElementById('messageBox');
         const loadingIndicator = document.getElementById('loadingIndicator');
 
+        // State variables
         let currentSiteData = { sites: [], siteSessionInfo: {} };
         let masterPeopleList = []; 
         let currentRegisteredPeople = { volunteers: [], participants: [] }; 
-
         let selectedAvailableIds = new Set();
         let selectedRegisteredIds = new Set();
         let currentSessionId = null;
         let currentSiteId = null;
         let currentAvailableFilter = 'all';
 
-        function showLoading(show) { loadingIndicator.style.display = show ? 'flex' : 'none'; }
+        // --- Utility Functions ---
+        function showLoading(show) { 
+            loadingIndicator.style.display = show ? 'flex' : 'none'; 
+        }
+
         function showMessage(message, type = 'success', duration = 3500) {
             messageBox.textContent = message;
             // Clear existing type classes then add new ones
             messageBox.classList.remove('success', 'error', 'bg-green-100', 'text-green-800', 'border-green-300', 'bg-red-100', 'text-red-800', 'border-red-300');
-            messageBox.className = 'fixed top-5 left-1/2 transform -translate-x-1/2 -translate-y-full p-4 rounded-md shadow-lg z-[1000] opacity-0 transition-all ease-in-out duration-300 font-medium min-w-[280px] text-center'; // Base classes
+            // Base classes for positioning and initial state (invisible and off-screen)
+            messageBox.className = 'fixed top-5 left-1/2 transform -translate-x-1/2 -translate-y-full p-4 rounded-md shadow-lg z-[1000] opacity-0 transition-all ease-in-out duration-300 font-medium min-w-[280px] text-center'; 
             
             if (type === 'success') {
                 messageBox.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-300');
@@ -178,17 +179,20 @@
                 messageBox.classList.add('bg-red-100', 'text-red-800', 'border', 'border-red-300');
             }
 
-            requestAnimationFrame(() => { // Ensure transition happens
-                messageBox.classList.add('show', '!opacity-100', '!translate-y-0');
+            // Trigger reflow to ensure transition applies from off-screen state
+            requestAnimationFrame(() => { 
+                messageBox.classList.add('show', '!opacity-100', '!translate-y-0'); // Classes to make it visible and slide in
             });
+
             if (messageBox.timeoutId) clearTimeout(messageBox.timeoutId);
             messageBox.timeoutId = setTimeout(() => {
-                messageBox.classList.remove('show', '!opacity-100', '!translate-y-0');
+                messageBox.classList.remove('show', '!opacity-100', '!translate-y-0'); // Slide out and hide
             }, duration);
         }
 
+        // --- Data Population and Rendering Functions ---
         function populateSitesDropdown(sites) {
-            siteSelect.innerHTML = '<option value="">Select a Site</option>';
+            siteSelect.innerHTML = '<option value="">Select a Site</option>'; // Clear before populating
             sites.forEach(site => {
                 const option = document.createElement('option');
                 option.value = site.id;
@@ -199,25 +203,42 @@
 
         async function fetchInitialCoordinatorData() {
             showLoading(true);
-            try {'
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
+            try {
+                // ==============================================================================
+                // <<< CRITICAL USER ACTION REQUIRED >>>
+                // REPLACE THE LINE BELOW WITH YOUR ACTUAL GOOGLE APPS SCRIPT WEB APP URL
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; 
+                // EXAMPLE: const SCRIPT_URL = 'https://script.google.com/macros/s/ABCDEFG12345/exec';
+                // Not replacing this placeholder will cause "Failed to parse URL" errors.
+                // ==============================================================================
+                
+                if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_GOES_HERE') {
+                    throw new Error("CRITICAL: Google Apps Script URL has not been set. Please replace 'YOUR_APPS_SCRIPT_URL_GOES_HERE' in the coordinator_app.html file with your deployed script URL.");
+                }
+
+                // Fetch sites and session info
                 const sitesResponse = await fetch(`${SCRIPT_URL}?action=getSites`);
-                if (!sitesResponse.ok) throw new Error(`Fetching sites: ${sitesResponse.statusText} (${sitesResponse.status})`);
+                if (!sitesResponse.ok) throw new Error(`Fetching sites failed: ${sitesResponse.statusText} (${sitesResponse.status})`);
                 const sitesData = await sitesResponse.json();
-                if (!sitesData || !sitesData.sites || !sitesData.siteSessionInfo) throw new Error("Invalid site data structure from server.");
+                if (!sitesData || typeof sitesData.sites === 'undefined' || typeof sitesData.siteSessionInfo === 'undefined') {
+                    throw new Error("Invalid site data structure received from the server.");
+                }
                 currentSiteData = sitesData;
                 populateSitesDropdown(sitesData.sites);
 
+                // Fetch master list of all people
                 const peopleResponse = await fetch(`${SCRIPT_URL}?action=getAllPeople`);
-                if (!peopleResponse.ok) throw new Error(`Fetching people: ${peopleResponse.statusText} (${peopleResponse.status})`);
+                if (!peopleResponse.ok) throw new Error(`Fetching master people list failed: ${peopleResponse.statusText} (${peopleResponse.status})`);
                 const peopleData = await peopleResponse.json();
-                if (!peopleData || !peopleData.allPeople) throw new Error("Invalid master people list data structure from server.");
+                if (!peopleData || typeof peopleData.allPeople === 'undefined') {
+                    throw new Error("Invalid master people list data structure received from the server.");
+                }
                 masterPeopleList = peopleData.allPeople;
                 
-                renderAvailablePeopleList(); 
+                renderAvailablePeopleList(); // Render initially (will be filtered if a site is pre-selected or based on default filters)
             } catch (error) {
-                console.error("Error fetching initial coordinator data:", error);
-                showMessage(`Initial data load failed: ${error.message}. Check console & Apps Script. Ensure URL is correct.`, 'error', 7000);
+                console.error("Error during initial coordinator data fetch:", error);
+                showMessage(`Initial data load failed: ${error.message}. Please check the console for more details and verify the Apps Script URL and deployment.`, 'error', 7000);
             } finally {
                 showLoading(false);
             }
@@ -225,12 +246,14 @@
         
         function createPersonListItem(person, listType) {
             const item = document.createElement('div');
-            item.className = 'person-item';
+            item.className = 'person-item'; // Base class
             item.dataset.id = person.id;
-            item.dataset.type = person.type;
+            item.dataset.type = person.type; 
             item.dataset.name = person.name; 
-            item.innerHTML = `<span class="truncate">${person.name}</span> <span class="text-xs px-1.5 py-0.5 rounded-full ${person.type === 'Volunteer' ? 'bg-blue-100 text-blue-700' : 'bg-green-100 text-green-700'}">${person.type.substring(0,1)}</span>`;
+            // Display name and a type indicator (V for Volunteer, P for Participant)
+            item.innerHTML = `<span class="truncate flex-grow">${person.name}</span> <span class="text-xs px-1.5 py-0.5 rounded-full ${person.type === 'Volunteer' ? 'bg-blue-100 text-blue-700' : 'bg-green-100 text-green-700'}">${person.type.substring(0,1)}</span>`;
 
+            // Click event to toggle selection state
             item.addEventListener('click', (e) => {
                 e.stopPropagation(); 
                 item.classList.toggle('selected');
@@ -245,64 +268,76 @@
         }
 
         function renderAvailablePeopleList() {
-            availablePeopleListDiv.innerHTML = '';
-            selectedAvailableIds.clear(); 
+            availablePeopleListDiv.innerHTML = ''; // Clear current list
+            selectedAvailableIds.clear(); // Clear selections when re-rendering
             
+            // Create a set of IDs for people already registered in the current session for quick lookup
             const registeredPersonIdsThisSession = new Set([
                 ...currentRegisteredPeople.volunteers.map(p => p.id),
                 ...currentRegisteredPeople.participants.map(p => p.id)
             ]);
 
+            // Filter master list: exclude those already registered for this session
             let filteredList = masterPeopleList.filter(p => !registeredPersonIdsThisSession.has(p.id));
 
+            // Apply type filter (Volunteer/Participant/All)
             if (currentAvailableFilter !== 'all') {
                 filteredList = filteredList.filter(p => p.type.toLowerCase() === currentAvailableFilter.toLowerCase());
             }
+            // Apply name filter text
             const filterText = filterAvailableInput.value.toLowerCase();
             if (filterText) {
                 filteredList = filteredList.filter(p => p.name.toLowerCase().includes(filterText));
             }
             
+            // Sort the filtered list alphabetically by name
             filteredList.sort((a,b) => a.name.localeCompare(b.name));
 
             if (filteredList.length === 0) {
-                availablePeopleListDiv.innerHTML = '<p class="text-gray-500 p-2 text-sm">No available people match criteria or all are registered for this session.</p>';
+                availablePeopleListDiv.innerHTML = '<p class="text-gray-500 p-2 text-sm">No available people match the current criteria, or all are registered for this session.</p>';
                 return;
             }
+            // Create and append list items
             filteredList.forEach(p => availablePeopleListDiv.appendChild(createPersonListItem(p, 'available')));
         }
 
         function renderRegisteredPeopleList() {
-            registeredPeopleListDiv.innerHTML = '';
-            selectedRegisteredIds.clear();
+            registeredPeopleListDiv.innerHTML = ''; // Clear current list
+            selectedRegisteredIds.clear(); // Clear selections when re-rendering
 
+            // Combine volunteers and participants registered for the current session
             let combinedRegistered = [
                 ...currentRegisteredPeople.volunteers.map(p => ({...p, type: 'Volunteer'})),
                 ...currentRegisteredPeople.participants.map(p => ({...p, type: 'Participant'}))
             ];
             
+            // Apply name filter text
             const filterText = filterRegisteredInput.value.toLowerCase();
             if (filterText) {
                  combinedRegistered = combinedRegistered.filter(p => p.name.toLowerCase().includes(filterText));
             }
+            // Sort the combined list alphabetically by name
             combinedRegistered.sort((a,b) => a.name.localeCompare(b.name));
 
             if (combinedRegistered.length === 0) {
-                 registeredPeopleListDiv.innerHTML = '<p class="text-gray-500 p-2 text-sm">No one currently registered for this session.</p>';
+                 registeredPeopleListDiv.innerHTML = '<p class="text-gray-500 p-2 text-sm">No one is currently registered for this session.</p>';
             } else {
+                // Create and append list items
                 combinedRegistered.forEach(p => registeredPeopleListDiv.appendChild(createPersonListItem(p, 'registered')));
             }
+            // After updating the registered list, always re-render the available list
+            // as people might have moved between lists.
             renderAvailablePeopleList(); 
         }
 
+        // --- Event Listeners for UI Interactions ---
         siteSelect.addEventListener('change', function() {
             currentSiteId = this.value;
-            managementSection.classList.add('hidden');
+            managementSection.classList.add('hidden'); // Hide management section until lists are loaded
             currentSessionId = null;
-            loadRegisteredBtn.disabled = true;
+            loadRegisteredBtn.disabled = true; // Disable load button
             sessionNameDisplay.textContent = "Select a site to see session";
             sessionNameDisplay.classList.add('text-gray-500');
-
 
             if (currentSiteId) {
                 const sessionInfo = currentSiteData.siteSessionInfo[currentSiteId];
@@ -310,7 +345,7 @@
                     sessionNameDisplay.textContent = sessionInfo.sessionName;
                     sessionNameDisplay.classList.remove('text-gray-500');
                     currentSessionId = sessionInfo.sessionId;
-                    loadRegisteredBtn.disabled = false;
+                    loadRegisteredBtn.disabled = false; // Enable load button
                 } else {
                     sessionNameDisplay.textContent = "No session defined for this site.";
                 }
@@ -319,49 +354,62 @@
 
         loadRegisteredBtn.addEventListener('click', async function() {
             if (!currentSessionId) {
-                showMessage("Please select a site with a defined session.", "error");
+                showMessage("Please select a site with a defined session first.", "error");
                 return;
             }
             showLoading(true);
-            selectedAvailableIds.clear();
+            selectedAvailableIds.clear(); // Clear selections before loading new lists
             selectedRegisteredIds.clear();
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
-                const response = await fetch(`${SCRIPT_URL}?action=getRegisteredAttendees&sessionId=${currentSessionId}`);
-                if (!response.ok) throw new Error(`Fetching registered list: ${response.statusText} (${response.status})`);
-                const data = await response.json();
-                if (data.volunteers === undefined || data.participants === undefined) {
-                     currentRegisteredPeople = { volunteers: [], participants: [] };
-                     throw new Error("Invalid data structure for registered attendees from server.");
+                // ==============================================================================
+                // <<< CRITICAL USER ACTION REQUIRED >>>
+                // ENSURE THE SCRIPT_URL CONSTANT HAS YOUR ACTUAL GOOGLE APPS SCRIPT URL
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; 
+                // ==============================================================================
+                if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_GOES_HERE') {
+                    throw new Error("CRITICAL: Google Apps Script URL is still a placeholder in loadRegisteredBtn. Please update it.");
                 }
-                currentRegisteredPeople = data;
+
+                const response = await fetch(`${SCRIPT_URL}?action=getRegisteredAttendees&sessionId=${currentSessionId}`);
+                if (!response.ok) throw new Error(`Fetching registered list failed: ${response.statusText} (${response.status})`);
+                const data = await response.json();
+                // Ensure the response structure is as expected
+                if (typeof data.volunteers === 'undefined' || typeof data.participants === 'undefined') {
+                     currentRegisteredPeople = { volunteers: [], participants: [] }; // Reset to empty on bad data
+                     throw new Error("Invalid data structure for registered attendees received from the server.");
+                }
+                currentRegisteredPeople = data; // Store the fetched registered people
                 
-                renderAvailablePeopleList();
-                renderRegisteredPeopleList();
-                managementSection.classList.remove('hidden');
-                showMessage("Lists loaded successfully.", "success");
+                renderAvailablePeopleList(); // Render the "Available People" list
+                renderRegisteredPeopleList(); // Render the "Registered for this Session" list
+                managementSection.classList.remove('hidden'); // Show the management section
+                showMessage("Registered lists loaded successfully.", "success");
             } catch (error) {
-                console.error("Error loading registered list:", error);
+                console.error("Error loading registered list for session:", error);
                 showMessage(`Error loading registered list: ${error.message}`, 'error', 5000);
-                currentRegisteredPeople = { volunteers: [], participants: [] };
-                renderAvailablePeopleList(); 
-                renderRegisteredPeopleList();
+                currentRegisteredPeople = { volunteers: [], participants: [] }; // Reset on error
+                renderAvailablePeopleList(); // Attempt to render available list even on error
+                renderRegisteredPeopleList(); // Render registered (likely empty)
             } finally {
                 showLoading(false);
             }
         });
         
+        // Event listener for filter buttons (All, Volunteers, Participants)
         availablePeopleListFilters.addEventListener('click', (e) => {
             if (e.target.tagName === 'BUTTON') {
+                // Update active state for filter buttons
                 availablePeopleListFilters.querySelectorAll('button').forEach(btn => btn.classList.remove('active'));
                 e.target.classList.add('active');
-                currentAvailableFilter = e.target.dataset.filter;
-                renderAvailablePeopleList();
+                currentAvailableFilter = e.target.dataset.filter; // Store current filter type
+                renderAvailablePeopleList(); // Re-render available list with new filter
             }
         });
+        // Event listeners for text input filters
         filterAvailableInput.addEventListener('input', () => renderAvailablePeopleList());
         filterRegisteredInput.addEventListener('input', () => renderRegisteredPeopleList());
 
+        // Event listener to add selected people to the registered list
         addSelectedBtn.addEventListener('click', () => {
             if (selectedAvailableIds.size === 0) {
                 showMessage("No one selected from 'Available People' list to add.", "error");
@@ -372,22 +420,24 @@
                 const personToAdd = masterPeopleList.find(p => p.id === id);
                 if (personToAdd) {
                     let alreadyExists = false;
+                    // Check if person is already in the respective registered list (volunteer or participant)
                     if (personToAdd.type === "Volunteer") {
                         alreadyExists = currentRegisteredPeople.volunteers.some(v => v.id === id);
                         if (!alreadyExists) currentRegisteredPeople.volunteers.push({id: personToAdd.id, name: personToAdd.name});
-                    } else { 
+                    } else { // Participant
                          alreadyExists = currentRegisteredPeople.participants.some(p => p.id === id);
                         if (!alreadyExists) currentRegisteredPeople.participants.push({id: personToAdd.id, name: personToAdd.name});
                     }
                     if(!alreadyExists) addedCount++;
                 }
             });
-            if(addedCount > 0) showMessage(`${addedCount} people added to registered list. Save changes to make it permanent.`, 'success', 2500);
-            else showMessage('Selected people already in registered list or not found in master.', 'error', 3000);
+            if(addedCount > 0) showMessage(`${addedCount} ${addedCount === 1 ? 'person' : 'people'} added to registered list. Remember to save changes.`, 'success', 2500);
+            else showMessage('Selected people might already be in the registered list or were not found in the master list.', 'error', 4000);
             
-            renderRegisteredPeopleList(); 
+            renderRegisteredPeopleList(); // Re-render both lists
         });
 
+        // Event listener to remove selected people from the registered list
         removeSelectedBtn.addEventListener('click', () => {
             if (selectedRegisteredIds.size === 0) {
                 showMessage("No one selected from 'Registered' list to remove.", "error");
@@ -397,59 +447,72 @@
             const initialVolunteerCount = currentRegisteredPeople.volunteers.length;
             const initialParticipantCount = currentRegisteredPeople.participants.length;
 
+            // Filter out selected people from volunteer and participant lists
             currentRegisteredPeople.volunteers = currentRegisteredPeople.volunteers.filter(p => !selectedRegisteredIds.has(p.id));
             currentRegisteredPeople.participants = currentRegisteredPeople.participants.filter(p => !selectedRegisteredIds.has(p.id));
             
             removedCount = (initialVolunteerCount - currentRegisteredPeople.volunteers.length) + (initialParticipantCount - currentRegisteredPeople.participants.length);
 
-            if(removedCount > 0) showMessage(`${removedCount} people removed from registered list. Save changes to make it permanent.`, 'success', 2500);
-
-            renderRegisteredPeopleList(); 
+            if(removedCount > 0) showMessage(`${removedCount} ${removedCount === 1 ? 'person' : 'people'} removed from registered list. Remember to save changes.`, 'success', 2500);
+            
+            renderRegisteredPeopleList(); // Re-render both lists
         });
 
+        // Event listener to save all changes to the Google Sheet
         saveChangesBtn.addEventListener('click', async function() {
             if (!currentSiteId || !currentSessionId) {
-                showMessage("Site or Session ID is missing. Cannot save.", "error");
+                showMessage("Site or Session ID is missing. Cannot save changes.", "error");
                 return;
             }
             
+            // Prepare payload for the Apps Script
             const payload = {
                 siteId: currentSiteId,
                 sessionId: currentSessionId,
+                // Pass full person objects including type, as expected by the updated Apps Script
                 registeredVolunteers: currentRegisteredPeople.volunteers.map(p => ({id: p.id, name: p.name, type: "Volunteer"})), 
                 registeredParticipants: currentRegisteredPeople.participants.map(p => ({id: p.id, name: p.name, type: "Participant"})) 
             };
 
             showLoading(true);
             try {
-                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; // IMPORTANT: Replace this
+                // ==============================================================================
+                // <<< CRITICAL USER ACTION REQUIRED >>>
+                // ENSURE THE SCRIPT_URL CONSTANT HAS YOUR ACTUAL GOOGLE APPS SCRIPT URL
+                const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzgsZu2n8pV9wfbUXHwoydDsYixgzbb6njdvlO82sYPdjPMtMKXsVmZcpvEmHhO_0iGcA/exec'; 
+                // ==============================================================================
+                if (SCRIPT_URL === 'YOUR_APPS_SCRIPT_URL_GOES_HERE') {
+                    throw new Error("CRITICAL: Google Apps Script URL is still a placeholder in saveChangesBtn. Please update it.");
+                }
+
                 const response = await fetch(SCRIPT_URL, {
                     method: 'POST',
                     headers: { 
-                        // Apps Script doPost expects the Content-Type for parsing e.postData.contents.
-                        // 'text/plain' is often safer for simple JSON, but 'application/json' should work if script handles it robustly.
                         'Content-Type': 'application/json' 
                     },
-                    body: JSON.stringify({ action: 'updateRegisteredAttendees', data: payload }) // Send action as part of the JSON body
+                    // The Apps Script expects an 'action' and 'data' property in the JSON body
+                    body: JSON.stringify({ action: 'updateRegisteredAttendees', data: payload }) 
                 });
                 if (!response.ok) {
-                     const errorData = await response.json().catch(() => ({ message: `HTTP error! Status: ${response.status}` }));
-                    throw new Error(errorData.message || `HTTP error! Status: ${response.status}`);
+                     // Try to get a more specific error message from the server if possible
+                     const errorData = await response.json().catch(() => ({ message: `Request failed with status: ${response.status}` }));
+                    throw new Error(errorData.message || `Request failed with status: ${response.status}`);
                 }
                 const result = await response.json();
                 if (result.success) {
-                    showMessage("Registered list updated successfully!", "success");
+                    showMessage("Registered list updated successfully on the server!", "success");
                 } else {
-                    throw new Error(result.message || "Unknown error updating list on server.");
+                    throw new Error(result.message || "An unknown error occurred while updating the list on the server.");
                 }
             } catch (error) {
-                console.error("Error saving changes:", error);
-                showMessage(`Error saving changes: ${error.message}. Check Apps Script logs.`, 'error', 6000);
+                console.error("Error saving changes to registered list:", error);
+                showMessage(`Error saving changes: ${error.message}. Please check the Apps Script logs.`, 'error', 6000);
             } finally {
                 showLoading(false);
             }
         });
 
+        // Initial App Load: Fetch sites and master people list
         document.addEventListener('DOMContentLoaded', fetchInitialCoordinatorData);
     </script>
 </body>
