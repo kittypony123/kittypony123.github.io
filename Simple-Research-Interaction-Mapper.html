@@ -1,0 +1,2132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Patient Interaction Mapper</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: #f5f6fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: white;
+            padding: 1rem 2rem;
+            border-bottom: 1px solid #e1e5e9;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: #3b82f6;
+            color: white;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .logo-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #6b7280;
+            margin-top: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: #3b82f6;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+        }
+
+        .btn-secondary {
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+        }
+
+        .btn-secondary:hover {
+            background: #e5e7eb;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        /* Research Metrics */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .metric {
+            background: #f8fafc;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #e2e8f0;
+        }
+
+        .metric-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+
+        .metric-label {
+            font-size: 12px;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Patient Selection */
+        .patient-selector {
+            background: #f0f9ff;
+            border: 1px solid #bae6fd;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .patient-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin-top: 1rem;
+        }
+
+        .patient-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 8px;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .patient-card:hover,
+        .patient-card.active {
+            border-color: #3b82f6;
+            background: #3b82f6;
+            color: white;
+        }
+
+        .patient-id {
+            font-weight: 600;
+            font-size: 13px;
+            margin-bottom: 2px;
+        }
+
+        .patient-info {
+            font-size: 11px;
+            opacity: 0.8;
+        }
+
+        /* Simple Tabs */
+        .tabs {
+            display: flex;
+            background: #f3f4f6;
+            border-radius: 8px;
+            padding: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 8px 12px;
+            text-align: center;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+            color: #6b7280;
+            transition: all 0.2s;
+        }
+
+        .tab.active {
+            background: white;
+            color: #3b82f6;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Forms */
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: 500;
+            color: #374151;
+            font-size: 14px;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: border-color 0.2s;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Lists */
+        .item-list {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .item {
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .item-meta {
+            font-size: 12px;
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+
+        .item-description {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .btn-small {
+            padding: 4px 8px;
+            font-size: 11px;
+        }
+
+        /* Timeline */
+        .timeline-container {
+            position: relative;
+            padding-left: 2rem;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #d1d5db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.5rem;
+            background: white;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -23px;
+            top: 16px;
+            width: 8px;
+            height: 8px;
+            background: #3b82f6;
+            border-radius: 50%;
+            border: 2px solid white;
+        }
+
+        .timeline-date {
+            font-size: 12px;
+            font-weight: 600;
+            color: #3b82f6;
+            margin-bottom: 4px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 4px;
+        }
+
+        .timeline-details {
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        /* Time indicators */
+        .time-badge {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 6px;
+            border-radius: 12px;
+            font-size: 10px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        /* Analytics Section */
+        .analytics-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .chart-container {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 1rem;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .chart-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        .empty-icon {
+            font-size: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Bulk Import Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            display: none;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-overlay.active {
+            display: flex !important;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            max-width: 800px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            transform: scale(0.95);
+            transition: transform 0.3s ease;
+        }
+
+        .modal-overlay.active .modal {
+            transform: scale(1);
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .modal-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1f2937;
+        }
+
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #6b7280;
+            padding: 0;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+
+        .modal-close:hover {
+            background: #f3f4f6;
+            color: #374151;
+        }
+
+        .import-section {
+            margin-bottom: 2rem;
+        }
+
+        .import-section h4 {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .file-drop-zone {
+            border: 2px dashed #d1d5db;
+            border-radius: 8px;
+            padding: 2rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f9fafb;
+        }
+
+        .file-drop-zone:hover,
+        .file-drop-zone.dragover {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+
+        .file-drop-icon {
+            font-size: 48px;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+        }
+
+        .file-drop-text {
+            color: #6b7280;
+            margin-bottom: 0.5rem;
+        }
+
+        .file-drop-subtext {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .file-input {
+            display: none;
+        }
+
+        .import-preview {
+            margin-top: 1.5rem;
+        }
+
+        .preview-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            display: block;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+        }
+
+        .preview-table thead {
+            background: #f3f4f6;
+            position: sticky;
+            top: 0;
+        }
+
+        .preview-table th,
+        .preview-table td {
+            border: 1px solid #e5e7eb;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .preview-table th {
+            font-weight: 600;
+            color: #374151;
+        }
+
+        .sample-templates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .template-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .template-card:hover {
+            border-color: #3b82f6;
+            background: #f0f9ff;
+        }
+
+        .template-title {
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+
+        .template-description {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 1rem;
+        }
+
+        .import-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            border-radius: 6px;
+            display: none;
+        }
+
+        .import-status.success {
+            background: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            color: #166534;
+        }
+
+        .import-status.error {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            color: #dc2626;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: #3b82f6;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .analytics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .modal {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .sample-templates {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">📊</div>
+                <div>
+                    <div class="logo-text">Research Interaction Mapper</div>
+                    <div class="logo-subtitle">Patient Journey & Temporal Analysis</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="loadDemo()">📋 Load Demo</button>
+                <button class="btn btn-secondary" onclick="showBulkImport()">📥 Bulk Import</button>
+                <button class="btn btn-secondary" onclick="exportData()">💾 Export</button>
+                <button class="btn btn-primary" onclick="generateReport()">📈 Report</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">📊 Data Collection</h2>
+
+            <!-- Research Metrics -->
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-number" id="totalPatients">0</div>
+                    <div class="metric-label">Patients</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number" id="totalInteractions">0</div>
+                    <div class="metric-label">Interactions</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number" id="avgDuration">0d</div>
+                    <div class="metric-label">Avg Duration</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-number" id="completionRate">0%</div>
+                    <div class="metric-label">Completion</div>
+                </div>
+            </div>
+
+            <!-- Patient Selector -->
+            <div class="patient-selector">
+                <div style="font-weight: 600; margin-bottom: 8px;">Select Patient:</div>
+                <div class="patient-grid" id="patientGrid">
+                    <div class="patient-card active" data-patient="new" onclick="selectPatient('new')">
+                        <div class="patient-id">+ New</div>
+                        <div class="patient-info">Add Patient</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('patient')">👤 Patient</div>
+                <div class="tab" onclick="switchTab('interactions')">🏥 Interactions</div>
+                <div class="tab" onclick="switchTab('outcomes')">📊 Outcomes</div>
+                <div class="tab" onclick="switchTab('timeline')">📅 Timeline</div>
+            </div>
+
+            <!-- Patient Tab -->
+            <div id="patient-tab" class="tab-content active">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Patient ID</label>
+                        <input type="text" id="patientId" class="form-input" placeholder="P001, PT-001, etc.">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Enrollment Date</label>
+                        <input type="date" id="enrollmentDate" class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Age Group</label>
+                        <select id="ageGroup" class="form-select">
+                            <option value="">Select age group</option>
+                            <option value="18-25">18-25 years</option>
+                            <option value="26-35">26-35 years</option>
+                            <option value="36-45">36-45 years</option>
+                            <option value="46-55">46-55 years</option>
+                            <option value="56-65">56-65 years</option>
+                            <option value="66+">66+ years</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Study Group</label>
+                        <select id="studyGroup" class="form-select">
+                            <option value="">Select group</option>
+                            <option value="Control">Control Group</option>
+                            <option value="Intervention">Intervention Group</option>
+                            <option value="Comparison">Comparison Group</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Primary Condition</label>
+                    <input type="text" id="primaryCondition" class="form-input" placeholder="e.g., Type 2 Diabetes">
+                </div>
+                <button class="btn btn-primary" onclick="addPatient()">👤 Add/Update Patient</button>
+            </div>
+
+            <!-- Interactions Tab -->
+            <div id="interactions-tab" class="tab-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" id="interactionDate" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Time</label>
+                        <input type="time" id="interactionTime" class="form-input">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Type</label>
+                        <select id="interactionType" class="form-select">
+                            <option value="">Select type</option>
+                            <option value="Initial Visit">Initial Visit</option>
+                            <option value="Follow-up">Follow-up</option>
+                            <option value="Phone Call">Phone Call</option>
+                            <option value="Telemedicine">Telemedicine</option>
+                            <option value="Test/Lab">Test/Lab</option>
+                            <option value="Emergency">Emergency</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Duration (min)</label>
+                        <input type="number" id="duration" class="form-input" placeholder="30">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Provider</label>
+                    <input type="text" id="provider" class="form-input" placeholder="Dr. Smith, Nurse Johnson">
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Notes</label>
+                    <textarea id="interactionNotes" class="form-textarea" placeholder="What happened during this interaction?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addInteraction()">🏥 Add Interaction</button>
+                <div class="item-list" id="interactionsList"></div>
+            </div>
+
+            <!-- Outcomes Tab -->
+            <div id="outcomes-tab" class="tab-content">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Date</label>
+                        <input type="date" id="outcomeDate" class="form-input">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Metric</label>
+                        <input type="text" id="outcomeMetric" class="form-input" placeholder="Blood Pressure, HbA1c">
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label">Value</label>
+                        <input type="text" id="outcomeValue" class="form-input" placeholder="120/80, 7.2%">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Target</label>
+                        <input type="text" id="targetValue" class="form-input" placeholder="Target value">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Notes</label>
+                    <textarea id="outcomeNotes" class="form-textarea" placeholder="Clinical notes, observations"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addOutcome()">📊 Add Outcome</button>
+                <div class="item-list" id="outcomesList"></div>
+            </div>
+
+            <!-- Timeline Tab -->
+            <div id="timeline-tab" class="tab-content">
+                <div class="timeline-container" id="patientTimeline">
+                    <div class="empty-state">
+                        <div class="empty-icon">📅</div>
+                        <p>Add interactions to see patient timeline</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">📈 Analytics</h2>
+
+            <div class="analytics-grid">
+                <div class="chart-container">
+                    <div class="chart-title">Interaction Patterns</div>
+                    <div id="interactionChart" class="empty-state">
+                        <div class="empty-icon">📊</div>
+                        <p>Charts appear with data</p>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <div class="chart-title">Outcome Trends</div>
+                    <div id="outcomeChart" class="empty-state">
+                        <div class="empty-icon">📈</div>
+                        <p>Charts appear with data</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chart-container">
+                <div class="chart-title">Study Progress Overview</div>
+                <div id="studyOverview" class="empty-state">
+                    <div class="empty-icon">🔍</div>
+                    <p>Load demo data or add patients to see analytics</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Bulk Import Modal -->
+    <div class="modal-overlay" id="importModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">📥 Bulk Import Data</h3>
+                <button class="modal-close" onclick="closeBulkImport()">×</button>
+            </div>
+
+            <div class="import-section">
+                <h4>📁 Upload File</h4>
+                <div class="file-drop-zone" onclick="document.getElementById('fileInput').click()" 
+                     ondrop="handleFileDrop(event)" ondragover="handleDragOver(event)" ondragleave="handleDragLeave(event)">
+                    <div class="file-drop-icon">📄</div>
+                    <div class="file-drop-text">Click to select or drop CSV/Excel file here</div>
+                    <div class="file-drop-subtext">Supports .csv, .xlsx, .xls files up to 10MB</div>
+                </div>
+                <input type="file" id="fileInput" class="file-input" accept=".csv,.xlsx,.xls" onchange="handleFileSelect(event)">
+                
+                <div class="import-preview" id="importPreview" style="display: none;">
+                    <h4>📊 Data Preview</h4>
+                    <div id="previewContent"></div>
+                    <div class="form-row" style="margin-top: 1rem;">
+                        <div class="form-group">
+                            <label class="form-label">Data Type</label>
+                            <select id="importDataType" class="form-select">
+                                <option value="patients">👤 Patients</option>
+                                <option value="interactions">🏥 Interactions</option>
+                                <option value="outcomes">📊 Outcomes</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Has Header Row</label>
+                            <select id="hasHeaders" class="form-select">
+                                <option value="true">Yes</option>
+                                <option value="false">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <button class="btn btn-primary" onclick="processImport()">📥 Import Data</button>
+                        <button class="btn btn-secondary" onclick="clearImport()">🔄 Clear</button>
+                    </div>
+                </div>
+
+                <div class="import-status" id="importStatus"></div>
+                <div class="progress-bar-container" id="importProgress" style="display: none;">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+            </div>
+
+            <div class="import-section">
+                <h4>📋 Sample Templates</h4>
+                <p style="color: #6b7280; font-size: 14px; margin-bottom: 1rem;">Download sample CSV templates to get started:</p>
+                <div class="sample-templates">
+                    <div class="template-card" onclick="downloadTemplate('patients')">
+                        <div class="template-title">👤 Patients Template</div>
+                        <div class="template-description">Patient demographics, enrollment dates, study groups</div>
+                        <button class="btn btn-secondary btn-small">📥 Download CSV</button>
+                    </div>
+                    <div class="template-card" onclick="downloadTemplate('interactions')">
+                        <div class="template-title">🏥 Interactions Template</div>
+                        <div class="template-description">Medical visits, calls, appointments with timestamps</div>
+                        <button class="btn btn-secondary btn-small">📥 Download CSV</button>
+                    </div>
+                    <div class="template-card" onclick="downloadTemplate('outcomes')">
+                        <div class="template-title">📊 Outcomes Template</div>
+                        <div class="template-description">Clinical measurements, metrics, target values</div>
+                        <button class="btn btn-secondary btn-small">📥 Download CSV</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="import-section">
+                <h4>ℹ️ Import Guidelines</h4>
+                <ul style="color: #6b7280; font-size: 13px; line-height: 1.6; margin-left: 1.5rem;">
+                    <li>CSV files should be UTF-8 encoded</li>
+                    <li>Dates should be in YYYY-MM-DD format</li>
+                    <li>Times should be in HH:MM format (24-hour)</li>
+                    <li>Patient IDs must match existing patients for interactions/outcomes</li>
+                    <li>Empty cells will be treated as blank values</li>
+                    <li>Duplicate entries will be skipped</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple data storage
+        let researchData = {
+            patients: [],
+            interactions: [],
+            outcomes: [],
+            currentPatient: null
+        };
+
+        let selectedPatientId = 'new';
+
+        // Load demo data
+        function loadDemo() {
+            const options = prompt('Select demo data size:\n1 - Small (3 patients)\n2 - Large (1000 patients)', '1');
+            
+            if (options === '1') {
+                loadSmallDemo();
+            } else if (options === '2') {
+                loadLargeDemo();
+            }
+        }
+
+        function loadSmallDemo() {
+            if (confirm('Load small sample research data (3 patients)?')) {
+                // Sample patients
+                researchData.patients = [
+                    {
+                        id: 'P001',
+                        enrollmentDate: '2024-01-15',
+                        ageGroup: '56-65',
+                        studyGroup: 'Intervention',
+                        primaryCondition: 'Type 2 Diabetes'
+                    },
+                    {
+                        id: 'P002',
+                        enrollmentDate: '2024-01-20',
+                        ageGroup: '46-55',
+                        studyGroup: 'Control',
+                        primaryCondition: 'Hypertension'
+                    },
+                    {
+                        id: 'P003',
+                        enrollmentDate: '2024-02-01',
+                        ageGroup: '36-45',
+                        studyGroup: 'Intervention',
+                        primaryCondition: 'Anxiety'
+                    }
+                ];
+
+                // Sample interactions with time data
+                researchData.interactions = [
+                    {
+                        id: 'int_001',
+                        patientId: 'P001',
+                        interactionDate: '2024-01-15',
+                        interactionTime: '09:00',
+                        interactionType: 'Initial Visit',
+                        duration: 45,
+                        provider: 'Dr. Martinez',
+                        interactionNotes: 'Initial diabetes consultation. Started on metformin. Diet counseling provided.'
+                    },
+                    {
+                        id: 'int_002',
+                        patientId: 'P001',
+                        interactionDate: '2024-02-15',
+                        interactionTime: '14:30',
+                        interactionType: 'Follow-up',
+                        duration: 30,
+                        provider: 'Dr. Martinez',
+                        interactionNotes: 'Good response to metformin. HbA1c improved. Continue current regimen.'
+                    },
+                    {
+                        id: 'int_003',
+                        patientId: 'P001',
+                        interactionDate: '2024-03-01',
+                        interactionTime: '10:00',
+                        interactionType: 'Phone Call',
+                        duration: 15,
+                        provider: 'Nurse Thompson',
+                        interactionNotes: 'Medication adherence check. Patient reports good compliance.'
+                    },
+                    {
+                        id: 'int_004',
+                        patientId: 'P002',
+                        interactionDate: '2024-01-20',
+                        interactionTime: '11:15',
+                        interactionType: 'Initial Visit',
+                        duration: 40,
+                        provider: 'Dr. Chen',
+                        interactionNotes: 'Hypertension evaluation. Started on lisinopril. Home BP monitoring.'
+                    },
+                    {
+                        id: 'int_005',
+                        patientId: 'P002',
+                        interactionDate: '2024-02-20',
+                        interactionTime: '15:45',
+                        interactionType: 'Follow-up',
+                        duration: 25,
+                        provider: 'Dr. Chen',
+                        interactionNotes: 'BP well controlled. Continue current medication.'
+                    }
+                ];
+
+                // Sample outcomes
+                researchData.outcomes = [
+                    {
+                        id: 'out_001',
+                        patientId: 'P001',
+                        outcomeDate: '2024-02-15',
+                        outcomeMetric: 'HbA1c',
+                        outcomeValue: '7.2%',
+                        targetValue: '<7%',
+                        outcomeNotes: 'Improved from baseline 8.5%. Continue current treatment.'
+                    },
+                    {
+                        id: 'out_002',
+                        patientId: 'P001',
+                        outcomeDate: '2024-03-15',
+                        outcomeMetric: 'HbA1c',
+                        outcomeValue: '6.8%',
+                        targetValue: '<7%',
+                        outcomeNotes: 'Target achieved. Excellent progress.'
+                    },
+                    {
+                        id: 'out_003',
+                        patientId: 'P002',
+                        outcomeDate: '2024-02-20',
+                        outcomeMetric: 'Blood Pressure',
+                        outcomeValue: '128/82',
+                        targetValue: '<130/80',
+                        outcomeNotes: 'Good response to ACE inhibitor.'
+                    }
+                ];
+
+                updateAll();
+                selectPatient('P001');
+                alert('Demo data loaded! 3 patients with interaction timelines.');
+            }
+        }
+
+        function loadLargeDemo() {
+            if (confirm('Load large demo dataset (1000 patients)? This may take a moment...')) {
+                // Show loading message
+                const originalText = document.querySelector('[onclick="loadDemo()"]').textContent;
+                document.querySelector('[onclick="loadDemo()"]').textContent = '⏳ Loading...';
+                
+                setTimeout(() => {
+                    generateLargeDataset();
+                    document.querySelector('[onclick="loadDemo()"]').textContent = originalText;
+                }, 100);
+            }
+        }
+
+        function generateLargeDataset() {
+            console.log('Generating large dataset...');
+            
+            // Clear existing data
+            researchData.patients = [];
+            researchData.interactions = [];
+            researchData.outcomes = [];
+
+            // Patient templates
+            const ageGroups = ['18-25', '26-35', '36-45', '46-55', '56-65', '66+'];
+            const studyGroups = ['Control', 'Intervention', 'Comparison'];
+            const conditions = [
+                'Type 2 Diabetes', 'Hypertension', 'Anxiety', 'Depression', 'COPD',
+                'Heart Disease', 'Arthritis', 'Obesity', 'Asthma', 'Migraine',
+                'Chronic Pain', 'Sleep Apnea', 'Stroke Recovery', 'Cancer Treatment',
+                'Kidney Disease', 'Liver Disease', 'Thyroid Disorder', 'Osteoporosis'
+            ];
+
+            const interactionTypes = [
+                'Initial Visit', 'Follow-up', 'Phone Call', 'Telemedicine', 
+                'Test/Lab', 'Emergency', 'Consultation', 'Procedure'
+            ];
+
+            const providers = [
+                'Dr. Smith', 'Dr. Johnson', 'Dr. Williams', 'Dr. Brown', 'Dr. Jones',
+                'Dr. Garcia', 'Dr. Miller', 'Dr. Davis', 'Dr. Rodriguez', 'Dr. Martinez',
+                'Nurse Thompson', 'Nurse Wilson', 'Nurse Anderson', 'Nurse Taylor',
+                'Dr. Lee', 'Dr. Walker', 'Dr. Hall', 'Dr. Allen', 'Dr. Young'
+            ];
+
+            const outcomes = [
+                'Blood Pressure', 'HbA1c', 'Cholesterol', 'Weight', 'BMI',
+                'Heart Rate', 'Blood Sugar', 'Pain Scale', 'Depression Score',
+                'Anxiety Level', 'Sleep Quality', 'Exercise Minutes', 'Steps/Day'
+            ];
+
+            // Generate 1000 patients
+            for (let i = 1; i <= 1000; i++) {
+                const patientId = 'P' + String(i).padStart(4, '0');
+                const enrollmentDate = getRandomDate('2023-01-01', '2024-07-01');
+                
+                const patient = {
+                    id: patientId,
+                    enrollmentDate: enrollmentDate,
+                    ageGroup: getRandomItem(ageGroups),
+                    studyGroup: getRandomItem(studyGroups),
+                    primaryCondition: getRandomItem(conditions)
+                };
+                
+                researchData.patients.push(patient);
+
+                // Generate 2-8 interactions per patient
+                const numInteractions = getRandomInt(2, 8);
+                let lastDate = new Date(enrollmentDate);
+                
+                for (let j = 0; j < numInteractions; j++) {
+                    // Space interactions 1-60 days apart
+                    lastDate = new Date(lastDate.getTime() + getRandomInt(1, 60) * 24 * 60 * 60 * 1000);
+                    
+                    if (lastDate > new Date()) break; // Don't create future interactions
+                    
+                    const interaction = {
+                        id: 'int_' + patientId + '_' + j,
+                        patientId: patientId,
+                        interactionDate: lastDate.toISOString().split('T')[0],
+                        interactionTime: getRandomTime(),
+                        interactionType: j === 0 ? 'Initial Visit' : getRandomItem(interactionTypes),
+                        duration: getRandomInt(15, 90),
+                        provider: getRandomItem(providers),
+                        interactionNotes: generateInteractionNote(patient.primaryCondition)
+                    };
+                    
+                    researchData.interactions.push(interaction);
+                }
+
+                // Generate 1-4 outcomes per patient
+                const numOutcomes = getRandomInt(1, 4);
+                for (let k = 0; k < numOutcomes; k++) {
+                    const outcomeDate = getRandomDateBetween(enrollmentDate, new Date().toISOString().split('T')[0]);
+                    const metric = getRandomItem(outcomes);
+                    
+                    const outcome = {
+                        id: 'out_' + patientId + '_' + k,
+                        patientId: patientId,
+                        outcomeDate: outcomeDate,
+                        outcomeMetric: metric,
+                        outcomeValue: generateOutcomeValue(metric),
+                        targetValue: generateTargetValue(metric),
+                        outcomeNotes: generateOutcomeNote(metric)
+                    };
+                    
+                    researchData.outcomes.push(outcome);
+                }
+
+                // Update progress for every 100 patients
+                if (i % 100 === 0) {
+                    console.log(`Generated ${i} patients...`);
+                }
+            }
+
+            updateAll();
+            selectPatient('P0001');
+            
+            alert(`Large demo dataset loaded!\n\n• ${researchData.patients.length} patients\n• ${researchData.interactions.length} interactions\n• ${researchData.outcomes.length} outcomes\n\nThis represents a realistic research study dataset.`);
+        }
+
+        // Helper functions for data generation
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        function getRandomItem(array) {
+            return array[Math.floor(Math.random() * array.length)];
+        }
+
+        function getRandomDate(start, end) {
+            const startDate = new Date(start);
+            const endDate = new Date(end);
+            const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime());
+            return new Date(randomTime).toISOString().split('T')[0];
+        }
+
+        function getRandomDateBetween(start, end) {
+            return getRandomDate(start, end);
+        }
+
+        function getRandomTime() {
+            const hours = String(getRandomInt(8, 17)).padStart(2, '0');
+            const minutes = String(getRandomInt(0, 59)).padStart(2, '0');
+            return `${hours}:${minutes}`;
+        }
+
+        function generateInteractionNote(condition) {
+            const notes = {
+                'Type 2 Diabetes': [
+                    'Blood glucose levels reviewed. Medication adherence discussed.',
+                    'Dietary counseling provided. HbA1c trending downward.',
+                    'Foot examination completed. No complications noted.',
+                    'Insulin dosage adjusted based on recent readings.'
+                ],
+                'Hypertension': [
+                    'Blood pressure readings reviewed. Medication effective.',
+                    'Lifestyle modifications discussed. Exercise plan updated.',
+                    'No side effects from current antihypertensive medication.',
+                    'Home monitoring compliance excellent.'
+                ],
+                'Anxiety': [
+                    'Anxiety levels assessed using GAD-7 scale.',
+                    'Coping strategies discussed. Therapy referral made.',
+                    'Medication adjustment made to reduce side effects.',
+                    'Patient reports improvement in sleep quality.'
+                ],
+                'Depression': [
+                    'Depression screening completed using PHQ-9.',
+                    'Therapy sessions showing positive results.',
+                    'Medication compliance reviewed and reinforced.',
+                    'Social support systems strengthened.'
+                ]
+            };
+            
+            const conditionNotes = notes[condition] || [
+                'Routine follow-up appointment completed successfully.',
+                'Patient status reviewed. Treatment plan updated.',
+                'No adverse events reported since last visit.',
+                'Continued monitoring recommended.'
+            ];
+            
+            return getRandomItem(conditionNotes);
+        }
+
+        function generateOutcomeValue(metric) {
+            const values = {
+                'Blood Pressure': `${getRandomInt(110, 160)}/${getRandomInt(70, 100)}`,
+                'HbA1c': `${(Math.random() * 4 + 5).toFixed(1)}%`,
+                'Cholesterol': `${getRandomInt(150, 280)} mg/dL`,
+                'Weight': `${getRandomInt(120, 250)} lbs`,
+                'BMI': `${(Math.random() * 15 + 18).toFixed(1)}`,
+                'Heart Rate': `${getRandomInt(60, 100)} bpm`,
+                'Blood Sugar': `${getRandomInt(80, 200)} mg/dL`,
+                'Pain Scale': `${getRandomInt(1, 10)}/10`,
+                'Depression Score': `${getRandomInt(0, 21)}`,
+                'Anxiety Level': `${getRandomInt(0, 15)}`,
+                'Sleep Quality': `${getRandomInt(1, 10)}/10`,
+                'Exercise Minutes': `${getRandomInt(0, 300)} min/week`,
+                'Steps/Day': `${getRandomInt(2000, 15000)} steps`
+            };
+            
+            return values[metric] || `${getRandomInt(1, 100)}`;
+        }
+
+        function generateTargetValue(metric) {
+            const targets = {
+                'Blood Pressure': '<130/80',
+                'HbA1c': '<7%',
+                'Cholesterol': '<200 mg/dL',
+                'Weight': 'Patient-specific',
+                'BMI': '18.5-24.9',
+                'Heart Rate': '60-100 bpm',
+                'Blood Sugar': '80-130 mg/dL',
+                'Pain Scale': '<4/10',
+                'Depression Score': '<5',
+                'Anxiety Level': '<8',
+                'Sleep Quality': '>7/10',
+                'Exercise Minutes': '>150 min/week',
+                'Steps/Day': '>8000 steps'
+            };
+            
+            return targets[metric] || 'Target range';
+        }
+
+        function generateOutcomeNote(metric) {
+            const notes = [
+                'Within normal range for patient demographics.',
+                'Improvement noted since last measurement.',
+                'Trending in positive direction with current treatment.',
+                'Requires continued monitoring and adjustment.',
+                'Patient reports feeling better with current levels.',
+                'Medication adjustment may be needed next visit.'
+            ];
+            
+            return getRandomItem(notes);
+        }
+
+        // Patient management
+        function selectPatient(patientId) {
+            selectedPatientId = patientId;
+            updatePatientGrid();
+            
+            if (patientId !== 'new') {
+                const patient = researchData.patients.find(p => p.id === patientId);
+                if (patient) {
+                    document.getElementById('patientId').value = patient.id;
+                    document.getElementById('enrollmentDate').value = patient.enrollmentDate;
+                    document.getElementById('ageGroup').value = patient.ageGroup;
+                    document.getElementById('studyGroup').value = patient.studyGroup;
+                    document.getElementById('primaryCondition').value = patient.primaryCondition;
+                }
+                updateLists();
+                updateTimeline();
+            } else {
+                clearPatientForm();
+            }
+        }
+
+        function clearPatientForm() {
+            document.getElementById('patientId').value = '';
+            document.getElementById('enrollmentDate').value = '';
+            document.getElementById('ageGroup').value = '';
+            document.getElementById('studyGroup').value = '';
+            document.getElementById('primaryCondition').value = '';
+        }
+
+        function updatePatientGrid() {
+            const grid = document.getElementById('patientGrid');
+            grid.innerHTML = `
+                <div class="patient-card ${selectedPatientId === 'new' ? 'active' : ''}" data-patient="new" onclick="selectPatient('new')">
+                    <div class="patient-id">+ New</div>
+                    <div class="patient-info">Add Patient</div>
+                </div>
+            `;
+
+            researchData.patients.forEach(patient => {
+                const interactionCount = researchData.interactions.filter(i => i.patientId === patient.id).length;
+                const card = document.createElement('div');
+                card.className = `patient-card ${selectedPatientId === patient.id ? 'active' : ''}`;
+                card.onclick = () => selectPatient(patient.id);
+                card.innerHTML = `
+                    <div class="patient-id">${patient.id}</div>
+                    <div class="patient-info">${patient.ageGroup} • ${interactionCount} visits</div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+            // Add active class to selected tab and content
+            event.target.classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+        }
+
+        // Add patient
+        function addPatient() {
+            const patientId = document.getElementById('patientId').value.trim();
+            const enrollmentDate = document.getElementById('enrollmentDate').value;
+            const ageGroup = document.getElementById('ageGroup').value;
+            const studyGroup = document.getElementById('studyGroup').value;
+            const primaryCondition = document.getElementById('primaryCondition').value.trim();
+
+            if (!patientId || !enrollmentDate) {
+                alert('Please provide Patient ID and Enrollment Date');
+                return;
+            }
+
+            const existingIndex = researchData.patients.findIndex(p => p.id === patientId);
+            const patient = {
+                id: patientId,
+                enrollmentDate,
+                ageGroup,
+                studyGroup,
+                primaryCondition
+            };
+
+            if (existingIndex >= 0) {
+                researchData.patients[existingIndex] = patient;
+            } else {
+                researchData.patients.push(patient);
+            }
+
+            selectedPatientId = patientId;
+            updateAll();
+        }
+
+        // Add interaction
+        function addInteraction() {
+            if (selectedPatientId === 'new') {
+                alert('Please select a patient first');
+                return;
+            }
+
+            const interactionDate = document.getElementById('interactionDate').value;
+            const interactionTime = document.getElementById('interactionTime').value;
+            const interactionType = document.getElementById('interactionType').value;
+            const duration = document.getElementById('duration').value;
+            const provider = document.getElementById('provider').value.trim();
+            const interactionNotes = document.getElementById('interactionNotes').value.trim();
+
+            if (!interactionDate || !interactionType) {
+                alert('Please provide date and interaction type');
+                return;
+            }
+
+            const interaction = {
+                id: 'int_' + Date.now(),
+                patientId: selectedPatientId,
+                interactionDate,
+                interactionTime,
+                interactionType,
+                duration: parseInt(duration) || 0,
+                provider,
+                interactionNotes
+            };
+
+            researchData.interactions.push(interaction);
+            
+            // Clear form
+            ['interactionDate', 'interactionTime', 'interactionType', 'duration', 'provider', 'interactionNotes'].forEach(id => {
+                document.getElementById(id).value = '';
+            });
+            
+            updateAll();
+        }
+
+        // Add outcome
+        function addOutcome() {
+            if (selectedPatientId === 'new') {
+                alert('Please select a patient first');
+                return;
+            }
+
+            const outcomeDate = document.getElementById('outcomeDate').value;
+            const outcomeMetric = document.getElementById('outcomeMetric').value.trim();
+            const outcomeValue = document.getElementById('outcomeValue').value.trim();
+            const targetValue = document.getElementById('targetValue').value.trim();
+            const outcomeNotes = document.getElementById('outcomeNotes').value.trim();
+
+            if (!outcomeDate || !outcomeMetric || !outcomeValue) {
+                alert('Please provide date, metric, and value');
+                return;
+            }
+
+            const outcome = {
+                id: 'out_' + Date.now(),
+                patientId: selectedPatientId,
+                outcomeDate,
+                outcomeMetric,
+                outcomeValue,
+                targetValue,
+                outcomeNotes
+            };
+
+            researchData.outcomes.push(outcome);
+            
+            // Clear form
+            ['outcomeDate', 'outcomeMetric', 'outcomeValue', 'targetValue', 'outcomeNotes'].forEach(id => {
+                document.getElementById(id).value = '';
+            });
+            
+            updateAll();
+        }
+
+        // Update lists
+        function updateLists() {
+            updateInteractionsList();
+            updateOutcomesList();
+        }
+
+        function updateInteractionsList() {
+            const container = document.getElementById('interactionsList');
+            container.innerHTML = '';
+
+            const patientInteractions = researchData.interactions.filter(i => i.patientId === selectedPatientId);
+            
+            patientInteractions.forEach(interaction => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                const date = new Date(interaction.interactionDate).toLocaleDateString();
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${interaction.interactionType}</div>
+                        <div class="item-meta">${date} ${interaction.interactionTime ? '• ' + interaction.interactionTime : ''} • ${interaction.provider}
+                            ${interaction.duration ? `<span class="time-badge">${interaction.duration}min</span>` : ''}
+                        </div>
+                        <div class="item-description">${interaction.interactionNotes}</div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeInteraction('${interaction.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        function updateOutcomesList() {
+            const container = document.getElementById('outcomesList');
+            container.innerHTML = '';
+
+            const patientOutcomes = researchData.outcomes.filter(o => o.patientId === selectedPatientId);
+            
+            patientOutcomes.forEach(outcome => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                const date = new Date(outcome.outcomeDate).toLocaleDateString();
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${outcome.outcomeMetric}: ${outcome.outcomeValue}</div>
+                        <div class="item-meta">${date} • Target: ${outcome.targetValue}</div>
+                        <div class="item-description">${outcome.outcomeNotes}</div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeOutcome('${outcome.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Update timeline
+        function updateTimeline() {
+            const container = document.getElementById('patientTimeline');
+            
+            if (selectedPatientId === 'new') {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📅</div>
+                        <p>Select a patient to see timeline</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Combine interactions and outcomes
+            const events = [];
+            
+            researchData.interactions.filter(i => i.patientId === selectedPatientId).forEach(interaction => {
+                events.push({
+                    date: interaction.interactionDate,
+                    time: interaction.interactionTime,
+                    type: 'interaction',
+                    title: interaction.interactionType,
+                    details: `${interaction.provider} • ${interaction.duration}min`,
+                    description: interaction.interactionNotes
+                });
+            });
+
+            researchData.outcomes.filter(o => o.patientId === selectedPatientId).forEach(outcome => {
+                events.push({
+                    date: outcome.outcomeDate,
+                    time: '',
+                    type: 'outcome',
+                    title: `${outcome.outcomeMetric}: ${outcome.outcomeValue}`,
+                    details: `Target: ${outcome.targetValue}`,
+                    description: outcome.outcomeNotes
+                });
+            });
+
+            // Sort by date
+            events.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+            if (events.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-icon">📅</div>
+                        <p>Add interactions or outcomes to see timeline</p>
+                    </div>
+                `;
+                return;
+            }
+
+            let timelineHTML = '<div class="timeline-line"></div>';
+            
+            events.forEach(event => {
+                const date = new Date(event.date).toLocaleDateString();
+                timelineHTML += `
+                    <div class="timeline-item">
+                        <div class="timeline-date">${date} ${event.time ? '• ' + event.time : ''}</div>
+                        <div class="timeline-title">${event.title}</div>
+                        <div class="timeline-details">${event.details}</div>
+                        ${event.description ? `<div style="margin-top: 8px; font-size: 13px; color: #6b7280;">${event.description}</div>` : ''}
+                    </div>
+                `;
+            });
+
+            container.innerHTML = timelineHTML;
+        }
+
+        // Update metrics
+        function updateMetrics() {
+            document.getElementById('totalPatients').textContent = researchData.patients.length;
+            document.getElementById('totalInteractions').textContent = researchData.interactions.length;
+            
+            // Calculate average duration (simplified)
+            const avgDuration = researchData.patients.length > 0 ? 
+                Math.round(researchData.interactions.length / researchData.patients.length * 30) : 0;
+            document.getElementById('avgDuration').textContent = avgDuration + 'd';
+            
+            // Mock completion rate
+            const completionRate = researchData.patients.length > 0 ? 
+                Math.min(100, Math.round(researchData.interactions.length / researchData.patients.length * 20)) : 0;
+            document.getElementById('completionRate').textContent = completionRate + '%';
+        }
+
+        // Update analytics
+        function updateAnalytics() {
+            // Simple analytics display
+            const interactionChart = document.getElementById('interactionChart');
+            const outcomeChart = document.getElementById('outcomeChart');
+            const studyOverview = document.getElementById('studyOverview');
+
+            if (researchData.interactions.length > 0) {
+                // Interaction patterns
+                const typeCount = {};
+                researchData.interactions.forEach(i => {
+                    typeCount[i.interactionType] = (typeCount[i.interactionType] || 0) + 1;
+                });
+                
+                interactionChart.innerHTML = Object.entries(typeCount).map(([type, count]) => 
+                    `<div style="margin: 4px 0;"><strong>${type}:</strong> ${count}</div>`
+                ).join('');
+            }
+
+            if (researchData.outcomes.length > 0) {
+                // Outcome trends
+                const metricCount = {};
+                researchData.outcomes.forEach(o => {
+                    metricCount[o.outcomeMetric] = (metricCount[o.outcomeMetric] || 0) + 1;
+                });
+                
+                outcomeChart.innerHTML = Object.entries(metricCount).map(([metric, count]) => 
+                    `<div style="margin: 4px 0;"><strong>${metric}:</strong> ${count} measurements</div>`
+                ).join('');
+            }
+
+            if (researchData.patients.length > 0) {
+                // Study overview
+                const groupCount = {};
+                researchData.patients.forEach(p => {
+                    groupCount[p.studyGroup] = (groupCount[p.studyGroup] || 0) + 1;
+                });
+                
+                studyOverview.innerHTML = `
+                    <div style="text-align: left;">
+                        <h4 style="margin-bottom: 1rem;">Study Groups:</h4>
+                        ${Object.entries(groupCount).map(([group, count]) => 
+                            `<div style="margin: 8px 0;"><strong>${group}:</strong> ${count} patients</div>`
+                        ).join('')}
+                        <div style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #e5e7eb;">
+                            <strong>Total Interactions:</strong> ${researchData.interactions.length}<br>
+                            <strong>Total Outcomes:</strong> ${researchData.outcomes.length}
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // Remove functions
+        function removeInteraction(id) {
+            researchData.interactions = researchData.interactions.filter(i => i.id !== id);
+            updateAll();
+        }
+
+        function removeOutcome(id) {
+            researchData.outcomes = researchData.outcomes.filter(o => o.id !== id);
+            updateAll();
+        }
+
+        // Update all displays
+        function updateAll() {
+            updatePatientGrid();
+            updateLists();
+            updateTimeline();
+            updateMetrics();
+            updateAnalytics();
+        }
+
+        // Export data
+        function exportData() {
+            const dataStr = JSON.stringify(researchData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'research-data.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        // Generate report
+        function generateReport() {
+            alert('📈 Research Report\n\nYour study includes:\n\n• ' + researchData.patients.length + ' enrolled patients\n• ' + researchData.interactions.length + ' recorded interactions\n• ' + researchData.outcomes.length + ' outcome measurements\n\nDetailed analytics and statistical analysis features coming soon!');
+        }
+
+        // Bulk Import Functions
+        let importData = null;
+
+        function showBulkImport() {
+            console.log('Opening bulk import modal...');
+            const modal = document.getElementById('importModal');
+            if (modal) {
+                modal.classList.add('active');
+                console.log('Modal should be visible now');
+            } else {
+                console.error('Import modal not found!');
+            }
+        }
+
+        function closeBulkImport() {
+            document.getElementById('importModal').classList.remove('active');
+            clearImport();
+        }
+
+        function clearImport() {
+            document.getElementById('importPreview').style.display = 'none';
+            document.getElementById('importStatus').style.display = 'none';
+            document.getElementById('importProgress').style.display = 'none';
+            document.getElementById('fileInput').value = '';
+            importData = null;
+        }
+
+        // File drag and drop handlers
+        function handleDragOver(event) {
+            event.preventDefault();
+            event.currentTarget.classList.add('dragover');
+        }
+
+        function handleDragLeave(event) {
+            event.currentTarget.classList.remove('dragover');
+        }
+
+        function handleFileDrop(event) {
+            event.preventDefault();
+            event.currentTarget.classList.remove('dragover');
+            const files = event.dataTransfer.files;
+            if (files.length > 0) {
+                processFile(files[0]);
+            }
+        }
+
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            if (files.length > 0) {
+                processFile(files[0]);
+            }
+        }
+
+        // Process uploaded file
+        function processFile(file) {
+            const maxSize = 10 * 1024 * 1024; // 10MB
+            if (file.size > maxSize) {
+                showImportStatus('File size must be less than 10MB', 'error');
+                return;
+            }
+
+            const fileExtension = file.name.split('.').pop().toLowerCase();
+            if (!['csv', 'xlsx', 'xls'].includes(fileExtension)) {
+                showImportStatus('Please upload a CSV or Excel file', 'error');
+                return;
+            }
+
+            showImportStatus('Processing file...', 'info');
+            showImportProgress();
+
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    if (fileExtension === 'csv') {
+                        importData = parseCSV(e.target.result);
+                    } else {
+                        // For Excel files, we'd need a library like xlsx
+                        showImportStatus('Excel files not yet supported. Please use CSV format.', 'error');
+                        return;
+                    }
+                    
+                    if (importData && importData.length > 0) {
+                        showPreview(importData);
+                        showImportStatus('File processed successfully. ' + importData.length + ' rows found.', 'success');
+                    } else {
+                        showImportStatus('No data found in file', 'error');
+                    }
+                } catch (error) {
+                    showImportStatus('Error processing file: ' + error.message, 'error');
+                }
+                hideImportProgress();
+            };
+
+            reader.readAsText(file);
+        }
+
+        // Simple CSV parser
+        function parseCSV(csvText) {
+            const lines = csvText.trim().split('\n');
+            const result = [];
+            
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+                if (line) {
+                    // Simple CSV parsing (handles basic cases)
+                    const columns = line.split(',').map(col => col.replace(/^"(.*)"$/, '$1').trim());
+                    result.push(columns);
+                }
+            }
+            
+            return result;
+        }
+
+        // Show data preview
+        function showPreview(data) {
+            if (!data || data.length === 0) return;
+
+            const previewContent = document.getElementById('previewContent');
+            const maxRows = Math.min(data.length, 6); // Show first 6 rows
+            
+            let tableHTML = '<table class="preview-table"><thead><tr>';
+            
+            // Header row
+            const headerRow = data[0];
+            headerRow.forEach((header, index) => {
+                tableHTML += `<th>Column ${index + 1}</th>`;
+            });
+            tableHTML += '</tr></thead><tbody>';
+            
+            // Data rows
+            for (let i = 0; i < maxRows; i++) {
+                tableHTML += '<tr>';
+                data[i].forEach(cell => {
+                    tableHTML += `<td>${cell || ''}</td>`;
+                });
+                tableHTML += '</tr>';
+            }
+            
+            tableHTML += '</tbody></table>';
+            
+            if (data.length > maxRows) {
+                tableHTML += `<p style="margin-top: 0.5rem; font-size: 12px; color: #6b7280;">Showing first ${maxRows} of ${data.length} rows</p>`;
+            }
+            
+            previewContent.innerHTML = tableHTML;
+            document.getElementById('importPreview').style.display = 'block';
+        }
+
+        // Process import based on data type
+        function processImport() {
+            if (!importData || importData.length === 0) {
+                showImportStatus('No data to import', 'error');
+                return;
+            }
+
+            const dataType = document.getElementById('importDataType').value;
+            const hasHeaders = document.getElementById('hasHeaders').value === 'true';
+            
+            showImportStatus('Importing data...', 'info');
+            showImportProgress();
+
+            try {
+                let successCount = 0;
+                let errorCount = 0;
+                const startRow = hasHeaders ? 1 : 0;
+
+                for (let i = startRow; i < importData.length; i++) {
+                    const row = importData[i];
+                    updateImportProgress((i - startRow + 1) / (importData.length - startRow) * 100);
+
+                    try {
+                        if (dataType === 'patients') {
+                            importPatientRow(row);
+                            successCount++;
+                        } else if (dataType === 'interactions') {
+                            importInteractionRow(row);
+                            successCount++;
+                        } else if (dataType === 'outcomes') {
+                            importOutcomeRow(row);
+                            successCount++;
+                        }
+                    } catch (error) {
+                        console.warn('Error importing row', i, ':', error.message);
+                        errorCount++;
+                    }
+                }
+
+                updateAll();
+                hideImportProgress();
+                
+                let message = `Import completed! ${successCount} records imported successfully.`;
+                if (errorCount > 0) {
+                    message += ` ${errorCount} records failed.`;
+                }
+                showImportStatus(message, successCount > 0 ? 'success' : 'error');
+
+                if (successCount > 0) {
+                    setTimeout(() => {
+                        closeBulkImport();
+                    }, 2000);
+                }
+
+            } catch (error) {
+                hideImportProgress();
+                showImportStatus('Import failed: ' + error.message, 'error');
+            }
+        }
+
+        // Import individual rows
+        function importPatientRow(row) {
+            // Expected columns: patientId, enrollmentDate, ageGroup, studyGroup, primaryCondition
+            if (row.length < 2) throw new Error('Insufficient data');
+            
+            const patientId = row[0]?.trim();
+            const enrollmentDate = row[1]?.trim();
+            
+            if (!patientId || !enrollmentDate) throw new Error('Missing required fields');
+
+            // Check if patient already exists
+            const existingIndex = researchData.patients.findIndex(p => p.id === patientId);
+            
+            const patient = {
+                id: patientId,
+                enrollmentDate: enrollmentDate,
+                ageGroup: row[2]?.trim() || '',
+                studyGroup: row[3]?.trim() || '',
+                primaryCondition: row[4]?.trim() || ''
+            };
+
+            if (existingIndex >= 0) {
+                researchData.patients[existingIndex] = patient;
+            } else {
+                researchData.patients.push(patient);
+            }
+        }
+
+        function importInteractionRow(row) {
+            // Expected columns: patientId, interactionDate, interactionTime, interactionType, duration, provider, interactionNotes
+            if (row.length < 4) throw new Error('Insufficient data');
+            
+            const patientId = row[0]?.trim();
+            const interactionDate = row[1]?.trim();
+            const interactionType = row[3]?.trim();
+            
+            if (!patientId || !interactionDate || !interactionType) throw new Error('Missing required fields');
+
+            // Check if patient exists
+            const patientExists = researchData.patients.some(p => p.id === patientId);
+            if (!patientExists) throw new Error('Patient not found: ' + patientId);
+
+            const interaction = {
+                id: 'int_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                patientId: patientId,
+                interactionDate: interactionDate,
+                interactionTime: row[2]?.trim() || '',
+                interactionType: interactionType,
+                duration: parseInt(row[4]?.trim()) || 0,
+                provider: row[5]?.trim() || '',
+                interactionNotes: row[6]?.trim() || ''
+            };
+
+            researchData.interactions.push(interaction);
+        }
+
+        function importOutcomeRow(row) {
+            // Expected columns: patientId, outcomeDate, outcomeMetric, outcomeValue, targetValue, outcomeNotes
+            if (row.length < 4) throw new Error('Insufficient data');
+            
+            const patientId = row[0]?.trim();
+            const outcomeDate = row[1]?.trim();
+            const outcomeMetric = row[2]?.trim();
+            const outcomeValue = row[3]?.trim();
+            
+            if (!patientId || !outcomeDate || !outcomeMetric || !outcomeValue) throw new Error('Missing required fields');
+
+            // Check if patient exists
+            const patientExists = researchData.patients.some(p => p.id === patientId);
+            if (!patientExists) throw new Error('Patient not found: ' + patientId);
+
+            const outcome = {
+                id: 'out_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
+                patientId: patientId,
+                outcomeDate: outcomeDate,
+                outcomeMetric: outcomeMetric,
+                outcomeValue: outcomeValue,
+                targetValue: row[4]?.trim() || '',
+                outcomeNotes: row[5]?.trim() || ''
+            };
+
+            researchData.outcomes.push(outcome);
+        }
+
+        // Download sample templates
+        function downloadTemplate(type) {
+            let csvContent = '';
+            let filename = '';
+
+            if (type === 'patients') {
+                csvContent = 'patientId,enrollmentDate,ageGroup,studyGroup,primaryCondition\n';
+                csvContent += 'P001,2024-01-15,56-65,Intervention,Type 2 Diabetes\n';
+                csvContent += 'P002,2024-01-20,46-55,Control,Hypertension\n';
+                csvContent += 'P003,2024-02-01,36-45,Intervention,Anxiety\n';
+                filename = 'patients_template.csv';
+            } else if (type === 'interactions') {
+                csvContent = 'patientId,interactionDate,interactionTime,interactionType,duration,provider,interactionNotes\n';
+                csvContent += 'P001,2024-01-15,09:00,Initial Visit,45,Dr. Martinez,Initial consultation and assessment\n';
+                csvContent += 'P001,2024-02-15,14:30,Follow-up,30,Dr. Martinez,Follow-up visit to review progress\n';
+                csvContent += 'P002,2024-01-20,11:15,Initial Visit,40,Dr. Chen,First appointment for evaluation\n';
+                filename = 'interactions_template.csv';
+            } else if (type === 'outcomes') {
+                csvContent = 'patientId,outcomeDate,outcomeMetric,outcomeValue,targetValue,outcomeNotes\n';
+                csvContent += 'P001,2024-02-15,HbA1c,7.2%,<7%,Improved from baseline\n';
+                csvContent += 'P001,2024-03-15,HbA1c,6.8%,<7%,Target achieved\n';
+                csvContent += 'P002,2024-02-20,Blood Pressure,128/82,<130/80,Good response to treatment\n';
+                filename = 'outcomes_template.csv';
+            }
+
+            const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', filename);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // Utility functions for import status and progress
+        function showImportStatus(message, type) {
+            const statusDiv = document.getElementById('importStatus');
+            statusDiv.textContent = message;
+            statusDiv.className = 'import-status ' + type;
+            statusDiv.style.display = 'block';
+        }
+
+        function showImportProgress() {
+            document.getElementById('importProgress').style.display = 'block';
+            updateImportProgress(0);
+        }
+
+        function hideImportProgress() {
+            document.getElementById('importProgress').style.display = 'none';
+        }
+
+        function updateImportProgress(percent) {
+            document.getElementById('progressBar').style.width = percent + '%';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('importModal').addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeBulkImport();
+            }
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateAll();
+        });
+    </script>
+</body>
+</html>

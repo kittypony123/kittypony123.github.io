@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music DNA & Sound Evolution Tracker</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .header-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Progress Indicator Styles */
+        .progress-container {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .progress-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+
+        .progress-percentage {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 16px;
+            border-radius: 25px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 25px;
+            width: 0%;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .progress-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            animation: progressShimmer 2s infinite ease-in-out;
+        }
+
+        @keyframes progressShimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        .progress-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .progress-step:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-step.completed {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+        }
+
+        .progress-step.active {
+            background: rgba(118, 75, 162, 0.1);
+            border-color: #764ba2;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .progress-step.completed .step-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .step-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .step-status {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .tab.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+        }
+
+        /* Items List */
+        .item-list {
+            margin-top: 1rem;
+        }
+
+        .item {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .item-meta {
+            font-size: 12px;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+            min-height: 32px;
+        }
+
+        /* Music-specific styling */
+        .genre-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .genre-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .influence-level {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 8px;
+        }
+
+        .influence-stars {
+            color: #ffd700;
+            font-size: 14px;
+        }
+
+        /* Visualization */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flow-diagram {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 2rem;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .progress-steps {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            .progress-step {
+                flex-direction: row;
+                text-align: left;
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Skip links for accessibility */
+        .skip-links {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            text-decoration: none;
+            z-index: 9999;
+            border-radius: 0 0 4px 0;
+            font-weight: 600;
+            transition: top 0.3s ease;
+        }
+
+        .skip-links:focus {
+            top: 0;
+        }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip Links for Accessibility -->
+    <a href="#main-content" class="skip-links">Skip to main content</a>
+    <a href="#music-builder" class="skip-links">Skip to music journey builder</a>
+    <a href="#music-dna" class="skip-links">Skip to music DNA visualization</a>
+    
+    <!-- Screen reader announcements -->
+    <div aria-live="polite" aria-atomic="true" class="sr-only" id="status-announcements"></div>
+    <div aria-live="assertive" aria-atomic="true" class="sr-only" id="error-announcements"></div>
+
+    <header class="header" role="banner">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🎵</div>
+                <div>
+                    <div class="logo-text">Music DNA Tracker</div>
+                    <div class="logo-subtitle">Sound Evolution & Musical Journey Mapping</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" onclick="loadSampleMusicJourney()" title="Load sample musical journey">
+                    🎼 Demo Journey
+                </button>
+                <button class="header-btn" onclick="exportMusicDNA()" title="Export your music DNA">
+                    📊 Export DNA
+                </button>
+                <button class="header-btn" onclick="playlistGenerator()" title="Generate playlist from your DNA">
+                    🎧 Generate Playlist
+                </button>
+                <button class="header-btn" onclick="shareMusicDNA()" title="Share your musical evolution">
+                    🌟 Share Journey
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container" id="main-content" role="main">
+        <section class="section" id="music-builder" aria-labelledby="music-builder-title">
+            <h2 class="section-title" id="music-builder-title">
+                <span class="section-icon" aria-hidden="true">🎼</span>
+                Musical Journey Builder
+                <span class="sr-only">- Create your musical evolution timeline</span>
+            </h2>
+
+            <!-- Progress Indicator -->
+            <div class="progress-container" role="region" aria-labelledby="progress-title">
+                <div class="progress-header">
+                    <h3 class="progress-title" id="progress-title">
+                        <span aria-hidden="true">🎯</span> Musical Evolution Progress
+                    </h3>
+                    <span class="progress-percentage" id="progressPercentage" aria-live="polite">0%</span>
+                </div>
+                <div class="progress-bar-container" role="progressbar" aria-labelledby="progress-title" 
+                     aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-valuetext="0% complete">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="progress-steps">
+                    <div class="progress-step" id="step-origins" data-step="origins">
+                        <div class="step-icon">🎵</div>
+                        <div class="step-title">Musical Origins</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-influences" data-step="influences">
+                        <div class="step-icon">🌟</div>
+                        <div class="step-title">Key Influences</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-evolution" data-step="evolution">
+                        <div class="step-icon">🔄</div>
+                        <div class="step-title">Sound Evolution</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-creation" data-step="creation">
+                        <div class="step-icon">🎨</div>
+                        <div class="step-title">Creative Output</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-identity" data-step="identity">
+                        <div class="step-icon">🧬</div>
+                        <div class="step-title">Musical Identity</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs" role="tablist" aria-label="Musical journey configuration sections">
+                <div class="tab active" role="tab" tabindex="0" aria-selected="true" 
+                     aria-controls="origins-tab" id="origins-tab-button"
+                     onclick="switchTab('origins')">
+                    <span aria-hidden="true">🎵</span> Musical Origins
+                </div>
+                <div class="tab" role="tab" tabindex="-1" aria-selected="false" 
+                     aria-controls="influences-tab" id="influences-tab-button"
+                     onclick="switchTab('influences')">
+                    <span aria-hidden="true">🌟</span> Key Influences
+                </div>
+                <div class="tab" role="tab" tabindex="-1" aria-selected="false" 
+                     aria-controls="evolution-tab" id="evolution-tab-button"
+                     onclick="switchTab('evolution')">
+                    <span aria-hidden="true">🔄</span> Sound Evolution
+                </div>
+                <div class="tab" role="tab" tabindex="-1" aria-selected="false" 
+                     aria-controls="creation-tab" id="creation-tab-button"
+                     onclick="switchTab('creation')">
+                    <span aria-hidden="true">🎨</span> Creative Output
+                </div>
+                <div class="tab" role="tab" tabindex="-1" aria-selected="false" 
+                     aria-controls="identity-tab" id="identity-tab-button"
+                     onclick="switchTab('identity')">
+                    <span aria-hidden="true">🧬</span> Musical Identity
+                </div>
+            </div>
+
+            <!-- Musical Origins Tab -->
+            <div id="origins-tab" class="tab-content active" role="tabpanel" 
+                 aria-labelledby="origins-tab-button" tabindex="0">
+                <div class="form-group">
+                    <label class="form-label" for="firstMemory">
+                        First Musical Memory
+                        <span class="sr-only">(required)</span>
+                    </label>
+                    <textarea id="firstMemory" class="form-textarea" 
+                              placeholder="Describe your earliest musical memory... maybe a lullaby, a song on the radio, or music from a movie that stuck with you"
+                              aria-required="true"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="childhoodSongs">Songs That Shaped Your Childhood</label>
+                    <input type="text" id="childhoodSongs" class="form-input" 
+                           placeholder="e.g., Disney soundtracks, nursery rhymes, family favorites">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="familyInfluence">Family Musical Influence</label>
+                    <select id="familyInfluence" class="form-select">
+                        <option value="">How did your family influence your musical taste?</option>
+                        <option value="Very Musical Family">🎼 Very Musical Family - Parents/siblings played instruments</option>
+                        <option value="Music Loving">🎵 Music Loving - Always had music playing at home</option>
+                        <option value="Specific Genre">🎯 Specific Genre - Family preferred certain styles</option>
+                        <option value="Limited Exposure">📻 Limited Exposure - Discovered music mostly on your own</option>
+                        <option value="Diverse Exposure">🌍 Diverse Exposure - Exposed to many different styles</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="firstInstrument">First Musical Instrument Experience</label>
+                    <input type="text" id="firstInstrument" class="form-input" 
+                           placeholder="e.g., Piano lessons at 7, Guitar hero at friend's house, Singing in school choir">
+                </div>
+                <button class="btn btn-primary" onclick="addMusicalOrigin()">
+                    ➕ Add Origin Memory
+                </button>
+                <div class="item-list" id="originsList"></div>
+            </div>
+
+            <!-- Key Influences Tab -->
+            <div id="influences-tab" class="tab-content" role="tabpanel" 
+                 aria-labelledby="influences-tab-button" tabindex="0">
+                <div class="form-group">
+                    <label class="form-label" for="artistName">Artist/Band Name</label>
+                    <input type="text" id="artistName" class="form-input" 
+                           placeholder="e.g., The Beatles, Beethoven, Drake, Taylor Swift">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="discoveryStory">How You Discovered Them</label>
+                    <textarea id="discoveryStory" class="form-textarea" 
+                              placeholder="Tell the story of how you first encountered this artist... was it a friend's recommendation, radio, streaming, concert, etc.?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="influenceLevel">Influence Level</label>
+                    <select id="influenceLevel" class="form-select">
+                        <option value="">Rate their impact on your musical taste</option>
+                        <option value="Life Changing">⭐⭐⭐⭐⭐ Life Changing - Completely shifted your musical perspective</option>
+                        <option value="Major Impact">⭐⭐⭐⭐ Major Impact - Significantly influenced your taste</option>
+                        <option value="Notable Influence">⭐⭐⭐ Notable Influence - Important to your musical development</option>
+                        <option value="Moderate Impact">⭐⭐ Moderate Impact - Enjoyed and influenced you somewhat</option>
+                        <option value="Minor Influence">⭐ Minor Influence - Liked but limited impact</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="genres">Musical Genres</label>
+                    <input type="text" id="genres" class="form-input" 
+                           placeholder="e.g., Rock, Hip-Hop, Classical, Jazz, Electronic (separate with commas)">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="emotionalConnection">Emotional Connection</label>
+                    <textarea id="emotionalConnection" class="form-textarea" 
+                              placeholder="What emotions or life experiences does this artist connect to? How did they help you through certain times?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addMusicalInfluence()">
+                    🌟 Add Influence
+                </button>
+                <div class="item-list" id="influencesList"></div>
+            </div>
+
+            <!-- Sound Evolution Tab -->
+            <div id="evolution-tab" class="tab-content" role="tabpanel" 
+                 aria-labelledby="evolution-tab-button" tabindex="0">
+                <div class="form-group">
+                    <label class="form-label" for="evolutionPhase">Evolution Phase</label>
+                    <input type="text" id="evolutionPhase" class="form-input" 
+                           placeholder="e.g., Teenage Punk Phase, College Jazz Discovery, Electronic Awakening">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="evolutionTrigger">What Triggered This Change</label>
+                    <textarea id="evolutionTrigger" class="form-textarea" 
+                              placeholder="What caused this shift in your musical taste? A specific song, album, concert, life event, or person?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="timeperiod">Time Period</label>
+                    <input type="text" id="timeperiod" class="form-input" 
+                           placeholder="e.g., Summer 2019, Age 16-18, College Years, After Breakup">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="newGenres">New Genres Explored</label>
+                    <input type="text" id="newGenres" class="form-input" 
+                           placeholder="What new styles of music did you discover during this phase?">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="evolutionImpact">How It Changed You</label>
+                    <textarea id="evolutionImpact" class="form-textarea" 
+                              placeholder="How did this musical evolution affect your identity, friendships, or life perspective?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addEvolutionPhase()">
+                    🔄 Add Evolution Phase
+                </button>
+                <div class="item-list" id="evolutionList"></div>
+            </div>
+
+            <!-- Creative Output Tab -->
+            <div id="creation-tab" class="tab-content" role="tabpanel" 
+                 aria-labelledby="creation-tab-button" tabindex="0">
+                <div class="form-group">
+                    <label class="form-label" for="creationType">Creative Output Type</label>
+                    <select id="creationType" class="form-select">
+                        <option value="">What kind of musical creation is this?</option>
+                        <option value="Original Song">🎵 Original Song</option>
+                        <option value="Instrumental Piece">🎹 Instrumental Piece</option>
+                        <option value="Playlist Creation">📋 Curated Playlist</option>
+                        <option value="Cover Performance">🎤 Cover Performance</option>
+                        <option value="Remix/Mashup">🔄 Remix/Mashup</option>
+                        <option value="Musical Analysis">📝 Musical Analysis/Review</option>
+                        <option value="Live Performance">🎪 Live Performance</option>
+                        <option value="Collaboration">🤝 Musical Collaboration</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="creationTitle">Title/Name</label>
+                    <input type="text" id="creationTitle" class="form-input" 
+                           placeholder="e.g., 'Midnight Blues', 'Summer Vibes Playlist', 'Acoustic Session'">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="inspiration">Inspiration & Influences</label>
+                    <textarea id="inspiration" class="form-textarea" 
+                              placeholder="What inspired this creation? Which artists, experiences, or emotions influenced it?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="creationProcess">Creation Process</label>
+                    <textarea id="creationProcess" class="form-textarea" 
+                              placeholder="How did you create this? What tools, techniques, or collaborations were involved?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="impact">Impact & Reception</label>
+                    <textarea id="impact" class="form-textarea" 
+                              placeholder="How was it received? What impact did creating this have on your musical journey?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addCreativeOutput()">
+                    🎨 Add Creative Work
+                </button>
+                <div class="item-list" id="creationsList"></div>
+            </div>
+
+            <!-- Musical Identity Tab -->
+            <div id="identity-tab" class="tab-content" role="tabpanel" 
+                 aria-labelledby="identity-tab-button" tabindex="0">
+                <div class="form-group">
+                    <label class="form-label" for="currentGenres">Current Musical Identity</label>
+                    <textarea id="currentGenres" class="form-textarea" 
+                              placeholder="How would you describe your current musical taste? What genres, artists, or styles define you now?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="musicRole">Role Music Plays in Your Life</label>
+                    <select id="musicRole" class="form-select">
+                        <option value="">How important is music in your daily life?</option>
+                        <option value="Life's Soundtrack">🎵 Life's Soundtrack - Music is essential to everything I do</option>
+                        <option value="Creative Outlet">🎨 Creative Outlet - I actively create and share music</option>
+                        <option value="Emotional Companion">💝 Emotional Companion - Music helps me process feelings</option>
+                        <option value="Social Connector">🤝 Social Connector - Music brings me together with others</option>
+                        <option value="Background Presence">🎧 Background Presence - I enjoy music but it's not central</option>
+                        <option value="Occasional Escape">🌟 Occasional Escape - Music is for special moments</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="futureGoals">Musical Future Goals</label>
+                    <textarea id="futureGoals" class="form-textarea" 
+                              placeholder="Where do you want your musical journey to go? Learning instruments, creating music, attending concerts, discovering new genres?"></textarea>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="musicLegacy">Musical Legacy</label>
+                    <textarea id="musicLegacy" class="form-textarea" 
+                              placeholder="What do you want music to mean in your life story? How do you want to be remembered musically?"></textarea>
+                </div>
+                
+                <div style="background: rgba(102, 126, 234, 0.1); border: 1px solid rgba(102, 126, 234, 0.2); border-radius: 12px; padding: 1.5rem; margin-top: 2rem;">
+                    <h4 style="margin: 0 0 1rem 0; color: #333; font-size: 16px; font-weight: 600;">🧬 Your Music DNA Summary</h4>
+                    <div id="musicDNASummary" style="color: #666; font-size: 14px; line-height: 1.6;">
+                        <p style="margin: 0;">Complete the sections above to see your musical DNA profile. This will show how your musical journey has evolved and what makes your taste unique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="music-dna" aria-labelledby="dna-title">
+            <h2 class="section-title" id="dna-title">
+                <span class="section-icon" aria-hidden="true">🧬</span>
+                Music DNA Visualization
+                <span class="sr-only">- Visual representation of your musical evolution</span>
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="influencesCount">0</div>
+                    <div class="stat-label">Key Influences</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="evolutionPhasesCount">0</div>
+                    <div class="stat-label">Evolution Phases</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="creationsCount">0</div>
+                    <div class="stat-label">Creative Works</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="genresCount">0</div>
+                    <div class="stat-label">Genres Explored</div>
+                </div>
+            </div>
+
+            <div class="flow-diagram" id="musicFlow" role="img" aria-labelledby="flow-diagram-title">
+                <div class="empty-state">
+                    <div class="empty-state-icon" aria-hidden="true">🌟</div>
+                    <h3 id="flow-diagram-title">Your Musical Evolution</h3>
+                    <p>Build your musical journey to see your sound DNA visualization</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Global music data storage
+        let musicData = {
+            origins: [],
+            influences: [],
+            evolution: [],
+            creations: [],
+            identity: {
+                currentGenres: '',
+                musicRole: '',
+                futureGoals: '',
+                musicLegacy: ''
+            },
+            metadata: {
+                created: new Date().toISOString(),
+                lastModified: new Date().toISOString(),
+                version: "1.0",
+                title: "Musical DNA Journey"
+            }
+        };
+
+        // SAMPLE MUSIC JOURNEY LOADER
+        function loadSampleMusicJourney() {
+            if (confirm('This will replace your current musical journey with a sample journey. Continue?')) {
+                
+                // Sample musical origins
+                musicData.origins = [
+                    {
+                        id: 'origin_lullaby',
+                        firstMemory: 'My mother singing "Twinkle, Twinkle, Little Star" as she rocked me to sleep. The gentle melody and her warm voice made me feel safe and loved.',
+                        childhoodSongs: 'Disney movie soundtracks, especially The Lion King and Beauty and the Beast',
+                        familyInfluence: 'Music Loving',
+                        firstInstrument: 'Piano lessons starting at age 6 - learned simple melodies and fell in love with the sound of keys'
+                    }
+                ];
+
+                // Sample key influences
+                musicData.influences = [
+                    {
+                        id: 'inf_beatles',
+                        artistName: 'The Beatles',
+                        discoveryStory: 'Found my dad\'s old vinyl collection in the attic when I was 12. Put on "Abbey Road" and was blown away by the layered harmonies and songwriting.',
+                        influenceLevel: 'Life Changing',
+                        genres: ['Rock', 'Pop', 'Psychedelic'],
+                        emotionalConnection: 'Their music taught me that songs could be both fun and profound. "Here Comes the Sun" got me through my parents\' divorce.'
+                    },
+                    {
+                        id: 'inf_radiohead',
+                        artistName: 'Radiohead',
+                        discoveryStory: 'Heard "Paranoid Android" on late-night radio during a sleepless night in high school. The complexity and emotion hit me like a freight train.',
+                        influenceLevel: 'Major Impact',
+                        genres: ['Alternative Rock', 'Electronic', 'Art Rock'],
+                        emotionalConnection: 'Radiohead gave me permission to feel deeply and think differently. Their music became the soundtrack to my intellectual awakening.'
+                    }
+                ];
+
+                // Sample evolution phases
+                musicData.evolution = [
+                    {
+                        id: 'evo_punk',
+                        evolutionPhase: 'Teenage Punk Rebellion',
+                        evolutionTrigger: 'Feeling misunderstood at school, discovered Green Day and The Clash. Their anger and energy matched my teenage frustration.',
+                        timeperiod: 'Ages 14-16',
+                        newGenres: 'Punk Rock, Ska, Alternative',
+                        evolutionImpact: 'Punk taught me that music could be a form of protest and self-expression. I started dressing differently and found my voice.'
+                    },
+                    {
+                        id: 'evo_electronic',
+                        evolutionPhase: 'Electronic Music Discovery',
+                        evolutionTrigger: 'First rave experience at 19. The communal energy and synthesized sounds opened up a whole new world of music.',
+                        timeperiod: 'College years',
+                        newGenres: 'House, Techno, Ambient, Drum & Bass',
+                        evolutionImpact: 'Electronic music showed me the future of sound and got me interested in music production and technology.'
+                    }
+                ];
+
+                // Sample creative outputs
+                musicData.creations = [
+                    {
+                        id: 'create_first_song',
+                        creationType: 'Original Song',
+                        creationTitle: 'Late Night Thoughts',
+                        inspiration: 'Written during a difficult period of self-doubt, inspired by Radiohead\'s emotional honesty and The Beatles\' melodic sensibility.',
+                        creationProcess: 'Started with a simple chord progression on piano, added lyrics about feeling lost, recorded rough demo on phone.',
+                        impact: 'First time I expressed deep feelings through music. Sharing it with friends gave me confidence to continue writing.'
+                    },
+                    {
+                        id: 'create_weekend_mix',
+                        creationType: 'Playlist Creation',
+                        creationTitle: 'Perfect Weekend Vibes',
+                        inspiration: 'Wanted to capture the feeling of freedom and possibility that comes with Friday afternoon.',
+                        creationProcess: 'Carefully selected tracks that build energy throughout the day, from mellow morning tunes to late-night dance tracks.',
+                        impact: 'Friends loved it so much they asked for more playlists. Realized I had a talent for musical curation.'
+                    }
+                ];
+
+                // Sample musical identity
+                musicData.identity = {
+                    currentGenres: 'My taste now spans indie rock, electronic, jazz, and neo-soul. I love artists who push boundaries while maintaining emotional depth - like Thom Yorke, FKA Twigs, and Anderson .Paak.',
+                    musicRole: 'Creative Outlet',
+                    futureGoals: 'I want to learn music production software and create my own electronic compositions. Also planning to attend more live shows and discover underground artists.',
+                    musicLegacy: 'I want to be remembered as someone who used music to connect with others and express authentic emotions. Music has been my constant companion through every life phase.'
+                };
+
+                // Update form fields for identity section
+                document.getElementById('currentGenres').value = musicData.identity.currentGenres;
+                document.getElementById('musicRole').value = musicData.identity.musicRole;
+                document.getElementById('futureGoals').value = musicData.identity.futureGoals;
+                document.getElementById('musicLegacy').value = musicData.identity.musicLegacy;
+
+                // Update all displays
+                updateOriginsList();
+                updateInfluencesList();
+                updateEvolutionList();
+                updateCreationsList();
+                updateMusicDNAVisualization();
+                updateMusicDNASummary();
+                updateProgressDisplay();
+
+                // Show success message
+                alert('Sample musical journey loaded! Explore how musical taste evolves over time.');
+                console.log('Sample music journey loaded successfully');
+            }
+        }
+
+        // Progress Management
+        function updateProgressDisplay() {
+            const steps = {
+                origins: musicData.origins.length > 0,
+                influences: musicData.influences.length > 0,
+                evolution: musicData.evolution.length > 0,
+                creation: musicData.creations.length > 0,
+                identity: musicData.identity.currentGenres.trim() !== ''
+            };
+
+            const completedSteps = Object.values(steps).filter(Boolean).length;
+            const totalSteps = Object.keys(steps).length;
+            const percentage = Math.round((completedSteps / totalSteps) * 100);
+
+            document.getElementById('progressPercentage').textContent = `${percentage}%`;
+            document.getElementById('progressBar').style.width = `${percentage}%`;
+
+            // Update individual steps
+            Object.keys(steps).forEach(step => {
+                const stepElement = document.getElementById(`step-${step}`);
+                if (stepElement) {
+                    const statusElement = stepElement.querySelector('.step-status');
+                    
+                    stepElement.classList.remove('completed', 'active');
+                    
+                    if (steps[step]) {
+                        stepElement.classList.add('completed');
+                        if (statusElement) statusElement.textContent = 'Complete';
+                    } else {
+                        if (statusElement) statusElement.textContent = 'Incomplete';
+                    }
+                }
+            });
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+                tab.setAttribute('aria-selected', 'false');
+                tab.setAttribute('tabindex', '-1');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Add active class to selected tab and content
+            const activeTab = document.getElementById(`${tabName}-tab-button`);
+            const activeContent = document.getElementById(`${tabName}-tab`);
+            
+            activeTab.classList.add('active');
+            activeTab.setAttribute('aria-selected', 'true');
+            activeTab.setAttribute('tabindex', '0');
+            activeContent.classList.add('active');
+            
+            // Focus the tab content for accessibility
+            activeContent.focus();
+        }
+
+        // Add Musical Origin
+        function addMusicalOrigin() {
+            const firstMemory = document.getElementById('firstMemory').value.trim();
+            const childhoodSongs = document.getElementById('childhoodSongs').value.trim();
+            const familyInfluence = document.getElementById('familyInfluence').value;
+            const firstInstrument = document.getElementById('firstInstrument').value.trim();
+
+            if (!firstMemory) {
+                alert('Please describe your first musical memory');
+                return;
+            }
+
+            const origin = {
+                id: 'origin_' + Date.now(),
+                firstMemory,
+                childhoodSongs,
+                familyInfluence,
+                firstInstrument
+            };
+
+            musicData.origins.push(origin);
+            
+            // Clear form
+            document.getElementById('firstMemory').value = '';
+            document.getElementById('childhoodSongs').value = '';
+            document.getElementById('familyInfluence').value = '';
+            document.getElementById('firstInstrument').value = '';
+            
+            updateOriginsList();
+            updateProgressDisplay();
+        }
+
+        function updateOriginsList() {
+            const container = document.getElementById('originsList');
+            container.innerHTML = '';
+
+            musicData.origins.forEach(origin => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">Musical Origin Memory</div>
+                        <div class="item-meta">${origin.familyInfluence || 'Family Influence'}</div>
+                        <div class="item-description">${origin.firstMemory}</div>
+                        ${origin.childhoodSongs ? `<div style="margin-top: 8px; font-style: italic;">Childhood favorites: ${origin.childhoodSongs}</div>` : ''}
+                        ${origin.firstInstrument ? `<div style="margin-top: 4px; font-style: italic;">First instrument: ${origin.firstInstrument}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeOrigin('${origin.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Musical Influence
+        function addMusicalInfluence() {
+            const artistName = document.getElementById('artistName').value.trim();
+            const discoveryStory = document.getElementById('discoveryStory').value.trim();
+            const influenceLevel = document.getElementById('influenceLevel').value;
+            const genres = document.getElementById('genres').value.trim();
+            const emotionalConnection = document.getElementById('emotionalConnection').value.trim();
+
+            if (!artistName || !discoveryStory) {
+                alert('Please provide the artist name and discovery story');
+                return;
+            }
+
+            const influence = {
+                id: 'inf_' + Date.now(),
+                artistName,
+                discoveryStory,
+                influenceLevel,
+                genres: genres.split(',').map(g => g.trim()).filter(g => g),
+                emotionalConnection
+            };
+
+            musicData.influences.push(influence);
+            
+            // Clear form
+            document.getElementById('artistName').value = '';
+            document.getElementById('discoveryStory').value = '';
+            document.getElementById('influenceLevel').value = '';
+            document.getElementById('genres').value = '';
+            document.getElementById('emotionalConnection').value = '';
+            
+            updateInfluencesList();
+            updateProgressDisplay();
+        }
+
+        function updateInfluencesList() {
+            const container = document.getElementById('influencesList');
+            container.innerHTML = '';
+
+            musicData.influences.forEach(influence => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                const genreTags = (influence.genres || []).map(genre => `<span class="genre-tag">${genre}</span>`).join('');
+                const stars = influence.influenceLevel ? `<span class="influence-level">${influence.influenceLevel.split(' ')[0]}</span>` : '';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${influence.artistName} ${stars}</div>
+                        <div class="item-meta">Key Musical Influence</div>
+                        <div class="item-description">${influence.discoveryStory}</div>
+                        ${influence.emotionalConnection ? `<div style="margin-top: 8px; font-style: italic;">"${influence.emotionalConnection}"</div>` : ''}
+                        ${genreTags ? `<div class="genre-tags">${genreTags}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeInfluence('${influence.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Evolution Phase
+        function addEvolutionPhase() {
+            const evolutionPhase = document.getElementById('evolutionPhase').value.trim();
+            const evolutionTrigger = document.getElementById('evolutionTrigger').value.trim();
+            const timeperiod = document.getElementById('timeperiod').value.trim();
+            const newGenres = document.getElementById('newGenres').value.trim();
+            const evolutionImpact = document.getElementById('evolutionImpact').value.trim();
+
+            if (!evolutionPhase || !evolutionTrigger) {
+                alert('Please provide the evolution phase name and trigger');
+                return;
+            }
+
+            const evolution = {
+                id: 'evo_' + Date.now(),
+                evolutionPhase,
+                evolutionTrigger,
+                timeperiod,
+                newGenres,
+                evolutionImpact
+            };
+
+            musicData.evolution.push(evolution);
+            
+            // Clear form
+            document.getElementById('evolutionPhase').value = '';
+            document.getElementById('evolutionTrigger').value = '';
+            document.getElementById('timeperiod').value = '';
+            document.getElementById('newGenres').value = '';
+            document.getElementById('evolutionImpact').value = '';
+            
+            updateEvolutionList();
+            updateProgressDisplay();
+        }
+
+        function updateEvolutionList() {
+            const container = document.getElementById('evolutionList');
+            container.innerHTML = '';
+
+            musicData.evolution.forEach(evolution => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${evolution.evolutionPhase}</div>
+                        <div class="item-meta">${evolution.timeperiod || 'Musical Evolution Phase'}</div>
+                        <div class="item-description">${evolution.evolutionTrigger}</div>
+                        ${evolution.newGenres ? `<div style="margin-top: 8px;"><strong>New genres:</strong> ${evolution.newGenres}</div>` : ''}
+                        ${evolution.evolutionImpact ? `<div style="margin-top: 8px; font-style: italic;">${evolution.evolutionImpact}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeEvolution('${evolution.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Creative Output
+        function addCreativeOutput() {
+            const creationType = document.getElementById('creationType').value;
+            const creationTitle = document.getElementById('creationTitle').value.trim();
+            const inspiration = document.getElementById('inspiration').value.trim();
+            const creationProcess = document.getElementById('creationProcess').value.trim();
+            const impact = document.getElementById('impact').value.trim();
+
+            if (!creationType || !creationTitle) {
+                alert('Please provide the creation type and title');
+                return;
+            }
+
+            const creation = {
+                id: 'create_' + Date.now(),
+                creationType,
+                creationTitle,
+                inspiration,
+                creationProcess,
+                impact
+            };
+
+            musicData.creations.push(creation);
+            
+            // Clear form
+            document.getElementById('creationType').value = '';
+            document.getElementById('creationTitle').value = '';
+            document.getElementById('inspiration').value = '';
+            document.getElementById('creationProcess').value = '';
+            document.getElementById('impact').value = '';
+            
+            updateCreationsList();
+            updateProgressDisplay();
+        }
+
+        function updateCreationsList() {
+            const container = document.getElementById('creationsList');
+            container.innerHTML = '';
+
+            musicData.creations.forEach(creation => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${creation.creationTitle}</div>
+                        <div class="item-meta">${creation.creationType}</div>
+                        ${creation.inspiration ? `<div class="item-description">${creation.inspiration}</div>` : ''}
+                        ${creation.creationProcess ? `<div style="margin-top: 8px;"><strong>Process:</strong> ${creation.creationProcess}</div>` : ''}
+                        ${creation.impact ? `<div style="margin-top: 8px; font-style: italic;">${creation.impact}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeCreation('${creation.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Update Music DNA Summary
+        function updateMusicDNASummary() {
+            const summaryElement = document.getElementById('musicDNASummary');
+            
+            if (musicData.origins.length === 0 && musicData.influences.length === 0) {
+                summaryElement.innerHTML = '<p style="margin: 0;">Complete the sections above to see your musical DNA profile. This will show how your musical journey has evolved and what makes your taste unique.</p>';
+                return;
+            }
+
+            let summary = '<div style="display: grid; gap: 1rem;">';
+            
+            if (musicData.origins.length > 0) {
+                summary += `<div><strong>🎵 Musical Roots:</strong> Your journey began with ${musicData.origins[0].firstMemory.substring(0, 100)}...</div>`;
+            }
+            
+            if (musicData.influences.length > 0) {
+                const topInfluences = musicData.influences.slice(0, 3).map(inf => inf.artistName).join(', ');
+                summary += `<div><strong>🌟 Key Influences:</strong> ${topInfluences}</div>`;
+            }
+            
+            if (musicData.evolution.length > 0) {
+                summary += `<div><strong>🔄 Evolution Phases:</strong> ${musicData.evolution.length} major shifts in musical taste</div>`;
+            }
+            
+            if (musicData.creations.length > 0) {
+                summary += `<div><strong>🎨 Creative Output:</strong> ${musicData.creations.length} musical creations</div>`;
+            }
+            
+            if (musicData.identity.currentGenres) {
+                summary += `<div><strong>🧬 Current Identity:</strong> ${musicData.identity.currentGenres.substring(0, 150)}...</div>`;
+            }
+            
+            summary += '</div>';
+            summaryElement.innerHTML = summary;
+        }
+
+        // Update visualization stats
+        function updateMusicDNAVisualization() {
+            document.getElementById('influencesCount').textContent = musicData.influences.length;
+            document.getElementById('evolutionPhasesCount').textContent = musicData.evolution.length;
+            document.getElementById('creationsCount').textContent = musicData.creations.length;
+            
+            // Count unique genres
+            const allGenres = new Set();
+            musicData.influences.forEach(inf => {
+                (inf.genres || []).forEach(genre => allGenres.add(genre));
+            });
+            document.getElementById('genresCount').textContent = allGenres.size;
+        }
+
+        // Remove functions
+        function removeOrigin(id) {
+            musicData.origins = musicData.origins.filter(origin => origin.id !== id);
+            updateOriginsList();
+            updateProgressDisplay();
+        }
+
+        function removeInfluence(id) {
+            musicData.influences = musicData.influences.filter(influence => influence.id !== id);
+            updateInfluencesList();
+            updateMusicDNAVisualization();
+            updateProgressDisplay();
+        }
+
+        function removeEvolution(id) {
+            musicData.evolution = musicData.evolution.filter(evolution => evolution.id !== id);
+            updateEvolutionList();
+            updateMusicDNAVisualization();
+            updateProgressDisplay();
+        }
+
+        function removeCreation(id) {
+            musicData.creations = musicData.creations.filter(creation => creation.id !== id);
+            updateCreationsList();
+            updateMusicDNAVisualization();
+            updateProgressDisplay();
+        }
+
+        // Header functions
+        function exportMusicDNA() {
+            const dataStr = JSON.stringify(musicData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'my-music-dna.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function playlistGenerator() {
+            if (musicData.influences.length === 0) {
+                alert('Add some musical influences first to generate a playlist!');
+                return;
+            }
+            
+            const influences = musicData.influences.map(inf => inf.artistName).join(', ');
+            alert(`🎧 Playlist Generator\n\nBased on your influences (${influences}), we'd recommend exploring:\n\n• Similar artists from the same era\n• Modern artists inspired by your influences\n• Deep cuts from your favorite artists\n• Genre-blending artists\n\nConnect to Spotify or Apple Music to generate actual playlists!`);
+        }
+
+        function shareMusicDNA() {
+            if (musicData.influences.length === 0 && musicData.origins.length === 0) {
+                alert('Build your musical journey first before sharing!');
+                return;
+            }
+            
+            alert('🌟 Share Your Musical DNA\n\nYour unique musical journey is ready to share! You could:\n\n• Export as a beautiful infographic\n• Share on social media\n• Compare with friends\n• Create a musical autobiography\n\nSharing features coming soon!');
+        }
+
+        // Monitor identity fields for DNA summary updates
+        document.addEventListener('DOMContentLoaded', function() {
+            ['currentGenres', 'musicRole', 'futureGoals', 'musicLegacy'].forEach(fieldId => {
+                const field = document.getElementById(fieldId);
+                if (field) {
+                    field.addEventListener('input', () => {
+                        musicData.identity[fieldId] = field.value;
+                        updateMusicDNASummary();
+                        updateProgressDisplay();
+                    });
+                }
+            });
+            
+            updateProgressDisplay();
+        });
+    </script>
+</body>
+</html>

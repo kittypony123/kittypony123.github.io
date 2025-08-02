@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Services Interaction Tracker - Patient Journey Mapping</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-content {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .logo-subtitle {
+            font-size: 12px;
+            color: #666;
+            font-weight: 500;
+            margin-top: 2px;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .header-btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .header-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            min-height: calc(100vh - 120px);
+        }
+
+        .section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            position: relative;
+            padding-bottom: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 2px;
+        }
+
+        .section-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Progress Indicator Styles */
+        .progress-container {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+            border: 1px solid rgba(102, 126, 234, 0.2);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .progress-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #333;
+            margin: 0;
+        }
+
+        .progress-percentage {
+            font-size: 20px;
+            font-weight: 700;
+            color: #667eea;
+            background: rgba(102, 126, 234, 0.1);
+            padding: 8px 16px;
+            border-radius: 25px;
+            min-width: 60px;
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            width: 100%;
+            height: 10px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 25px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            border-radius: 25px;
+            width: 0%;
+            transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .progress-steps {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 1rem;
+        }
+
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .progress-step:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .progress-step.completed {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: #667eea;
+        }
+
+        .step-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+        }
+
+        .progress-step.completed .step-icon {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+        }
+
+        .step-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .step-status {
+            font-size: 10px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 2rem;
+        }
+
+        .tab {
+            flex: 1;
+            padding: 12px 20px;
+            text-align: center;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .tab.active {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+            font-size: 14px;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 1);
+            transform: translateY(-1px);
+        }
+
+        /* Items List */
+        .item-list {
+            margin-top: 1rem;
+        }
+
+        .item {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            transition: all 0.3s ease;
+        }
+
+        .item:hover {
+            background: rgba(255, 255, 255, 1);
+            border-color: #667eea;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.1);
+        }
+
+        .item-content {
+            flex: 1;
+        }
+
+        .item-title {
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .item-meta {
+            font-size: 12px;
+            color: #667eea;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        .item-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .btn-small {
+            padding: 6px 12px;
+            font-size: 12px;
+            min-height: 32px;
+        }
+
+        /* Health-specific styling */
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 8px;
+        }
+
+        .service-tag {
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+            font-weight: 500;
+        }
+
+        .priority-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-left: 8px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .priority-high { color: #dc3545; }
+        .priority-medium { color: #fd7e14; }
+        .priority-low { color: #28a745; }
+
+        /* Visualization */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+
+        .stat-number {
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            opacity: 0.9;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .flow-diagram {
+            background: rgba(255, 255, 255, 0.5);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 300px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .empty-state {
+            text-align: center;
+            color: #666;
+            padding: 2rem;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+                padding: 1rem;
+                gap: 1rem;
+            }
+            
+            .progress-steps {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+            
+            .progress-step {
+                flex-direction: row;
+                text-align: left;
+                padding: 1rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">🏥</div>
+                <div>
+                    <div class="logo-text">Health Services Tracker</div>
+                    <div class="logo-subtitle">Patient Journey & Interaction Mapping</div>
+                </div>
+            </div>
+            <div class="header-actions">
+                <button class="header-btn" onclick="loadSampleHealthJourney()" title="Load sample health journey">
+                    📋 Demo Journey
+                </button>
+                <button class="header-btn" onclick="exportHealthData()" title="Export your health journey">
+                    📊 Export Data
+                </button>
+                <button class="header-btn" onclick="generateHealthReport()" title="Generate health report">
+                    📄 Health Report
+                </button>
+                <button class="header-btn" onclick="shareHealthJourney()" title="Share with healthcare provider">
+                    🔗 Share Journey
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">🏥</span>
+                Health Services Journey Builder
+            </h2>
+
+            <!-- Progress Indicator -->
+            <div class="progress-container">
+                <div class="progress-header">
+                    <h3 class="progress-title">
+                        <span>🎯</span> Health Journey Progress
+                    </h3>
+                    <span class="progress-percentage" id="progressPercentage">0%</span>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="progress-steps">
+                    <div class="progress-step" id="step-providers" data-step="providers">
+                        <div class="step-icon">👨‍⚕️</div>
+                        <div class="step-title">Healthcare Providers</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-visits" data-step="visits">
+                        <div class="step-icon">🏥</div>
+                        <div class="step-title">Medical Visits</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-treatments" data-step="treatments">
+                        <div class="step-icon">💊</div>
+                        <div class="step-title">Treatments</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-conditions" data-step="conditions">
+                        <div class="step-icon">🩺</div>
+                        <div class="step-title">Health Conditions</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                    <div class="progress-step" id="step-outcomes" data-step="outcomes">
+                        <div class="step-icon">📈</div>
+                        <div class="step-title">Health Outcomes</div>
+                        <div class="step-status">Incomplete</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('providers')">
+                    <span>👨‍⚕️</span> Healthcare Providers
+                </div>
+                <div class="tab" onclick="switchTab('visits')">
+                    <span>🏥</span> Medical Visits
+                </div>
+                <div class="tab" onclick="switchTab('treatments')">
+                    <span>💊</span> Treatments
+                </div>
+                <div class="tab" onclick="switchTab('conditions')">
+                    <span>🩺</span> Health Conditions
+                </div>
+                <div class="tab" onclick="switchTab('outcomes')">
+                    <span>📈</span> Health Outcomes
+                </div>
+            </div>
+
+            <!-- Healthcare Providers Tab -->
+            <div id="providers-tab" class="tab-content active">
+                <div class="form-group">
+                    <label class="form-label" for="providerName">Healthcare Provider Name</label>
+                    <input type="text" id="providerName" class="form-input" 
+                           placeholder="e.g., Dr. Sarah Johnson, City Medical Center">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="providerType">Provider Type</label>
+                    <select id="providerType" class="form-select">
+                        <option value="">Select provider type</option>
+                        <option value="Primary Care Physician">👨‍⚕️ Primary Care Physician</option>
+                        <option value="Specialist">🔬 Specialist</option>
+                        <option value="Hospital">🏥 Hospital</option>
+                        <option value="Urgent Care">⚡ Urgent Care</option>
+                        <option value="Emergency Room">🚨 Emergency Room</option>
+                        <option value="Mental Health">🧠 Mental Health Provider</option>
+                        <option value="Pharmacy">💊 Pharmacy</option>
+                        <option value="Diagnostic Center">🔍 Diagnostic Center</option>
+                        <option value="Physical Therapy">🏃‍♂️ Physical Therapy</option>
+                        <option value="Other">🏢 Other Healthcare Facility</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="providerSpecialty">Specialty/Department</label>
+                    <input type="text" id="providerSpecialty" class="form-input" 
+                           placeholder="e.g., Cardiology, Family Medicine, Orthopedics">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="firstVisitDate">First Visit Date</label>
+                    <input type="date" id="firstVisitDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="providerNotes">Notes & Experience</label>
+                    <textarea id="providerNotes" class="form-textarea" 
+                              placeholder="How did you find this provider? What's your experience been like?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addHealthcareProvider()">
+                    ➕ Add Healthcare Provider
+                </button>
+                <div class="item-list" id="providersList"></div>
+            </div>
+
+            <!-- Medical Visits Tab -->
+            <div id="visits-tab" class="tab-content">
+                <div class="form-group">
+                    <label class="form-label" for="visitDate">Visit Date</label>
+                    <input type="date" id="visitDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="visitProvider">Healthcare Provider</label>
+                    <select id="visitProvider" class="form-select">
+                        <option value="">Select provider (add providers first)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="visitReason">Reason for Visit</label>
+                    <input type="text" id="visitReason" class="form-input" 
+                           placeholder="e.g., Annual checkup, Follow-up, Symptom concern">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="visitType">Visit Type</label>
+                    <select id="visitType" class="form-select">
+                        <option value="">Select visit type</option>
+                        <option value="Routine Checkup">📅 Routine Checkup</option>
+                        <option value="Sick Visit">🤒 Sick Visit</option>
+                        <option value="Follow-up">🔄 Follow-up</option>
+                        <option value="Consultation">💬 Consultation</option>
+                        <option value="Procedure">⚕️ Procedure</option>
+                        <option value="Emergency">🚨 Emergency</option>
+                        <option value="Preventive Care">🛡️ Preventive Care</option>
+                        <option value="Test Results">📋 Test Results</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="visitOutcome">Visit Outcome & Next Steps</label>
+                    <textarea id="visitOutcome" class="form-textarea" 
+                              placeholder="What happened during the visit? Any diagnoses, prescriptions, or follow-up plans?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addMedicalVisit()">
+                    🏥 Add Medical Visit
+                </button>
+                <div class="item-list" id="visitsList"></div>
+            </div>
+
+            <!-- Treatments Tab -->
+            <div id="treatments-tab" class="tab-content">
+                <div class="form-group">
+                    <label class="form-label" for="treatmentName">Treatment/Medication Name</label>
+                    <input type="text" id="treatmentName" class="form-input" 
+                           placeholder="e.g., Lisinopril, Physical Therapy, Surgery">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="treatmentType">Treatment Type</label>
+                    <select id="treatmentType" class="form-select">
+                        <option value="">Select treatment type</option>
+                        <option value="Medication">💊 Medication</option>
+                        <option value="Procedure">⚕️ Medical Procedure</option>
+                        <option value="Surgery">🏥 Surgery</option>
+                        <option value="Therapy">🏃‍♂️ Physical/Occupational Therapy</option>
+                        <option value="Counseling">🧠 Counseling/Mental Health Treatment</option>
+                        <option value="Lifestyle">🥗 Lifestyle Changes</option>
+                        <option value="Monitoring">📊 Monitoring/Testing</option>
+                        <option value="Alternative">🌿 Alternative Medicine</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="prescribingProvider">Prescribing Provider</label>
+                    <select id="prescribingProvider" class="form-select">
+                        <option value="">Select provider</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="treatmentStart">Start Date</label>
+                    <input type="date" id="treatmentStart" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="treatmentEnd">End Date (if applicable)</label>
+                    <input type="date" id="treatmentEnd" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="treatmentEffectiveness">Effectiveness & Side Effects</label>
+                    <textarea id="treatmentEffectiveness" class="form-textarea" 
+                              placeholder="How effective was this treatment? Any side effects or concerns?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addTreatment()">
+                    💊 Add Treatment
+                </button>
+                <div class="item-list" id="treatmentsList"></div>
+            </div>
+
+            <!-- Health Conditions Tab -->
+            <div id="conditions-tab" class="tab-content">
+                <div class="form-group">
+                    <label class="form-label" for="conditionName">Health Condition</label>
+                    <input type="text" id="conditionName" class="form-input" 
+                           placeholder="e.g., Type 2 Diabetes, Hypertension, Anxiety">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="diagnosisDate">Diagnosis Date</label>
+                    <input type="date" id="diagnosisDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="diagnosingProvider">Diagnosing Provider</label>
+                    <select id="diagnosingProvider" class="form-select">
+                        <option value="">Select provider</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="conditionSeverity">Severity Level</label>
+                    <select id="conditionSeverity" class="form-select">
+                        <option value="">Select severity</option>
+                        <option value="Mild">🟢 Mild - Minimal impact on daily life</option>
+                        <option value="Moderate">🟡 Moderate - Some impact on daily activities</option>
+                        <option value="Severe">🟠 Severe - Significant impact on quality of life</option>
+                        <option value="Critical">🔴 Critical - Life-threatening or severely debilitating</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="conditionStatus">Current Status</label>
+                    <select id="conditionStatus" class="form-select">
+                        <option value="">Select status</option>
+                        <option value="Active">🔴 Active - Currently managing</option>
+                        <option value="Stable">🟡 Stable - Under control</option>
+                        <option value="Improving">🟢 Improving - Getting better</option>
+                        <option value="Resolved">✅ Resolved - No longer an issue</option>
+                        <option value="Chronic">♾️ Chronic - Long-term condition</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="conditionNotes">Notes & Impact</label>
+                    <textarea id="conditionNotes" class="form-textarea" 
+                              placeholder="How does this condition affect your daily life? Any triggers or patterns you've noticed?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addHealthCondition()">
+                    🩺 Add Health Condition
+                </button>
+                <div class="item-list" id="conditionsList"></div>
+            </div>
+
+            <!-- Health Outcomes Tab -->
+            <div id="outcomes-tab" class="tab-content">
+                <div class="form-group">
+                    <label class="form-label" for="outcomeMetric">Health Metric/Goal</label>
+                    <input type="text" id="outcomeMetric" class="form-input" 
+                           placeholder="e.g., Blood Pressure, Weight Loss, Pain Level">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="baselineValue">Baseline Value</label>
+                    <input type="text" id="baselineValue" class="form-input" 
+                           placeholder="e.g., 140/90 mmHg, 180 lbs, Pain level 8/10">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="targetValue">Target Value</label>
+                    <input type="text" id="targetValue" class="form-input" 
+                           placeholder="e.g., 120/80 mmHg, 160 lbs, Pain level 3/10">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="currentValue">Current Value</label>
+                    <input type="text" id="currentValue" class="form-input" 
+                           placeholder="e.g., 125/85 mmHg, 170 lbs, Pain level 5/10">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="measurementDate">Last Measured</label>
+                    <input type="date" id="measurementDate" class="form-input">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="outcomeNotes">Progress Notes</label>
+                    <textarea id="outcomeNotes" class="form-textarea" 
+                              placeholder="How are you progressing toward your health goals? What's working or not working?"></textarea>
+                </div>
+                <button class="btn btn-primary" onclick="addHealthOutcome()">
+                    📈 Add Health Outcome
+                </button>
+                <div class="item-list" id="outcomesList"></div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">
+                <span class="section-icon">📊</span>
+                Health Journey Visualization
+            </h2>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" id="providersCount">0</div>
+                    <div class="stat-label">Healthcare Providers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="visitsCount">0</div>
+                    <div class="stat-label">Medical Visits</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="treatmentsCount">0</div>
+                    <div class="stat-label">Active Treatments</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="conditionsCount">0</div>
+                    <div class="stat-label">Health Conditions</div>
+                </div>
+            </div>
+
+            <div class="flow-diagram" id="healthFlow">
+                <div class="empty-state">
+                    <div class="empty-state-icon">🏥</div>
+                    <h3>Your Health Journey</h3>
+                    <p>Build your health services interactions to see your healthcare journey visualization</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Global health data storage
+        let healthData = {
+            providers: [],
+            visits: [],
+            treatments: [],
+            conditions: [],
+            outcomes: [],
+            metadata: {
+                created: new Date().toISOString(),
+                lastModified: new Date().toISOString(),
+                version: "1.0",
+                title: "Health Services Journey"
+            }
+        };
+
+        // SAMPLE HEALTH JOURNEY LOADER
+        function loadSampleHealthJourney() {
+            if (confirm('This will replace your current health journey with a sample journey. Continue?')) {
+                
+                // Sample healthcare providers
+                healthData.providers = [
+                    {
+                        id: 'provider_pcp',
+                        providerName: 'Dr. Emily Rodriguez, MD',
+                        providerType: 'Primary Care Physician',
+                        providerSpecialty: 'Family Medicine',
+                        firstVisitDate: '2022-01-15',
+                        providerNotes: 'Excellent primary care doctor who takes time to listen and explain everything clearly. Found through insurance network.'
+                    },
+                    {
+                        id: 'provider_cardio',
+                        providerName: 'Dr. Michael Chen, MD',
+                        providerType: 'Specialist',
+                        providerSpecialty: 'Cardiology',
+                        firstVisitDate: '2023-03-20',
+                        providerNotes: 'Referred by PCP for high blood pressure. Very thorough cardiologist with excellent bedside manner.'
+                    },
+                    {
+                        id: 'provider_pt',
+                        providerName: 'Riverside Physical Therapy',
+                        providerType: 'Physical Therapy',
+                        providerSpecialty: 'Orthopedic Rehabilitation',
+                        firstVisitDate: '2023-08-10',
+                        providerNotes: 'Great PT clinic for my back injury. Modern facility with knowledgeable therapists.'
+                    }
+                ];
+
+                // Sample medical visits
+                healthData.visits = [
+                    {
+                        id: 'visit_annual',
+                        visitDate: '2024-01-15',
+                        visitProvider: 'Dr. Emily Rodriguez, MD',
+                        visitReason: 'Annual physical examination',
+                        visitType: 'Routine Checkup',
+                        visitOutcome: 'Overall health good. Blood pressure slightly elevated (135/88). Recommended dietary changes and follow-up in 3 months. Ordered routine blood work.'
+                    },
+                    {
+                        id: 'visit_followup',
+                        visitDate: '2024-04-20',
+                        visitProvider: 'Dr. Emily Rodriguez, MD',
+                        visitReason: 'Blood pressure follow-up',
+                        visitType: 'Follow-up',
+                        visitOutcome: 'BP still elevated (140/92). Started on Lisinopril 10mg daily. Referred to cardiologist for further evaluation.'
+                    },
+                    {
+                        id: 'visit_cardio',
+                        visitDate: '2024-05-15',
+                        visitProvider: 'Dr. Michael Chen, MD',
+                        visitReason: 'Hypertension evaluation',
+                        visitType: 'Consultation',
+                        visitOutcome: 'Comprehensive cardiac workup. EKG normal, echo shows mild LVH. Increased Lisinopril to 20mg. Lifestyle counseling provided.'
+                    }
+                ];
+
+                // Sample treatments
+                healthData.treatments = [
+                    {
+                        id: 'treatment_lisinopril',
+                        treatmentName: 'Lisinopril 20mg daily',
+                        treatmentType: 'Medication',
+                        prescribingProvider: 'Dr. Michael Chen, MD',
+                        treatmentStart: '2024-04-20',
+                        treatmentEnd: '',
+                        treatmentEffectiveness: 'Very effective for blood pressure control. No significant side effects. BP improved from 140/92 to 125/80.'
+                    },
+                    {
+                        id: 'treatment_diet',
+                        treatmentName: 'DASH Diet & Exercise Program',
+                        treatmentType: 'Lifestyle',
+                        prescribingProvider: 'Dr. Emily Rodriguez, MD',
+                        treatmentStart: '2024-01-15',
+                        treatmentEnd: '',
+                        treatmentEffectiveness: 'Following DASH diet and walking 30 min/day. Lost 12 lbs so far. Feeling more energetic.'
+                    }
+                ];
+
+                // Sample health conditions
+                healthData.conditions = [
+                    {
+                        id: 'condition_htn',
+                        conditionName: 'Essential Hypertension',
+                        diagnosisDate: '2024-04-20',
+                        diagnosingProvider: 'Dr. Emily Rodriguez, MD',
+                        conditionSeverity: 'Moderate',
+                        conditionStatus: 'Stable',
+                        conditionNotes: 'Well-controlled with medication and lifestyle changes. Family history of hypertension. Monitor closely.'
+                    },
+                    {
+                        id: 'condition_back',
+                        conditionName: 'Lower Back Strain',
+                        diagnosisDate: '2023-08-05',
+                        diagnosingProvider: 'Dr. Emily Rodriguez, MD',
+                        conditionSeverity: 'Mild',
+                        conditionStatus: 'Improving',
+                        conditionNotes: 'Work-related back strain from poor ergonomics. Responded well to physical therapy. Much improved.'
+                    }
+                ];
+
+                // Sample health outcomes
+                healthData.outcomes = [
+                    {
+                        id: 'outcome_bp',
+                        outcomeMetric: 'Blood Pressure Control',
+                        baselineValue: '140/92 mmHg',
+                        targetValue: '130/80 mmHg',
+                        currentValue: '125/80 mmHg',
+                        measurementDate: '2024-07-15',
+                        outcomeNotes: 'Excellent progress! Combination of medication and lifestyle changes working well. Goal achieved.'
+                    },
+                    {
+                        id: 'outcome_weight',
+                        outcomeMetric: 'Weight Management',
+                        baselineValue: '185 lbs',
+                        targetValue: '170 lbs',
+                        currentValue: '173 lbs',
+                        measurementDate: '2024-07-20',
+                        outcomeNotes: 'Good progress with DASH diet and regular exercise. Almost at target weight. Feeling great!'
+                    }
+                ];
+
+                // Update provider dropdowns
+                updateProviderDropdowns();
+                
+                // Update all displays
+                updateProvidersList();
+                updateVisitsList();
+                updateTreatmentsList();
+                updateConditionsList();
+                updateOutcomesList();
+                updateHealthVisualization();
+                updateProgressDisplay();
+
+                // Show success message
+                alert('Sample health journey loaded! Explore how healthcare interactions can be tracked and managed.');
+                console.log('Sample health journey loaded successfully');
+            }
+        }
+
+        // Progress Management
+        function updateProgressDisplay() {
+            const steps = {
+                providers: healthData.providers.length > 0,
+                visits: healthData.visits.length > 0,
+                treatments: healthData.treatments.length > 0,
+                conditions: healthData.conditions.length > 0,
+                outcomes: healthData.outcomes.length > 0
+            };
+
+            const completedSteps = Object.values(steps).filter(Boolean).length;
+            const totalSteps = Object.keys(steps).length;
+            const percentage = Math.round((completedSteps / totalSteps) * 100);
+
+            document.getElementById('progressPercentage').textContent = `${percentage}%`;
+            document.getElementById('progressBar').style.width = `${percentage}%`;
+
+            // Update individual steps
+            Object.keys(steps).forEach(step => {
+                const stepElement = document.getElementById(`step-${step}`);
+                if (stepElement) {
+                    const statusElement = stepElement.querySelector('.step-status');
+                    
+                    stepElement.classList.remove('completed', 'active');
+                    
+                    if (steps[step]) {
+                        stepElement.classList.add('completed');
+                        if (statusElement) statusElement.textContent = 'Complete';
+                    } else {
+                        if (statusElement) statusElement.textContent = 'Incomplete';
+                    }
+                }
+            });
+        }
+
+        // Tab switching
+        function switchTab(tabName) {
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Add active class to selected tab and content
+            event.target.classList.add('active');
+            document.getElementById(`${tabName}-tab`).classList.add('active');
+        }
+
+        // Update provider dropdowns
+        function updateProviderDropdowns() {
+            const dropdowns = ['visitProvider', 'prescribingProvider', 'diagnosingProvider'];
+            
+            dropdowns.forEach(dropdownId => {
+                const dropdown = document.getElementById(dropdownId);
+                if (dropdown) {
+                    // Clear existing options (except first one)
+                    while (dropdown.children.length > 1) {
+                        dropdown.removeChild(dropdown.lastChild);
+                    }
+                    
+                    // Add provider options
+                    healthData.providers.forEach(provider => {
+                        const option = document.createElement('option');
+                        option.value = provider.providerName;
+                        option.textContent = provider.providerName;
+                        dropdown.appendChild(option);
+                    });
+                }
+            });
+        }
+
+        // Add Healthcare Provider
+        function addHealthcareProvider() {
+            const providerName = document.getElementById('providerName').value.trim();
+            const providerType = document.getElementById('providerType').value;
+            const providerSpecialty = document.getElementById('providerSpecialty').value.trim();
+            const firstVisitDate = document.getElementById('firstVisitDate').value;
+            const providerNotes = document.getElementById('providerNotes').value.trim();
+
+            if (!providerName || !providerType) {
+                alert('Please provide the provider name and type');
+                return;
+            }
+
+            const provider = {
+                id: 'provider_' + Date.now(),
+                providerName,
+                providerType,
+                providerSpecialty,
+                firstVisitDate,
+                providerNotes
+            };
+
+            healthData.providers.push(provider);
+            
+            // Clear form
+            document.getElementById('providerName').value = '';
+            document.getElementById('providerType').value = '';
+            document.getElementById('providerSpecialty').value = '';
+            document.getElementById('firstVisitDate').value = '';
+            document.getElementById('providerNotes').value = '';
+            
+            updateProvidersList();
+            updateProviderDropdowns();
+            updateProgressDisplay();
+        }
+
+        function updateProvidersList() {
+            const container = document.getElementById('providersList');
+            container.innerHTML = '';
+
+            healthData.providers.forEach(provider => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${provider.providerName}</div>
+                        <div class="item-meta">${provider.providerType} - ${provider.providerSpecialty}</div>
+                        <div class="item-description">${provider.providerNotes}</div>
+                        ${provider.firstVisitDate ? `<div style="margin-top: 8px; font-weight: 500;">First visit: ${new Date(provider.firstVisitDate).toLocaleDateString()}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeProvider('${provider.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Medical Visit
+        function addMedicalVisit() {
+            const visitDate = document.getElementById('visitDate').value;
+            const visitProvider = document.getElementById('visitProvider').value;
+            const visitReason = document.getElementById('visitReason').value.trim();
+            const visitType = document.getElementById('visitType').value;
+            const visitOutcome = document.getElementById('visitOutcome').value.trim();
+
+            if (!visitDate || !visitProvider || !visitReason) {
+                alert('Please provide the visit date, provider, and reason');
+                return;
+            }
+
+            const visit = {
+                id: 'visit_' + Date.now(),
+                visitDate,
+                visitProvider,
+                visitReason,
+                visitType,
+                visitOutcome
+            };
+
+            healthData.visits.push(visit);
+            
+            // Clear form
+            document.getElementById('visitDate').value = '';
+            document.getElementById('visitProvider').value = '';
+            document.getElementById('visitReason').value = '';
+            document.getElementById('visitType').value = '';
+            document.getElementById('visitOutcome').value = '';
+            
+            updateVisitsList();
+            updateProgressDisplay();
+        }
+
+        function updateVisitsList() {
+            const container = document.getElementById('visitsList');
+            container.innerHTML = '';
+
+            healthData.visits.forEach(visit => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${visit.visitReason}</div>
+                        <div class="item-meta">${visit.visitType} - ${new Date(visit.visitDate).toLocaleDateString()} - ${visit.visitProvider}</div>
+                        <div class="item-description">${visit.visitOutcome}</div>
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeVisit('${visit.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Treatment
+        function addTreatment() {
+            const treatmentName = document.getElementById('treatmentName').value.trim();
+            const treatmentType = document.getElementById('treatmentType').value;
+            const prescribingProvider = document.getElementById('prescribingProvider').value;
+            const treatmentStart = document.getElementById('treatmentStart').value;
+            const treatmentEnd = document.getElementById('treatmentEnd').value;
+            const treatmentEffectiveness = document.getElementById('treatmentEffectiveness').value.trim();
+
+            if (!treatmentName || !treatmentType) {
+                alert('Please provide the treatment name and type');
+                return;
+            }
+
+            const treatment = {
+                id: 'treatment_' + Date.now(),
+                treatmentName,
+                treatmentType,
+                prescribingProvider,
+                treatmentStart,
+                treatmentEnd,
+                treatmentEffectiveness
+            };
+
+            healthData.treatments.push(treatment);
+            
+            // Clear form
+            document.getElementById('treatmentName').value = '';
+            document.getElementById('treatmentType').value = '';
+            document.getElementById('prescribingProvider').value = '';
+            document.getElementById('treatmentStart').value = '';
+            document.getElementById('treatmentEnd').value = '';
+            document.getElementById('treatmentEffectiveness').value = '';
+            
+            updateTreatmentsList();
+            updateProgressDisplay();
+        }
+
+        function updateTreatmentsList() {
+            const container = document.getElementById('treatmentsList');
+            container.innerHTML = '';
+
+            healthData.treatments.forEach(treatment => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                const isActive = !treatment.treatmentEnd;
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${treatment.treatmentName} ${isActive ? '<span style="color: #28a745;">● Active</span>' : '<span style="color: #6c757d;">● Completed</span>'}</div>
+                        <div class="item-meta">${treatment.treatmentType} - ${treatment.prescribingProvider}</div>
+                        <div class="item-description">${treatment.treatmentEffectiveness}</div>
+                        ${treatment.treatmentStart ? `<div style="margin-top: 8px; font-weight: 500;">Started: ${new Date(treatment.treatmentStart).toLocaleDateString()}</div>` : ''}
+                        ${treatment.treatmentEnd ? `<div style="font-weight: 500;">Ended: ${new Date(treatment.treatmentEnd).toLocaleDateString()}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeTreatment('${treatment.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Health Condition
+        function addHealthCondition() {
+            const conditionName = document.getElementById('conditionName').value.trim();
+            const diagnosisDate = document.getElementById('diagnosisDate').value;
+            const diagnosingProvider = document.getElementById('diagnosingProvider').value;
+            const conditionSeverity = document.getElementById('conditionSeverity').value;
+            const conditionStatus = document.getElementById('conditionStatus').value;
+            const conditionNotes = document.getElementById('conditionNotes').value.trim();
+
+            if (!conditionName) {
+                alert('Please provide the condition name');
+                return;
+            }
+
+            const condition = {
+                id: 'condition_' + Date.now(),
+                conditionName,
+                diagnosisDate,
+                diagnosingProvider,
+                conditionSeverity,
+                conditionStatus,
+                conditionNotes
+            };
+
+            healthData.conditions.push(condition);
+            
+            // Clear form
+            document.getElementById('conditionName').value = '';
+            document.getElementById('diagnosisDate').value = '';
+            document.getElementById('diagnosingProvider').value = '';
+            document.getElementById('conditionSeverity').value = '';
+            document.getElementById('conditionStatus').value = '';
+            document.getElementById('conditionNotes').value = '';
+            
+            updateConditionsList();
+            updateProgressDisplay();
+        }
+
+        function updateConditionsList() {
+            const container = document.getElementById('conditionsList');
+            container.innerHTML = '';
+
+            healthData.conditions.forEach(condition => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                const severityColor = {
+                    'Mild': '#28a745',
+                    'Moderate': '#fd7e14',
+                    'Severe': '#dc3545',
+                    'Critical': '#dc3545'
+                }[condition.conditionSeverity] || '#6c757d';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${condition.conditionName}</div>
+                        <div class="item-meta">
+                            ${condition.conditionStatus} 
+                            ${condition.conditionSeverity ? `<span style="color: ${severityColor};">● ${condition.conditionSeverity}</span>` : ''}
+                            ${condition.diagnosingProvider ? ` - ${condition.diagnosingProvider}` : ''}
+                        </div>
+                        <div class="item-description">${condition.conditionNotes}</div>
+                        ${condition.diagnosisDate ? `<div style="margin-top: 8px; font-weight: 500;">Diagnosed: ${new Date(condition.diagnosisDate).toLocaleDateString()}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeCondition('${condition.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Add Health Outcome
+        function addHealthOutcome() {
+            const outcomeMetric = document.getElementById('outcomeMetric').value.trim();
+            const baselineValue = document.getElementById('baselineValue').value.trim();
+            const targetValue = document.getElementById('targetValue').value.trim();
+            const currentValue = document.getElementById('currentValue').value.trim();
+            const measurementDate = document.getElementById('measurementDate').value;
+            const outcomeNotes = document.getElementById('outcomeNotes').value.trim();
+
+            if (!outcomeMetric || !baselineValue) {
+                alert('Please provide the metric name and baseline value');
+                return;
+            }
+
+            const outcome = {
+                id: 'outcome_' + Date.now(),
+                outcomeMetric,
+                baselineValue,
+                targetValue,
+                currentValue,
+                measurementDate,
+                outcomeNotes
+            };
+
+            healthData.outcomes.push(outcome);
+            
+            // Clear form
+            document.getElementById('outcomeMetric').value = '';
+            document.getElementById('baselineValue').value = '';
+            document.getElementById('targetValue').value = '';
+            document.getElementById('currentValue').value = '';
+            document.getElementById('measurementDate').value = '';
+            document.getElementById('outcomeNotes').value = '';
+            
+            updateOutcomesList();
+            updateProgressDisplay();
+        }
+
+        function updateOutcomesList() {
+            const container = document.getElementById('outcomesList');
+            container.innerHTML = '';
+
+            healthData.outcomes.forEach(outcome => {
+                const item = document.createElement('div');
+                item.className = 'item';
+                
+                item.innerHTML = `
+                    <div class="item-content">
+                        <div class="item-title">${outcome.outcomeMetric}</div>
+                        <div class="item-meta">
+                            Baseline: ${outcome.baselineValue} → Target: ${outcome.targetValue}
+                            ${outcome.currentValue ? ` → Current: ${outcome.currentValue}` : ''}
+                        </div>
+                        <div class="item-description">${outcome.outcomeNotes}</div>
+                        ${outcome.measurementDate ? `<div style="margin-top: 8px; font-weight: 500;">Last measured: ${new Date(outcome.measurementDate).toLocaleDateString()}</div>` : ''}
+                    </div>
+                    <div class="item-actions">
+                        <button class="btn btn-secondary btn-small" onclick="removeOutcome('${outcome.id}')">Remove</button>
+                    </div>
+                `;
+                container.appendChild(item);
+            });
+        }
+
+        // Update visualization stats and flow diagram
+        function updateHealthVisualization() {
+            document.getElementById('providersCount').textContent = healthData.providers.length;
+            document.getElementById('visitsCount').textContent = healthData.visits.length;
+            document.getElementById('treatmentsCount').textContent = healthData.treatments.filter(t => !t.treatmentEnd).length;
+            document.getElementById('conditionsCount').textContent = healthData.conditions.length;
+            
+            // Update flow diagram
+            updateHealthFlowDiagram();
+        }
+
+        function updateHealthFlowDiagram() {
+            const flowContainer = document.getElementById('healthFlow');
+            
+            if (healthData.providers.length === 0 && healthData.visits.length === 0 && 
+                healthData.treatments.length === 0 && healthData.conditions.length === 0) {
+                flowContainer.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">🏥</div>
+                        <h3>Your Health Journey</h3>
+                        <p>Build your health services interactions to see your healthcare journey visualization</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Create comprehensive health journey visualization
+            let flowHTML = '<div style="padding: 1rem;">';
+            
+            // Recent Activity Timeline
+            if (healthData.visits.length > 0) {
+                flowHTML += '<div style="margin-bottom: 2rem;">';
+                flowHTML += '<h4 style="color: #333; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span>📅</span> Recent Medical Activity</h4>';
+                
+                // Sort visits by date (most recent first)
+                const recentVisits = [...healthData.visits].sort((a, b) => new Date(b.visitDate) - new Date(a.visitDate)).slice(0, 3);
+                
+                recentVisits.forEach(visit => {
+                    flowHTML += `
+                        <div style="background: rgba(102, 126, 234, 0.1); border-left: 4px solid #667eea; padding: 1rem; margin-bottom: 1rem; border-radius: 8px;">
+                            <div style="font-weight: 600; color: #333; margin-bottom: 4px;">${new Date(visit.visitDate).toLocaleDateString()} - ${visit.visitReason}</div>
+                            <div style="font-size: 14px; color: #667eea; margin-bottom: 8px;">${visit.visitProvider} • ${visit.visitType}</div>
+                            <div style="font-size: 13px; color: #666;">${visit.visitOutcome}</div>
+                        </div>
+                    `;
+                });
+                flowHTML += '</div>';
+            }
+
+            // Active Conditions & Treatments
+            const activeConditions = healthData.conditions.filter(c => c.conditionStatus === 'Active' || c.conditionStatus === 'Chronic');
+            const activeTreatments = healthData.treatments.filter(t => !t.treatmentEnd);
+            
+            if (activeConditions.length > 0 || activeTreatments.length > 0) {
+                flowHTML += '<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2rem;">';
+                
+                // Active Conditions
+                if (activeConditions.length > 0) {
+                    flowHTML += '<div>';
+                    flowHTML += '<h4 style="color: #333; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span>🩺</span> Active Conditions</h4>';
+                    activeConditions.forEach(condition => {
+                        const severityColor = {
+                            'Mild': '#28a745',
+                            'Moderate': '#fd7e14', 
+                            'Severe': '#dc3545',
+                            'Critical': '#dc3545'
+                        }[condition.conditionSeverity] || '#6c757d';
+                        
+                        flowHTML += `
+                            <div style="background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem;">
+                                <div style="font-weight: 600; color: #333; font-size: 14px;">${condition.conditionName}</div>
+                                <div style="font-size: 12px; color: ${severityColor}; margin-top: 4px;">● ${condition.conditionSeverity} • ${condition.conditionStatus}</div>
+                            </div>
+                        `;
+                    });
+                    flowHTML += '</div>';
+                }
+                
+                // Active Treatments
+                if (activeTreatments.length > 0) {
+                    flowHTML += '<div>';
+                    flowHTML += '<h4 style="color: #333; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span>💊</span> Current Treatments</h4>';
+                    activeTreatments.forEach(treatment => {
+                        flowHTML += `
+                            <div style="background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 0.75rem; margin-bottom: 0.5rem;">
+                                <div style="font-weight: 600; color: #333; font-size: 14px;">${treatment.treatmentName}</div>
+                                <div style="font-size: 12px; color: #28a745; margin-top: 4px;">● Active • ${treatment.treatmentType}</div>
+                                ${treatment.treatmentStart ? `<div style="font-size: 11px; color: #666; margin-top: 2px;">Since ${new Date(treatment.treatmentStart).toLocaleDateString()}</div>` : ''}
+                            </div>
+                        `;
+                    });
+                    flowHTML += '</div>';
+                }
+                
+                flowHTML += '</div>';
+            }
+
+            // Healthcare Team
+            if (healthData.providers.length > 0) {
+                flowHTML += '<div style="margin-bottom: 2rem;">';
+                flowHTML += '<h4 style="color: #333; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span>👥</span> Your Healthcare Team</h4>';
+                
+                flowHTML += '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">';
+                healthData.providers.forEach(provider => {
+                    flowHTML += `
+                        <div style="background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 1rem; text-align: center;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">${getProviderIcon(provider.providerType)}</div>
+                            <div style="font-weight: 600; color: #333; font-size: 14px; margin-bottom: 4px;">${provider.providerName}</div>
+                            <div style="font-size: 12px; color: #667eea;">${provider.providerSpecialty}</div>
+                            <div style="font-size: 11px; color: #666; margin-top: 4px;">${provider.providerType}</div>
+                        </div>
+                    `;
+                });
+                flowHTML += '</div>';
+                flowHTML += '</div>';
+            }
+
+            // Health Progress
+            if (healthData.outcomes.length > 0) {
+                flowHTML += '<div>';
+                flowHTML += '<h4 style="color: #333; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px;"><span>📈</span> Health Progress</h4>';
+                
+                healthData.outcomes.forEach(outcome => {
+                    flowHTML += `
+                        <div style="background: rgba(255, 255, 255, 0.8); border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; padding: 1rem; margin-bottom: 1rem;">
+                            <div style="font-weight: 600; color: #333; margin-bottom: 8px;">${outcome.outcomeMetric}</div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span style="font-size: 12px; color: #666;">Baseline: ${outcome.baselineValue}</span>
+                                <span style="font-size: 12px; color: #667eea;">→</span>
+                                <span style="font-size: 12px; color: #666;">Target: ${outcome.targetValue}</span>
+                            </div>
+                            ${outcome.currentValue ? `
+                                <div style="background: rgba(102, 126, 234, 0.1); padding: 8px; border-radius: 6px; text-align: center;">
+                                    <span style="font-size: 14px; font-weight: 600; color: #667eea;">Current: ${outcome.currentValue}</span>
+                                </div>
+                            ` : ''}
+                            ${outcome.measurementDate ? `<div style="font-size: 11px; color: #666; margin-top: 8px; text-align: center;">Last updated: ${new Date(outcome.measurementDate).toLocaleDateString()}</div>` : ''}
+                        </div>
+                    `;
+                });
+                flowHTML += '</div>';
+            }
+
+            flowHTML += '</div>';
+            flowContainer.innerHTML = flowHTML;
+        }
+
+        function getProviderIcon(providerType) {
+            const icons = {
+                'Primary Care Physician': '👨‍⚕️',
+                'Specialist': '🔬',
+                'Hospital': '🏥',
+                'Urgent Care': '⚡',
+                'Emergency Room': '🚨',
+                'Mental Health': '🧠',
+                'Pharmacy': '💊',
+                'Diagnostic Center': '🔍',
+                'Physical Therapy': '🏃‍♂️',
+                'Other': '🏢'
+            };
+            return icons[providerType] || '👨‍⚕️';
+        }
+
+        // Remove functions
+        function removeProvider(id) {
+            healthData.providers = healthData.providers.filter(provider => provider.id !== id);
+            updateProvidersList();
+            updateProviderDropdowns();
+            updateProgressDisplay();
+        }
+
+        function removeVisit(id) {
+            healthData.visits = healthData.visits.filter(visit => visit.id !== id);
+            updateVisitsList();
+            updateHealthVisualization();
+            updateProgressDisplay();
+        }
+
+        function removeTreatment(id) {
+            healthData.treatments = healthData.treatments.filter(treatment => treatment.id !== id);
+            updateTreatmentsList();
+            updateHealthVisualization();
+            updateProgressDisplay();
+        }
+
+        function removeCondition(id) {
+            healthData.conditions = healthData.conditions.filter(condition => condition.id !== id);
+            updateConditionsList();
+            updateHealthVisualization();
+            updateProgressDisplay();
+        }
+
+        function removeOutcome(id) {
+            healthData.outcomes = healthData.outcomes.filter(outcome => outcome.id !== id);
+            updateOutcomesList();
+            updateProgressDisplay();
+        }
+
+        // Header functions
+        function exportHealthData() {
+            const dataStr = JSON.stringify(healthData, null, 2);
+            const dataBlob = new Blob([dataStr], {type: 'application/json'});
+            const url = URL.createObjectURL(dataBlob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'my-health-journey.json';
+            link.click();
+            URL.revokeObjectURL(url);
+        }
+
+        function generateHealthReport() {
+            if (healthData.providers.length === 0) {
+                alert('Add some healthcare providers first to generate a report!');
+                return;
+            }
+            
+            alert('📄 Health Report Generator\n\nYour comprehensive health report would include:\n\n• Healthcare provider summary\n• Visit timeline and patterns\n• Treatment effectiveness analysis\n• Condition progression tracking\n• Health outcome trends\n• Care coordination insights\n\nReport generation features coming soon!');
+        }
+
+        function shareHealthJourney() {
+            if (healthData.providers.length === 0 && healthData.visits.length === 0) {
+                alert('Build your health journey first before sharing!');
+                return;
+            }
+            
+            alert('🔗 Share Health Journey\n\nYour health information can be securely shared with:\n\n• New healthcare providers\n• Specialists for referrals\n• Emergency contacts\n• Care coordinators\n• Insurance providers\n\nSecure sharing features coming soon!');
+        }
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateProgressDisplay();
+            updateHealthVisualization();
+        });
+    </script>
+</body>
+</html>
