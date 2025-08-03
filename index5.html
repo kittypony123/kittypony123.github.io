@@ -270,7 +270,13 @@
         const [storedValue, setStoredValue] = React.useState(() => {
           try {
             const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
+            if (!item) return initialValue;
+            try {
+              return JSON.parse(item);
+            } catch (error) {
+              debug.warn(`Invalid JSON for localStorage key "${key}":`, item);
+              return initialValue;
+            }
           } catch (error) {
             debug.warn(`Error reading localStorage key "${key}":`, error);
             return initialValue;
