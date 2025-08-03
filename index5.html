@@ -15,12 +15,12 @@
     Current warnings are expected in development mode.
     -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Local copies of React, Babel, Feather Icons, and SheetJS -->
-    <script src="react.development.js"></script>
+    <!-- React, ReactDOM, and SheetJS served from CDNs; Babel & Feather are local -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="babel.min.js"></script>
     <script src="feather.min.js"></script>
-    <script src="xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   </head>
   <body class="bg-gray-50 font-sans text-base">
     <div id="root"></div>
