@@ -1,0 +1,3500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Catalog - Your BI Hub Made Simple</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --secondary: #64748b;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --info: #06b6d4;
+            
+            --bg-primary: #f8fafc;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #f1f5f9;
+            --bg-card: #ffffff;
+            --bg-hover: #f1f5f9;
+            
+            --text-primary: #1e293b;
+            --text-secondary: #475569;
+            --text-muted: #64748b;
+            
+            --border: #e2e8f0;
+            --border-light: #f1f5f9;
+            
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+        }
+
+        .nav-brand i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        /* Breadcrumb Navigation */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            margin: 1rem 2rem 0;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border-light);
+        }
+
+        .breadcrumb-item {
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb-item:hover {
+            color: var(--primary);
+        }
+
+        .breadcrumb-separator {
+            color: var(--text-muted);
+            margin: 0 0.25rem;
+        }
+
+        .breadcrumb-item.active {
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: default;
+        }
+
+        .breadcrumb-item.active:hover {
+            color: var(--text-primary);
+        }
+
+        /* Navigation Menu */
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            margin-left: 2rem;
+        }
+
+        .nav-menu-item {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .nav-menu-item:hover {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .nav-menu-item.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+
+        .help-btn {
+            background: var(--info);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 0.875rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .help-btn:hover {
+            background: #0891b2;
+            transform: translateY(-1px);
+        }
+
+        /* Welcome Section */
+        .welcome-section {
+            background: linear-gradient(135deg, var(--primary) 0%, #7c3aed 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .welcome-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .welcome-subtitle {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .welcome-actions {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Main Layout */
+        .app-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Quick Start Cards */
+        .quick-start {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .section-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .quick-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quick-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), #7c3aed);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .quick-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .quick-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .quick-card-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: white;
+            border-radius: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .quick-card-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+        }
+
+        .quick-card-description {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-card-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary);
+            font-weight: 500;
+            font-size: 0.875rem;
+        }
+
+        /* Import Wizard */
+        .wizard {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .wizard-header {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .wizard-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .wizard-subtitle {
+            opacity: 0.9;
+        }
+
+        .wizard-progress {
+            background: rgba(255, 255, 255, 0.2);
+            height: 0.5rem;
+            border-radius: 0.25rem;
+            margin-top: 1rem;
+            overflow: hidden;
+        }
+
+        .wizard-progress-fill {
+            background: rgba(255, 255, 255, 0.9);
+            height: 100%;
+            border-radius: 0.25rem;
+            transition: width 0.5s ease;
+        }
+
+        .wizard-content {
+            padding: 2rem;
+        }
+
+        .wizard-step {
+            display: none;
+        }
+
+        .wizard-step.active {
+            display: block;
+            animation: fadeInUp 0.5s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .step-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .step-icon {
+            width: 5rem;
+            height: 5rem;
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .step-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .step-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        /* File Upload Zone */
+        .upload-zone {
+            border: 2px dashed var(--border);
+            border-radius: 1rem;
+            padding: 3rem 2rem;
+            text-align: center;
+            background: var(--bg-tertiary);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            margin-bottom: 2rem;
+        }
+
+        .upload-zone:hover,
+        .upload-zone.dragover {
+            border-color: var(--primary);
+            background: rgba(59, 130, 246, 0.05);
+            transform: scale(1.02);
+        }
+
+        .upload-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .upload-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-subtitle {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        .file-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .file-input-card {
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .file-input-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .file-input-card.has-file {
+            background: rgba(16, 185, 129, 0.05);
+            border-color: var(--success);
+        }
+
+        .file-input-card.has-file::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--success);
+        }
+
+        .file-input-card input[type="file"] {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+        }
+
+        .file-card-icon {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+        }
+
+        .file-input-card.has-file .file-card-icon {
+            color: var(--success);
+        }
+
+        .file-label {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+        }
+
+        .file-status {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        .file-input-card.has-file .file-status {
+            color: var(--success);
+            font-weight: 500;
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            user-select: none;
+        }
+
+        .btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: var(--primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .btn-secondary {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-lg {
+            padding: 1rem 2rem;
+            font-size: 1rem;
+        }
+
+        /* Wizard Navigation */
+        .wizard-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 2rem;
+        }
+
+        .wizard-nav .btn {
+            min-width: 120px;
+        }
+
+        /* Demo Section */
+        .demo-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .demo-icon {
+            width: 4rem;
+            height: 4rem;
+            background: linear-gradient(135deg, var(--info), #06b6d4);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin: 0 auto 1.5rem;
+        }
+
+        .demo-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .demo-description {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+        }
+
+        /* Data Browser */
+        .data-browser {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .browser-header {
+            background: var(--bg-tertiary);
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .browser-title {
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .browser-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            min-height: 500px;
+        }
+
+        .browser-sidebar {
+            background: var(--bg-tertiary);
+            border-right: 1px solid var(--border);
+            padding: 1rem;
+        }
+
+        .browser-search {
+            margin-bottom: 1rem;
+        }
+
+        .browser-search input {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            background: var(--bg-secondary);
+        }
+
+        .data-tree {
+            list-style: none;
+        }
+
+        .tree-item {
+            margin-bottom: 0.25rem;
+        }
+
+        .tree-node {
+            padding: 0.5rem;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .tree-node:hover {
+            background: var(--bg-hover);
+        }
+
+        .tree-node.selected {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tree-icon {
+            width: 1rem;
+            text-align: center;
+        }
+
+        .detail-panel {
+            padding: 2rem;
+            background: var(--bg-secondary);
+        }
+
+        /* Tooltips */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+        }
+
+        .tooltip .tooltip-text {
+            visibility: hidden;
+            width: 200px;
+            background-color: var(--text-primary);
+            color: var(--bg-secondary);
+            text-align: center;
+            border-radius: 0.375rem;
+            padding: 0.5rem;
+            font-size: 0.75rem;
+            position: absolute;
+            z-index: 1;
+            bottom: 125%;
+            left: 50%;
+            margin-left: -100px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip .tooltip-text::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: var(--text-primary) transparent transparent transparent;
+        }
+
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Notifications */
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 1rem 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            box-shadow: var(--shadow-xl);
+            z-index: 1000;
+            max-width: 400px;
+            animation: slideInRight 0.3s ease-out;
+        }
+
+        .notification.success {
+            border-color: var(--success);
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .notification.error {
+            border-color: var(--error);
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .notification.warning {
+            border-color: var(--warning);
+            background: rgba(245, 158, 11, 0.05);
+        }
+
+        .notification.info {
+            border-color: var(--info);
+            background: rgba(6, 182, 212, 0.05);
+        }
+
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            max-width: 600px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: var(--shadow-xl);
+            animation: modalAppear 0.3s ease-out;
+        }
+
+        @keyframes modalAppear {
+            from {
+                opacity: 0;
+                transform: scale(0.9) translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        .close-btn {
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.25rem;
+            border-radius: 0.375rem;
+            transition: all 0.2s ease;
+        }
+
+        .close-btn:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        /* Help Tour */
+        .tour-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+        }
+
+        .tour-spotlight {
+            position: absolute;
+            background: transparent;
+            border-radius: 0.5rem;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.7);
+            pointer-events: none;
+        }
+
+        .tour-tooltip {
+            position: absolute;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            max-width: 300px;
+            box-shadow: var(--shadow-xl);
+            z-index: 2001;
+        }
+
+        .tour-tooltip::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 10px solid transparent;
+        }
+
+        .tour-tooltip.bottom::after {
+            top: -20px;
+            left: 50%;
+            margin-left: -10px;
+            border-bottom-color: var(--bg-card);
+        }
+
+        .tour-tooltip.top::after {
+            bottom: -20px;
+            left: 50%;
+            margin-left: -10px;
+            border-top-color: var(--bg-card);
+        }
+
+        .tour-title {
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .tour-description {
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .tour-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .tour-progress {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+        }
+
+        /* Form Styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .form-input,
+        .form-select,
+        .form-textarea {
+            width: 100%;
+            padding: 0.75rem;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            color: var(--text-primary);
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+        }
+
+        .form-input:focus,
+        .form-select:focus,
+        .form-textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .form-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-content {
+                padding: 0 1rem;
+            }
+
+            .app-container {
+                padding: 1rem;
+            }
+
+            .welcome-title {
+                font-size: 2rem;
+            }
+
+            .welcome-actions {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .file-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .browser-content {
+                grid-template-columns: 1fr;
+            }
+
+            .browser-sidebar {
+                display: none;
+            }
+        }
+
+        /* Utilities */
+        .hidden { display: none !important; }
+
+        /* Lineage Viewer Styles */
+        .lineage-viewer {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .lineage-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 1.5rem;
+        }
+
+        .lineage-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .lineage-controls {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .lineage-btn {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .lineage-btn:hover {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lineage-btn.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+        }
+
+        .lineage-canvas {
+            width: 100%;
+            height: 400px;
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            background: var(--bg-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lineage-node {
+            position: absolute;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 0.5rem;
+            padding: 0.75rem;
+            min-width: 120px;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: var(--shadow);
+        }
+
+        .lineage-node:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-2px);
+        }
+
+        .lineage-node.selected {
+            border-color: var(--primary);
+            background: var(--primary);
+            color: white;
+        }
+
+        .lineage-node.table {
+            border-color: var(--info);
+        }
+
+        .lineage-node.column {
+            border-color: var(--success);
+        }
+
+        .lineage-node.measure {
+            border-color: var(--warning);
+        }
+
+        .lineage-node-title {
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .lineage-node-type {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .lineage-connection {
+            position: absolute;
+            pointer-events: none;
+        }
+
+        .lineage-connection-line {
+            stroke: var(--border);
+            stroke-width: 2;
+            fill: none;
+            marker-end: url(#arrowhead);
+        }
+
+        .lineage-connection-line.highlighted {
+            stroke: var(--primary);
+            stroke-width: 3;
+        }
+
+        .lineage-legend {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            padding: 1rem;
+            background: var(--bg-tertiary);
+            border-radius: 0.5rem;
+        }
+
+        .lineage-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .lineage-legend-color {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+
+        .lineage-legend-color.table { background: var(--info); }
+        .lineage-legend-color.column { background: var(--success); }
+        .lineage-legend-color.measure { background: var(--warning); }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .justify-center { justify-content: center; }
+        .gap-2 { gap: 0.5rem; }
+        .gap-4 { gap: 1rem; }
+        .text-center { text-align: center; }
+        .text-sm { font-size: 0.875rem; }
+        .text-lg { font-size: 1.125rem; }
+        .font-semibold { font-weight: 600; }
+        .opacity-50 { opacity: 0.5; }
+        .mb-4 { margin-bottom: 1rem; }
+        .mt-4 { margin-top: 1rem; }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="nav-brand">
+                <i class="fas fa-database"></i>
+                Data Catalog
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <span class="nav-menu-item" onclick="app.showWelcome()">Home</span>
+                <span class="nav-menu-item" onclick="app.showImportWizard()">Import</span>
+                <span class="nav-menu-item" onclick="app.showExplore()">Explore</span>
+                <span class="nav-menu-item" onclick="app.showLineage()">Lineage</span>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="help-btn" id="helpBtn">
+                    <i class="fas fa-question-circle"></i>
+                    Help & Tour
+                </button>
+                <button class="btn btn-secondary" id="exportBtn" style="display: none;">
+                    <i class="fas fa-download"></i>
+                    Export
+                </button>
+                <label class="btn btn-secondary" for="importFile" style="display: none;">
+                    <i class="fas fa-upload"></i>
+                    Import
+                </label>
+                <input type="file" id="importFile" accept=".json" class="hidden">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb hidden" id="breadcrumb">
+        <span class="breadcrumb-item" onclick="app.showWelcome()">
+            <i class="fas fa-home"></i>
+            Home
+        </span>
+    </div>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section" id="welcomeSection">
+        <div class="welcome-content">
+            <h1 class="welcome-title">Welcome to Your Data Catalog</h1>
+            <p class="welcome-subtitle">
+                Transform your CSV exports into a searchable, organized catalog with business context that everyone can understand.
+            </p>
+            <div class="welcome-actions">
+                <button class="btn btn-lg btn-success" id="getStartedBtn">
+                    <i class="fas fa-rocket"></i>
+                    Get Started
+                </button>
+                <button class="btn btn-lg btn-secondary" id="tryDemoBtn">
+                    <i class="fas fa-play"></i>
+                    Try Demo
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <div class="app-container">
+        <!-- Quick Start Cards -->
+        <section class="quick-start" id="quickStartSection">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Three simple steps to create your data catalog</p>
+            </div>
+            
+            <div class="cards-grid">
+                <div class="quick-card" onclick="app.showImportWizard()">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-upload"></i>
+                    </div>
+                    <h3 class="quick-card-title">1. Import Your Data</h3>
+                    <p class="quick-card-description">
+                        Upload your CSV files from Power BI or other BI tools. We'll automatically organize tables, columns, measures, and relationships.
+                    </p>
+                    <div class="quick-card-action">
+                        <span>Start importing</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="quick-card" onclick="app.showExploreDemo()">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3 class="quick-card-title">2. Explore & Search</h3>
+                    <p class="quick-card-description">
+                        Browse your data assets with our intuitive interface. Search across all tables, columns, and measures instantly.
+                    </p>
+                    <div class="quick-card-action">
+                        <span>See how it works</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <div class="quick-card" onclick="app.showMetadataDemo()">
+                    <div class="quick-card-icon">
+                        <i class="fas fa-edit"></i>
+                    </div>
+                    <h3 class="quick-card-title">3. Add Business Context</h3>
+                    <p class="quick-card-description">
+                        Enrich your data with business descriptions, owners, purposes, and quality indicators that preserve across refreshes.
+                    </p>
+                    <div class="quick-card-action">
+                        <span>Learn more</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Import Wizard -->
+        <div class="wizard hidden" id="importWizard">
+            <div class="wizard-header">
+                <h2 class="wizard-title">Import Your Data Model</h2>
+                <p class="wizard-subtitle">We'll guide you through importing your CSV files step by step</p>
+                <div class="wizard-progress">
+                    <div class="wizard-progress-fill" id="wizardProgress" style="width: 25%"></div>
+                </div>
+            </div>
+            
+            <div class="wizard-content">
+                <!-- Step 1: Welcome -->
+                <div class="wizard-step active" id="step1">
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-hand-wave"></i>
+                        </div>
+                        <h3 class="step-title">Let's Get Your Data Ready</h3>
+                        <p class="step-description">
+                            Before we start, make sure you have exported these CSV files from your BI tool:
+                        </p>
+                        <ul style="text-align: left; max-width: 400px; margin: 0 auto 2rem; color: var(--text-secondary);">
+                            <li><strong>Tables</strong> - Basic table information (names, descriptions, row counts)</li>
+                            <li><strong>Columns</strong> - Column details (names, data types, descriptions)</li>
+                            <li><strong>Relationships</strong> - How tables connect to each other</li>
+                            <li><strong>Measures</strong> - Calculated fields and KPIs</li>
+                        </ul>
+                        <div style="background: rgba(59, 130, 246, 0.1); padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+                            <strong>💡 Tip:</strong> These files are typically named like "view_tables.csv", "view_columns.csv", etc.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Model Name -->
+                <div class="wizard-step" id="step2">
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-tag"></i>
+                        </div>
+                        <h3 class="step-title">Name Your Semantic Model</h3>
+                        <p class="step-description">
+                            Give your data model a meaningful name. This helps organize multiple models if you have them.
+                        </p>
+                        <div class="form-group">
+                            <label class="form-label">Model Name</label>
+                            <input type="text" id="modelName" class="form-input" value="My Data Model" placeholder="e.g., Sales Analytics Model">
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); padding: 1rem; border-radius: 0.5rem;">
+                            <strong>✨ Example names:</strong> "Sales Dashboard Model", "HR Analytics", "Financial Reports"
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: File Upload -->
+                <div class="wizard-step" id="step3">
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="step-title">Upload Your CSV Files</h3>
+                        <p class="step-description">
+                            Drop your files here or click to select them. We'll automatically detect which file is which based on the name.
+                        </p>
+                        
+                        <div class="upload-zone" id="uploadZone">
+                            <div class="upload-icon">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <h4 class="upload-title">Drag & Drop Files Here</h4>
+                            <p class="upload-subtitle">or click to browse your computer</p>
+                            
+                            <div class="file-grid">
+                                <div class="file-input-card" id="fileCard1">
+                                    <input type="file" id="csvTables" accept=".csv">
+                                    <div class="file-card-icon">
+                                        <i class="fas fa-table"></i>
+                                    </div>
+                                    <div class="file-label">Tables</div>
+                                    <div class="file-status">Select view_tables.csv</div>
+                                </div>
+                                <div class="file-input-card" id="fileCard2">
+                                    <input type="file" id="csvColumns" accept=".csv">
+                                    <div class="file-card-icon">
+                                        <i class="fas fa-columns"></i>
+                                    </div>
+                                    <div class="file-label">Columns</div>
+                                    <div class="file-status">Select view_columns.csv</div>
+                                </div>
+                                <div class="file-input-card" id="fileCard3">
+                                    <input type="file" id="csvRelationships" accept=".csv">
+                                    <div class="file-card-icon">
+                                        <i class="fas fa-project-diagram"></i>
+                                    </div>
+                                    <div class="file-label">Relationships</div>
+                                    <div class="file-status">Select view_relationships.csv</div>
+                                </div>
+                                <div class="file-input-card" id="fileCard4">
+                                    <input type="file" id="csvMeasures" accept=".csv">
+                                    <div class="file-card-icon">
+                                        <i class="fas fa-calculator"></i>
+                                    </div>
+                                    <div class="file-label">Measures</div>
+                                    <div class="file-status">Select view_measures.csv</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Ready to Import -->
+                <div class="wizard-step" id="step4">
+                    <div class="step-content">
+                        <div class="step-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="step-title">Ready to Import!</h3>
+                        <p class="step-description">
+                            Perfect! We have all your files. Click the button below to import your data model into the catalog.
+                        </p>
+                        <div id="filesSummary" style="background: var(--bg-tertiary); padding: 1rem; border-radius: 0.5rem; margin-bottom: 2rem; text-align: left;">
+                            <!-- Dynamic content will be added here -->
+                        </div>
+                        <button class="btn btn-success btn-lg" id="startImportBtn">
+                            <i class="fas fa-magic"></i>
+                            Import My Data Model
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="wizard-nav">
+                <button class="btn btn-secondary" id="prevBtn" disabled>
+                    <i class="fas fa-arrow-left"></i>
+                    Previous
+                </button>
+                <div class="text-sm" style="color: var(--text-muted);">
+                    Step <span id="currentStep">1</span> of 4
+                </div>
+                <button class="btn btn-primary" id="nextBtn">
+                    Next
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Demo Section -->
+        <div class="demo-section hidden" id="demoSection">
+            <div class="demo-icon">
+                <i class="fas fa-play"></i>
+            </div>
+            <h3 class="demo-title">Try the Interactive Demo</h3>
+            <p class="demo-description">
+                Experience the data catalog with sample data from a bike sharing company. 
+                See how easy it is to explore data and add business context.
+            </p>
+            <button class="btn btn-success btn-lg" id="loadDemoBtn">
+                <i class="fas fa-rocket"></i>
+                Load Sample Data
+            </button>
+        </div>
+
+        <!-- Data Browser -->
+        <div class="data-browser hidden" id="dataBrowser">
+            <div class="browser-header">
+                <h3 class="browser-title">
+                    <i class="fas fa-database"></i>
+                    Your Data Catalog - <span id="modelTitle">Loading...</span>
+                </h3>
+                <div class="flex gap-2">
+                    <div class="tooltip">
+                        <i class="fas fa-info-circle" style="color: var(--info);"></i>
+                        <span class="tooltip-text">Click any item to see details and add business context</span>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="addMoreDataBtn">
+                        <i class="fas fa-plus"></i>
+                        Import More Data
+                    </button>
+                </div>
+            </div>
+            
+            <div class="browser-content">
+                <div class="browser-sidebar">
+                    <div class="browser-search">
+                        <input type="text" id="treeSearch" placeholder="Search your data..." class="search-input">
+                    </div>
+                    
+                    <div style="margin-bottom: 1rem;">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="text-sm font-semibold">Quick Stats</span>
+                        </div>
+                        <div class="text-sm" style="color: var(--text-secondary);">
+                            <div class="flex justify-between mb-1">
+                                <span>Tables:</span>
+                                <span id="statsTablesCount">0</span>
+                            </div>
+                            <div class="flex justify-between mb-1">
+                                <span>Columns:</span>
+                                <span id="statsColumnsCount">0</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Measures:</span>
+                                <span id="statsMeasuresCount">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <ul class="data-tree" id="dataTree">
+                        <li class="tree-item">
+                            <div class="tree-node">
+                                <i class="fas fa-spinner fa-spin tree-icon"></i>
+                                <span>Loading data...</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="detail-panel" id="detailPanel">
+                    <div class="text-center" style="color: var(--text-muted); margin-top: 3rem;">
+                        <i class="fas fa-hand-pointer" style="font-size: 3rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+                        <h4>Click any item on the left to explore</h4>
+                        <p>Select a table, column, or measure to see its details and add business context.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lineage Viewer -->
+    <div class="lineage-viewer hidden" id="lineageViewer">
+        <div class="lineage-header">
+            <div class="lineage-title">
+                <i class="fas fa-project-diagram"></i>
+                Data Lineage
+            </div>
+            <div class="lineage-controls">
+                <input type="text" id="lineageSearch" placeholder="Search nodes..." 
+                       style="padding: 0.5rem; border: 1px solid var(--border); border-radius: 0.5rem; margin-right: 0.5rem;"
+                       oninput="app.filterLineageNodes(this.value)">
+                <button class="lineage-btn" onclick="app.showOnlyConnected()" id="connectedOnlyBtn">
+                    <i class="fas fa-filter"></i>
+                    Connected Only
+                </button>
+                <button class="lineage-btn" onclick="app.refreshLineage()">
+                    <i class="fas fa-sync-alt"></i>
+                    Refresh
+                </button>
+                <button class="lineage-btn" onclick="app.fitLineageToView()">
+                    <i class="fas fa-expand"></i>
+                    Fit to View
+                </button>
+                <button class="lineage-btn" onclick="app.resetLineageZoom()">
+                    <i class="fas fa-search"></i>
+                    Reset Zoom
+                </button>
+            </div>
+        </div>
+        
+        <div class="lineage-canvas" id="lineageCanvas">
+            <svg id="lineageSvg" width="100%" height="100%">
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                            refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="var(--border)" />
+                    </marker>
+                </defs>
+            </svg>
+        </div>
+        
+        <div class="lineage-legend">
+            <div class="lineage-legend-item">
+                <div class="lineage-legend-color table"></div>
+                <span>Tables</span>
+            </div>
+            <div class="lineage-legend-item">
+                <div class="lineage-legend-color column"></div>
+                <span>Columns</span>
+            </div>
+            <div class="lineage-legend-item">
+                <div class="lineage-legend-color measure"></div>
+                <span>Measures</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Help Modal -->
+    <div class="modal-overlay hidden" id="helpModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title">Help & Getting Started</h3>
+                <button class="close-btn" id="closeHelpBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content">
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Quick Start Guide</h4>
+                    <div style="display: grid; gap: 1rem;">
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">1</div>
+                            <div>
+                                <strong>Export CSV Files</strong><br>
+                                <small style="color: var(--text-secondary);">Export tables, columns, relationships, and measures from your BI tool</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">2</div>
+                            <div>
+                                <strong>Import to Catalog</strong><br>
+                                <small style="color: var(--text-secondary);">Use our step-by-step wizard to upload and organize your data</small>
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; align-items: center;">
+                            <div style="width: 2rem; height: 2rem; background: var(--primary); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;">3</div>
+                            <div>
+                                <strong>Add Business Context</strong><br>
+                                <small style="color: var(--text-secondary);">Click any item to add descriptions, owners, and quality indicators</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Common File Formats</h4>
+                    <div style="background: var(--bg-tertiary); padding: 1rem; border-radius: 0.5rem; font-family: monospace; font-size: 0.8rem;">
+                        <div>• view_tables.csv</div>
+                        <div>• view_columns.csv</div>
+                        <div>• view_relationships.csv</div>
+                        <div>• view_measures.csv</div>
+                    </div>
+                </div>
+                
+                <div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem;">Keyboard Shortcuts</h4>
+                    <div style="display: grid; gap: 0.5rem; font-size: 0.875rem;">
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Go to Home</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Ctrl + H</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Import Data</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Ctrl + I</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Explore Data</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Ctrl + E</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>View Lineage</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Ctrl + L</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Show Help</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Shift + ?</kbd>
+                        </div>
+                        <div style="display: flex; justify-content: space-between;">
+                            <span>Close Modal</span>
+                            <kbd style="background: var(--bg-tertiary); padding: 0.25rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem;">Escape</kbd>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="flex gap-2">
+                    <button class="btn btn-primary" id="startTourBtn">
+                        <i class="fas fa-route"></i>
+                        Take Interactive Tour
+                    </button>
+                    <button class="btn btn-secondary" onclick="app.loadDemo()">
+                        <i class="fas fa-play"></i>
+                        Try Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Business Metadata Modal -->
+    <div class="modal-overlay hidden" id="metadataModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Add Business Context</h3>
+                <button class="close-btn" id="closeModalBtn">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Dynamic form content -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script>
+        // User-Friendly Data Catalog Application
+        class UserFriendlyDataCatalog {
+            constructor() {
+                this.currentWizardStep = 1;
+                this.semanticModelName = "My Data Model";
+                this.tablesById = new Map();
+                this.columnsById = new Map();
+                this.measuresById = new Map();
+                this.relationshipsById = new Map();
+                this.businessMetadata = this.loadBusinessMetadata();
+                this.selectedItemId = null;
+                this.assets = [];
+                this.isDemo = false;
+                
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.setupDragAndDrop();
+                this.checkForExistingData();
+            }
+
+            // Check if user has existing data
+            checkForExistingData() {
+                if (Object.keys(this.businessMetadata.business).length > 0) {
+                    this.showNotification("Welcome back! You have existing business metadata.", "info");
+                }
+            }
+
+            // Event Listeners
+            setupEventListeners() {
+                // Welcome section
+                document.getElementById('getStartedBtn').addEventListener('click', () => this.showImportWizard());
+                document.getElementById('tryDemoBtn').addEventListener('click', () => this.showDemo());
+
+                // Help
+                document.getElementById('helpBtn').addEventListener('click', () => this.showHelp());
+                document.getElementById('closeHelpBtn').addEventListener('click', () => this.closeHelp());
+                document.getElementById('startTourBtn').addEventListener('click', () => this.startTour());
+
+                // Keyboard navigation
+                document.addEventListener('keydown', (e) => this.handleKeyboardNavigation(e));
+
+                // Wizard navigation
+                document.getElementById('nextBtn').addEventListener('click', () => this.nextWizardStep());
+                document.getElementById('prevBtn').addEventListener('click', () => this.prevWizardStep());
+                document.getElementById('startImportBtn').addEventListener('click', () => this.importCSVFiles());
+
+                // Model name
+                document.getElementById('modelName').addEventListener('input', (e) => {
+                    this.semanticModelName = e.target.value.trim() || "My Data Model";
+                });
+
+                // File inputs
+                ['csvTables', 'csvColumns', 'csvRelationships', 'csvMeasures'].forEach((id, index) => {
+                    document.getElementById(id).addEventListener('change', (e) => {
+                        this.updateFileStatus(index + 1, e.target.files[0]);
+                        this.updateWizardProgress();
+                    });
+                });
+
+                // Demo
+                document.getElementById('loadDemoBtn').addEventListener('click', () => this.loadDemo());
+
+                // Data browser
+                document.getElementById('treeSearch').addEventListener('input', () => this.filterData());
+                document.getElementById('addMoreDataBtn').addEventListener('click', () => this.showImportWizard());
+
+                // Export/Import
+                document.getElementById('exportBtn').addEventListener('click', () => this.exportData());
+                document.getElementById('importFile').addEventListener('change', (e) => this.importData(e));
+
+                // Modal
+                document.getElementById('closeModalBtn').addEventListener('click', () => this.closeModal());
+
+                // Close modals when clicking outside
+                document.getElementById('helpModal').addEventListener('click', (e) => {
+                    if (e.target === document.getElementById('helpModal')) {
+                        this.closeHelp();
+                    }
+                });
+
+                document.getElementById('metadataModal').addEventListener('click', (e) => {
+                    if (e.target === document.getElementById('metadataModal')) {
+                        this.closeModal();
+                    }
+                });
+            }
+
+            // Drag and Drop
+            setupDragAndDrop() {
+                const zone = document.getElementById('uploadZone');
+                
+                zone.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    zone.classList.add('dragover');
+                });
+
+                zone.addEventListener('dragleave', (e) => {
+                    e.preventDefault();
+                    if (!zone.contains(e.relatedTarget)) {
+                        zone.classList.remove('dragover');
+                    }
+                });
+
+                zone.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    zone.classList.remove('dragover');
+                    
+                    const files = Array.from(e.dataTransfer.files);
+                    const csvFiles = files.filter(f => f.name.toLowerCase().endsWith('.csv'));
+                    
+                    if (csvFiles.length === 0) {
+                        this.showNotification('Please drop CSV files only', 'warning');
+                        return;
+                    }
+
+                    this.autoAssignFiles(csvFiles);
+                });
+
+                // Make entire zone clickable
+                zone.addEventListener('click', () => {
+                    // Find the first empty file input and click it
+                    const fileInputs = ['csvTables', 'csvColumns', 'csvRelationships', 'csvMeasures'];
+                    for (const inputId of fileInputs) {
+                        const input = document.getElementById(inputId);
+                        if (input.files.length === 0) {
+                            input.click();
+                            break;
+                        }
+                    }
+                });
+            }
+
+            // Show import wizard
+            showImportWizard() {
+                this.hideAllSections();
+                document.getElementById('importWizard').classList.remove('hidden');
+                this.updateBreadcrumb(['Import']);
+                this.updateActiveNavItem('import');
+                
+                this.currentWizardStep = 1;
+                this.updateWizardStep();
+            }
+
+            // Show demo section
+            showDemo() {
+                this.hideAllSections();
+                document.getElementById('demoSection').classList.remove('hidden');
+                this.updateBreadcrumb(['Demo']);
+                this.updateActiveNavItem('');
+            }
+
+            // Wizard navigation
+            nextWizardStep() {
+                if (this.currentWizardStep < 4) {
+                    if (this.validateWizardStep(this.currentWizardStep)) {
+                        this.currentWizardStep++;
+                        this.updateWizardStep();
+                    }
+                }
+            }
+
+            prevWizardStep() {
+                if (this.currentWizardStep > 1) {
+                    this.currentWizardStep--;
+                    this.updateWizardStep();
+                }
+            }
+
+            validateWizardStep(step) {
+                switch (step) {
+                    case 1:
+                        return true; // Welcome step, always valid
+                    case 2:
+                        const modelName = document.getElementById('modelName').value.trim();
+                        if (!modelName) {
+                            this.showNotification('Please enter a model name', 'warning');
+                            return false;
+                        }
+                        return true;
+                    case 3:
+                        const files = [
+                            document.getElementById('csvTables').files[0],
+                            document.getElementById('csvColumns').files[0],
+                            document.getElementById('csvRelationships').files[0],
+                            document.getElementById('csvMeasures').files[0]
+                        ];
+                        const missingFiles = files.filter(f => !f).length;
+                        if (missingFiles > 0) {
+                            this.showNotification(`Please select all ${4 - files.filter(f => f).length} remaining CSV files`, 'warning');
+                            return false;
+                        }
+                        return true;
+                    default:
+                        return true;
+                }
+            }
+
+            updateWizardStep() {
+                // Hide all steps
+                document.querySelectorAll('.wizard-step').forEach(step => {
+                    step.classList.remove('active');
+                });
+
+                // Show current step
+                document.getElementById(`step${this.currentWizardStep}`).classList.add('active');
+
+                // Update progress
+                const progress = (this.currentWizardStep / 4) * 100;
+                document.getElementById('wizardProgress').style.width = `${progress}%`;
+
+                // Update navigation
+                document.getElementById('currentStep').textContent = this.currentWizardStep;
+                document.getElementById('prevBtn').disabled = this.currentWizardStep === 1;
+                
+                const nextBtn = document.getElementById('nextBtn');
+                if (this.currentWizardStep === 4) {
+                    nextBtn.style.display = 'none';
+                } else {
+                    nextBtn.style.display = 'flex';
+                }
+
+                // Update step 4 summary
+                if (this.currentWizardStep === 4) {
+                    this.updateFilesSummary();
+                }
+
+                this.updateWizardProgress();
+            }
+
+            updateWizardProgress() {
+                // Update next button state based on validation
+                const nextBtn = document.getElementById('nextBtn');
+                const isValid = this.validateWizardStepQuiet(this.currentWizardStep);
+                nextBtn.disabled = !isValid;
+            }
+
+            validateWizardStepQuiet(step) {
+                switch (step) {
+                    case 1:
+                        return true;
+                    case 2:
+                        return document.getElementById('modelName').value.trim() !== '';
+                    case 3:
+                        const files = [
+                            document.getElementById('csvTables').files[0],
+                            document.getElementById('csvColumns').files[0],
+                            document.getElementById('csvRelationships').files[0],
+                            document.getElementById('csvMeasures').files[0]
+                        ];
+                        return files.every(f => f);
+                    default:
+                        return true;
+                }
+            }
+
+            updateFilesSummary() {
+                const summary = document.getElementById('filesSummary');
+                const files = [
+                    { name: 'Tables', file: document.getElementById('csvTables').files[0] },
+                    { name: 'Columns', file: document.getElementById('csvColumns').files[0] },
+                    { name: 'Relationships', file: document.getElementById('csvRelationships').files[0] },
+                    { name: 'Measures', file: document.getElementById('csvMeasures').files[0] }
+                ];
+
+                const modelName = document.getElementById('modelName').value;
+
+                summary.innerHTML = `
+                    <h4 style="margin-bottom: 1rem;">📋 Import Summary</h4>
+                    <div style="margin-bottom: 1rem;">
+                        <strong>Model Name:</strong> ${modelName}
+                    </div>
+                    <div style="margin-bottom: 1rem;">
+                        <strong>Files to Import:</strong>
+                    </div>
+                    <ul style="list-style: none; padding: 0;">
+                        ${files.map(f => `
+                            <li style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                                <i class="fas fa-check-circle" style="color: var(--success);"></i>
+                                <span>${f.name}: ${f.file.name}</span>
+                                <small style="color: var(--text-muted);">(${(f.file.size / 1024).toFixed(1)} KB)</small>
+                            </li>
+                        `).join('')}
+                    </ul>
+                `;
+            }
+
+            // Auto-assign files based on naming patterns
+            autoAssignFiles(files) {
+                const mappings = {
+                    'table': 'csvTables',
+                    'column': 'csvColumns',
+                    'relationship': 'csvRelationships',
+                    'measure': 'csvMeasures'
+                };
+
+                let assignedCount = 0;
+
+                files.forEach(file => {
+                    const name = file.name.toLowerCase();
+                    for (const [pattern, inputId] of Object.entries(mappings)) {
+                        if (name.includes(pattern)) {
+                            const input = document.getElementById(inputId);
+                            if (input.files.length === 0) { // Only assign if empty
+                                const dt = new DataTransfer();
+                                dt.items.add(file);
+                                input.files = dt.files;
+                                
+                                const cardIndex = Object.values(mappings).indexOf(inputId) + 1;
+                                this.updateFileStatus(cardIndex, file);
+                                assignedCount++;
+                            }
+                            break;
+                        }
+                    }
+                });
+
+                if (assignedCount > 0) {
+                    this.showNotification(`✨ Automatically assigned ${assignedCount} file(s)! Check the assignments below.`, 'success');
+                    this.updateWizardProgress();
+                } else {
+                    this.showNotification('Files dropped, but could not auto-assign. Please select them manually.', 'info');
+                }
+            }
+
+            // Update file input visual status
+            updateFileStatus(cardIndex, file) {
+                const card = document.getElementById(`fileCard${cardIndex}`);
+                if (file) {
+                    card.classList.add('has-file');
+                    card.querySelector('.file-status').textContent = file.name;
+                } else {
+                    card.classList.remove('has-file');
+                    const defaultStatuses = [
+                        'Select view_tables.csv',
+                        'Select view_columns.csv', 
+                        'Select view_relationships.csv',
+                        'Select view_measures.csv'
+                    ];
+                    card.querySelector('.file-status').textContent = defaultStatuses[cardIndex - 1];
+                }
+            }
+
+            // CSV Import Engine
+            async importCSVFiles() {
+                const files = {
+                    tables: document.getElementById('csvTables').files[0],
+                    columns: document.getElementById('csvColumns').files[0],
+                    relationships: document.getElementById('csvRelationships').files[0],
+                    measures: document.getElementById('csvMeasures').files[0]
+                };
+
+                // Show loading state
+                const importBtn = document.getElementById('startImportBtn');
+                const originalText = importBtn.innerHTML;
+                importBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Importing your data...';
+                importBtn.disabled = true;
+
+                try {
+                    // Show progress messages
+                    this.showNotification('📁 Reading CSV files...', 'info');
+
+                    // Parse all CSV files
+                    const parsedData = {};
+                    for (const [key, file] of Object.entries(files)) {
+                        parsedData[key] = await this.parseCSV(file);
+                    }
+
+                    this.showNotification('🔧 Processing and organizing data...', 'info');
+
+                    // Validate and process data
+                    await this.processImportedData(parsedData);
+                    
+                    this.showNotification('🎨 Building your data catalog...', 'info');
+                    
+                    // Update UI
+                    this.buildAssets();
+                    this.showDataBrowser();
+                    
+                    const totalItems = this.tablesById.size + this.columnsById.size + this.measuresById.size;
+                    this.showNotification(`🎉 Success! Imported ${totalItems} data assets into your catalog.`, 'success');
+
+                } catch (error) {
+                    console.error('Import error:', error);
+                    this.showNotification(`❌ Import failed: ${error.message}. Please check your CSV files and try again.`, 'error');
+                } finally {
+                    // Reset button
+                    importBtn.innerHTML = originalText;
+                    importBtn.disabled = false;
+                }
+            }
+
+            // Parse CSV with better error handling
+            parseCSV(file) {
+                return new Promise((resolve, reject) => {
+                    Papa.parse(file, {
+                        header: true,
+                        skipEmptyLines: true,
+                        complete: (results) => {
+                            if (results.errors.length > 0) {
+                                reject(new Error(`Error in ${file.name}: ${results.errors[0].message}`));
+                            } else if (results.data.length === 0) {
+                                reject(new Error(`${file.name} appears to be empty`));
+                            } else {
+                                resolve(results.data);
+                            }
+                        },
+                        error: (error) => {
+                            reject(new Error(`Failed to read ${file.name}: ${error.message}`));
+                        }
+                    });
+                });
+            }
+
+            // Process imported data
+            async processImportedData(data) {
+                // Clear existing data
+                this.tablesById.clear();
+                this.columnsById.clear();
+                this.measuresById.clear();
+                this.relationshipsById.clear();
+
+                let processedItems = 0;
+
+                // Process tables
+                for (const row of data.tables) {
+                    if (!row.TableName) continue;
+                    
+                    const id = `table:${row.TableName.trim()}`;
+                    this.tablesById.set(id, {
+                        id,
+                        type: 'Table',
+                        name: row.TableName.trim(),
+                        isHidden: this.toBool(row.IsHidden),
+                        rowCount: parseInt(row.RowCount || 0),
+                        description: (row.Description || '').trim()
+                    });
+                    processedItems++;
+                }
+
+                // Process columns
+                for (const row of data.columns) {
+                    if (!row.TableName || !row.ColumnName) continue;
+                    
+                    const tableName = row.TableName.trim();
+                    const columnName = row.ColumnName.trim();
+                    const id = `column:${tableName}.${columnName}`;
+                    
+                    this.columnsById.set(id, {
+                        id,
+                        type: 'Column',
+                        tableId: `table:${tableName}`,
+                        name: columnName,
+                        dataType: (row.DataType || '').trim(),
+                        isHidden: this.toBool(row.IsHidden),
+                        isKey: this.toBool(row.IsKey),
+                        isNullable: this.toBool(row.IsNullable),
+                        format: row.FormatString || '',
+                        dataCategory: row.DataCategory || '',
+                        description: (row.Description || '').trim()
+                    });
+                    processedItems++;
+                }
+
+                // Process measures
+                for (const row of data.measures) {
+                    if (!row.TableName || !row.MeasureName) continue;
+                    
+                    const tableName = row.TableName.trim();
+                    const measureName = row.MeasureName.trim();
+                    const id = `measure:${tableName}.${measureName}`;
+                    
+                    this.measuresById.set(id, {
+                        id,
+                        type: 'Measure',
+                        tableId: `table:${tableName}`,
+                        name: measureName,
+                        expression: row.Expression || '',
+                        format: row.FormatString || '',
+                        folder: row.DisplayFolder || '',
+                        description: (row.Description || '').trim()
+                    });
+                    processedItems++;
+                }
+
+                // Process relationships
+                for (const row of data.relationships) {
+                    if (!row.FromTable || !row.FromColumn || !row.ToTable || !row.ToColumn) continue;
+                    
+                    const id = `rel:${row.FromTable}.${row.FromColumn}->${row.ToTable}.${row.ToColumn}`;
+                    this.relationshipsById.set(id, {
+                        id,
+                        type: 'Relationship',
+                        fromTableId: `table:${row.FromTable.trim()}`,
+                        toTableId: `table:${row.ToTable.trim()}`,
+                        fromColumnId: `column:${row.FromTable.trim()}.${row.FromColumn.trim()}`,
+                        toColumnId: `column:${row.ToTable.trim()}.${row.ToColumn.trim()}`,
+                        cardinality: row.Cardinality || '',
+                        direction: row.CrossFilterDirection || '',
+                        isActive: this.toBool(row.IsActive),
+                        description: (row.Description || '').trim()
+                    });
+                    processedItems++;
+                }
+
+                if (processedItems === 0) {
+                    throw new Error('No valid data found in CSV files. Please check the format.');
+                }
+            }
+
+            // Show data browser
+            showDataBrowser() {
+                this.hideAllSections();
+                document.getElementById('dataBrowser').classList.remove('hidden');
+                this.updateBreadcrumb(['Explore']);
+                this.updateActiveNavItem('explore');
+                
+                // Show export/import buttons
+                document.getElementById('exportBtn').style.display = 'flex';
+                document.querySelector('label[for="importFile"]').style.display = 'flex';
+                
+                // Update title
+                document.getElementById('modelTitle').textContent = this.semanticModelName;
+                
+                // Update stats
+                this.updateStats();
+                this.renderDataTree();
+                
+                this.isDemo = false;
+            }
+
+            // Load demo data
+            loadDemo() {
+                this.isDemo = true;
+                this.showNotification('🎭 Loading demo data...', 'info');
+                
+                // Clear existing data
+                this.tablesById.clear();
+                this.columnsById.clear();
+                this.measuresById.clear();
+                this.relationshipsById.clear();
+                
+                // Create sample data
+                this.createSampleData();
+                this.buildAssets();
+                
+                this.semanticModelName = "Bike Share Analytics (Demo)";
+                
+                this.showDataBrowser();
+                this.showNotification('🎉 Demo loaded! Explore the sample bike sharing data.', 'success');
+            }
+
+            // Create sample data for demo
+            createSampleData() {
+                // Sample tables
+                this.tablesById.set('table:Trips', {
+                    id: 'table:Trips',
+                    type: 'Table',
+                    name: 'Trips',
+                    isHidden: false,
+                    rowCount: 125000,
+                    description: 'Individual bike trip records with start/end stations and duration'
+                });
+
+                this.tablesById.set('table:Stations', {
+                    id: 'table:Stations',
+                    type: 'Table', 
+                    name: 'Stations',
+                    isHidden: false,
+                    rowCount: 450,
+                    description: 'Bike sharing station master data with location and capacity'
+                });
+
+                this.tablesById.set('table:Weather', {
+                    id: 'table:Weather',
+                    type: 'Table',
+                    name: 'Weather',
+                    isHidden: false,
+                    rowCount: 365,
+                    description: 'Daily weather conditions affecting bike usage patterns'
+                });
+
+                // Sample columns
+                const sampleColumns = [
+                    { table: 'Trips', name: 'TripId', type: 'Integer', isKey: true, desc: 'Unique identifier for each trip' },
+                    { table: 'Trips', name: 'StartTime', type: 'DateTime', isKey: false, desc: 'Trip start timestamp' },
+                    { table: 'Trips', name: 'EndTime', type: 'DateTime', isKey: false, desc: 'Trip end timestamp' },
+                    { table: 'Trips', name: 'Duration', type: 'Integer', isKey: false, desc: 'Trip duration in seconds' },
+                    { table: 'Stations', name: 'StationId', type: 'Integer', isKey: true, desc: 'Unique station identifier' },
+                    { table: 'Stations', name: 'Name', type: 'String', isKey: false, desc: 'Station display name' },
+                    { table: 'Stations', name: 'Latitude', type: 'Decimal', isKey: false, desc: 'Station GPS latitude' },
+                    { table: 'Stations', name: 'Longitude', type: 'Decimal', isKey: false, desc: 'Station GPS longitude' },
+                    { table: 'Weather', name: 'Date', type: 'Date', isKey: true, desc: 'Weather observation date' },
+                    { table: 'Weather', name: 'Temperature', type: 'Decimal', isKey: false, desc: 'Daily average temperature' },
+                ];
+
+                sampleColumns.forEach(col => {
+                    const id = `column:${col.table}.${col.name}`;
+                    this.columnsById.set(id, {
+                        id,
+                        type: 'Column',
+                        tableId: `table:${col.table}`,
+                        name: col.name,
+                        dataType: col.type,
+                        isHidden: false,
+                        isKey: col.isKey,
+                        isNullable: !col.isKey,
+                        format: '',
+                        dataCategory: '',
+                        description: col.desc
+                    });
+                });
+
+                // Sample measures
+                const sampleMeasures = [
+                    { table: 'Trips', name: 'Total Trips', expr: 'COUNTROWS(Trips)', desc: 'Total number of bike trips' },
+                    { table: 'Trips', name: 'Average Duration', expr: 'AVERAGE(Trips[Duration])/60', desc: 'Average trip duration in minutes' },
+                    { table: 'Stations', name: 'Active Stations', expr: 'DISTINCTCOUNT(Trips[StartStationId])', desc: 'Number of stations with trips' },
+                ];
+
+                sampleMeasures.forEach(meas => {
+                    const id = `measure:${meas.table}.${meas.name}`;
+                    this.measuresById.set(id, {
+                        id,
+                        type: 'Measure',
+                        tableId: `table:${meas.table}`,
+                        name: meas.name,
+                        expression: meas.expr,
+                        format: '#,##0',
+                        folder: 'Key Metrics',
+                        description: meas.desc
+                    });
+                });
+
+                // Add sample business metadata
+                this.businessMetadata.business = {
+                    'table:Trips': {
+                        ownerBusiness: 'Operations Team',
+                        ownerTechnical: 'Data Engineering',
+                        purpose: 'Track bike usage patterns and customer behavior for operational optimization',
+                        audience: 'Operations, Marketing, Executive',
+                        tags: ['operations', 'usage', 'customer-behavior'],
+                        rag: 'Green',
+                        sensitivity: 'Medium',
+                        links: ['https://internal.bikeshare.com/operations'],
+                        knownIssues: 'GPS coordinates may be inaccurate for trips before 2020'
+                    },
+                    'measure:Trips.Total Trips': {
+                        ownerBusiness: 'Operations Team',
+                        purpose: 'Primary KPI for measuring overall system utilization',
+                        rag: 'Green',
+                        sensitivity: 'Low'
+                    }
+                };
+            }
+
+            // Build searchable assets
+            buildAssets() {
+                this.assets = [];
+                
+                // Add tables
+                for (const table of this.tablesById.values()) {
+                    this.assets.push(this.attachBusinessMetadata(table));
+                }
+                
+                // Add columns
+                for (const column of this.columnsById.values()) {
+                    this.assets.push(this.attachBusinessMetadata(column));
+                }
+                
+                // Add measures
+                for (const measure of this.measuresById.values()) {
+                    this.assets.push(this.attachBusinessMetadata(measure));
+                }
+            }
+
+            // Attach business metadata
+            attachBusinessMetadata(asset) {
+                const bizData = this.businessMetadata.business[asset.id] || {};
+                return {
+                    ...asset,
+                    ownerBusiness: bizData.ownerBusiness || '',
+                    ownerTechnical: bizData.ownerTechnical || '',
+                    purpose: bizData.purpose || '',
+                    audience: bizData.audience || '',
+                    tags: bizData.tags || [],
+                    rag: bizData.rag || '',
+                    sensitivity: bizData.sensitivity || '',
+                    links: bizData.links || [],
+                    knownIssues: bizData.knownIssues || ''
+                };
+            }
+
+            // Update statistics
+            updateStats() {
+                document.getElementById('statsTablesCount').textContent = this.tablesById.size;
+                document.getElementById('statsColumnsCount').textContent = this.columnsById.size;
+                document.getElementById('statsMeasuresCount').textContent = this.measuresById.size;
+            }
+
+            // Render data tree
+            renderDataTree() {
+                const tree = document.getElementById('dataTree');
+                tree.innerHTML = '';
+                
+                if (this.assets.length === 0) {
+                    tree.innerHTML = '<li class="tree-item"><div class="tree-node">No data available</div></li>';
+                    return;
+                }
+
+                // Group by type
+                const grouped = {
+                    Table: [],
+                    Column: [],
+                    Measure: []
+                };
+
+                this.assets.forEach(asset => {
+                    if (grouped[asset.type]) {
+                        grouped[asset.type].push(asset);
+                    }
+                });
+
+                // Render groups
+                for (const [type, items] of Object.entries(grouped)) {
+                    if (items.length === 0) continue;
+                    
+                    const typeIcon = {
+                        Table: 'fas fa-table',
+                        Column: 'fas fa-columns',
+                        Measure: 'fas fa-calculator'
+                    }[type];
+
+                    const groupItem = document.createElement('li');
+                    groupItem.className = 'tree-item';
+                    groupItem.innerHTML = `
+                        <div class="tree-node" onclick="app.toggleGroup('${type}')" style="font-weight: 600;">
+                            <i class="tree-icon fas fa-chevron-right" id="chevron-${type}"></i>
+                            <i class="tree-icon ${typeIcon}"></i>
+                            <span>${type}s (${items.length})</span>
+                        </div>
+                        <ul class="data-tree hidden" id="group-${type}" style="margin-left: 1rem;">
+                            ${items.map(item => `
+                                <li class="tree-item">
+                                    <div class="tree-node" onclick="app.selectItem('${item.id}')" data-id="${item.id}">
+                                        <i class="tree-icon"></i>
+                                        <span>${item.name}</span>
+                                        ${item.rag ? `<span style="margin-left: auto; font-size: 0.7rem;">${this.getRagEmoji(item.rag)}</span>` : ''}
+                                    </div>
+                                </li>
+                            `).join('')}
+                        </ul>
+                    `;
+                    tree.appendChild(groupItem);
+                }
+
+                // Auto-expand first group
+                if (this.assets.length > 0) {
+                    setTimeout(() => this.toggleGroup('Table'), 100);
+                }
+            }
+
+            // Get RAG emoji
+            getRagEmoji(rag) {
+                const emojis = { Green: '🟢', Amber: '🟡', Red: '🔴' };
+                return emojis[rag] || '';
+            }
+
+            // Toggle tree group
+            toggleGroup(type) {
+                const group = document.getElementById(`group-${type}`);
+                const chevron = document.getElementById(`chevron-${type}`);
+                
+                if (!group) return;
+                
+                if (group.classList.contains('hidden')) {
+                    group.classList.remove('hidden');
+                    chevron.classList.replace('fa-chevron-right', 'fa-chevron-down');
+                } else {
+                    group.classList.add('hidden');
+                    chevron.classList.replace('fa-chevron-down', 'fa-chevron-right');
+                }
+            }
+
+            // Select item and show details
+            selectItem(itemId) {
+                this.selectedItemId = itemId;
+                
+                // Update tree selection
+                document.querySelectorAll('.tree-node').forEach(node => {
+                    node.classList.remove('selected');
+                });
+                const selectedNode = document.querySelector(`[data-id="${itemId}"]`);
+                if (selectedNode) {
+                    selectedNode.classList.add('selected');
+                }
+                
+                // Show details
+                this.renderItemDetails(itemId);
+            }
+
+            // Render item details
+            renderItemDetails(itemId) {
+                const item = this.assets.find(a => a.id === itemId);
+                if (!item) return;
+                
+                const panel = document.getElementById('detailPanel');
+                
+                const typeIcons = {
+                    Table: 'fas fa-table',
+                    Column: 'fas fa-columns',
+                    Measure: 'fas fa-calculator'
+                };
+
+                let content = `
+                    <div style="margin-bottom: 2rem;">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <h3 style="margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                                <i class="${typeIcons[item.type]}" style="color: var(--primary);"></i>
+                                ${item.name}
+                            </h3>
+                            ${item.rag ? `<span style="font-size: 1.5rem;">${this.getRagEmoji(item.rag)}</span>` : ''}
+                        </div>
+                        <div style="background: var(--bg-tertiary); padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.875rem; color: var(--text-secondary);">
+                            ${item.type} in ${this.semanticModelName}
+                        </div>
+                    </div>
+                `;
+
+                // Technical details
+                content += `<div style="margin-bottom: 2rem;">
+                    <h4 style="margin-bottom: 1rem; color: var(--primary); display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-cog"></i>
+                        Technical Details
+                    </h4>
+                    <p style="margin-bottom: 1rem; line-height: 1.6;">${item.description || '<em style="color: var(--text-muted);">No description available</em>'}</p>
+                `;
+
+                if (item.type === 'Table') {
+                    const columns = [...this.columnsById.values()].filter(c => c.tableId === item.id);
+                    const measures = [...this.measuresById.values()].filter(m => m.tableId === item.id);
+                    content += `
+                        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 1rem;">
+                            <div style="text-align: center; padding: 1rem; background: var(--bg-tertiary); border-radius: 0.5rem;">
+                                <div style="font-size: 1.5rem; font-weight: 600; color: var(--primary);">${item.rowCount?.toLocaleString() || 0}</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Rows</div>
+                            </div>
+                            <div style="text-align: center; padding: 1rem; background: var(--bg-tertiary); border-radius: 0.5rem;">
+                                <div style="font-size: 1.5rem; font-weight: 600; color: var(--primary);">${columns.length}</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Columns</div>
+                            </div>
+                            <div style="text-align: center; padding: 1rem; background: var(--bg-tertiary); border-radius: 0.5rem;">
+                                <div style="font-size: 1.5rem; font-weight: 600; color: var(--primary);">${measures.length}</div>
+                                <div style="font-size: 0.875rem; color: var(--text-secondary);">Measures</div>
+                            </div>
+                        </div>
+                    `;
+                } else if (item.type === 'Column') {
+                    content += `
+                        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; font-size: 0.875rem; margin-bottom: 1rem;">
+                            <div><strong>Data Type:</strong> ${item.dataType}</div>
+                            <div><strong>Nullable:</strong> ${item.isNullable ? 'Yes' : 'No'}</div>
+                            ${item.isKey ? '<div style="color: var(--warning);"><strong><i class="fas fa-key"></i> Primary Key</strong></div>' : ''}
+                            ${item.isHidden ? '<div style="color: var(--text-muted);"><i class="fas fa-eye-slash"></i> Hidden from users</div>' : ''}
+                        </div>
+                    `;
+                } else if (item.type === 'Measure') {
+                    content += `
+                        <div style="margin-bottom: 1rem;">
+                            ${item.folder ? `<p><strong>Folder:</strong> ${item.folder}</p>` : ''}
+                            ${item.format ? `<p><strong>Format:</strong> ${item.format}</p>` : ''}
+                        </div>
+                        <details style="margin-bottom: 1rem;">
+                            <summary style="cursor: pointer; padding: 0.5rem; background: var(--bg-tertiary); border-radius: 0.5rem; font-weight: 500;">
+                                <i class="fas fa-code"></i> View DAX Expression
+                            </summary>
+                            <div style="margin-top: 0.5rem; padding: 1rem; background: var(--bg-primary); border-radius: 0.5rem; font-family: monospace; font-size: 0.875rem; border: 1px solid var(--border);">
+                                ${item.expression || 'No expression available'}
+                            </div>
+                        </details>
+                    `;
+                }
+
+                content += '</div>';
+
+                // Business metadata
+                const hasBusinessData = item.purpose || item.ownerBusiness || item.tags.length > 0;
+                content += `
+                    <div style="margin-bottom: 2rem;">
+                        <h4 style="margin-bottom: 1rem; color: var(--success); display: flex; align-items: center; gap: 0.5rem;">
+                            <i class="fas fa-users"></i>
+                            Business Context
+                            ${!hasBusinessData ? '<span style="font-size: 0.75rem; font-weight: 400; color: var(--text-muted);">(Click "Add Context" to enhance this asset)</span>' : ''}
+                        </h4>
+                `;
+
+                if (hasBusinessData) {
+                    if (item.purpose) content += `<p style="margin-bottom: 1rem;"><strong>Purpose:</strong> ${item.purpose}</p>`;
+                    if (item.ownerBusiness) content += `<p style="margin-bottom: 1rem;"><strong>Business Owner:</strong> ${item.ownerBusiness}</p>`;
+                    if (item.audience) content += `<p style="margin-bottom: 1rem;"><strong>Target Audience:</strong> ${item.audience}</p>`;
+                    if (item.tags.length) {
+                        content += `<p style="margin-bottom: 1rem;"><strong>Tags:</strong> `;
+                        content += item.tags.map(tag => `<span style="background: var(--primary); color: white; padding: 0.2rem 0.5rem; border-radius: 1rem; font-size: 0.75rem; margin-right: 0.5rem;">${tag}</span>`).join('');
+                        content += `</p>`;
+                    }
+                    if (item.sensitivity) content += `<p style="margin-bottom: 1rem;"><strong>Data Sensitivity:</strong> <span style="color: var(--warning);">${item.sensitivity}</span></p>`;
+                    if (item.knownIssues) content += `<p style="margin-bottom: 1rem;"><strong>Known Issues:</strong> ${item.knownIssues}</p>`;
+                } else {
+                    content += `<p style="color: var(--text-muted); font-style: italic;">No business context added yet. Click "Add Business Context" to enhance this asset with ownership, purpose, and quality information.</p>`;
+                }
+
+                content += '</div>';
+
+                // Action buttons
+                content += `
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <button class="btn btn-primary" onclick="app.editBusinessMetadata('${item.id}')">
+                            <i class="fas fa-plus"></i>
+                            ${hasBusinessData ? 'Edit Business Context' : 'Add Business Context'}
+                        </button>
+                        ${item.type === 'Measure' && item.expression ? `
+                            <button class="btn btn-secondary" onclick="navigator.clipboard.writeText('${item.expression.replace(/'/g, "\\'")}').then(() => app.showNotification('DAX expression copied to clipboard!', 'success'))">
+                                <i class="fas fa-copy"></i>
+                                Copy DAX
+                            </button>
+                        ` : ''}
+                    </div>
+                `;
+
+                panel.innerHTML = content;
+            }
+
+            // Filter data
+            filterData() {
+                const searchTerm = document.getElementById('treeSearch').value.toLowerCase().trim();
+                
+                if (!searchTerm) {
+                    this.renderDataTree();
+                    return;
+                }
+
+                // Filter assets based on search term
+                const filteredAssets = this.assets.filter(asset => {
+                    const searchableText = [
+                        asset.name,
+                        asset.description,
+                        asset.purpose,
+                        asset.tags.join(' '),
+                        asset.expression || ''
+                    ].join(' ').toLowerCase();
+                    
+                    return searchableText.includes(searchTerm);
+                });
+
+                // Render filtered tree
+                this.renderFilteredTree(filteredAssets, searchTerm);
+            }
+
+            // Render filtered tree
+            renderFilteredTree(filteredAssets, searchTerm) {
+                const tree = document.getElementById('dataTree');
+                tree.innerHTML = '';
+                
+                if (filteredAssets.length === 0) {
+                    tree.innerHTML = `
+                        <li class="tree-item">
+                            <div class="tree-node" style="color: var(--text-muted);">
+                                <i class="fas fa-search tree-icon"></i>
+                                <span>No results found for "${searchTerm}"</span>
+                            </div>
+                        </li>
+                    `;
+                    return;
+                }
+
+                // Show results directly (flattened)
+                filteredAssets.forEach(item => {
+                    const typeIcon = {
+                        Table: 'fas fa-table',
+                        Column: 'fas fa-columns',
+                        Measure: 'fas fa-calculator'
+                    }[item.type];
+
+                    const listItem = document.createElement('li');
+                    listItem.className = 'tree-item';
+                    listItem.innerHTML = `
+                        <div class="tree-node" onclick="app.selectItem('${item.id}')" data-id="${item.id}">
+                            <i class="tree-icon ${typeIcon}"></i>
+                            <span>${item.name}</span>
+                            <span style="margin-left: auto; font-size: 0.75rem; color: var(--text-muted);">${item.type}</span>
+                            ${item.rag ? `<span style="font-size: 0.7rem;">${this.getRagEmoji(item.rag)}</span>` : ''}
+                        </div>
+                    `;
+                    tree.appendChild(listItem);
+                });
+            }
+
+            // Edit business metadata
+            editBusinessMetadata(itemId) {
+                const item = this.assets.find(a => a.id === itemId);
+                if (!item) return;
+                
+                const modal = document.getElementById('metadataModal');
+                const modalTitle = document.getElementById('modalTitle');
+                const modalContent = document.getElementById('modalContent');
+                
+                modalTitle.innerHTML = `
+                    <i class="fas fa-edit" style="color: var(--primary);"></i>
+                    Add Business Context - ${item.name}
+                `;
+                
+                modalContent.innerHTML = `
+                    <div style="margin-bottom: 2rem; padding: 1rem; background: var(--bg-tertiary); border-radius: 0.5rem; border-left: 4px solid var(--primary);">
+                        <h4 style="margin: 0 0 0.5rem 0;">💡 Why Add Business Context?</h4>
+                        <p style="margin: 0; color: var(--text-secondary); font-size: 0.875rem;">
+                            Business context helps colleagues understand what this ${item.type.toLowerCase()} is for, who owns it, and how reliable it is.
+                            This information stays with your data even when you refresh from new CSV exports.
+                        </p>
+                    </div>
+
+                    <form id="metadataForm">
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-user-tie"></i>
+                                Business Owner
+                                <span class="tooltip">
+                                    <i class="fas fa-question-circle" style="color: var(--info); margin-left: 0.25rem;"></i>
+                                    <span class="tooltip-text">Who is responsible for this data from a business perspective?</span>
+                                </span>
+                            </label>
+                            <input type="text" id="ownerBusiness" class="form-input" value="${item.ownerBusiness}" placeholder="e.g., Marketing Team, John Smith">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-user-cog"></i>
+                                Technical Owner
+                                <span class="tooltip">
+                                    <i class="fas fa-question-circle" style="color: var(--info); margin-left: 0.25rem;"></i>
+                                    <span class="tooltip-text">Who maintains this data technically?</span>
+                                </span>
+                            </label>
+                            <input type="text" id="ownerTechnical" class="form-input" value="${item.ownerTechnical}" placeholder="e.g., Data Engineering, Jane Doe">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-bullseye"></i>
+                                Purpose & Usage
+                                <span style="color: var(--primary); font-size: 0.75rem;">(Recommended)</span>
+                            </label>
+                            <textarea id="purpose" class="form-textarea" placeholder="What is this used for? Why is it important? How should others use it?">${item.purpose}</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-users"></i>
+                                Target Audience
+                            </label>
+                            <input type="text" id="audience" class="form-input" value="${item.audience}" placeholder="e.g., Sales team, Executives, All staff">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-tags"></i>
+                                Tags (comma-separated)
+                            </label>
+                            <input type="text" id="tags" class="form-input" value="${item.tags.join(', ')}" placeholder="e.g., sales, kpi, customer-data, revenue">
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-traffic-light"></i>
+                                    Quality Status (RAG)
+                                </label>
+                                <select id="rag" class="form-select">
+                                    <option value="">Select status</option>
+                                    <option value="Green" ${item.rag === 'Green' ? 'selected' : ''}>🟢 Green - Reliable & Current</option>
+                                    <option value="Amber" ${item.rag === 'Amber' ? 'selected' : ''}>🟡 Amber - Use with Caution</option>
+                                    <option value="Red" ${item.rag === 'Red' ? 'selected' : ''}>🔴 Red - Known Issues</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class="fas fa-shield-alt"></i>
+                                    Data Sensitivity
+                                </label>
+                                <select id="sensitivity" class="form-select">
+                                    <option value="">Select sensitivity</option>
+                                    <option value="Low" ${item.sensitivity === 'Low' ? 'selected' : ''}>🟢 Low - Public/General</option>
+                                    <option value="Medium" ${item.sensitivity === 'Medium' ? 'selected' : ''}>🟡 Medium - Internal Only</option>
+                                    <option value="High" ${item.sensitivity === 'High' ? 'selected' : ''}>🟠 High - Restricted</option>
+                                    <option value="PII" ${item.sensitivity === 'PII' ? 'selected' : ''}>🔴 PII - Personal Data</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-exclamation-triangle"></i>
+                                Known Issues or Limitations
+                            </label>
+                            <textarea id="knownIssues" class="form-textarea" placeholder="Document any known data quality issues, refresh delays, or usage limitations...">${item.knownIssues}</textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-external-link-alt"></i>
+                                Useful Links (comma-separated)
+                            </label>
+                            <input type="text" id="links" class="form-input" value="${item.links.join(', ')}" placeholder="e.g., https://wiki.company.com/data-guide, https://docs.team.com/kpis">
+                        </div>
+                        
+                        <div style="display: flex; gap: 1rem; margin-top: 2rem; justify-content: flex-end;">
+                            <button type="button" class="btn btn-secondary" onclick="app.closeModal()">
+                                Cancel
+                            </button>
+                            <button type="submit" class="btn btn-success">
+                                <i class="fas fa-save"></i>
+                                Save Business Context
+                            </button>
+                        </div>
+                    </form>
+                `;
+                
+                modal.classList.remove('hidden');
+                
+                // Focus on purpose field if empty (most important field)
+                setTimeout(() => {
+                    const purposeField = document.getElementById('purpose');
+                    if (!purposeField.value) {
+                        purposeField.focus();
+                    }
+                }, 100);
+                
+                // Handle form submission
+                document.getElementById('metadataForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.saveBusinessMetadata(itemId);
+                });
+            }
+
+            // Save business metadata
+            saveBusinessMetadata(itemId) {
+                const formData = {
+                    ownerBusiness: document.getElementById('ownerBusiness').value.trim(),
+                    ownerTechnical: document.getElementById('ownerTechnical').value.trim(),
+                    purpose: document.getElementById('purpose').value.trim(),
+                    audience: document.getElementById('audience').value.trim(),
+                    tags: document.getElementById('tags').value.split(',').map(t => t.trim()).filter(Boolean),
+                    rag: document.getElementById('rag').value,
+                    sensitivity: document.getElementById('sensitivity').value,
+                    knownIssues: document.getElementById('knownIssues').value.trim(),
+                    links: document.getElementById('links').value.split(',').map(l => l.trim()).filter(Boolean)
+                };
+                
+                // Save to business metadata
+                this.businessMetadata.business[itemId] = formData;
+                this.saveBusinessMetadataToStorage();
+                
+                // Rebuild assets with new metadata
+                this.buildAssets();
+                
+                // Refresh UI
+                this.renderItemDetails(itemId);
+                this.renderDataTree();
+                
+                this.closeModal();
+                this.showNotification('✨ Business context saved! This information will be preserved across data refreshes.', 'success');
+            }
+
+            // Show help modal
+            showHelp() {
+                document.getElementById('helpModal').classList.remove('hidden');
+            }
+
+            // Close help modal  
+            closeHelp() {
+                document.getElementById('helpModal').classList.add('hidden');
+            }
+
+            // Start interactive tour
+            startTour() {
+                this.closeHelp();
+                this.showNotification('🎯 Interactive tour coming soon! For now, try the "Load Sample Data" button to explore.', 'info');
+            }
+
+            // Close modal
+            closeModal() {
+                document.getElementById('metadataModal').classList.add('hidden');
+            }
+
+            // Export data
+            exportData() {
+                const exportData = {
+                    metadata: {
+                        exportDate: new Date().toISOString(),
+                        semanticModelName: this.semanticModelName,
+                        version: "2.0",
+                        isDemo: this.isDemo,
+                        itemCounts: {
+                            tables: this.tablesById.size,
+                            columns: this.columnsById.size,
+                            measures: this.measuresById.size,
+                            relationships: this.relationshipsById.size
+                        }
+                    },
+                    technicalData: {
+                        tables: [...this.tablesById.values()],
+                        columns: [...this.columnsById.values()],
+                        measures: [...this.measuresById.values()],
+                        relationships: [...this.relationshipsById.values()]
+                    },
+                    businessData: this.businessMetadata
+                };
+                
+                const blob = new Blob([JSON.stringify(exportData, null, 2)], {type: 'application/json'});
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${this.semanticModelName.replace(/[^a-z0-9]/gi, '_')}_data_catalog.json`;
+                a.click();
+                
+                URL.revokeObjectURL(url);
+                
+                const totalItems = this.tablesById.size + this.columnsById.size + this.measuresById.size;
+                this.showNotification(`📦 Complete catalog exported! ${totalItems} items with all business context included.`, 'success');
+            }
+
+            // Import data
+            async importData(event) {
+                const file = event.target.files[0];
+                if (!file) return;
+                
+                this.showNotification('📥 Importing catalog data...', 'info');
+                
+                try {
+                    const text = await file.text();
+                    const data = JSON.parse(text);
+                    
+                    if (data.technicalData && data.businessData) {
+                        // Import technical data
+                        this.tablesById.clear();
+                        this.columnsById.clear();
+                        this.measuresById.clear();
+                        this.relationshipsById.clear();
+                        
+                        data.technicalData.tables?.forEach(t => this.tablesById.set(t.id, t));
+                        data.technicalData.columns?.forEach(c => this.columnsById.set(c.id, c));
+                        data.technicalData.measures?.forEach(m => this.measuresById.set(m.id, m));
+                        data.technicalData.relationships?.forEach(r => this.relationshipsById.set(r.id, r));
+                        
+                        // Import business data
+                        this.businessMetadata = data.businessData;
+                        this.saveBusinessMetadataToStorage();
+                        
+                        // Update semantic model name
+                        if (data.metadata?.semanticModelName) {
+                            this.semanticModelName = data.metadata.semanticModelName;
+                        }
+                        
+                        this.isDemo = data.metadata?.isDemo || false;
+                        
+                        // Rebuild and render
+                        this.buildAssets();
+                        this.showDataBrowser();
+                        
+                        const totalItems = this.tablesById.size + this.columnsById.size + this.measuresById.size;
+                        this.showNotification(`🎉 Successfully imported ${totalItems} items with business context!`, 'success');
+                        
+                    } else if (data.business) {
+                        // Legacy format - business metadata only
+                        this.businessMetadata.business = {...this.businessMetadata.business, ...data.business};
+                        this.saveBusinessMetadataToStorage();
+                        this.buildAssets();
+                        this.showNotification('📋 Business metadata imported successfully!', 'success');
+                    } else {
+                        this.showNotification('❌ Invalid file format. Please select a valid data catalog export.', 'error');
+                    }
+                    
+                } catch (error) {
+                    console.error('Import error:', error);
+                    this.showNotification('❌ Failed to import file. Please check the file format and try again.', 'error');
+                }
+                
+                // Reset file input
+                event.target.value = '';
+            }
+
+            // Demo methods for quick cards
+            showExploreDemo() {
+                if (this.assets.length === 0) {
+                    this.showNotification('💡 Load sample data first to see the explore functionality!', 'info');
+                    this.showDemo();
+                } else {
+                    this.showDataBrowser();
+                    this.showNotification('👈 Use the search and tree navigation on the left to explore your data!', 'info');
+                }
+            }
+
+            showMetadataDemo() {
+                if (this.assets.length === 0) {
+                    this.showNotification('💡 Load sample data first to see the business metadata features!', 'info');
+                    this.showDemo();
+                } else {
+                    this.showDataBrowser();
+                    this.showNotification('👈 Click any item in the tree, then click "Add Business Context" to see metadata features!', 'info');
+                }
+            }
+
+            // Utility functions
+            toBool(value) {
+                return String(value).toLowerCase() === 'true';
+            }
+
+            // Business metadata persistence
+            loadBusinessMetadata() {
+                try {
+                    return JSON.parse(localStorage.getItem('catalog_business_v1')) || { business: {}, version: 1 };
+                } catch {
+                    return { business: {}, version: 1 };
+                }
+            }
+
+            saveBusinessMetadataToStorage() {
+                localStorage.setItem('catalog_business_v1', JSON.stringify(this.businessMetadata));
+            }
+
+            // Show user-friendly notifications
+            showNotification(message, type = 'info') {
+                const notification = document.createElement('div');
+                notification.className = `notification ${type}`;
+                
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    error: 'fas fa-times-circle',
+                    warning: 'fas fa-exclamation-triangle',
+                    info: 'fas fa-info-circle'
+                };
+                
+                notification.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i class="${icons[type] || icons.info}"></i>
+                        <span>${message}</span>
+                    </div>
+                `;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.style.animation = 'slideOutRight 0.3s ease-in forwards';
+                    setTimeout(() => notification.remove(), 300);
+                }, 5000);
+            }
+
+            // Navigation Methods
+            showWelcome() {
+                this.hideAllSections();
+                document.getElementById('welcomeSection').style.display = 'block';
+                document.getElementById('quickStartSection').style.display = 'block';
+                this.updateBreadcrumb([]);
+                this.updateActiveNavItem('');
+            }
+
+            showExplore() {
+                if (this.tablesById.size === 0 && this.columnsById.size === 0 && this.measuresById.size === 0) {
+                    this.showNotification('💡 Load sample data first to see the explore functionality!', 'info');
+                    this.showDemo();
+                } else {
+                    this.showDataBrowser();
+                    this.showNotification('👈 Use the search and tree navigation on the left to explore your data!', 'info');
+                }
+            }
+
+            showLineage() {
+                if (this.tablesById.size === 0 && this.columnsById.size === 0 && this.measuresById.size === 0) {
+                    this.showNotification('💡 Load sample data first to see the lineage visualization!', 'info');
+                    this.showDemo();
+                } else {
+                    this.hideAllSections();
+                    document.getElementById('lineageViewer').classList.remove('hidden');
+                    this.updateBreadcrumb(['Lineage']);
+                    this.updateActiveNavItem('lineage');
+                    this.buildLineageView();
+                }
+            }
+
+            hideAllSections() {
+                document.getElementById('welcomeSection').style.display = 'none';
+                document.getElementById('quickStartSection').style.display = 'none';
+                document.getElementById('importWizard').classList.add('hidden');
+                document.getElementById('demoSection').classList.add('hidden');
+                document.getElementById('dataBrowser').classList.add('hidden');
+                document.getElementById('lineageViewer').classList.add('hidden');
+            }
+
+            updateBreadcrumb(items) {
+                const breadcrumb = document.getElementById('breadcrumb');
+                if (items.length === 0) {
+                    breadcrumb.classList.add('hidden');
+                    return;
+                }
+                
+                breadcrumb.classList.remove('hidden');
+                breadcrumb.innerHTML = `
+                    <span class="breadcrumb-item" onclick="app.showWelcome()">
+                        <i class="fas fa-home"></i>
+                        Home
+                    </span>
+                `;
+                
+                items.forEach((item, index) => {
+                    breadcrumb.innerHTML += `
+                        <span class="breadcrumb-separator">/</span>
+                        <span class="breadcrumb-item ${index === items.length - 1 ? 'active' : ''}"
+                              ${index < items.length - 1 ? `onclick="app.${item.toLowerCase()}()"` : ''}>
+                            ${item}
+                        </span>
+                    `;
+                });
+            }
+
+            updateActiveNavItem(activeItem) {
+                document.querySelectorAll('.nav-menu-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                
+                if (activeItem) {
+                    const items = {
+                        'import': 1,
+                        'explore': 2,
+                        'lineage': 3
+                    };
+                    const index = items[activeItem];
+                    if (index !== undefined) {
+                        document.querySelectorAll('.nav-menu-item')[index].classList.add('active');
+                    }
+                }
+            }
+
+            // Lineage Visualization Methods
+            buildLineageView() {
+                const canvas = document.getElementById('lineageCanvas');
+                const svg = document.getElementById('lineageSvg');
+                
+                // Clear existing content
+                svg.innerHTML = `
+                    <defs>
+                        <marker id="arrowhead" markerWidth="10" markerHeight="7" 
+                                refX="9" refY="3.5" orient="auto">
+                            <polygon points="0 0, 10 3.5, 0 7" fill="#64748b" />
+                        </marker>
+                    </defs>
+                `;
+                canvas.innerHTML = '<svg id="lineageSvg" width="100%" height="100%"></svg>';
+                
+                this.renderLineageNodes();
+                this.renderLineageConnections();
+            }
+
+            renderLineageNodes() {
+                const canvas = document.getElementById('lineageCanvas');
+                const nodes = [];
+                
+                // Add table nodes
+                this.tablesById.forEach((table, id) => {
+                    nodes.push({
+                        id: id,
+                        name: table.TableName || id,
+                        type: 'table',
+                        x: Math.random() * 600 + 50,
+                        y: Math.random() * 300 + 50
+                    });
+                });
+                
+                // Add measure nodes
+                this.measuresById.forEach((measure, id) => {
+                    nodes.push({
+                        id: id,
+                        name: measure.MeasureName || id,
+                        type: 'measure',
+                        x: Math.random() * 600 + 50,
+                        y: Math.random() * 300 + 50
+                    });
+                });
+                
+                // Render nodes
+                nodes.forEach(node => {
+                    const nodeElement = document.createElement('div');
+                    nodeElement.className = `lineage-node ${node.type}`;
+                    nodeElement.setAttribute('data-id', node.id);
+                    nodeElement.style.left = `${node.x}px`;
+                    nodeElement.style.top = `${node.y}px`;
+                    nodeElement.innerHTML = `
+                        <div class="lineage-node-title">${node.name}</div>
+                        <div class="lineage-node-type">${node.type}</div>
+                    `;
+                    
+                    nodeElement.onclick = () => this.selectLineageNode(node.id);
+                    canvas.appendChild(nodeElement);
+                });
+            }
+
+            renderLineageConnections() {
+                const svg = document.getElementById('lineageSvg');
+                
+                // Draw relationships between tables
+                this.relationshipsById.forEach((rel) => {
+                    const fromTable = document.querySelector(`.lineage-node[data-id="${rel.FromTable}"]`);
+                    const toTable = document.querySelector(`.lineage-node[data-id="${rel.ToTable}"]`);
+                    
+                    if (fromTable && toTable) {
+                        const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+                        line.setAttribute('class', 'lineage-connection-line');
+                        line.setAttribute('x1', parseInt(fromTable.style.left) + 60);
+                        line.setAttribute('y1', parseInt(fromTable.style.top) + 40);
+                        line.setAttribute('x2', parseInt(toTable.style.left) + 60);
+                        line.setAttribute('y2', parseInt(toTable.style.top) + 40);
+                        svg.appendChild(line);
+                    }
+                });
+            }
+
+            selectLineageNode(nodeId) {
+                // Remove previous selection
+                document.querySelectorAll('.lineage-node').forEach(node => {
+                    node.classList.remove('selected');
+                });
+                
+                // Add selection to clicked node
+                const selectedNode = document.querySelector(`.lineage-node[data-id="${nodeId}"]`);
+                if (selectedNode) {
+                    selectedNode.classList.add('selected');
+                }
+                
+                // Highlight related connections
+                this.highlightConnections(nodeId);
+            }
+
+            highlightConnections(nodeId) {
+                // Reset all connections
+                document.querySelectorAll('.lineage-connection-line').forEach(line => {
+                    line.classList.remove('highlighted');
+                });
+                
+                // Highlight connections related to selected node
+                this.relationshipsById.forEach((rel) => {
+                    if (rel.FromTable === nodeId || rel.ToTable === nodeId) {
+                        const connections = document.querySelectorAll('.lineage-connection-line');
+                        connections.forEach(line => {
+                            // Simple matching - in a full implementation, you'd track which line belongs to which relationship
+                            line.classList.add('highlighted');
+                        });
+                    }
+                });
+            }
+
+            refreshLineage() {
+                this.buildLineageView();
+                this.showNotification('🔄 Lineage view refreshed!', 'success');
+            }
+
+            fitLineageToView() {
+                // Simple implementation - center all nodes
+                const nodes = document.querySelectorAll('.lineage-node');
+                const canvas = document.getElementById('lineageCanvas');
+                const canvasRect = canvas.getBoundingClientRect();
+                
+                let totalX = 0, totalY = 0;
+                nodes.forEach((node, index) => {
+                    const x = 100 + (index % 4) * 150;
+                    const y = 80 + Math.floor(index / 4) * 100;
+                    node.style.left = `${x}px`;
+                    node.style.top = `${y}px`;
+                    totalX += x;
+                    totalY += y;
+                });
+                
+                this.renderLineageConnections();
+                this.showNotification('📐 Lineage fitted to view!', 'info');
+            }
+
+            resetLineageZoom() {
+                this.buildLineageView();
+                this.showNotification('🔍 Lineage zoom reset!', 'info');
+            }
+
+            // Lineage Filtering and Drill-down
+            filterLineageNodes(searchTerm) {
+                const nodes = document.querySelectorAll('.lineage-node');
+                const term = searchTerm.toLowerCase().trim();
+                
+                nodes.forEach(node => {
+                    const title = node.querySelector('.lineage-node-title').textContent.toLowerCase();
+                    const type = node.querySelector('.lineage-node-type').textContent.toLowerCase();
+                    
+                    if (term === '' || title.includes(term) || type.includes(term)) {
+                        node.style.display = 'block';
+                        node.style.opacity = '1';
+                    } else {
+                        node.style.display = 'none';
+                        node.style.opacity = '0.3';
+                    }
+                });
+                
+                // Update connections visibility
+                this.updateConnectionVisibility();
+            }
+
+            showOnlyConnected() {
+                const btn = document.getElementById('connectedOnlyBtn');
+                const isActive = btn.classList.contains('active');
+                
+                if (isActive) {
+                    // Show all nodes
+                    btn.classList.remove('active');
+                    btn.innerHTML = '<i class="fas fa-filter"></i> Connected Only';
+                    document.querySelectorAll('.lineage-node').forEach(node => {
+                        node.style.display = 'block';
+                        node.style.opacity = '1';
+                    });
+                } else {
+                    // Show only connected nodes
+                    btn.classList.add('active');
+                    btn.innerHTML = '<i class="fas fa-filter"></i> Show All';
+                    
+                    const connectedNodes = new Set();
+                    this.relationshipsById.forEach(rel => {
+                        connectedNodes.add(rel.FromTable);
+                        connectedNodes.add(rel.ToTable);
+                    });
+                    
+                    document.querySelectorAll('.lineage-node').forEach(node => {
+                        const nodeId = node.getAttribute('data-id');
+                        if (connectedNodes.has(nodeId)) {
+                            node.style.display = 'block';
+                            node.style.opacity = '1';
+                        } else {
+                            node.style.display = 'none';
+                            node.style.opacity = '0.3';
+                        }
+                    });
+                }
+                
+                this.updateConnectionVisibility();
+            }
+
+            updateConnectionVisibility() {
+                const connections = document.querySelectorAll('.lineage-connection-line');
+                const visibleNodes = Array.from(document.querySelectorAll('.lineage-node'))
+                    .filter(node => node.style.display !== 'none' && node.style.opacity !== '0.3')
+                    .map(node => node.getAttribute('data-id'));
+                
+                connections.forEach(connection => {
+                    // In a full implementation, you'd track which connection belongs to which nodes
+                    // For now, show all connections if any nodes are visible
+                    connection.style.display = visibleNodes.length > 1 ? 'block' : 'none';
+                });
+            }
+
+            // Enhanced node selection with drill-down
+            selectLineageNode(nodeId) {
+                // Remove previous selection
+                document.querySelectorAll('.lineage-node').forEach(node => {
+                    node.classList.remove('selected');
+                });
+                
+                // Add selection to clicked node
+                const selectedNode = document.querySelector(`.lineage-node[data-id="${nodeId}"]`);
+                if (selectedNode) {
+                    selectedNode.classList.add('selected');
+                }
+                
+                // Highlight related connections and show node details
+                this.highlightConnections(nodeId);
+                this.showNodeDetails(nodeId);
+            }
+
+            showNodeDetails(nodeId) {
+                // Find the node data
+                let nodeData = null;
+                let nodeType = '';
+                
+                if (this.tablesById.has(nodeId)) {
+                    nodeData = this.tablesById.get(nodeId);
+                    nodeType = 'table';
+                } else if (this.measuresById.has(nodeId)) {
+                    nodeData = this.measuresById.get(nodeId);
+                    nodeType = 'measure';
+                } else if (this.columnsById.has(nodeId)) {
+                    nodeData = this.columnsById.get(nodeId);
+                    nodeType = 'column';
+                }
+                
+                if (nodeData) {
+                    // Show a detailed tooltip or panel
+                    const details = this.getNodeDetailsHTML(nodeData, nodeType, nodeId);
+                    this.showNotification(`📊 Selected: ${nodeData.TableName || nodeData.MeasureName || nodeData.ColumnName || nodeId}`, 'info');
+                    
+                    // In a full implementation, you could show a detailed panel here
+                    console.log('Node details:', nodeData);
+                }
+            }
+
+            getNodeDetailsHTML(nodeData, nodeType, nodeId) {
+                // Generate HTML for node details - could be used for a detail panel
+                let html = `<div class="lineage-node-details">`;
+                html += `<h4>${nodeData.TableName || nodeData.MeasureName || nodeData.ColumnName || nodeId}</h4>`;
+                html += `<p><strong>Type:</strong> ${nodeType}</p>`;
+                
+                if (nodeType === 'table') {
+                    html += `<p><strong>Rows:</strong> ${nodeData.RowCount || 'Unknown'}</p>`;
+                    html += `<p><strong>Hidden:</strong> ${nodeData.IsHidden ? 'Yes' : 'No'}</p>`;
+                } else if (nodeType === 'measure') {
+                    html += `<p><strong>Format:</strong> ${nodeData.FormatString || 'Default'}</p>`;
+                    html += `<p><strong>Hidden:</strong> ${nodeData.IsHidden ? 'Yes' : 'No'}</p>`;
+                } else if (nodeType === 'column') {
+                    html += `<p><strong>Data Type:</strong> ${nodeData.DataType || 'Unknown'}</p>`;
+                    html += `<p><strong>Table:</strong> ${nodeData.TableName || 'Unknown'}</p>`;
+                }
+                
+                html += `</div>`;
+                return html;
+            }
+
+            // Keyboard Navigation Handler
+            handleKeyboardNavigation(e) {
+                // Only handle keyboard shortcuts when no modal is open and no input is focused
+                if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA' || 
+                    !document.getElementById('helpModal').classList.contains('hidden') ||
+                    !document.getElementById('businessModal').classList.contains('hidden')) {
+                    return;
+                }
+
+                switch(e.key) {
+                    case 'h':
+                    case 'H':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            this.showWelcome();
+                        }
+                        break;
+                    case 'i':
+                    case 'I':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            this.showImportWizard();
+                        }
+                        break;
+                    case 'e':
+                    case 'E':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            this.showExplore();
+                        }
+                        break;
+                    case 'l':
+                    case 'L':
+                        if (e.ctrlKey || e.metaKey) {
+                            e.preventDefault();
+                            this.showLineage();
+                        }
+                        break;
+                    case '?':
+                        if (e.shiftKey) {
+                            e.preventDefault();
+                            this.showHelp();
+                        }
+                        break;
+                    case 'Escape':
+                        // Close modals
+                        if (!document.getElementById('helpModal').classList.contains('hidden')) {
+                            this.closeHelp();
+                        }
+                        if (!document.getElementById('businessModal').classList.contains('hidden')) {
+                            this.closeBusinessModal();
+                        }
+                        break;
+                }
+            }
+        }
+
+        // Initialize the application
+        const app = new UserFriendlyDataCatalog();
+        
+        // Make functions available globally for onclick handlers
+        window.app = app;
+    </script>
+</body>
+</html>
