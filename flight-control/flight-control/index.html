@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Air Traffic Routes — Flight Control Variant</title>
+  <style>
+    html,body { height:100%; margin:0; font-family: Inter, system-ui, Arial, sans-serif; background:#000; color:#1e293b; -webkit-tap-highlight-color: transparent; overflow: hidden; }
+    #game { display:flex; height:100vh; }
+    #canvasWrap { flex:1; position:relative; touch-action: none; cursor: crosshair; }
+    canvas { display:block; width:100%; height:100%; background: linear-gradient(135deg,#0b1020 0%, #0f172a 60%, #111827 100%); transition: filter 0.3s ease; }
+
+    /* Radar grid overlay */
+    .radar-grid { position:absolute; inset:0; pointer-events:none; background:
+      radial-gradient(circle at 50% 50%, rgba(59,130,246,0.05) 0 2px, transparent 2px 100%),
+      repeating-radial-gradient(circle at 50% 50%, rgba(59,130,246,0.07), rgba(59,130,246,0.07) 1px, transparent 1px 40px),
+      repeating-linear-gradient(0deg, rgba(59,130,246,0.06), rgba(59,130,246,0.06) 1px, transparent 1px 40px),
+      repeating-linear-gradient(90deg, rgba(59,130,246,0.06), rgba(59,130,246,0.06) 1px, transparent 1px 40px);
+      mix-blend-mode: screen;
+    }
+    /* Radar sweep overlay */
+    .radar-sweep { position:absolute; inset:0; pointer-events:none; background:
+      conic-gradient(from 0deg at 50% 50%, rgba(34,197,94,0.0), rgba(34,197,94,0.0) 330deg, rgba(34,197,94,0.28));
+      animation: sweep-rotate 6s linear infinite; mix-blend-mode: screen; filter: blur(1px); }
+    @keyframes sweep-rotate { to { transform: rotate(360deg); } }
+
+    /* Traffic alert pulse */
+    #canvasWrap.traffic-alert::after { content:''; position:absolute; inset:0; pointer-events:none; background: radial-gradient(circle at 50% 50%, rgba(239,68,68,0.08), transparent 50%); animation: alert-pulse 1s ease-out; }
+    @keyframes alert-pulse { 0% { opacity: 0.8; } 100% { opacity: 0; } }
+
+    #topLeftHud { position: absolute; top: 12px; left: 12px; z-index: 15; display: flex; align-items: center; gap: 14px; }
+    .tl-icon { width: 28px; height: 28px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center; color: #e5e7eb; background: rgba(17,24,39,0.7); border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 2px 8px rgba(0,0,0,0.5); transition: all 0.2s ease; backdrop-filter: blur(8px); }
+    .tl-icon:hover { background: rgba(31,41,55,0.85); transform: translateY(-1px); }
+    #promoBanner { font-weight: 700; color: #f3f4f6; font-size: 13px; letter-spacing: 0.2px; background: linear-gradient(135deg, #ef4444, #f59e0b); padding: 8px 12px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.08); transition: transform 0.2s ease; }
+    #promoBanner:hover { transform: translateY(-1px); }
+
+    #topRightHud { position: absolute; top: 12px; right: 12px; z-index: 15; display: flex; align-items: center; gap: 12px; user-select: none; }
+    #dayBadge { display: inline-flex; align-items: center; gap: 8px; color: #e5e7eb; font-weight: 700; font-size: 12px; letter-spacing: 0.5px; background: rgba(17,24,39,0.7); padding: 8px 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.06); box-shadow: 0 2px 8px rgba(0,0,0,0.5); backdrop-filter: blur(8px); transition: all 0.3s ease; }
+    #dayClock { width: 20px; height: 20px; border-radius: 50%; background: conic-gradient(#f59e0b 0deg, #f59e0b 0deg, rgba(255,255,255,0.12) 0deg 360deg); box-shadow: 0 0 0 2px rgba(0,0,0,0.3) inset; transition: transform 0.3s ease; }
+    #speedControls { display: flex; flex-direction: column; gap: 3px; background: rgba(17,24,39,0.7); border: 1px solid rgba(255,255,255,0.06); padding: 6px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.5); backdrop-filter: blur(8px); }
+    .speed-btn { width: 28px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border: 0; border-radius: 6px; background: transparent; color: #f3f4f6; cursor: pointer; font-size: 12px; font-weight: 700; transition: all 0.2s ease; }
+    .speed-btn.active { background: #0ea5a3; color: white; box-shadow: 0 2px 4px rgba(14,165,163,0.3); }
+    .speed-btn:hover:not(.active) { background: rgba(255,255,255,0.08); }
+
+    #bottomShelf { position: absolute; left: 50%; bottom: 16px; transform: translateX(-50%); z-index: 15; display: flex; align-items: center; gap: 18px; background: rgba(17,24,39,0.8); border: 1px solid rgba(255,255,255,0.08); border-radius: 32px; padding: 10px 16px; backdrop-filter: blur(12px); box-shadow: 0 4px 20px rgba(0,0,0,0.5); transition: all 0.3s ease; }
+    #bottomShelf:hover { transform: translateX(-50%) translateY(-2px); box-shadow: 0 6px 25px rgba(0,0,0,0.7); }
+    .inv-pill { display: flex; align-items: center; gap: 8px; color: #e5e7eb; transition: transform 0.2s ease; }
+    .inv-pill:hover { transform: scale(1.05); }
+    .inv-icon { width: 32px; height: 32px; border-radius: 50%; background: linear-gradient(135deg, #1f2937, #111827); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; box-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 1px 0 rgba(255,255,255,0.1) inset; transition: all 0.2s ease; }
+    .inv-count { font-weight: 700; font-size: 14px; min-width: 16px; text-align: center; transition: color 0.2s ease; }
+    #lineSwatches { display: flex; align-items: center; gap: 10px; padding: 0 8px; }
+    .swatch { width: 20px; height: 20px; border-radius: 50%; box-shadow: 0 2px 6px rgba(0,0,0,0.6), 0 0 0 2px rgba(255,255,255,0.12) inset; cursor: pointer; transition: all 0.2s ease; position: relative; border: 2px solid transparent; }
+    .swatch:hover { transform: scale(1.15); box-shadow: 0 6px 16px rgba(0,0,0,0.7), 0 0 0 2px rgba(255,255,255,0.2) inset; z-index: 2; }
+    .swatch.selected { transform: scale(1.3) !important; border: 3px solid #ffffff !important; box-shadow: 0 0 0 1px rgba(0,0,0,0.8), 0 4px 12px rgba(0,0,0,0.8) !important; z-index: 3; }
+    .swatch.selected::after { content: '●'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: rgba(255,255,255,0.9); font-size: 8px; text-shadow: 0 0 2px rgba(0,0,0,0.9); }
+
+    #gameOver, #rewardDialog { position: absolute; inset: 0; display: none; align-items: center; justify-content: center; z-index: 20; }
+    #gameOver.show, #rewardDialog.show { display: flex; }
+    .box { background: linear-gradient(180deg, rgba(17,24,39,0.95), rgba(15,23,42,0.95)); color: #e5e7eb; padding: 16px 18px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); box-shadow: 0 10px 40px rgba(0,0,0,0.6), 0 1px 0 rgba(255,255,255,0.08) inset; min-width: 320px; max-width: 480px; transform: translateY(6px) scale(0.98); opacity: 0; transition: all 0.25s ease; }
+    #gameOver.show .box, #rewardDialog.show .box { opacity: 1; transform: translateY(0) scale(1); }
+    h2 { margin: 0 0 8px 0; font-size: 18px; letter-spacing: 0.6px; }
+    p { margin: 0; font-size: 13px; color: #cbd5e1; }
+    button { background: #0ea5a3; color: #fff; border: 0; padding: 8px 10px; border-radius: 8px; font-weight: 700; cursor: pointer; box-shadow: 0 2px 8px rgba(14,165,163,0.35); transition: all 0.2s ease; }
+    button.secondary { background: #334155; box-shadow: none; }
+    button:hover { filter: brightness(1.05); transform: translateY(-1px); }
+
+    /* Cursor states */
+    .canvas-drawing { cursor: crosshair !important; }
+    .canvas-hovering-station { cursor: pointer !important; }
+    .canvas-hovering-line { cursor: grab !important; }
+    .canvas-removing { cursor: not-allowed !important; }
+    .canvas-recoloring { cursor: help !important; }
+
+    /* Achievement notifications */
+    .achievement-notification { position: fixed; top: 20px; right: 20px; z-index: 1000; background: linear-gradient(135deg, #1f2937, #111827); border: 2px solid #f59e0b; border-radius: 12px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 20px rgba(245,158,11,0.3); transform: translateX(120%); opacity: 0; transition: all 0.3s ease; max-width: 300px; }
+    .achievement-notification.show { transform: translateX(0); opacity: 1; }
+    .achievement-content { display: flex; align-items: center; gap: 12px; color: #e5e7eb; }
+    .achievement-icon { font-size: 32px; flex-shrink: 0; }
+    .achievement-title { font-size: 12px; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .achievement-name { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .achievement-desc { font-size: 12px; color: #cbd5e1; line-height: 1.3; }
+
+    /* Event notifications */
+    .event-notification { position: fixed; top: 20px; left: 20px; z-index: 999; background: linear-gradient(135deg, #1f2937, #111827); border: 2px solid #ef4444; border-radius: 12px; padding: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.7), 0 0 20px rgba(239,68,68,0.3); transform: translateX(-120%); opacity: 0; transition: all 0.3s ease; max-width: 300px; }
+    .event-notification.show { transform: translateX(0); opacity: 1; }
+    .event-content { display: flex; align-items: center; gap: 12px; color: #e5e7eb; }
+    .event-icon { font-size: 28px; flex-shrink: 0; }
+    .event-title { font-size: 12px; font-weight: 700; color: #ef4444; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+    .event-name { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 2px; }
+    .event-desc { font-size: 12px; color: #cbd5e1; line-height: 1.3; }
+
+    @media (max-width:640px){
+      #bottomShelf { gap: 12px; padding: 8px 12px; }
+      .inv-icon { width: 28px; height: 28px; font-size: 14px; }
+      .swatch { width: 16px; height: 16px; }
+      #topRightHud { gap: 8px; }
+      #topLeftHud { gap: 10px; }
+      .achievement-notification { top: 10px; right: 10px; max-width: 280px; padding: 12px; }
+      .achievement-icon { font-size: 24px; }
+    }
+  </style>
+  <!-- Fallback note for local file loads -->
+  <meta name="airspace-warning" content="Serve via a local web server if blank." />
+  </head>
+<body>
+  <div id="game">
+    <div id="canvasWrap">
+      <canvas id="c"></canvas>
+      <div id="moduleWarning" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.75);color:#fff;padding:14px 18px;border-radius:10px;z-index:1000;max-width:480px;text-align:center;">
+        If this page appears blank, you likely opened it directly from the filesystem.
+        Please serve the folder via a local web server, for example:<br><br>
+        <code>python -m http.server 8000</code><br>
+        then open <code>http://localhost:8000/flight_control.html</code>.
+      </div>
+
+      <!-- Style overlays -->
+      <div class="radar-grid"></div>
+      <div class="radar-sweep"></div>
+
+      <!-- ATC toast -->
+      <div id="atcToast" style="position:absolute;left:50%;top:12px;transform:translateX(-50%) translateY(-8px);opacity:0;background:rgba(17,24,39,0.85);color:#fff;padding:6px 10px;border-radius:10px;border:1px solid rgba(255,255,255,0.08);box-shadow:0 2px 10px rgba(0,0,0,0.4);transition:all .25s ease;pointer-events:none;z-index:25;">Traffic alert</div>
+
+      <div id="topLeftHud">
+        <div id="btnBack" class="tl-icon" title="Back">←</div>
+        <div id="btnUndo" class="tl-icon" title="Undo Last Action (Ctrl+Z)" style="opacity: 0.4;">↶</div>
+        <div id="btnAutoRoute" class="tl-icon" title="Toggle Auto-Routing (A)" style="opacity: 0.6;">🤖</div>
+        <div id="btnOpen" class="tl-icon" title="Open">↗</div>
+        <div id="promoBanner">Flight Control variant</div>
+      </div>
+
+      <div id="topRightHud">
+        <div id="complexityIndicator" title="Network Complexity" style="display: flex; align-items: center; gap: 8px; background: rgba(17,24,39,0.7); padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px);">
+          <span id="complexityIcon" style="font-size: 16px;">🧠</span>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <div id="complexityLevel" style="font-size: 10px; font-weight: 700; color: #10b981;">LOW</div>
+            <div style="width: 60px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div id="complexityBar" style="height: 100%; background: linear-gradient(90deg, #10b981, #f59e0b, #ef4444); width: 20%; transition: width 0.3s ease;"></div>
+            </div>
+          </div>
+        </div>
+        <div id="achievementProgress" title="Achievement Progress" style="display: flex; align-items: center; gap: 8px; background: rgba(17,24,39,0.7); padding: 6px 10px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.06); backdrop-filter: blur(8px);">
+          <span style="font-size: 16px;">🏆</span>
+          <div style="display: flex; flex-direction: column; gap: 2px;">
+            <div id="achievementCount" style="font-size: 10px; font-weight: 700; color: #f59e0b;">0/12</div>
+            <div style="width: 60px; height: 3px; background: rgba(255,255,255,0.1); border-radius: 2px; overflow: hidden;">
+              <div id="achievementBar" style="height: 100%; background: linear-gradient(90deg, #f59e0b, #ef4444); width: 0%; transition: width 0.3s ease;"></div>
+            </div>
+          </div>
+        </div>
+        <div id="dayBadge">
+          <span id="dayLabel">MON</span>
+          <div id="dayClock" aria-hidden="true"></div>
+        </div>
+        <div id="speedControls">
+          <button id="btnPause" class="speed-btn" title="Pause">⏸</button>
+          <button id="btnPlay" class="speed-btn" title="Play">▶</button>
+          <button id="btnFast" class="speed-btn" title="2x Speed">⏩</button>
+        </div>
+      </div>
+
+      <div id="bottomShelf">
+        <div class="inv-pill" id="trainPill"><span class="inv-icon" aria-hidden="true">🛩️</span><span id="invTrains" class="inv-count">0</span></div>
+        <div id="lineSwatches" aria-label="Routes"></div>
+        <div class="inv-pill" id="tunnelPill"><span class="inv-icon" aria-hidden="true">🛂</span><span id="invTunnels" class="inv-count">0</span></div>
+        <div class="inv-pill" id="carriagePill"><span class="inv-icon" aria-hidden="true">🧳</span><span id="invCarriages" class="inv-count">0</span></div>
+        <div class="inv-pill" id="wxPill" title="Active weather cells"><span class="inv-icon" aria-hidden="true">⛈️</span><span id="wxCount" class="inv-count">0</span></div>
+      </div>
+
+      <div id="gameOver">
+        <div class="box">
+          <h2>Control Lost</h2>
+          <p id="goReason">An airport became overcrowded.</p>
+          <p id="finalStats"></p>
+          <div style="display:flex;gap:12px;justify-content:center;margin-top:20px;">
+            <button id="goRestart">Try Again</button>
+            <button id="goClose" class="secondary">Close</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="rewardDialog">
+        <div class="box">
+          <h2>Week Complete!</h2>
+          <p>You received a new plane! Choose your weekly reward:</p>
+          <div class="reward-options" id="rewardOptions" style="display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; margin-top: 12px;"></div>
+          <p style="font-size:12px; color:#9fb4c8; margin-top:15px;">Choose wisely — each option helps in different ways</p>
+        </div>
+      </div>
+
+      <!-- Route Suggestions Panel -->
+      <div id="suggestionsPanel" style="position: absolute; bottom: 20px; left: 20px; z-index: 10; background: rgba(17,24,39,0.9); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 12px; max-width: 280px; transform: translateY(100px); opacity: 0; transition: all 0.3s ease; backdrop-filter: blur(12px);">
+        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+          <span style="font-size: 16px;">💡</span>
+          <span style="font-size: 12px; font-weight: 700; color: #f59e0b; text-transform: uppercase; letter-spacing: 0.5px;">Route Suggestions</span>
+        </div>
+        <div id="suggestionsList" style="display: flex; flex-direction: column; gap: 6px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+  <script>
+    (function(){
+      function runIfRequested(){
+        try {
+          const p = new URLSearchParams(location.search);
+          const sim = p.get('sim');
+          if (sim) {
+            const weeks = parseInt(sim, 10) || 20;
+            const run = async () => {
+              try {
+                const res = await (window.MM && window.MM.simulateWeeks ? window.MM.simulateWeeks(weeks, { log: true, yieldEveryMs: 200 }) : Promise.reject(new Error('MM not ready')));
+                console.log('[Sim]', res);
+                try { alert(`Sim complete: day ${res.day}, score ${res.score}, waiting ${res.waiting}, lines ${res.lines}, trains ${res.trains}, finals ${res.finals}, gameOver ${res.gameOver}`); } catch(e){}
+              } catch (e) {
+                console.error('Sim error', e);
+                try { alert('Simulation error: ' + (e && e.message ? e.message : e)); } catch(_){}
+              }
+            };
+            if (window.MM && window.MM.simulateWeeks) run(); else window.addEventListener('load', run);
+          }
+        } catch (e) { console.warn('Auto-sim check failed', e); }
+      }
+      if (document.readyState === 'complete' || document.readyState === 'interactive') setTimeout(runIfRequested, 0);
+      else window.addEventListener('DOMContentLoaded', runIfRequested);
+
+      // Quick hotkey: Ctrl+Shift+S runs 20-week sim
+      document.addEventListener('keydown', (e)=>{
+        try {
+          if (e.ctrlKey && e.shiftKey && (e.key||'').toLowerCase() === 's'){
+            if (window.MM && window.MM.simulateWeeks){ window.MM.simulateWeeks(20, { log:true, yieldEveryMs: 200 }); }
+          }
+        } catch(_){ }
+      });
+    })();
+  </script>
+</body>
+</html>
