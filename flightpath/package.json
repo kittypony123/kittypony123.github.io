@@ -1,0 +1,28 @@
+{
+  "name": "air-traffic-routes-game",
+  "version": "1.0.0",
+  "description": "Browser-based air traffic control simulation game",
+  "scripts": {
+    "test": "playwright test",
+    "test:desktop": "playwright test --grep \"Desktop\"",
+    "test:mobile": "playwright test --grep \"Mobile\"",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "serve": "python -m http.server 8000",
+    "test:ci": "playwright test --reporter=github"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "keywords": [
+    "game",
+    "canvas",
+    "mobile",
+    "touch",
+    "air-traffic"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "playwright": "^1.55.0"
+  }
+}
