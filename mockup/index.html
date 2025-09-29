@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RFShop(UK) - Professional RF Equipment UK | Redesign Mockup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">
+                    <h1>RFShop<span class="uk">(UK)</span></h1>
+                    <p class="tagline">Professional RF Equipment UK</p>
+                </div>
+                <div class="header-search">
+                    <div class="search-container">
+                        <input type="text"
+                               placeholder="Search by part number, product name, or description..."
+                               class="search-input"
+                               id="main-search">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="search-suggestions" id="search-suggestions"></div>
+                </div>
+                <div class="header-actions">
+                    <button class="help-btn">
+                        <i class="fas fa-question-circle"></i>
+                        <span>Help Me Choose</span>
+                    </button>
+                    <button class="cart-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="main-nav">
+                <div class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Connectors & Adapters <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="mega-menu">
+                            <div class="mega-menu-section">
+                                <h3>RF Connectors</h3>
+                                <ul>
+                                    <li><a href="#" data-category="sma">SMA Connectors</a></li>
+                                    <li><a href="#" data-category="bnc">BNC Connectors</a></li>
+                                    <li><a href="#" data-category="n-type">N-Type Connectors</a></li>
+                                    <li><a href="#" data-category="tnc">TNC Connectors</a></li>
+                                    <li><a href="#" data-category="mcx">MCX Connectors</a></li>
+                                    <li><a href="#" data-category="mmcx">MMCX Connectors</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h3>RF Adapters</h3>
+                                <ul>
+                                    <li><a href="#" data-category="gender-changers">Gender Changers</a></li>
+                                    <li><a href="#" data-category="connector-converters">Connector Converters</a></li>
+                                    <li><a href="#" data-category="right-angle">Right Angle Adapters</a></li>
+                                    <li><a href="#" data-category="impedance">Impedance Adapters</a></li>
+                                </ul>
+                            </div>
+                            <div class="mega-menu-featured">
+                                <h3>Popular Products</h3>
+                                <div class="featured-product">
+                                    <img src="https://via.placeholder.com/80x80" alt="SMA Adapter">
+                                    <div>
+                                        <h4>SMA Male to Female</h4>
+                                        <p>£12.50</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Cables & Assemblies <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Antennas <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link">
+                            Test Equipment <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Solutions</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb-list">
+                    <li><a href="#"><i class="fas fa-home"></i></a></li>
+                    <li><a href="#">Connectors & Adapters</a></li>
+                    <li class="active">SMA Connectors</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <div class="content-layout">
+                <!-- Sidebar Filters -->
+                <aside class="filters-sidebar">
+                    <div class="filters-header">
+                        <h2>Filters</h2>
+                        <button class="clear-filters">Clear All</button>
+                    </div>
+
+                    <!-- Quick Filters -->
+                    <div class="filter-section">
+                        <h3>Quick Filters</h3>
+                        <div class="quick-filters">
+                            <button class="filter-tag active" data-filter="in-stock">In Stock</button>
+                            <button class="filter-tag" data-filter="uk-delivery">UK Delivery</button>
+                            <button class="filter-tag" data-filter="same-day">Same Day Ship</button>
+                        </div>
+                    </div>
+
+                    <!-- Connector Type -->
+                    <div class="filter-section">
+                        <button class="filter-toggle">
+                            <h3>Connector Type</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-content">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="connector" value="sma" checked>
+                                <span class="checkmark"></span>
+                                SMA (205)
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="connector" value="bnc">
+                                <span class="checkmark"></span>
+                                BNC (156)
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="connector" value="n-type">
+                                <span class="checkmark"></span>
+                                N-Type (134)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="filter-section">
+                        <button class="filter-toggle">
+                            <h3>Gender</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-content">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gender" value="male">
+                                <span class="checkmark"></span>
+                                Male (Plug) (98)
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="gender" value="female">
+                                <span class="checkmark"></span>
+                                Female (Jack) (87)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Impedance -->
+                    <div class="filter-section">
+                        <button class="filter-toggle">
+                            <h3>Impedance</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-content">
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="impedance" value="50" checked>
+                                <span class="checkmark"></span>
+                                50Ω (167)
+                            </label>
+                            <label class="filter-checkbox">
+                                <input type="checkbox" name="impedance" value="75">
+                                <span class="checkmark"></span>
+                                75Ω (38)
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Frequency Range -->
+                    <div class="filter-section">
+                        <button class="filter-toggle">
+                            <h3>Frequency Range</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-content">
+                            <div class="range-slider">
+                                <label>Up to (GHz)</label>
+                                <input type="range" min="0" max="18" value="6" class="slider" id="freq-range">
+                                <div class="range-values">
+                                    <span>DC</span>
+                                    <span id="freq-value">6 GHz</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Price Range -->
+                    <div class="filter-section">
+                        <button class="filter-toggle">
+                            <h3>Price Range</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="filter-content">
+                            <div class="price-inputs">
+                                <input type="number" placeholder="Min £" class="price-input">
+                                <span>to</span>
+                                <input type="number" placeholder="Max £" class="price-input">
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Products Area -->
+                <div class="products-area">
+                    <!-- Category Header -->
+                    <div class="category-header">
+                        <div class="category-info">
+                            <h1>SMA Connectors</h1>
+                            <p class="category-description">
+                                Professional SMA (SubMiniature version A) connectors for RF applications up to 18 GHz.
+                                Available in male and female configurations with various mounting options.
+                            </p>
+                        </div>
+                        <div class="category-stats">
+                            <span class="product-count">205 products</span>
+                            <span class="in-stock">167 in stock</span>
+                        </div>
+                    </div>
+
+                    <!-- Toolbar -->
+                    <div class="products-toolbar">
+                        <div class="toolbar-left">
+                            <div class="view-toggle">
+                                <button class="view-btn active" data-view="grid">
+                                    <i class="fas fa-th"></i>
+                                </button>
+                                <button class="view-btn" data-view="list">
+                                    <i class="fas fa-list"></i>
+                                </button>
+                            </div>
+                            <span class="results-count">Showing 1-12 of 205 results</span>
+                        </div>
+                        <div class="toolbar-right">
+                            <select class="sort-select">
+                                <option value="relevance">Sort by Relevance</option>
+                                <option value="price-low">Price: Low to High</option>
+                                <option value="price-high">Price: High to Low</option>
+                                <option value="name">Name A-Z</option>
+                                <option value="stock">In Stock First</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid" id="products-grid">
+                        <!-- Product Card 1 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Male Connector">
+                                <div class="product-badges">
+                                    <span class="badge in-stock">In Stock</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA Male Connector, 50Ω, RG316 Cable</h3>
+                                <p class="product-sku">SKU: SMA-M-316-50</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">DC-6GHz</span>
+                                    <span class="spec">Male</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£8.50</span>
+                                    <span class="price-ex-vat">£7.08 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 2 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Female Connector">
+                                <div class="product-badges">
+                                    <span class="badge in-stock">In Stock</span>
+                                    <span class="badge popular">Popular</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA Female Jack, Panel Mount, 50Ω</h3>
+                                <p class="product-sku">SKU: SMA-F-PM-50</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">DC-18GHz</span>
+                                    <span class="spec">Female</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£12.30</span>
+                                    <span class="price-ex-vat">£10.25 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product Card 3 -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Right Angle">
+                                <div class="product-badges">
+                                    <span class="badge low-stock">Low Stock</span>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA Male Right Angle Connector, 50Ω</h3>
+                                <p class="product-sku">SKU: SMA-M-RA-50</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">DC-12GHz</span>
+                                    <span class="spec">Right Angle</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£15.75</span>
+                                    <span class="price-ex-vat">£13.13 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- More product cards... -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Terminator">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA 50Ω Terminator Load, 2W</h3>
+                                <p class="product-sku">SKU: SMA-TERM-50-2W</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">2W</span>
+                                    <span class="spec">DC-18GHz</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£18.90</span>
+                                    <span class="price-ex-vat">£15.75 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional product cards for demo... -->
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Adapter">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA Male to BNC Female Adapter</h3>
+                                <p class="product-sku">SKU: AD-SMABNC-MF</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">Adapter</span>
+                                    <span class="spec">SMA-BNC</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£22.40</span>
+                                    <span class="price-ex-vat">£18.67 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product-card">
+                            <div class="product-image">
+                                <img src="https://via.placeholder.com/250x250" alt="SMA Cable Assembly">
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-title">SMA Cable Assembly, Male to Male, 1m</h3>
+                                <p class="product-sku">SKU: SMA-MM-1000</p>
+                                <div class="product-specs">
+                                    <span class="spec">50Ω</span>
+                                    <span class="spec">1 Metre</span>
+                                    <span class="spec">RG58</span>
+                                </div>
+                                <div class="product-price">
+                                    <span class="price">£28.50</span>
+                                    <span class="price-ex-vat">£23.75 ex VAT</span>
+                                </div>
+                                <div class="product-actions">
+                                    <div class="quantity-selector">
+                                        <button class="qty-btn minus">-</button>
+                                        <input type="number" value="1" min="1" class="qty-input">
+                                        <button class="qty-btn plus">+</button>
+                                    </div>
+                                    <button class="add-to-cart-btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="page-btn prev disabled">
+                            <i class="fas fa-chevron-left"></i> Previous
+                        </button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="dots">...</span>
+                            <button class="page-btn">17</button>
+                        </div>
+                        <button class="page-btn next">
+                            Next <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div class="modal" id="help-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Help Me Choose the Right Connector</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-wizard">
+                    <div class="wizard-step active" data-step="1">
+                        <h3>What are you connecting?</h3>
+                        <div class="wizard-options">
+                            <button class="wizard-option" data-value="test-equipment">
+                                <i class="fas fa-microscope"></i>
+                                Test Equipment
+                            </button>
+                            <button class="wizard-option" data-value="antenna">
+                                <i class="fas fa-wifi"></i>
+                                Antenna
+                            </button>
+                            <button class="wizard-option" data-value="cable">
+                                <i class="fas fa-plug"></i>
+                                Cable Assembly
+                            </button>
+                        </div>
+                    </div>
+                    <div class="wizard-step" data-step="2">
+                        <h3>What frequency range?</h3>
+                        <div class="wizard-options">
+                            <button class="wizard-option" data-value="dc-1ghz">DC - 1 GHz</button>
+                            <button class="wizard-option" data-value="1-6ghz">1 - 6 GHz (WiFi)</button>
+                            <button class="wizard-option" data-value="6-18ghz">6 - 18 GHz</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
