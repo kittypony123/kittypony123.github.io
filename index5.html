@@ -24,12 +24,12 @@
     Current warnings are expected in development mode.
     -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Local copies of React, ReactDOM, Babel, Feather Icons, and SheetJS -->
-    <script src="react.development.js"></script>
-    <script src="react-dom.development.js"></script>
+    <!-- React, ReactDOM, and SheetJS served from CDNs; Babel & Feather are local -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="babel.min.js"></script>
     <script src="feather.min.js"></script>
-    <script src="xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
   </head>
   <body class="bg-gray-50 font-sans text-base">
     <!-- Google Tag Manager (noscript) -->
@@ -539,7 +539,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         const [storedValue, setStoredValue] = React.useState(() => {
           try {
             const item = window.localStorage.getItem(key);
-            return item ? JSON.parse(item) : initialValue;
+            if (!item) return initialValue;
+            try {
+              return JSON.parse(item);
+            } catch (error) {
+              debug.warn(`Invalid JSON for localStorage key "${key}":`, item);
+              return initialValue;
+            }
           } catch (error) {
             debug.warn(`Error reading localStorage key "${key}":`, error);
             return initialValue;
